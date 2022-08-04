@@ -1,0 +1,44 @@
+$color-content: #4b5d68;
+
+body {
+  color: $color-content;
+}
+.form {
+  margin: 0 auto;
+  border-radius: 10px;
+}
+.form img{
+  object-fit: cover;
+  margin: 0 auto;
+  border-radius: 10px;
+}
+// ничего не растягивает фотку по контейнеру и не срабатывает оверлей
+ #map {
+   > a {
+     display: block;
+     width: 100%;
+     height: 100%;
+     position: relative;
+     &:after  {
+       content: 'Click to interactive map';
+       position: absolute;
+       left: 0;
+       top: 0;
+       width: 100%;
+       height: 100%;
+       opacity: 0;
+       background:  #000000;
+       color: #FFFFFF;
+       font-size: 32px;
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       transition: all .2s ease;
+     }
+     &:hover:after {
+        opacity: 0.6;
+     }
+   }
+ }
+
+

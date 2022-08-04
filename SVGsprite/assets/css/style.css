@@ -1,0 +1,141 @@
+@charset "UTF-8";
+/*формула автопервода из px в rem*/
+body {
+  background: #FFFFFF;
+  font-family: Roboto, sans-serif;
+}
+
+.container {
+  width: 90%;
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+header {
+  width: 100%;
+  border-bottom: 1px solid hsl(0deg, 0%, 89.8%);
+  padding-bottom: 37px;
+}
+
+header img {
+  margin-top: 38px;
+}
+
+main {
+  padding-top: 54px;
+}
+
+h3 {
+  font-family: Roboto, sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  margin-bottom: 30px;
+}
+
+h1 {
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: 600;
+  font-size: 40px;
+  margin-bottom: 48px;
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 68px;
+}
+
+.content_block {
+  border: 1px solid hsl(0deg, 0%, 89.8%);
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  padding: 22px 22px 46px 37px;
+}
+
+.content_block:hover {
+  border: 1px solid hsl(135.8deg, 33.9%, 53.7%);
+}
+
+.signature a:hover {
+  color: hsl(135.8deg, 33.9%, 53.7%);
+  text-decoration: none;
+}
+
+.form {
+  color: black;
+  width: 38px;
+  height: 35px;
+  border: 1px solid hsl(0deg, 0%, 89.8%);
+  border-radius: 15px;
+  padding: 13px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.icon {
+  font-size: 40px;
+}
+
+.icon-inst {
+  font-size: 20px;
+}
+
+.content_block h3 {
+  font-size: 24px;
+  margin-bottom: 14px;
+}
+
+.content_block .text {
+  width: 100%;
+  max-width: 277px;
+  line-height: 27px;
+  padding-bottom: 27px;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  background: hsl(244.3deg, 52.5%, 15.7%);
+}
+
+footer img {
+  width: 196px;
+  margin-top: 37px;
+  margin-bottom: 42px;
+}
+
+.social_block_link {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 224px;
+  margin-bottom: 49px;
+}
+
+.social_block_link span {
+  font-size: 22px;
+  border: 1px solid hsl(244.3deg, 52.5%, 15.7%);
+  padding: 8px;
+  background: hsl(0deg, 0%, 89.8%);
+  border-radius: 7px;
+}
+
+.social_block_link a:hover {
+  color: hsl(135.8deg, 33.9%, 53.7%);
+  text-decoration: none;
+}
+
+@media only screen and (max-width: 1160px) {
+  .content {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 70px;
+  }
+
+  .content .content_block {
+    margin: 20px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,42 @@
+body {
+  color: #4b5d68;
+}
+
+.form {
+  margin: 0 auto;
+  border-radius: 10px;
+}
+
+.form img {
+  object-fit: cover;
+  margin: 0 auto;
+  border-radius: 10px;
+}
+
+#map > a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+#map > a:after {
+  content: "Click to interactive map";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  background: #000000;
+  color: #FFFFFF;
+  font-size: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+#map > a:hover:after {
+  opacity: 0.6;
+}
+
+/*# sourceMappingURL=style.css.map */
