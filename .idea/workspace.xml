@@ -2,39 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9e3b3e94-a61a-441a-9884-624508bb6215" name="Changes" comment="first">
-      <change afterPath="$PROJECT_DIR$/MapLeaflet/assets/css/MarkerCluster.Default.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MapLeaflet/assets/css/MarkerCluster.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MapLeaflet/assets/css/screen.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MapLeaflet/assets/cssMy/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MapLeaflet/assets/cssMy/style.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MapLeaflet/assets/cssMy/style.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MapLeaflet/assets/img/abstract.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MapLeaflet/assets/img/blue.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MapLeaflet/assets/img/green.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MapLeaflet/assets/img/map.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MapLeaflet/assets/img/marker.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MapLeaflet/assets/img/marker2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MapLeaflet/assets/img/marker3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MapLeaflet/assets/js/leaflet.markercluster-src.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MapLeaflet/assets/js/main.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MapLeaflet/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MAPLeaflet /assets/css/MarkerCluster.Default.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MAPLeaflet /assets/css/MarkerCluster.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MAPLeaflet /assets/css/screen.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MAPLeaflet /assets/cssMy/style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MAPLeaflet /assets/cssMy/style.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MAPLeaflet /assets/cssMy/style.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MAPLeaflet /assets/img/abstract.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MAPLeaflet /assets/img/blue.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MAPLeaflet /assets/img/green.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MAPLeaflet /assets/img/map.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MAPLeaflet /assets/img/marker.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MAPLeaflet /assets/img/marker2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MAPLeaflet /assets/img/marker3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MAPLeaflet /assets/js/leaflet.markercluster-src.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MAPLeaflet /assets/js/main.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MAPLeaflet /index.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -90,7 +58,7 @@
     ]
   }
 }</component>
-  <component name="RunManager" selected="JavaScript Debug.index.html (1)">
+  <component name="RunManager" selected="JavaScript Debug.index.html">
     <configuration name="index1.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/WorkingExamples/index1.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
@@ -102,8 +70,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JavaScript Debug.index.html (1)" />
         <item itemvalue="JavaScript Debug.index.html" />
+        <item itemvalue="JavaScript Debug.index.html (1)" />
         <item itemvalue="JavaScript Debug.index1.html" />
       </list>
     </recent_temporary>
@@ -123,7 +91,7 @@
       <workItem from="1659621122886" duration="365000" />
       <workItem from="1659621491214" duration="140000" />
       <workItem from="1659621634355" duration="3457000" />
-      <workItem from="1659689049516" duration="1906000" />
+      <workItem from="1659689049516" duration="2048000" />
     </task>
     <task id="LOCAL-00001" summary="first">
       <created>1659614174928</created>
@@ -181,7 +149,14 @@
       <option name="project" value="LOCAL" />
       <updated>1659707158001</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="first">
+      <created>1659707457985</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1659707457985</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
