@@ -1,0 +1,23 @@
+$bg: #fff;
+$text: #7288a2;
+$gray: #4d5974;
+$lightgray: #e5e5e5;
+$blue: #03b5d2;
+$refer: #6889ce;
+$content-text: 'Helvetica', sans-serif;
+$base_fz: 16;/*формула автоперехода из px в rem*/
+
+@mixin fz($size_in_px) {
+  font-size:($size_in_px/$base_fz)+rem;
+}
+
+body {
+  font-family: 'Helvetica', sans-serif;
+  background: $bg;
+  color: $gray;
+  display: flex;
+  padding: 4rem;
+}
+h1 {
+  color: red;
+}
