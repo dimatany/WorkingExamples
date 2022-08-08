@@ -317,16 +317,81 @@ body {
   color: #fff;
 }
 
-.myPortfolio {
-  background: #2A2A2A;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
 .footer {
   background: #3b3b3b;
   max-width: 1200px;
   margin: 0 auto;
+}
+
+.Portfolio {
+  background: #2A2A2A;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.Portfolio h2 {
+  font-size: 35px;
+  font-weight: 400;
+  margin: 0 auto;
+  width: 300px;
+  text-transform: uppercase;
+  padding-top: 100px;
+  padding-bottom: 50px;
+  text-align: center;
+}
+
+.myPortfolio {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.myPortfolio .box {
+  position: relative;
+  width: 280px;
+  height: 400px;
+  box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+  border-radius: 15px;
+  margin: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(10px);
+  transform-style: preserve-3d;
+  transform: perspective(800px);
+}
+
+h5 {
+  font-size: 28px;
+  text-align: center;
+  font-family: "Acme", sans-serif;
+}
+
+p {
+  margin: 20px 10px;
+}
+
+ul {
+  list-style: none;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  margin: 30px 0;
+  padding: 10px;
+}
+
+li {
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+}
+
+li a img:hover {
+  color: red;
+  transform: translate3d(0, -10px, 20px);
 }
 
 /*# sourceMappingURL=style.css.map */
