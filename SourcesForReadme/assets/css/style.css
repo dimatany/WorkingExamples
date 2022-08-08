@@ -88,7 +88,7 @@ body {
   background: #3b3b3b;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 60px 0;
+  padding: 130px 0;
   position: relative;
 }
 .aboutMe .aboutMe-description {
@@ -124,21 +124,21 @@ body {
   width: 650px;
   height: auto;
   position: absolute;
-  top: 22px;
+  top: 92px;
   left: 77px;
 }
 .aboutMe .aboutMe-decorations .aboutMe-decorations-blue img {
   width: 416px;
   height: auto;
   position: absolute;
-  top: 341px;
+  top: 411px;
   right: 176px;
 }
 .aboutMe .aboutMe-decorations .aboutMe-decorations-orange img {
   width: 331px;
   height: auto;
   position: absolute;
-  top: -7px;
+  top: 63px;
   right: 174px;
 }
 
@@ -147,15 +147,23 @@ body {
   max-width: 1200px;
   margin: 0 auto;
 }
-.mySkills .mySkills-soft .mySkills-soft-img {
-  padding: 50px;
+.mySkills h2 {
+  font-size: 35px;
+  font-weight: 400;
+  margin: 0 auto;
+  width: 350px;
+  text-transform: uppercase;
+  padding: 30px;
 }
-.mySkills .mySkills-soft .mySkills-soft-img img {
-  max-width: 100px;
-  height: auto;
+.mySkills .mySkills-hard .mySkills-hard-img {
+  background: #2A2A2A;
+  border-radius: 20px;
+  width: 10%;
 }
 .mySkills .mySkills-hard .mySkills-hard-img img {
-  max-width: 100px;
+  width: 60px;
+  margin: 0 auto;
+  padding: 10px;
   height: auto;
 }
 
