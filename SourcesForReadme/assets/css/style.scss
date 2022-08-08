@@ -172,91 +172,9 @@ body {
   h2 {
     font-size: 35px;
     font-weight: 400;
-    margin: 0 auto;
-    width: 350px;
     text-transform: uppercase;
-    padding: 30px;
-  }
-  .mySkills-icon {
-    position: relative;
-    :nth-child(1){
-      position: absolute;
-      top: 50px;
-      left: 300px;
-    }
-    :nth-child(2){
-      position: absolute;
-      top: 115px;
-      right: -800px;
-    }
-    :nth-child(3){
-      position: absolute;
-      top: 175px;
-      left: 325px;
-    }
-    :nth-child(4){
-      position: absolute;
-      top: 235px;
-      left: 860px;
-    }
-    :nth-child(5){
-      position: absolute;
-      top: 300px;
-      left: 280px;
-    }
-    :nth-child(6){
-      position: absolute;
-      top: 305px;
-      left: 800px;
-    }
-    :nth-child(7){
-      position: absolute;
-      top: 365px;
-      left: 345px;
-    }
-    :nth-child(8){
-      position: absolute;
-      top: 420px;
-      left: 860px;
-    }
-    :nth-child(9){
-      position: absolute;
-      top: 480px;
-      left: 300px;
-    }
-    :nth-child(10){
-      position: absolute;
-      top: 550px;
-      left: 800px;
-    }
-    :nth-child(11){
-      position: absolute;
-      top: 600px;
-      left: 345px;
-    }
-    :nth-child(12){
-      position: absolute;
-      top: 660px;
-      left: 800px;
-    }
-    :nth-child(13){
-      position: absolute;
-      top: 710px;
-      left: 300px;
-    }
-    .mySkills-icon-img {
-      position: relative;
-
-      img {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 60px;
-        margin: 0 auto;
-        padding: 10px;
-        height: auto;
-      }
-    }
+    padding: 60px;
+    text-align: center;
   }
   .mySkills-hard {
     width: 100%;
@@ -267,8 +185,7 @@ body {
     padding-bottom: 100px;
     .list {
       position: relative;
-      width: 350px;
-      min-height: 500px;
+      width: 550px;
       padding: 50px;
       background: #2f363e;
       box-shadow: 25px 25px 75px rgba(0, 0, 0, 0.25),
@@ -329,7 +246,7 @@ body {
         transition: 0.5s;
       }
       .list-item:hover::before {
-        width: 100%;
+        width: 70%;
       }
     }
     .list-item .name {
@@ -344,20 +261,80 @@ body {
         color: #fff;
       }
     }
+    .mySkills-icon-img {
+      img {
+        width: 50px;
+        height: auto;
+      }
+    }
+    .one img {
+      position: absolute;
+      top: 60px;
+      left: 400px;
+    }
+    .two img {
+      position: absolute;
+      top: 120px;
+      left: 400px;
+    }
+    .three img {
+      position: absolute;
+      top: 180px;
+      left: 400px;
+    }
+    .four img {
+      position: absolute;
+      top: 240px;
+      left: 400px;
+    }
+    .five img {
+      position: absolute;
+      top: 305px;
+      left: 400px;
+    }
+    .six img {
+      position: absolute;
+      top: 365px;
+      left: 400px;
+    }
+    .seven img {
+      position: absolute;
+      top: 425px;
+      left: 400px;
+    }
+    .eight img {
+      position: absolute;
+      top: 485px;
+      left: 400px;
+    }
+    .nine img {
+      position: absolute;
+      top: 545px;
+      left: 400px;
+    }
+    .ten img {
+      position: absolute;
+      top: 605px;
+      left: 400px;
+    }
+    .eleven img {
+      position: absolute;
+      top: 665px;
+      left: 400px;
+    }
+    .twelve img {
+      position: absolute;
+      top: 725px;
+      left: 400px;
+    }
+    .thirteen img {
+      position: absolute;
+      top: 785px;
+      left: 400px;
+    }
   }
 }
 
-
-.footer {
-  background: $lightgray;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-
-
-
-//////////////////////////////////////////////////////////////////////
 .Portfolio {
   background: $darkgray;
   max-width: 1200px;
@@ -373,7 +350,6 @@ body {
     text-align: center;
   }
 }
-
 .myPortfolio {
   position: relative;
   display: flex;
@@ -413,7 +389,6 @@ ul{
   margin:30px 0;
   padding:10px;
 }
-
 li{
   cursor: pointer;
   width:30px;
@@ -425,6 +400,11 @@ li a img:hover {
 }
 
 
+.footer {
+  background: $lightgray;
+  max-width: 1200px;
+  margin: 0 auto;
+}
 
 
 

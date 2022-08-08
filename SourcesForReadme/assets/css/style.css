@@ -150,90 +150,9 @@ body {
 .mySkills h2 {
   font-size: 35px;
   font-weight: 400;
-  margin: 0 auto;
-  width: 350px;
   text-transform: uppercase;
-  padding: 30px;
-}
-.mySkills .mySkills-icon {
-  position: relative;
-}
-.mySkills .mySkills-icon :nth-child(1) {
-  position: absolute;
-  top: 50px;
-  left: 300px;
-}
-.mySkills .mySkills-icon :nth-child(2) {
-  position: absolute;
-  top: 115px;
-  right: -800px;
-}
-.mySkills .mySkills-icon :nth-child(3) {
-  position: absolute;
-  top: 175px;
-  left: 325px;
-}
-.mySkills .mySkills-icon :nth-child(4) {
-  position: absolute;
-  top: 235px;
-  left: 860px;
-}
-.mySkills .mySkills-icon :nth-child(5) {
-  position: absolute;
-  top: 300px;
-  left: 280px;
-}
-.mySkills .mySkills-icon :nth-child(6) {
-  position: absolute;
-  top: 305px;
-  left: 800px;
-}
-.mySkills .mySkills-icon :nth-child(7) {
-  position: absolute;
-  top: 365px;
-  left: 345px;
-}
-.mySkills .mySkills-icon :nth-child(8) {
-  position: absolute;
-  top: 420px;
-  left: 860px;
-}
-.mySkills .mySkills-icon :nth-child(9) {
-  position: absolute;
-  top: 480px;
-  left: 300px;
-}
-.mySkills .mySkills-icon :nth-child(10) {
-  position: absolute;
-  top: 550px;
-  left: 800px;
-}
-.mySkills .mySkills-icon :nth-child(11) {
-  position: absolute;
-  top: 600px;
-  left: 345px;
-}
-.mySkills .mySkills-icon :nth-child(12) {
-  position: absolute;
-  top: 660px;
-  left: 800px;
-}
-.mySkills .mySkills-icon :nth-child(13) {
-  position: absolute;
-  top: 710px;
-  left: 300px;
-}
-.mySkills .mySkills-icon .mySkills-icon-img {
-  position: relative;
-}
-.mySkills .mySkills-icon .mySkills-icon-img img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 60px;
-  margin: 0 auto;
-  padding: 10px;
-  height: auto;
+  padding: 60px;
+  text-align: center;
 }
 .mySkills .mySkills-hard {
   width: 100%;
@@ -245,8 +164,7 @@ body {
 }
 .mySkills .mySkills-hard .list {
   position: relative;
-  width: 350px;
-  min-height: 500px;
+  width: 550px;
   padding: 50px;
   background: #2f363e;
   box-shadow: 25px 25px 75px rgba(0, 0, 0, 0.25), 10px 10px 70px rgba(0, 0, 0, 0.25), inset 5px 5px 10px rgba(0, 0, 0, 0.5), inset 5px 5px 20px rgba(255, 255, 255, 0.2), inset -5px -5px 15px rgba(0, 0, 0, 0.75);
@@ -302,7 +220,7 @@ body {
   transition: 0.5s;
 }
 .mySkills .mySkills-hard .list .list-item:hover::before {
-  width: 100%;
+  width: 70%;
 }
 .mySkills .mySkills-hard .list-item .name {
   position: relative;
@@ -316,11 +234,74 @@ body {
 .mySkills .mySkills-hard .list-item .name .list-item:hover .name h4 {
   color: #fff;
 }
-
-.footer {
-  background: #3b3b3b;
-  max-width: 1200px;
-  margin: 0 auto;
+.mySkills .mySkills-hard .mySkills-icon-img img {
+  width: 50px;
+  height: auto;
+}
+.mySkills .mySkills-hard .one img {
+  position: absolute;
+  top: 60px;
+  left: 400px;
+}
+.mySkills .mySkills-hard .two img {
+  position: absolute;
+  top: 120px;
+  left: 400px;
+}
+.mySkills .mySkills-hard .three img {
+  position: absolute;
+  top: 180px;
+  left: 400px;
+}
+.mySkills .mySkills-hard .four img {
+  position: absolute;
+  top: 240px;
+  left: 400px;
+}
+.mySkills .mySkills-hard .five img {
+  position: absolute;
+  top: 305px;
+  left: 400px;
+}
+.mySkills .mySkills-hard .six img {
+  position: absolute;
+  top: 365px;
+  left: 400px;
+}
+.mySkills .mySkills-hard .seven img {
+  position: absolute;
+  top: 425px;
+  left: 400px;
+}
+.mySkills .mySkills-hard .eight img {
+  position: absolute;
+  top: 485px;
+  left: 400px;
+}
+.mySkills .mySkills-hard .nine img {
+  position: absolute;
+  top: 545px;
+  left: 400px;
+}
+.mySkills .mySkills-hard .ten img {
+  position: absolute;
+  top: 605px;
+  left: 400px;
+}
+.mySkills .mySkills-hard .eleven img {
+  position: absolute;
+  top: 665px;
+  left: 400px;
+}
+.mySkills .mySkills-hard .twelve img {
+  position: absolute;
+  top: 725px;
+  left: 400px;
+}
+.mySkills .mySkills-hard .thirteen img {
+  position: absolute;
+  top: 785px;
+  left: 400px;
 }
 
 .Portfolio {
@@ -392,6 +373,12 @@ li {
 li a img:hover {
   color: red;
   transform: translate3d(0, -10px, 20px);
+}
+
+.footer {
+  background: #3b3b3b;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 /*# sourceMappingURL=style.css.map */
