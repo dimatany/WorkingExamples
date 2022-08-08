@@ -36,3 +36,25 @@ header,
   margin: 0 auto;
 }
 
+.mySkills {
+  background: $lightgray;
+  max-width: 1200px;
+  margin: 0 auto;
+  .mySkills-soft {
+    .mySkills-soft-img {
+      padding: 50px;
+      img {
+        max-width: 100px;
+        height: auto;
+      }
+    }
+  }
+  .mySkills-hard {
+    .mySkills-hard-img {
+      img {
+        max-width: 100px;
+        height: auto;
+      }
+    }
+  }
+}

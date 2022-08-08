@@ -24,4 +24,21 @@ header,
   margin: 0 auto;
 }
 
+.mySkills {
+  background: #3b3b3b;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.mySkills .mySkills-soft .mySkills-soft-img {
+  padding: 50px;
+}
+.mySkills .mySkills-soft .mySkills-soft-img img {
+  max-width: 100px;
+  height: auto;
+}
+.mySkills .mySkills-hard .mySkills-hard-img img {
+  max-width: 100px;
+  height: auto;
+}
+
 /*# sourceMappingURL=style.css.map */
