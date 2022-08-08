@@ -1,27 +1,145 @@
 @charset "UTF-8";
 /*формула автоперехода из px в rem*/
-@font-face {
-  font-family: Pompadur; /* Гарнитура шрифта */
-  src: url(../fonts/ArodoraPro-Light.otf); /* Путь к файлу со шрифтом */
-}
 body {
-  font-family: Pompadur, "Comic Sans MS", cursive;
+  font-family: "Roboto", sans-serif;
   background: #e5e5e5;
   color: #FFFFFF;
-  padding: 4rem;
+  font-size: 16;
 }
 
-header,
+.header,
 .hello {
   background: #2A2A2A;
   max-width: 1200px;
   margin: 0 auto;
 }
 
+.header {
+  padding-top: 25px;
+}
+.header .header-nav {
+  padding-bottom: 140px;
+}
+.header .header-nav .header-nav-ul {
+  display: flex;
+  justify-content: space-around;
+}
+.hello {
+  display: flex;
+}
+.hello .hello-info {
+  width: 45%;
+  margin: 0 auto 100px;
+  padding-left: 120px;
+}
+.hello .hello-info h1 {
+  font-size: 50px;
+  font-weight: 600;
+  text-transform: uppercase;
+  line-height: 55px;
+  margin-bottom: 20px;
+}
+.hello .hello-info h2 {
+  font-size: 35px;
+  font-weight: 400;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+}
+.hello .hello-info p {
+  font-size: 14px;
+  font-weight: 100;
+  line-height: 20px;
+  margin-bottom: 15px;
+}
+.hello .hello-info button {
+  width: 140px;
+  height: 35px;
+  background: #E2A200;
+  border-radius: 20px;
+  text-transform: uppercase;
+  color: #0d0a0a;
+}
+.hello .hello-pic {
+  width: 40%;
+  margin: 0 auto;
+}
+.hello .hello-pic .hello-pic-avatar {
+  position: relative;
+}
+.hello .hello-pic .hello-pic-avatar img {
+  position: absolute;
+  top: -76px;
+  left: 15px;
+  width: 270px;
+  height: auto;
+}
+.hello .hello-pic .hello-pic-border {
+  position: relative;
+}
+.hello .hello-pic .hello-pic-border img {
+  position: absolute;
+  top: -140px;
+  left: -95px;
+  width: 510px;
+  height: auto;
+}
+
 .aboutMe {
   background: #3b3b3b;
   max-width: 1200px;
   margin: 0 auto;
+  padding: 60px 0;
+  position: relative;
+}
+.aboutMe .aboutMe-description {
+  width: 400px;
+  margin: 0 auto;
+  background: #2A2A2A;
+  border-radius: 20px;
+  padding: 20px;
+  position: relative;
+  z-index: 9999;
+}
+.aboutMe .aboutMe-description h2 {
+  position: absolute;
+  top: -12px;
+  left: 107px;
+  font-size: 35px;
+  font-weight: 400;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  width: 300px;
+}
+.aboutMe .aboutMe-description p {
+  font-size: 14px;
+  font-weight: 100;
+  line-height: 20px;
+  width: 290px;
+  text-align: center;
+  margin: 0 auto;
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+.aboutMe .aboutMe-decorations .aboutMe-decorations-gray img {
+  width: 650px;
+  height: auto;
+  position: absolute;
+  top: 22px;
+  left: 77px;
+}
+.aboutMe .aboutMe-decorations .aboutMe-decorations-blue img {
+  width: 416px;
+  height: auto;
+  position: absolute;
+  top: 341px;
+  right: 176px;
+}
+.aboutMe .aboutMe-decorations .aboutMe-decorations-orange img {
+  width: 331px;
+  height: auto;
+  position: absolute;
+  top: -7px;
+  right: 174px;
 }
 
 .mySkills {
@@ -39,6 +157,18 @@ header,
 .mySkills .mySkills-hard .mySkills-hard-img img {
   max-width: 100px;
   height: auto;
+}
+
+.myPortfolio {
+  background: #2A2A2A;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer {
+  background: #3b3b3b;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 /*# sourceMappingURL=style.css.map */
