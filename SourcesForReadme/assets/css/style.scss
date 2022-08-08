@@ -1,9 +1,9 @@
-$bg: #fff;
-$text: #7288a2;
-$gray: #4d5974;
-$lightgray: #e5e5e5;
-$blue: #03b5d2;
-$refer: #6889ce;
+$blue: #00C1EC;
+$orange: #E2A200;
+$text: #FFFFFF;
+$darkgray: #2A2A2A;
+$lightgray: #3b3b3b;
+$background: #e5e5e5;
 $content-text: 'Helvetica', sans-serif;
 $base_fz: 16;/*формула автоперехода из px в rem*/
 
@@ -11,12 +11,28 @@ $base_fz: 16;/*формула автоперехода из px в rem*/
   font-size:($size_in_px/$base_fz)+rem;
 }
 
+@font-face {
+  font-family: Pompadur; /* Гарнитура шрифта */
+  src: url(../fonts/ArodoraPro-Light.otf); /* Путь к файлу со шрифтом */
+}
+
 body {
-  font-family: 'Helvetica', sans-serif;
-  background: $bg;
-  color: $gray;
+  font-family: Pompadur, 'Comic Sans MS', cursive;;
+  background: $background;
+  color: #FFFFFF;
   padding: 4rem;
 }
-h1 {
-  color: red;
+
+header,
+.hello {
+  background: $darkgray;
+  max-width: 1200px;
+  margin: 0 auto;
 }
+
+.aboutMe {
+  background: $lightgray;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+

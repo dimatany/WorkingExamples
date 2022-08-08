@@ -1,14 +1,27 @@
 @charset "UTF-8";
 /*формула автоперехода из px в rem*/
+@font-face {
+  font-family: Pompadur; /* Гарнитура шрифта */
+  src: url(../fonts/ArodoraPro-Light.otf); /* Путь к файлу со шрифтом */
+}
 body {
-  font-family: "Helvetica", sans-serif;
-  background: #fff;
-  color: #4d5974;
+  font-family: Pompadur, "Comic Sans MS", cursive;
+  background: #e5e5e5;
+  color: #FFFFFF;
   padding: 4rem;
 }
 
-h1 {
-  color: red;
+header,
+.hello {
+  background: #2A2A2A;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.aboutMe {
+  background: #3b3b3b;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 /*# sourceMappingURL=style.css.map */
