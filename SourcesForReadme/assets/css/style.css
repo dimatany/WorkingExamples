@@ -331,6 +331,24 @@ body {
 .Portfolio .myPortfolio .box-img2 {
   background: url("https://dimatany.github.io/WorkingExamples/SourcesForReadme/assets/images/wp.jpg") center/cover;
 }
+.Portfolio .myPortfolio .box-img3 {
+  background: url("https://dimatany.github.io/WorkingExamples/SourcesForReadme/assets/images/bw.jpg") center/cover;
+}
+.Portfolio .myPortfolio .box-img4 {
+  background: url("https://dimatany.github.io/WorkingExamples/SourcesForReadme/assets/images/ew.jpg") center/cover;
+}
+.Portfolio .myPortfolio .box-img5 {
+  background: url("https://dimatany.github.io/WorkingExamples/SourcesForReadme/assets/images/gp.jpg") center/cover;
+}
+.Portfolio .myPortfolio .box-img6 {
+  background: url("https://dimatany.github.io/WorkingExamples/SourcesForReadme/assets/images/bg.jpg") center/cover;
+}
+.Portfolio .myPortfolio .box-img7 {
+  background: url("https://dimatany.github.io/WorkingExamples/SourcesForReadme/assets/images/qw.jpg") center/cover;
+}
+.Portfolio .myPortfolio .box-img8 {
+  background: url("https://dimatany.github.io/WorkingExamples/SourcesForReadme/assets/images/we.jpg") center/cover;
+}
 .Portfolio .myPortfolio .box {
   position: relative;
   width: 280px;
@@ -357,7 +375,7 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  filter: blur(1rem);
+  filter: blur(2rem);
   z-index: -1;
   transform: scale(1.15);
 }
@@ -376,12 +394,13 @@ body {
   justify-content: space-between;
 }
 .Portfolio .myPortfolio .box .description h5 {
-  font-size: 28px;
+  font-size: 25px;
   text-align: center;
-  font-family: "Acme", sans-serif;
+  margin-bottom: 50px;
 }
 .Portfolio .myPortfolio .box .description p {
-  margin: 20px 10px;
+  margin: 50px 20px;
+  text-align: center;
 }
 .Portfolio .myPortfolio .box .description ul {
   list-style: none;
