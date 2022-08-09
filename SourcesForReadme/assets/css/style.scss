@@ -95,7 +95,7 @@ body {
     }
     .hello-pic-border {
       position: relative;;
-      img {
+      svg {
         position: absolute;
         top: -140px;
         left: -95px;
@@ -140,7 +140,7 @@ body {
   }
   .aboutMe-decorations {
     .aboutMe-decorations-gray {
-      img {
+      svg {
         width: 650px;
         height: auto;
         position: absolute;
@@ -149,7 +149,7 @@ body {
       }
     }
     .aboutMe-decorations-blue {
-      img {
+      svg {
         width: 416px;
         height: auto;
         position: absolute;
@@ -158,7 +158,7 @@ body {
       }
     }
     .aboutMe-decorations-orange {
-      img {
+      svg {
         width: 331px;
         height: auto;
         position: absolute;
@@ -388,9 +388,9 @@ body {
             cursor: pointer;
             width: 30px;
             height: 30px;
-            li a img:hover {
-              color: red;
-              transform: translate3d(0, -10px, 20px);
+            .fa-brands {
+              font-size: 40px;
+              color: $blue;
             }
           }
         }
@@ -398,9 +398,10 @@ body {
     }
   }
 }
-
-
-
+.Portfolio .myPortfolio .box .description ul li .fa-brands:hover {
+  color: red;
+  transition: 0.5s;
+}
 
 .footer {
   background: $darkgray;
@@ -413,9 +414,24 @@ body {
     padding: 60px;
     text-align: center;
   }
+  .footer-media {
+    display: flex;
+    justify-content: space-around;
+    padding: 100px 10px;
+    max-width: 900px;
+    margin: 0 auto;
+    .footer-media-icon {
+      .fa-brands {
+        font-size: 60px;
+        color: $blue;
+      }
+    }
+  }
 }
-
-
+.footer .footer-media .footer-media-icon .fa-brands:hover {
+  color: $orange;
+  transition: 0.5s;
+}
 
 
 

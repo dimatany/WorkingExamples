@@ -83,7 +83,7 @@ body {
 .hello .hello-pic .hello-pic-border {
   position: relative;
 }
-.hello .hello-pic .hello-pic-border img {
+.hello .hello-pic .hello-pic-border svg {
   position: absolute;
   top: -140px;
   left: -95px;
@@ -124,21 +124,21 @@ body {
   padding-top: 25px;
   padding-bottom: 25px;
 }
-.aboutMe .aboutMe-decorations .aboutMe-decorations-gray img {
+.aboutMe .aboutMe-decorations .aboutMe-decorations-gray svg {
   width: 650px;
   height: auto;
   position: absolute;
   top: 150px;
   left: 77px;
 }
-.aboutMe .aboutMe-decorations .aboutMe-decorations-blue img {
+.aboutMe .aboutMe-decorations .aboutMe-decorations-blue svg {
   width: 416px;
   height: auto;
   position: absolute;
   top: 500px;
   right: 176px;
 }
-.aboutMe .aboutMe-decorations .aboutMe-decorations-orange img {
+.aboutMe .aboutMe-decorations .aboutMe-decorations-orange svg {
   width: 331px;
   height: auto;
   position: absolute;
@@ -357,9 +357,14 @@ body {
   width: 30px;
   height: 30px;
 }
-.Portfolio .myPortfolio .box .description ul li li a img:hover {
+.Portfolio .myPortfolio .box .description ul li .fa-brands {
+  font-size: 40px;
+  color: #00C1EC;
+}
+
+.Portfolio .myPortfolio .box .description ul li .fa-brands:hover {
   color: red;
-  transform: translate3d(0, -10px, 20px);
+  transition: 0.5s;
 }
 
 .footer {
@@ -373,6 +378,22 @@ body {
   text-transform: uppercase;
   padding: 60px;
   text-align: center;
+}
+.footer .footer-media {
+  display: flex;
+  justify-content: space-around;
+  padding: 100px 10px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+.footer .footer-media .footer-media-icon .fa-brands {
+  font-size: 60px;
+  color: #00C1EC;
+}
+
+.footer .footer-media .footer-media-icon .fa-brands:hover {
+  color: #E2A200;
+  transition: 0.5s;
 }
 
 /*# sourceMappingURL=style.css.map */
