@@ -648,6 +648,16 @@ body {
   color: #E2A200;
   transition: 0.5s;
 }
+.footer .footer-download {
+  width: 200px;
+  text-align: center;
+  margin: 0 auto;
+  padding-bottom: 100px;
+  color: #00C1EC;
+}
+.footer .footer-download:hover {
+  color: #E2A200;
+}
 
 @media screen and (max-width: 768px) {
   .footer h2 {
