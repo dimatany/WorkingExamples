@@ -66,6 +66,11 @@ body {
   text-transform: uppercase;
   color: #0d0a0a;
 }
+.hello .hello-info button:hover {
+  color: #FFFFFF;
+  background: #00C1EC;
+  transition: 0.5s;
+}
 .hello .hello-pic {
   width: 40%;
   margin: 0 auto;
@@ -334,7 +339,7 @@ body {
   border-left: 1px solid rgba(255, 255, 255, 0.5);
   transform-style: preserve-3d;
   transform: perspective(800px);
-  background: url("https://dimatany.github.io/lessons/Test2/assets/img/wp.jpg") center/cover;
+  background: url("https://dimatany.github.io/WorkingExamples/SourcesForReadme/assets/images/bg.jpg") center/cover;
   z-index: 1;
   overflow: hidden;
   animation: hue 10s infinite alternate;
