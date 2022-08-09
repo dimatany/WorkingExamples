@@ -24,6 +24,13 @@ body {
   display: flex;
   justify-content: space-around;
 }
+.maine {
+  background: #3b3b3b;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-bottom: 80px;
+}
+
 .hello {
   display: flex;
 }
@@ -85,9 +92,6 @@ body {
 }
 
 .aboutMe {
-  background: #3b3b3b;
-  max-width: 1200px;
-  margin: 0 auto;
   padding: 130px 0;
   position: relative;
 }
@@ -142,11 +146,6 @@ body {
   right: 174px;
 }
 
-.mySkills {
-  background: #3b3b3b;
-  max-width: 1200px;
-  margin: 0 auto;
-}
 .mySkills h2 {
   font-size: 35px;
   font-weight: 400;
@@ -304,11 +303,6 @@ body {
   left: 400px;
 }
 
-.Portfolio {
-  background: #2A2A2A;
-  max-width: 1200px;
-  margin: 0 auto;
-}
 .Portfolio h2 {
   font-size: 35px;
   font-weight: 400;
@@ -319,16 +313,14 @@ body {
   padding-bottom: 50px;
   text-align: center;
 }
-
-.myPortfolio {
+.Portfolio .myPortfolio {
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
 }
-
-.myPortfolio .box {
+.Portfolio .myPortfolio .box {
   position: relative;
   width: 280px;
   height: 400px;
@@ -344,18 +336,15 @@ body {
   transform-style: preserve-3d;
   transform: perspective(800px);
 }
-
-h5 {
+.Portfolio .myPortfolio .box .description h5 {
   font-size: 28px;
   text-align: center;
   font-family: "Acme", sans-serif;
 }
-
-p {
+.Portfolio .myPortfolio .box .description p {
   margin: 20px 10px;
 }
-
-ul {
+.Portfolio .myPortfolio .box .description ul {
   list-style: none;
   width: 100%;
   display: flex;
@@ -363,22 +352,27 @@ ul {
   margin: 30px 0;
   padding: 10px;
 }
-
-li {
+.Portfolio .myPortfolio .box .description ul li {
   cursor: pointer;
   width: 30px;
   height: 30px;
 }
-
-li a img:hover {
+.Portfolio .myPortfolio .box .description ul li li a img:hover {
   color: red;
   transform: translate3d(0, -10px, 20px);
 }
 
 .footer {
-  background: #3b3b3b;
+  background: #2A2A2A;
   max-width: 1200px;
   margin: 0 auto;
+}
+.footer h2 {
+  font-size: 35px;
+  font-weight: 400;
+  text-transform: uppercase;
+  padding: 60px;
+  text-align: center;
 }
 
 /*# sourceMappingURL=style.css.map */
