@@ -6,27 +6,6 @@
       <change beforePath="$PROJECT_DIR$/SourcesForReadme/assets/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/SourcesForReadme/assets/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SourcesForReadme/assets/css/style.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/SourcesForReadme/assets/css/style.css.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SourcesForReadme/assets/css/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/SourcesForReadme/assets/css/style.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SourcesForReadme/assets/images/ajax-skills.svg" beforeDir="false" afterPath="$PROJECT_DIR$/SourcesForReadme/assets/images/ajax-skills.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SourcesForReadme/assets/images/bootstrap-skills.svg" beforeDir="false" afterPath="$PROJECT_DIR$/SourcesForReadme/assets/images/bootstrap-skills.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SourcesForReadme/assets/images/codepen-footer.svg" beforeDir="false" afterPath="$PROJECT_DIR$/SourcesForReadme/assets/images/codepen-footer.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SourcesForReadme/assets/images/codewars-footer.svg" beforeDir="false" afterPath="$PROJECT_DIR$/SourcesForReadme/assets/images/codewars-footer.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SourcesForReadme/assets/images/css-skills.svg" beforeDir="false" afterPath="$PROJECT_DIR$/SourcesForReadme/assets/images/css-skills.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SourcesForReadme/assets/images/email-footer.svg" beforeDir="false" afterPath="$PROJECT_DIR$/SourcesForReadme/assets/images/email-footer.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SourcesForReadme/assets/images/facebook-footer.svg" beforeDir="false" afterPath="$PROJECT_DIR$/SourcesForReadme/assets/images/facebook-footer.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SourcesForReadme/assets/images/figma-skills.svg" beforeDir="false" afterPath="$PROJECT_DIR$/SourcesForReadme/assets/images/figma-skills.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SourcesForReadme/assets/images/github-footer.svg" beforeDir="false" afterPath="$PROJECT_DIR$/SourcesForReadme/assets/images/github-footer.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SourcesForReadme/assets/images/github-skills.svg" beforeDir="false" afterPath="$PROJECT_DIR$/SourcesForReadme/assets/images/github-skills.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SourcesForReadme/assets/images/html-skills.svg" beforeDir="false" afterPath="$PROJECT_DIR$/SourcesForReadme/assets/images/html-skills.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SourcesForReadme/assets/images/instagram-footer.svg" beforeDir="false" afterPath="$PROJECT_DIR$/SourcesForReadme/assets/images/instagram-footer.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SourcesForReadme/assets/images/internet-port.svg" beforeDir="false" afterPath="$PROJECT_DIR$/SourcesForReadme/assets/images/internet-port.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SourcesForReadme/assets/images/js-skills.svg" beforeDir="false" afterPath="$PROJECT_DIR$/SourcesForReadme/assets/images/js-skills.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SourcesForReadme/assets/images/linkedin-footer.svg" beforeDir="false" afterPath="$PROJECT_DIR$/SourcesForReadme/assets/images/linkedin-footer.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SourcesForReadme/assets/images/rwd-skills.svg" beforeDir="false" afterPath="$PROJECT_DIR$/SourcesForReadme/assets/images/rwd-skills.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SourcesForReadme/assets/images/sass-skills.svg" beforeDir="false" afterPath="$PROJECT_DIR$/SourcesForReadme/assets/images/sass-skills.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SourcesForReadme/assets/images/telegram-footer.svg" beforeDir="false" afterPath="$PROJECT_DIR$/SourcesForReadme/assets/images/telegram-footer.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SourcesForReadme/assets/images/vue-skills.svg" beforeDir="false" afterPath="$PROJECT_DIR$/SourcesForReadme/assets/images/vue-skills.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SourcesForReadme/assets/images/webpack-skills.svg" beforeDir="false" afterPath="$PROJECT_DIR$/SourcesForReadme/assets/images/webpack-skills.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -131,7 +110,8 @@
       <workItem from="1659963493533" duration="11353000" />
       <workItem from="1660033620976" duration="3715000" />
       <workItem from="1660037773659" duration="935000" />
-      <workItem from="1660038785463" duration="1090000" />
+      <workItem from="1660038785463" duration="1470000" />
+      <workItem from="1660040288151" duration="880000" />
     </task>
     <task id="LOCAL-00001" summary="first">
       <created>1659614174928</created>
@@ -315,7 +295,14 @@
       <option name="project" value="LOCAL" />
       <updated>1660031079465</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="commit">
+      <created>1660039885385</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1660039885385</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
