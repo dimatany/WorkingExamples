@@ -13,7 +13,7 @@ $base_fz: 16;/*формула автоперехода из px в rem*/
 
 body {
   font-family: $content-text;
-  background: $background;
+  background: #f5daf9;
   color: #FFFFFF;
   font-size: $base_fz;
 }
@@ -28,11 +28,14 @@ body {
 .header {
   padding-top: 25px;
   .header-nav {
-    padding-bottom: 140px;
+    padding-bottom: 131px;
     .header-nav-ul {
       display: flex;
       justify-content: space-around;
       .header-nav-ul-item {
+        &:hover {
+          color: $orange;
+        }
       }
     }
   }
@@ -109,6 +112,80 @@ body {
     }
   }
 }
+@media screen and (max-width: 968px) {
+  .hello {
+    display: flex;
+    flex-direction: column;
+    .hello-info {
+      width: 75%;
+      text-align: center;
+      padding-left: 0;
+      h1 {
+        width: 75%;
+        margin: 30px auto;
+        font-size: 40px;
+        line-height: 45px;
+      }
+      h2 {
+        width: 75%;
+        margin: 15px auto;
+        font-size: 25px;
+      }
+      p {
+        margin-bottom: 30px;
+      }
+      button {
+        margin-bottom: 100px;
+      }
+    }
+    .hello-pic {
+      width: 40%;
+      margin: 0 auto;
+      .hello-pic-avatar {
+        margin: 100px auto;
+        img {
+          margin-top: 60px;
+          top: -230px;
+          left: 50px;
+        }
+      }
+      .hello-pic-border {
+        position: relative;;
+        svg {
+          position: absolute;
+          top: -240px;
+          left: -65px;
+          width: 510px;
+          height: auto;
+        }
+      }
+    }
+  }
+
+}
+@media screen and (max-width: 768px) {
+  .hello {
+    .hello-pic {
+      .hello-pic-avatar {
+        margin: 90px auto;
+        img {
+          margin-top: 60px;
+          top: -240px;
+          left: 10px;
+        }
+      }
+      .hello-pic-border {
+        position: relative;;
+        svg {
+          position: absolute;
+          top: -250px;
+          left: -100px;
+          width: 500px;
+        }
+      }
+    }
+  }
+}
 
 .aboutMe {
   padding: 130px 0;
@@ -149,26 +226,72 @@ body {
         height: auto;
         position: absolute;
         top: 150px;
-        left: 77px;
+        left: 80px;
       }
     }
     .aboutMe-decorations-blue {
       svg {
-        width: 416px;
+        width: 415px;
         height: auto;
         position: absolute;
-        top: 500px;
-        right: 176px;
+        top: 485px;
+        right: 125px;
       }
     }
     .aboutMe-decorations-orange {
       svg {
-        width: 331px;
+        width: 330px;
         height: auto;
         position: absolute;
         top: 115px;
-        right: 174px;
+        right: 175px;
       }
+    }
+  }
+}
+@media screen and (max-width: 1000px) {
+  .aboutMe-decorations-gray {
+    svg {
+      width: 530px;
+      height: auto;
+      position: absolute;
+      top: 150px;
+      left: 110px;
+    }
+  }
+  .aboutMe-decorations-blue {
+    svg {
+      width: 380px;
+      height: auto;
+      position: absolute;
+      top: 430px;
+      right: 120px;
+    }
+  }
+  .aboutMe-decorations-orange {
+    svg {
+      width: 320px;
+      height: auto;
+      position: absolute;
+      top: 80px;
+      right: 145px;
+    }
+  }
+}
+@media screen and (max-width: 968px) {
+  .aboutMe-decorations-gray {
+    svg {
+      display: none;
+    }
+  }
+  .aboutMe-decorations-blue {
+    svg {
+      display: none;
+    }
+  }
+  .aboutMe-decorations-orange {
+    svg {
+      display: none;
     }
   }
 }
