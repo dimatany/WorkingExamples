@@ -33,7 +33,6 @@ body {
       display: flex;
       justify-content: space-around;
       .header-nav-ul-item {
-
       }
     }
   }
@@ -358,6 +357,12 @@ body {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+    .box-img1 {
+      background: url("https://dimatany.github.io/WorkingExamples/SourcesForReadme/assets/images/bg.jpg") center/cover;
+    }
+    .box-img2 {
+      background: url("https://dimatany.github.io/WorkingExamples/SourcesForReadme/assets/images/wp.jpg") center/cover;
+    }
     .box {
       position: relative;
       width: 280px;
@@ -372,10 +377,21 @@ body {
       border-left: 1px solid rgba(255, 255, 255, 0.5);
       transform-style: preserve-3d;
       transform: perspective(800px);
-      background: url("https://dimatany.github.io/WorkingExamples/SourcesForReadme/assets/images/bg.jpg") center/cover;
       z-index: 1;
       overflow: hidden;
       animation: hue 10s infinite alternate;
+      &:after{
+        content: '';
+        width: 100%;
+        height: 100%;
+        background: inherit;
+        position: absolute;
+        top: 0;
+        left: 0;
+        filter: blur(1rem);
+        z-index: -1;
+        transform: scale(1.15);
+      }
       @keyframes hue {
         from{
           filter: hue-rotate(0);
@@ -413,28 +429,16 @@ body {
             .fa-brands {
               font-size: 40px;
               color: $blue;
+              &:hover {
+                color: red;
+                transition: 0.5s;
+              }
             }
           }
         }
       }
     }
   }
-}
-.Portfolio .myPortfolio .box::after{
-  content: '';
-  width: 100%;
-  height: 100%;
-  background: inherit;
-  position: absolute;
-  top: 0;
-  left: 0;
-  filter: blur(1rem);
-  z-index: -1;
-  transform: scale(1.15);
-}
-.Portfolio .myPortfolio .box .description ul li .fa-brands:hover {
-  color: red;
-  transition: 0.5s;
 }
 
 .footer {
@@ -458,14 +462,15 @@ body {
       .fa-brands {
         font-size: 60px;
         color: $blue;
+        &:hover {
+          color: $orange;
+          transition: 0.5s;
+        }
       }
     }
   }
 }
-.footer .footer-media .footer-media-icon .fa-brands:hover {
-  color: $orange;
-  transition: 0.5s;
-}
+
 
 
 
