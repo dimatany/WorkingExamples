@@ -134,9 +134,6 @@ body {
       p {
         margin-bottom: 30px;
       }
-      button {
-        margin-bottom: 100px;
-      }
     }
     .hello-pic {
       width: 40%;
@@ -165,6 +162,9 @@ body {
 }
 @media screen and (max-width: 768px) {
   .hello {
+    .hello-info {
+      margin: 0 auto;
+    }
     .hello-pic {
       .hello-pic-avatar {
         margin: 90px auto;

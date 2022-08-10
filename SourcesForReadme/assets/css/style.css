@@ -124,9 +124,6 @@ body {
   .hello .hello-info p {
     margin-bottom: 30px;
   }
-  .hello .hello-info button {
-    margin-bottom: 100px;
-  }
   .hello .hello-pic {
     width: 40%;
     margin: 0 auto;
@@ -151,6 +148,9 @@ body {
   }
 }
 @media screen and (max-width: 768px) {
+  .hello .hello-info {
+    margin: 0 auto;
+  }
   .hello .hello-pic .hello-pic-avatar {
     margin: 90px auto;
   }
