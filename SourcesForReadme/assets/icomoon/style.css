@@ -1,0 +1,125 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?q2ny47');
+  src:  url('fonts/icomoon.eot?q2ny47#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?q2ny47') format('truetype'),
+    url('fonts/icomoon.woff?q2ny47') format('woff'),
+    url('fonts/icomoon.svg?q2ny47#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-vue-skills:before {
+  content: "\e900";
+  color: #00c1ec;
+}
+.icon-internet-port:before {
+  content: "\e901";
+  color: #00c1ec;
+}
+.icon-webpack-skills:before {
+  content: "\e902";
+}
+.icon-telegram-footer .path1:before {
+  content: "\e903";
+  color: rgb(0, 193, 236);
+}
+.icon-telegram-footer .path2:before {
+  content: "\e904";
+  margin-left: -1em;
+  color: rgb(200, 218, 234);
+}
+.icon-telegram-footer .path3:before {
+  content: "\e905";
+  margin-left: -1em;
+  color: rgb(169, 201, 221);
+}
+.icon-telegram-footer .path4:before {
+  content: "\e906";
+  margin-left: -1em;
+  color: rgb(246, 251, 254);
+}
+.icon-sass-skills:before {
+  content: "\e907";
+  color: #00c1ec;
+}
+.icon-rwd-skills:before {
+  content: "\e908";
+  color: #00c1ec;
+}
+.icon-linkedin-footer:before {
+  content: "\e909";
+  color: #00c1ec;
+}
+.icon-js-skills:before {
+  content: "\e90a";
+  color: #00c1ec;
+}
+.icon-codewars-footer:before {
+  content: "\e90b";
+  color: #00c1ec;
+}
+.icon-css-skills:before {
+  content: "\e90c";
+  color: #00c1ec;
+}
+.icon-email-footer:before {
+  content: "\e90d";
+  color: #00c1ec;
+}
+.icon-jquery-skills:before {
+  content: "\e90e";
+  color: #00c1ec;
+}
+.icon-facebook-footer:before {
+  content: "\e90f";
+  color: #00c1ec;
+}
+.icon-figma-skills:before {
+  content: "\e910";
+  color: #00c1ec;
+}
+.icon-html-skills:before {
+  content: "\e911";
+  color: #00c1ec;
+}
+.icon-ajax-skills:before {
+  content: "\e912";
+  color: #00c1ec;
+}
+.icon-github-footer:before {
+  content: "\e913";
+  color: #00c1ec;
+}
+.icon-github-skills:before {
+  content: "\e914";
+  color: #00c1ec;
+}
+.icon-bootstrap-skills:before {
+  content: "\e915";
+  color: #00c1ec;
+}
+.icon-codepen-footer:before {
+  content: "\e916";
+  color: #00c1ec;
+}
+.icon-instagram-footer:before {
+  content: "\e917";
+  color: #00c1ec;
+}
