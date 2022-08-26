@@ -723,8 +723,29 @@ body {
     margin: 0 auto;
     padding-bottom: 100px;
     color: $blue;
-    &:hover {
-      color: $orange;
+    a {
+      line-height: 60px;
+      &:hover {
+        color: $orange;
+      }
+    }
+    .typing-demo {
+      width: 22ch;
+      height: 60px;
+      animation: typing 2s steps(22), blink .5s step-end infinite alternate;
+      white-space: nowrap;
+      overflow: hidden;
+      border-right: 2px solid;
+    }
+    @keyframes typing {
+      from {
+        width: 0;
+      }
+    }
+    @keyframes blink {
+      50% {
+        border-color: transparent;
+      }
     }
   }
 }
@@ -749,27 +770,6 @@ body {
     font-size: 35px;
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

@@ -657,8 +657,29 @@ body {
   padding-bottom: 100px;
   color: #00C1EC;
 }
-.footer .footer-download:hover {
+.footer .footer-download a {
+  line-height: 60px;
+}
+.footer .footer-download a:hover {
   color: #E2A200;
+}
+.footer .footer-download .typing-demo {
+  width: 22ch;
+  height: 60px;
+  animation: typing 2s steps(22), blink 0.5s step-end infinite alternate;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 2px solid;
+}
+@keyframes typing {
+  from {
+    width: 0;
+  }
+}
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
 }
 
 @media screen and (max-width: 768px) {
