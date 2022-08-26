@@ -718,33 +718,16 @@ body {
     }
   }
   .footer-download {
-    width: 200px;
+    width: 250px;
     text-align: center;
     margin: 0 auto;
     padding-bottom: 100px;
     color: $blue;
     a {
-      line-height: 60px;
+      line-height: 80px;
+      font-size: 25px;
       &:hover {
         color: $orange;
-      }
-    }
-    .typing-demo {
-      width: 22ch;
-      height: 60px;
-      animation: typing 2s steps(22), blink .5s step-end infinite alternate;
-      white-space: nowrap;
-      overflow: hidden;
-      border-right: 2px solid;
-    }
-    @keyframes typing {
-      from {
-        width: 0;
-      }
-    }
-    @keyframes blink {
-      50% {
-        border-color: transparent;
       }
     }
   }
