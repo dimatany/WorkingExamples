@@ -5,6 +5,7 @@ body {
   background: #f5daf9;
   color: #FFFFFF;
   font-size: 16;
+  scroll-behavior: smooth;
 }
 
 .header,
@@ -23,6 +24,9 @@ body {
 .header .header-nav .header-nav-ul {
   display: flex;
   justify-content: space-around;
+}
+.header .header-nav .header-nav-ul .header-nav-ul-item {
+  scroll-behavior: smooth;
 }
 .header .header-nav .header-nav-ul .header-nav-ul-item:hover {
   color: #E2A200;
