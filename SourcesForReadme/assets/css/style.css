@@ -45,22 +45,22 @@ body {
   padding-left: 120px;
 }
 .hello .hello-info h1 {
-  font-size: 50px;
+  font-size: 3.125rem;
   font-weight: 600;
   text-transform: uppercase;
   line-height: 55px;
   margin-bottom: 20px;
 }
 .hello .hello-info h2 {
-  font-size: 35px;
+  font-size: 2.1875rem;
   font-weight: 400;
   margin-bottom: 15px;
   text-transform: uppercase;
 }
 .hello .hello-info p {
-  font-size: 14px;
+  font-size: 1rem;
   font-weight: 100;
-  line-height: 20px;
+  line-height: 30px;
   margin-bottom: 15px;
 }
 .hello .hello-info button {
@@ -114,13 +114,11 @@ body {
   .hello .hello-info h1 {
     width: 75%;
     margin: 30px auto;
-    font-size: 40px;
-    line-height: 45px;
+    line-height: 55px;
   }
   .hello .hello-info h2 {
     width: 75%;
     margin: 15px auto;
-    font-size: 25px;
   }
   .hello .hello-info p {
     margin-bottom: 30px;
@@ -182,16 +180,16 @@ body {
   position: absolute;
   top: -12px;
   left: 107px;
-  font-size: 35px;
+  font-size: 2.1875rem;
   font-weight: 400;
   margin-bottom: 15px;
   text-transform: uppercase;
   width: 300px;
 }
 .aboutMe .aboutMe-description p {
-  font-size: 14px;
+  font-size: 1rem;
   font-weight: 100;
-  line-height: 20px;
+  line-height: 30px;
   width: 290px;
   text-align: center;
   margin: 0 auto;
@@ -260,7 +258,6 @@ body {
   }
   .aboutMe .aboutMe-description h2 {
     position: static;
-    font-size: 25px;
     width: 200px;
     margin: 0 auto;
     text-align: center;
@@ -270,11 +267,12 @@ body {
   }
 }
 .mySkills h2 {
-  font-size: 35px;
+  font-size: 2.1875rem;
   font-weight: 400;
   text-transform: uppercase;
   padding: 60px;
   text-align: center;
+  line-height: 50px;
 }
 .mySkills .mySkills-hard {
   width: 100%;
@@ -422,7 +420,6 @@ body {
 
 @media screen and (max-width: 768px) {
   .mySkills h2 {
-    font-size: 25px;
     font-weight: 400;
   }
   .mySkills .mySkills-hard .list {
@@ -502,7 +499,7 @@ body {
   }
 }
 .Portfolio h2 {
-  font-size: 35px;
+  font-size: 2.1875rem;
   font-weight: 400;
   margin: 0 auto;
   width: 300px;
@@ -588,13 +585,15 @@ body {
   justify-content: space-between;
 }
 .Portfolio .myPortfolio .box .description h5 {
-  font-size: 25px;
+  font-size: 1.5625rem;
   text-align: center;
   margin-bottom: 50px;
+  line-height: 50px;
 }
 .Portfolio .myPortfolio .box .description p {
   margin: 50px 20px;
   text-align: center;
+  line-height: 35px;
 }
 .Portfolio .myPortfolio .box .description ul {
   list-style: none;
@@ -610,7 +609,7 @@ body {
   height: 30px;
 }
 .Portfolio .myPortfolio .box .description ul li .fa-brands {
-  font-size: 40px;
+  font-size: 2.5rem;
   color: #00C1EC;
 }
 .Portfolio .myPortfolio .box .description ul li .fa-brands:hover {
@@ -618,22 +617,18 @@ body {
   transition: 0.5s;
 }
 
-@media screen and (max-width: 768px) {
-  .Portfolio h2 {
-    font-size: 25px;
-  }
-}
 .footer {
   background: #2A2A2A;
   max-width: 1200px;
   margin: 0 auto;
 }
 .footer h2 {
-  font-size: 35px;
+  font-size: 2.1875rem;
   font-weight: 400;
   text-transform: uppercase;
   padding: 60px;
   text-align: center;
+  line-height: 50px;
 }
 .footer .footer-media {
   display: flex;
@@ -643,7 +638,7 @@ body {
   margin: 0 auto;
 }
 .footer .footer-media .footer-media-icon .fa-brands {
-  font-size: 60px;
+  font-size: 3.75rem;
   color: #00C1EC;
 }
 .footer .footer-media .footer-media-icon .fa-brands:hover {
@@ -659,16 +654,13 @@ body {
 }
 .footer .footer-download a {
   line-height: 80px;
-  font-size: 25px;
+  font-size: 1.5625rem;
 }
 .footer .footer-download a:hover {
   color: #E2A200;
 }
 
 @media screen and (max-width: 768px) {
-  .footer h2 {
-    font-size: 25px;
-  }
   .footer .footer-media {
     display: flex;
     flex-wrap: wrap;

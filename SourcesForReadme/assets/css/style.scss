@@ -56,22 +56,22 @@ body {
     margin: 0 auto 100px;
     padding-left: 120px;
     h1 {
-      font-size: 50px;
+      @include fz(50);
       font-weight: 600;
       text-transform: uppercase;
       line-height: 55px;
       margin-bottom: 20px;
     }
     h2 {
-      font-size: 35px;
+      @include fz(35);
       font-weight: 400;
       margin-bottom: 15px;
       text-transform: uppercase;
     }
     p {
-      font-size: 14px;
+      @include fz(16);
       font-weight: 100;
-      line-height: 20px;
+      line-height: 30px;
       margin-bottom: 15px;
     }
     button {
@@ -124,13 +124,11 @@ body {
       h1 {
         width: 75%;
         margin: 30px auto;
-        font-size: 40px;
-        line-height: 45px;
+        line-height: 55px;
       }
       h2 {
         width: 75%;
         margin: 15px auto;
-        font-size: 25px;
       }
       p {
         margin-bottom: 30px;
@@ -198,16 +196,16 @@ body {
       position: absolute;
       top: -12px;
       left: 107px;
-      font-size: 35px;
+      @include fz(35);
       font-weight: 400;
       margin-bottom: 15px;
       text-transform: uppercase;
       width: 300px;
     }
     p {
-      font-size: 14px;
+      @include fz(16);
       font-weight: 100;
-      line-height: 20px;
+      line-height: 30px;
       width: 290px;
       text-align: center;
       margin: 0 auto;
@@ -297,7 +295,6 @@ body {
       width: 300px;
       h2 {
         position: static;
-        font-size: 25px;
         width: 200px;
         margin: 0 auto;
         text-align: center;
@@ -311,11 +308,12 @@ body {
 
 .mySkills {
   h2 {
-    font-size: 35px;
+    @include fz(35);
     font-weight: 400;
     text-transform: uppercase;
     padding: 60px;
     text-align: center;
+    line-height: 50px;
   }
   .mySkills-hard {
     width: 100%;
@@ -366,7 +364,7 @@ body {
       }
       .list-item .rank span {
         position: relative;
-        font-size: 1rem;
+        @include fz(16);
         font-weight: 600;
         color: #fff;
         transition: 0.5s;
@@ -472,7 +470,6 @@ body {
 @media screen and (max-width: 768px) {
   .mySkills {
     h2 {
-      font-size: 25px;
       font-weight: 400;
     }
     .mySkills-hard {
@@ -563,7 +560,7 @@ body {
 
 .Portfolio {
   h2 {
-    font-size: 35px;
+    @include fz(35);
     font-weight: 400;
     margin: 0 auto;
     width: 300px;
@@ -648,13 +645,15 @@ body {
       }
       .description {
         h5 {
-          font-size: 25px;
+          @include fz(25);
           text-align: center;
           margin-bottom: 50px;
+          line-height: 50px;
         }
         p {
           margin: 50px 20px;
           text-align: center;
+          line-height: 35px;
         }
         ul {
           list-style: none;
@@ -668,7 +667,7 @@ body {
             width: 30px;
             height: 30px;
             .fa-brands {
-              font-size: 40px;
+              @include fz(40);
               color: $blue;
               &:hover {
                 color: red;
@@ -681,24 +680,18 @@ body {
     }
   }
 }
-@media screen and (max-width: 768px) {
-  .Portfolio {
-    h2 {
-      font-size: 25px;
-    }
-  }
-}
 
 .footer {
   background: $darkgray;
   max-width: 1200px;
   margin: 0 auto;
   h2 {
-    font-size: 35px;
+    @include fz(35);
     font-weight: 400;
     text-transform: uppercase;
     padding: 60px;
     text-align: center;
+    line-height: 50px;
   }
   .footer-media {
     display: flex;
@@ -708,7 +701,7 @@ body {
     margin: 0 auto;
     .footer-media-icon {
       .fa-brands {
-        font-size: 60px;
+        @include fz(60);
         color: $blue;
         &:hover {
           color: $orange;
@@ -725,7 +718,7 @@ body {
     color: $blue;
     a {
       line-height: 80px;
-      font-size: 25px;
+      @include fz(25);
       &:hover {
         color: $orange;
       }
@@ -734,9 +727,6 @@ body {
 }
 @media screen and (max-width: 768px) {
   .footer {
-    h2 {
-      font-size: 25px;
-    }
     .footer-media {
       display: flex;
       flex-wrap: wrap;
