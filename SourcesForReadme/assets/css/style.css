@@ -1,11 +1,14 @@
 @charset "UTF-8";
 /*формула автоперехода из px в rem*/
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Roboto", sans-serif;
   background: #f5daf9;
   color: #FFFFFF;
   font-size: 16;
-  scroll-behavior: smooth;
 }
 
 .header,

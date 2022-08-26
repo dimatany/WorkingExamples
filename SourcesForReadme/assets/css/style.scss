@@ -11,12 +11,15 @@ $base_fz: 16;/*формула автоперехода из px в rem*/
   font-size:($size_in_px/$base_fz)+rem;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: $content-text;
   background: #f5daf9;
   color: #FFFFFF;
   font-size: $base_fz;
-  scroll-behavior: smooth;
 }
 
 .header,
