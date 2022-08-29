@@ -82,7 +82,7 @@ $base_fz: 16;/*формула автоперехода из px в rem*/
   font-weight: 400;
   font-size: 16px;
   line-height: 26px;
-  height: 80px;
+  height: 100px;
 }
 
 %signature {
@@ -147,7 +147,6 @@ body {
   color: $color-parts;
   font-size: 20px;
 }
-
 
 .header {
   position: sticky;
@@ -218,7 +217,6 @@ body {
   transition: 0.75s;
   left: 12%;
   top: 45%;
-  -webkit-transform: scale(0.1);
   -ms-transform: scale(0.1);
   transform: scale(0.1);
   -webkit-box-shadow: 0 5px 5px rgba(0,0,0,.25);
@@ -238,17 +236,13 @@ body {
 }
 
 .open_menu .nav-item {
-  -webkit-transform: scale(1) rotate(360deg);
   -ms-transform: scale(1) rotate(360deg);
   transform: scale(1) rotate(360deg);
 }
-
 .open_menu .nav-item:hover {
-  -webkit-transform: scale(1.25) rotate(360deg);
   -ms-transform: scale(1.25) rotate(360deg);
   transform: scale(1.25) rotate(360deg);
 }
-
 .open_menu .nav-item:nth-child(1) {
   top: 45%;
   left: 35%;
@@ -275,7 +269,6 @@ body {
     top: 25%;
   }
   .open_menu .nav-item:hover {
-    -webkit-transform: scale(1.25) rotate(360deg);
     -ms-transform: scale(1.25) rotate(360deg);
     transform: scale(1.25) rotate(360deg);
   }
@@ -296,7 +289,6 @@ body {
     left: 70%;
   }
 }
-
 
 .flex {
   display: -webkit-box;
