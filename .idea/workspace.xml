@@ -3,96 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="9e3b3e94-a61a-441a-9884-624508bb6215" name="Changes" comment="commit">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSSLending/assets/css/icomoon.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSSLending/assets/css/reset.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSSLending/assets/css/style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSSLending/assets/css/style.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSSLending/assets/css/style.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSSLending/assets/css/stylesheet_font.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSSLending/assets/favicon/android-chrome-48x48.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSSLending/assets/favicon/apple-touch-icon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSSLending/assets/favicon/browserconfig.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSSLending/assets/favicon/favicon-16x16.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSSLending/assets/favicon/favicon-32x32.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSSLending/assets/favicon/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSSLending/assets/favicon/mstile-150x150.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSSLending/assets/favicon/safari-pinned-tab.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSSLending/assets/favicon/site.webmanifest" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSSLending/assets/fonts/Avenir-Black.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSSLending/assets/fonts/Avenir-Black.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSSLending/assets/fonts/Avenir-Black.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSSLending/assets/fonts/Avenir-Black.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSSLending/assets/fonts/Avenir-BlackOblique.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSSLending/assets/fonts/Avenir-BlackOblique.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSSLending/assets/fonts/Avenir-BlackOblique.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSSLending/assets/fonts/Avenir-BlackOblique.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSSLending/assets/fonts/Avenir-Book.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSSLending/assets/fonts/Avenir-Book.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSSLending/assets/fonts/Avenir-Book.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSSLending/assets/fonts/Avenir-Book.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSSLending/assets/fonts/Avenir-BookOblique.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSSLending/assets/fonts/Avenir-BookOblique.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSSLending/assets/fonts/Avenir-BookOblique.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSSLending/assets/fonts/Avenir-BookOblique.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSSLending/assets/fonts/Avenir-Heavy.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSSLending/assets/fonts/Avenir-Heavy.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSSLending/assets/fonts/Avenir-Heavy.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSSLending/assets/fonts/Avenir-Heavy.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSSLending/assets/fonts/Avenir-HeavyOblique.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSSLending/assets/fonts/Avenir-HeavyOblique.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSSLending/assets/fonts/Avenir-HeavyOblique.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSSLending/assets/fonts/Avenir-HeavyOblique.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSSLending/assets/fonts/Avenir-Light.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSSLending/assets/fonts/Avenir-Light.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSSLending/assets/fonts/Avenir-Light.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSSLending/assets/fonts/Avenir-Light.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSSLending/assets/fonts/Avenir-LightOblique.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSSLending/assets/fonts/Avenir-LightOblique.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSSLending/assets/fonts/Avenir-LightOblique.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSSLending/assets/fonts/Avenir-LightOblique.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSSLending/assets/fonts/Avenir-Medium.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSSLending/assets/fonts/Avenir-Medium.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSSLending/assets/fonts/Avenir-Medium.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSSLending/assets/fonts/Avenir-Medium.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSSLending/assets/fonts/Avenir-MediumOblique.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSSLending/assets/fonts/Avenir-MediumOblique.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSSLending/assets/fonts/Avenir-MediumOblique.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSSLending/assets/fonts/Avenir-MediumOblique.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSSLending/assets/fonts/Avenir-Oblique.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSSLending/assets/fonts/Avenir-Oblique.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSSLending/assets/fonts/Avenir-Oblique.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSSLending/assets/fonts/Avenir-Oblique.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSSLending/assets/fonts/Avenir-Roman.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSSLending/assets/fonts/Avenir-Roman.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSSLending/assets/fonts/Avenir-Roman.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSSLending/assets/fonts/Avenir-Roman.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSSLending/assets/fonts/demo.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSSLending/assets/fonts_icon/icomoon.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSSLending/assets/fonts_icon/icomoon.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSSLending/assets/fonts_icon/icomoon.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSSLending/assets/fonts_icon/icomoon.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSSLending/assets/images/avatar.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSSLending/assets/images/background1.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSSLending/assets/images/background2.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSSLending/assets/images/background3.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSSLending/assets/images/background4.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSSLending/assets/images/block1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSSLending/assets/images/block2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSSLending/assets/images/block3.1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSSLending/assets/images/block3.2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSSLending/assets/images/block3.3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSSLending/assets/images/block3.4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSSLending/assets/images/favicon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSSLending/assets/images/fb.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSSLending/assets/images/inst.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSSLending/assets/images/logo.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSSLending/assets/images/substrate.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSSLending/assets/images/twitter.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSSLending/assets/js/lazyload.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSSLending/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSSLending/robots.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSSLending/sitemap.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BootstrapJS-basket/assets/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/BootstrapJS-basket/assets/js/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BootstrapJS-basket/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/BootstrapJS-basket/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -146,14 +58,14 @@
     ]
   }
 }</component>
-  <component name="RunManager" selected="JavaScript Debug.index.html (2)">
-    <configuration name="index1.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/WorkingExamples/index1.html" useBuiltInWebServerPort="true">
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="JavaScript Debug.index.html (3)">
     <configuration name="index.html (1)" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/WorkingExamples/AJAX&amp;Bootstrap/index.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
     <configuration name="index.html (2)" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/WorkingExamples/CSSLending/index.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="index.html (3)" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/WorkingExamples/BootstrapJS-basket/index.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
     <configuration name="index.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/WorkingExamples/index.html" useBuiltInWebServerPort="true">
@@ -164,11 +76,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JavaScript Debug.index.html (3)" />
         <item itemvalue="JavaScript Debug.index.html (2)" />
         <item itemvalue="JavaScript Debug.index.html" />
         <item itemvalue="Node.js.main.js" />
         <item itemvalue="JavaScript Debug.index.html (1)" />
-        <item itemvalue="JavaScript Debug.index1.html" />
       </list>
     </recent_temporary>
   </component>
@@ -230,14 +142,8 @@
       <workItem from="1661512018985" duration="266000" />
       <workItem from="1661512501622" duration="2754000" />
       <workItem from="1661527882690" duration="48000" />
-      <workItem from="1661528429128" duration="7824000" />
-    </task>
-    <task id="LOCAL-00019" summary="first">
-      <created>1659947380381</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1659947380381</updated>
+      <workItem from="1661528429128" duration="10160000" />
+      <workItem from="1661771315735" duration="206000" />
     </task>
     <task id="LOCAL-00020" summary="commit">
       <created>1659953865195</created>
@@ -575,7 +481,14 @@
       <option name="project" value="LOCAL" />
       <updated>1661767989257</updated>
     </task>
-    <option name="localTasksCounter" value="68" />
+    <task id="LOCAL-00068" summary="commit">
+      <created>1661769187835</created>
+      <option name="number" value="00068" />
+      <option name="presentableId" value="LOCAL-00068" />
+      <option name="project" value="LOCAL" />
+      <updated>1661769187835</updated>
+    </task>
+    <option name="localTasksCounter" value="69" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -600,5 +513,17 @@
     <MESSAGE value="first" />
     <MESSAGE value="commit" />
     <option name="LAST_COMMIT_MESSAGE" value="commit" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/BootstrapJS-basket/assets/js/main.js</url>
+          <line>260</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

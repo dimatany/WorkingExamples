@@ -89,7 +89,6 @@ function checkAndAddToCard() {
         topPanel.error('Quantity value must be positive');
         valid = false;
     }
-    
     if (isNaN(price)) {
         topPanel.error('Enter price valid value');
         valid = false;
@@ -196,14 +195,11 @@ function checkAndApplyDiscount() {
         topPanel.error('Enter promo code');
         return false;
     }
-    
     const index = DISCOUNT.findIndex(el => el.promo === discPromo);
-    
     if (index === -1) {
         topPanel.error('Promo code not found');
         return false;
     }
-    
     const disc = DISCOUNT[index];
     
     if (disc.isUsed) {
