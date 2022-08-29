@@ -1,0 +1,232 @@
+@charset "UTF-8";
+body {
+  background: silver;
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.first_form, .second_form {
+  max-width: 540px;
+  width: 100%;
+  max-height: 590px;
+  background-color: hsl(0deg, 100%, 99.8%);
+  padding: 10px;
+  border-radius: 5px;
+  margin: 30px;
+  font-size: 15px;
+  color: hsl(0deg, 0%, 32.9%);
+}
+
+.first_form h1 {
+  font-size: 24px;
+  font-weight: 700;
+  word-spacing: -3px;
+  padding-top: 14px;
+  margin-bottom: 22px;
+  color: hsl(0deg, 0%, 0%);
+}
+
+.block_fields {
+  display: flex;
+  max-width: 502px;
+  width: 100%;
+}
+
+.field_input {
+  display: flex;
+  flex-direction: column;
+  height: 67px;
+  justify-content: space-between;
+  margin-left: 5px;
+}
+
+.field_input input {
+  width: 245px;
+  height: 38px;
+  border-radius: 5px;
+  border: 1px solid hsl(0deg, 0%, 89.4%);
+}
+
+.field_input input:hover {
+  border: 1px solid hsl(211.1deg, 100%, 50%);
+}
+
+.field_select {
+  width: 245px;
+  height: 38px;
+  border-radius: 5px;
+  border: 1px solid hsl(0deg, 0%, 89.4%);
+}
+
+.email {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 98px;
+  margin-top: 19px;
+  margin-bottom: 13px;
+}
+
+.email input {
+  width: 500px;
+  height: 38px;
+  border-radius: 5px;
+  border: 1px solid hsl(0deg, 0%, 89.4%);
+}
+
+.email input:hover {
+  border: 1px solid hsl(211.1deg, 100%, 50%);
+}
+
+.email p {
+  color: hsl(0deg, 0%, 58.8%);
+}
+
+.disabled_selected { /*как отступить текстом от начала поля?*/
+  color: hsl(0deg, 0%, 58.8%);
+}
+
+.radio {
+  margin-bottom: 20px;
+}
+
+.retreat {
+  margin-bottom: 20px;
+}
+
+.second_retreat {
+  padding-bottom: 20px;
+}
+
+.btn {
+  width: 500px;
+  height: 38px;
+  border-radius: 5px;
+  background-color: hsl(211.1deg, 100%, 50%);
+  text-align: center;
+  font-size: 16px;
+  color: hsl(0deg, 100%, 99.8%);
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.btn:hover {
+  color: hsl(0deg, 0%, 32.9%);
+  background-color: hsl(0deg, 100%, 99.8%);
+  border: 1px solid hsl(211.1deg, 100%, 50%);
+}
+
+.additions_block {
+  text-align: center;
+  margin: 0 60px;
+  line-height: 21px;
+}
+
+.additions_block {
+  color: hsl(0deg, 0%, 58.8%);
+}
+
+.additions {
+  font-size: 13px;
+}
+
+.additions_block a {
+  color: hsl(211.1deg, 100%, 50%);
+}
+
+footer {
+  border-top: 1px solid hsl(0deg, 0%, 89.4%);
+  margin-top: 17px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-align: center;
+}
+
+footer a {
+  color: hsl(211.1deg, 100%, 50%);
+}
+
+/*second_form*/
+.wrap {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.second_form h1 {
+  font-size: 24px;
+  font-weight: 500;
+  color: hsl(0deg, 0%, 0%);
+  margin-top: 16px;
+  margin-bottom: 23px;
+}
+
+.block_change_photo {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 19px;
+}
+
+.reset {
+  background: url("../images/iconBasket.png") no-repeat top right;
+  width: 40px;
+  height: 40px;
+  margin-top: -17px;
+}
+
+input[type=file] {
+  display: none;
+}
+
+.custom-file-upload {
+  display: inline-block;
+  margin-top: -27px;
+  cursor: pointer;
+  margin-left: 20px;
+  width: 139px;
+  height: 30px;
+  border-radius: 5px;
+  border: 1px solid hsl(0deg, 0%, 89.4%);
+}
+
+.custom-file-upload img {
+  padding-top: 5px;
+}
+
+.upload_photo {
+  display: flex;
+  align-items: center;
+}
+
+.block_fields {
+  display: flex;
+  max-width: 502px;
+  width: 100%;
+}
+
+.btn_second_form {
+  width: 150px;
+  height: 36px;
+  border-radius: 5px;
+  background-color: hsl(211.1deg, 100%, 50%);
+  text-align: center;
+  font-size: 16px;
+  color: hsl(0deg, 100%, 99.8%);
+  margin-bottom: 20px;
+  margin-top: 22px;
+}
+
+.btn_second_form:hover {
+  color: hsl(0deg, 0%, 32.9%);
+  background-color: hsl(0deg, 100%, 99.8%);
+  border: 1px solid hsl(211.1deg, 100%, 50%);
+}
+
+footer {
+  height: 200px;
+}
+
+/*# sourceMappingURL=style.css.map */

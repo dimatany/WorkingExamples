@@ -1,0 +1,246 @@
+$button-color: hsl(211.1,100%,50%);
+$background-container: hsl(0,0%,96.9%);
+$background-first_form: hsl(0,100%,99.8%);
+$text-color: hsl(0,0%,32.9%);
+$paragraph-color: hsl(0,0%,58.8%);
+$title-color: hsl(0,0%,0%);
+$border-color: hsl(0,0%,89.4%);
+$font-stack: 'Inter', sans-serif;
+
+body {
+  background: silver;
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.first_form, .second_form{
+  max-width: 540px;
+  width: 100%;
+  max-height: 590px;
+  background-color: $background-first_form;
+  padding: 10px;
+  border-radius: 5px;
+  margin: 30px;
+  font-size: 15px;
+  color: $text-color;
+}
+
+.first_form h1 {
+  font-size: 24px;
+  font-weight: 700;
+  word-spacing: -3px;
+  padding-top: 14px;
+  margin-bottom: 22px;
+  color: $title-color;
+}
+
+.block_fields {
+  display: flex;
+  max-width: 502px;
+  width: 100%;
+}
+
+.field_input {
+  display: flex;
+  flex-direction: column;
+  height: 67px;
+  justify-content: space-between;
+  margin-left: 5px;
+}
+
+.field_input input {
+  width: 245px;
+  height: 38px;
+  border-radius: 5px;
+  border: 1px solid $border-color;
+}
+
+.field_input input:hover {
+  border: 1px solid $button-color;
+}
+
+.field_select {
+  width: 245px;
+  height: 38px;
+  border-radius: 5px;
+  border: 1px solid $border-color;
+}
+
+.email {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 98px;
+  margin-top: 19px;
+  margin-bottom: 13px;
+}
+
+.email input {
+  width: 500px;
+  height: 38px;
+  border-radius: 5px;
+  border: 1px solid $border-color;
+}
+
+.email input:hover {
+  border: 1px solid $button-color;
+}
+
+.email p {
+  color: $paragraph-color;
+}
+
+.disabled_selected {/*как отступить текстом от начала поля?*/
+  color: $paragraph-color;
+}
+
+.radio {
+  margin-bottom: 20px;
+}
+
+.retreat {
+  margin-bottom: 20px;
+}
+
+.second_retreat {
+  padding-bottom: 20px;
+
+}
+
+.btn {
+  width: 500px;
+  height: 38px;
+  border-radius: 5px;
+  background-color: $button-color;
+  text-align: center;
+  font-size: 16px;
+  color: $background-first_form;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.btn:hover {
+  color: $text-color;
+  background-color: $background-first_form;
+  border: 1px solid $button-color;
+}
+
+.additions_block {
+  text-align: center;
+  margin: 0 60px;
+  line-height: 21px;
+}
+
+.additions_block {
+  color: $paragraph-color;
+}
+
+.additions {
+  font-size: 13px;
+}
+
+.additions_block a {
+  color: $button-color;
+}
+
+footer {
+  border-top: 1px solid $border-color;
+  margin-top: 17px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-align: center;
+}
+
+footer a {
+  color: $button-color;
+}
+
+/*second_form*/
+.wrap {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.second_form h1 {
+  font-size: 24px;
+  font-weight: 500;
+  color: $title-color;
+  margin-top: 16px;
+  margin-bottom: 23px;
+}
+
+.block_change_photo {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 19px;
+}
+
+.reset {
+  background: url("../images/iconBasket.png")  no-repeat top right;
+  width: 40px;
+  height: 40px;
+  margin-top: -17px;
+}
+
+input[type="file"] {
+  display: none;
+}
+
+.custom-file-upload {
+  display: inline-block;
+  margin-top: -27px;
+  cursor: pointer;
+  margin-left: 20px;
+
+  width: 139px;
+  height: 30px;
+  border-radius: 5px;
+  border: 1px solid $border-color;
+}
+
+.custom-file-upload img {
+  padding-top: 5px;
+}
+
+.upload_photo {
+  display: flex;
+  align-items: center;
+}
+
+.block_fields {
+  display: flex;
+  max-width: 502px;
+  width: 100%;
+}
+
+.btn_second_form {
+  width: 150px;
+  height: 36px;
+  border-radius: 5px;
+  background-color: $button-color;
+  text-align: center;
+  font-size: 16px;
+  color: $background-first_form;
+  margin-bottom: 20px;
+  margin-top: 22px;
+}
+.btn_second_form:hover {
+  color: $text-color;
+  background-color: $background-first_form;
+  border: 1px solid $button-color;
+}
+
+footer {
+  height: 200px;
+}
+
+
+
+
+
+
+

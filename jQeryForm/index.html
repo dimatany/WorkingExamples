@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <!--Теги отображения контента-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <!--Теги CEO-->
+    <meta name="description" content="lessons from html">
+    <meta name="robots" content="all">
+    <!--Теги технические-->
+    <meta name="Author" content="Dima Tatiana">
+    <meta name="Copyright" content="free Internet access">
+    <meta name="Address" content="Grigoria Vashchenko, 5">
+    <title>Lesson 13 - Form</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/plugins/jquery.formstyler.css">
+    <link rel="stylesheet" href="assets/plugins/jquery.formstyler.theme.css">
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<div class="first_form">
+    <div class="container">
+        <form method="post" name="create_account" action="#" target="_blank">
+            <h1>Create an Account</h1>
+            <div class="block_fields">
+                <div class="field_input">
+                    <label for="first_name">First Name</label>
+                    <input id="first_name" type="text" name="first_name" value="">
+                </div>
+                <div class="field_input">
+                    <label for="last_name">Last Name</label>
+                    <input id="last_name" type="text" name="last_name" value="">
+                </div>
+            </div>
+            <div class="email">
+                <label for="email_input">E-mail</label>
+                <input id="email_input" type="text" name="email"/>
+                <p class="additions">We'll never share your email with anyone else.</p>
+            </div>
+            <div class="radio">
+                <label><input type="radio" name="gender" value="Male" checked>Male</label>
+                <label><input type="radio" name="gender" value="Female">Female</label>
+            </div>
+            <div class="block_fields retreat">
+                <div class="field_input">
+                    <label for="select">Country</label>
+                    <select class="field_select" id="select" name="country" required="required">
+                        <option class="disabled_selected" disabled selected>Select</option>
+                        <option value="usa">USA</option>
+                        <option value="canada">CANADA</option>
+                        <option value="england">England</option>
+                    </select>
+                </div>
+                <div class="field_input">
+                    <label for="city">City</label>
+                    <input id="city" type="text" name="city" value="">
+                </div>
+            </div>
+            <button class="btn" type="submit">Sign Up</button>
+            <div class="additions_block">
+                <p class="additions">By clicking the "Sing Up" button, you confirm that you accept our
+                <a href="#">Terms of Use</a> and <a href="#">Privacy Policy</a></p>
+            </div>
+            <footer>
+                <p>Have an account?<a href="#">Log In</a></p>
+            </footer>
+        </form>
+    </div>
+</div>
+<div class="second_form">
+    <div class="container">
+        <form method="post" enctype="multipart/form-data" name="profile" action="#">
+            <div class="wrap">
+                <h1>Profile</h1>
+                <div class="block_change_photo">
+                    <img src="assets/images/avatar.png" alt="avatar">
+                    <div class="upload_photo">
+                        <label for="file-upload" class="custom-file-upload">
+                            <img alt="camera" src="assets/images/iconCamera.svg">
+                        </label>
+                        <input id="file-upload" type="file" name="avatar">
+                        <button class="reset"></button>
+                    </div>
+                </div>
+                <div class="block_fields second_retreat">
+                    <div class="field_input">
+                        <label for="name">Name</label>
+                        <input id="name" type="text" name="name" value="" required autocomplete="name">
+                    </div>
+                    <div class="field_input">
+                        <label for="email">E-mail</label>
+                        <input id="email" type="text" name="email" required autocomplete="email">
+                    </div>
+                </div>
+                <div class="block_fields second_retreat">
+                    <div class="field_input">
+                        <label for="select2">Country</label>
+                        <select id="select2" name="country" required="required">
+                            <option class="disabled_selected" disabled selected>Select</option>
+                            <option value="usa">USA</option>
+                            <option value="canada">CANADA</option>
+                            <option value="england">England</option>
+                        </select>
+                    </div>
+                    <div class="field_input">
+                        <label for="city2">City</label>
+                        <input id="city2" type="text" name="city" value="">
+                    </div>
+                </div>
+                <div class="block_fields">
+                    <div class="field_input">
+                        <label for="ZipCode">Zip Code</label>
+                        <input type="number" name="ZipCode" id="ZipCode" autocomplete="off">
+                    </div>
+                    <div class="field_input">
+                    <label for="PhoneNum">Phone Number</label>
+                    <input type="tel" name="phone" id="PhoneNum" required autocomplete="tel">
+                    </div>
+                </div>
+                <button class="btn_second_form" type="submit">Update</button>
+            </div>
+        </form>
+    </div>
+</div>
+<footer></footer>
+<script src="assets/js/jquery-3.6.0.min"></script>
+<script src="assets/plugins/jquery.formstyler.min.js"></script>
+<script>
+    (function($) {
+        $(function() {
+
+            $('input[type="radio"], select').styler();
+
+        });
+    })(jQuery);
+</script>
+</body>
+</html>
