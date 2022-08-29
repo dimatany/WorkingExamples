@@ -3,8 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="9e3b3e94-a61a-441a-9884-624508bb6215" name="Changes" comment="commit">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BootstrapJS-basket/assets/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/BootstrapJS-basket/assets/js/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BootstrapJS-basket/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/BootstrapJS-basket/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,14 +57,14 @@
     ]
   }
 }</component>
-  <component name="RunManager" selected="JavaScript Debug.index.html (3)">
-    <configuration name="index.html (1)" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/WorkingExamples/AJAX&amp;Bootstrap/index.html" useBuiltInWebServerPort="true">
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="JavaScript Debug.index.html (4)">
     <configuration name="index.html (2)" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/WorkingExamples/CSSLending/index.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
     <configuration name="index.html (3)" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/WorkingExamples/BootstrapJS-basket/index.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="index.html (4)" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/WorkingExamples/jQeryForm/index.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
     <configuration name="index.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/WorkingExamples/index.html" useBuiltInWebServerPort="true">
@@ -76,11 +75,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JavaScript Debug.index.html (4)" />
         <item itemvalue="JavaScript Debug.index.html (3)" />
         <item itemvalue="JavaScript Debug.index.html (2)" />
         <item itemvalue="JavaScript Debug.index.html" />
         <item itemvalue="Node.js.main.js" />
-        <item itemvalue="JavaScript Debug.index.html (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -143,14 +142,9 @@
       <workItem from="1661512501622" duration="2754000" />
       <workItem from="1661527882690" duration="48000" />
       <workItem from="1661528429128" duration="10160000" />
-      <workItem from="1661771315735" duration="206000" />
-    </task>
-    <task id="LOCAL-00020" summary="commit">
-      <created>1659953865195</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1659953865195</updated>
+      <workItem from="1661771315735" duration="541000" />
+      <workItem from="1661772161479" duration="116000" />
+      <workItem from="1661772281454" duration="151000" />
     </task>
     <task id="LOCAL-00021" summary="commit">
       <created>1659956295480</created>
@@ -488,7 +482,14 @@
       <option name="project" value="LOCAL" />
       <updated>1661769187835</updated>
     </task>
-    <option name="localTasksCounter" value="69" />
+    <task id="LOCAL-00069" summary="commit">
+      <created>1661771528786</created>
+      <option name="number" value="00069" />
+      <option name="presentableId" value="LOCAL-00069" />
+      <option name="project" value="LOCAL" />
+      <updated>1661771528786</updated>
+    </task>
+    <option name="localTasksCounter" value="70" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -520,7 +521,6 @@
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/BootstrapJS-basket/assets/js/main.js</url>
           <line>260</line>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>
