@@ -3,10 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="9e3b3e94-a61a-441a-9884-624508bb6215" name="Changes" comment="commit">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SourcesForReadme/assets/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/SourcesForReadme/assets/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SourcesForReadme/assets/css/style.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/SourcesForReadme/assets/css/style.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SourcesForReadme/assets/css/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/SourcesForReadme/assets/css/style.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SourcesForReadme/assets/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/SourcesForReadme/assets/js/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CSSLending/assets/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/CSSLending/assets/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CSSLending/assets/css/style.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/CSSLending/assets/css/style.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CSSLending/assets/css/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/CSSLending/assets/css/style.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -140,14 +139,7 @@
       <workItem from="1661512018985" duration="266000" />
       <workItem from="1661512501622" duration="2754000" />
       <workItem from="1661527882690" duration="48000" />
-      <workItem from="1661528429128" duration="3804000" />
-    </task>
-    <task id="LOCAL-00016" summary="first">
-      <created>1659714164007</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1659714164007</updated>
+      <workItem from="1661528429128" duration="5606000" />
     </task>
     <task id="LOCAL-00017" summary="first">
       <created>1659715724537</created>
@@ -485,7 +477,14 @@
       <option name="project" value="LOCAL" />
       <updated>1661529272939</updated>
     </task>
-    <option name="localTasksCounter" value="65" />
+    <task id="LOCAL-00065" summary="commit">
+      <created>1661761573451</created>
+      <option name="number" value="00065" />
+      <option name="presentableId" value="LOCAL-00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1661761573451</updated>
+    </task>
+    <option name="localTasksCounter" value="66" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
