@@ -58,7 +58,7 @@ body {
   display: flex;
   .hello-info {
     width: 45%;
-    margin: 0 auto 100px;
+    margin: 0 auto 160px;
     padding-left: 120px;
     h1 {
       @include fz(50);
@@ -100,7 +100,7 @@ body {
       position: relative;;
       img {
         position: absolute;
-        top: -76px;
+        top: -45px;
         left: 15px;
         width: 270px;
         height: auto;
@@ -110,7 +110,7 @@ body {
       position: relative;;
       svg {
         position: absolute;
-        top: -140px;
+        top: -110px;
         left: -95px;
         width: 510px;
         height: auto;
@@ -147,16 +147,17 @@ body {
         img {
           margin-top: 60px;
           top: -230px;
-          left: 50px;
+          left: 10%;
         }
       }
       .hello-pic-border {
-        position: relative;;
+        position: relative;
         svg {
           position: absolute;
-          top: -240px;
-          left: -65px;
-          width: 510px;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          width: 150%;
           height: auto;
         }
       }
