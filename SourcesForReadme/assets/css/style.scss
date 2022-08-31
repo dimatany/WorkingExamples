@@ -5,8 +5,8 @@ $darkgray: #2A2A2A;
 $lightgray: #3b3b3b;
 $background: #e5e5e5;
 $content-text: 'Roboto', sans-serif;
-$base_fz: 16;/*формула автоперехода из px в rem*/
-
+$base_fz: 16;
+//формула автоперехода из px в rem
 @mixin fz($size_in_px) {
   font-size:($size_in_px/$base_fz)+rem;
 }

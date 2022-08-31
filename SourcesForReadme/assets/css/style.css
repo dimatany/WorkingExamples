@@ -1,5 +1,3 @@
-@charset "UTF-8";
-/*формула автоперехода из px в rem*/
 html {
   scroll-behavior: smooth;
 }
