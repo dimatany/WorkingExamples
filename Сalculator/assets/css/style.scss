@@ -30,7 +30,20 @@ body {
     border: 2px solid $color-but4;
     box-shadow: 5px 5px 10px $box-shadow2,
     -5px -5px 10px $insert-shadow2;
+    .svg-light {
+      display: block;
+      position: fixed;
+      top: 20px;
+      right: 30px;
+      width: 50px;
+      height: 50px;
+    }
+    .svg-dark {
+      display: none;
+    }
+
   }
+
   .calculator {
     background: $background-dark-cal;
     box-shadow: 15px 15px 20px $box-shadow2,
@@ -62,17 +75,25 @@ body {
 }
 .toggleBtn {
   position: fixed;
-  top: 30px;
-  right: 60px;
-  //background: #555;
-  width: 60px;
-  height: 60px;
+  top: 20px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
   cursor: pointer;
   box-shadow: 5px 5px 10px $box-shadow,
   -5px -5px 10px $insert-shadow;
   border: 2px solid $button-shadow;
-  background-image: url("../img/dark.svg");
+  .svg-dark {
+    position: fixed;
+    top: 20px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+  }
+  .svg-light {
+    display: none;
+  }
 }
 .calculator {
   display: grid;

@@ -15,6 +15,17 @@ body {
   border: 2px solid #333;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.25), -5px -5px 10px rgba(255, 255, 255, 0.1);
 }
+.dark .toggleBtn .svg-light {
+  display: block;
+  position: fixed;
+  top: 20px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+}
+.dark .toggleBtn .svg-dark {
+  display: none;
+}
 .dark .calculator {
   background: #33393e;
   box-shadow: 15px 15px 20px rgba(0, 0, 0, 0.25), -15px -15px 20px rgba(255, 255, 255, 0.1);
@@ -40,15 +51,24 @@ body {
 
 .toggleBtn {
   position: fixed;
-  top: 30px;
-  right: 60px;
-  width: 60px;
-  height: 60px;
+  top: 20px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
   cursor: pointer;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1), -5px -5px 10px #fff;
   border: 2px solid #edf1f4;
-  background-image: url("../img/dark.svg");
+}
+.toggleBtn .svg-dark {
+  position: fixed;
+  top: 20px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+}
+.toggleBtn .svg-light {
+  display: none;
 }
 
 .calculator {
