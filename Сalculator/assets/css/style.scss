@@ -15,8 +15,6 @@ $color-but2: #2196f3;
 $color-but3: #555;
 $color-but4: #333;
 
-
-
 body {
   font-family: "Open Sans", serif;
   display: flex;
@@ -64,16 +62,17 @@ body {
 }
 .toggleBtn {
   position: fixed;
-  top: 20px;
-  right: 20px;
-  background: #555;
-  width: 20px;
-  height: 20px;
+  top: 30px;
+  right: 60px;
+  //background: #555;
+  width: 60px;
+  height: 60px;
   border-radius: 50%;
   cursor: pointer;
   box-shadow: 5px 5px 10px $box-shadow,
   -5px -5px 10px $insert-shadow;
   border: 2px solid $button-shadow;
+  background-image: url("../img/dark.svg");
 }
 .calculator {
   display: grid;
@@ -152,3 +151,4 @@ body {
     }
   }
 }
+
