@@ -1,0 +1,154 @@
+$background-color: #edf1f4;
+$background-color-dark: #282c2f;
+$background-dark-cal: #33393e;
+$box-shadow: rgba(0,0,0,0.1);
+$box-shadow2: rgba(0,0,0,0.25);
+$insert-shadow: #fff;
+$insert-shadow2: rgba(255, 255, 255, 0.1);
+$button-shadow: #edf1f4;
+$color-light: #5166d6;
+$color-dark: #eee;
+$color-num: #666;
+$color-ins: #f44336;
+$color-but: #31a935;
+$color-but2: #2196f3;
+$color-but3: #555;
+$color-but4: #333;
+
+
+
+body {
+  font-family: "Open Sans", serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: $background-color;
+}
+.dark {
+  background: $background-color-dark;
+  .toggleBtn {
+    background: $background-color;
+    border: 2px solid $color-but4;
+    box-shadow: 5px 5px 10px $box-shadow2,
+    -5px -5px 10px $insert-shadow2;
+  }
+  .calculator {
+    background: $background-dark-cal;
+    box-shadow: 15px 15px 20px $box-shadow2,
+    -15px -15px 20px $insert-shadow2;
+    .buttons {
+      #value {
+        color: $color-dark;
+        box-shadow: inset 15px 15px 20px $box-shadow2,
+       inset  -15px -15px 20px $insert-shadow2;
+      }
+      span {
+        color: $color-dark;
+        border: 2px solid $color-but4;
+        box-shadow: 5px 5px 10px $box-shadow2,
+        -5px -5px 10px $insert-shadow2;
+        &:active {
+          box-shadow: inset 5px 5px 10px $box-shadow2,
+          inset -5px -5px 10px $insert-shadow2;
+        }
+      }
+      #clear, #plus, #equal {
+        border: 2px solid $color-but4;
+      }
+      #clear:active, #plus:active, #equal:active {
+        box-shadow: inset 5px 5px 10px $box-shadow;
+      }
+    }
+  }
+}
+.toggleBtn {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: #555;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 5px 5px 10px $box-shadow,
+  -5px -5px 10px $insert-shadow;
+  border: 2px solid $button-shadow;
+}
+.calculator {
+  display: grid;
+  position: relative;
+  width: 340px;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 15px 15px 20px $box-shadow,
+  -15px -15px 20px $insert-shadow;
+  .buttons {
+    display: grid;
+    #value {
+      position: relative;
+      grid-column: span 4;
+      user-select: none;
+      overflow: unset;
+      width: 100%;
+      text-align: end;
+      color: $color-light;
+      height: 100px;
+      line-height: 100px;
+      box-shadow: inset 5px 5px 10px $box-shadow,
+      inset -5px -5px 20px $insert-shadow;
+      border-radius: 10px;
+      margin-bottom: 12px;
+      padding: 0 20px;
+      font-size: 2em;
+      font-weight: 500;
+    }
+    span {
+      position: relative;
+      padding: 10px;
+      box-shadow: 5px 5px 10px $box-shadow,
+      -5px -5px 20px $insert-shadow;
+      border-radius: 10px;
+      margin: 10px;
+      cursor: pointer;
+      user-select: none;
+      min-width: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 1.2em;
+      color: $color-num;
+      border: 2px solid $button-shadow;
+      &:active {
+        box-shadow: inset 5px 5px 10px $box-shadow,
+        inset -5px -5px 20px $insert-shadow;
+        color: #f44336;
+      }
+    }
+    #clear:active, #plus:active, #equal:active {
+      box-shadow: 5px 5px 10px $box-shadow,
+      -5px -5px 20px $insert-shadow,
+    inset 5px 5px 10px $box-shadow;
+
+    }
+
+    #clear {
+      grid-column: span 2;
+      background: $color-ins;
+      color: $insert-shadow;
+      border: 2px solid $button-shadow;
+    }
+    #plus {
+      grid-row: span 2;
+      background: $color-but;
+      color: $insert-shadow;
+      border: 2px solid $button-shadow;
+    }
+    #equal {
+      grid-row: span 2;
+      background: $color-but2;
+      color: $insert-shadow;
+      border: 2px solid $button-shadow;
+    }
+  }
+}
