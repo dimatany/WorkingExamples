@@ -4,11 +4,11 @@ let value = document.getElementById('value');
 let toggleBtn = document.querySelector('.toggleBtn');
 let body = document.querySelector('body');
 
+
 for(let i=0; i<btn.length; i++) {
 	btn[i].addEventListener('click', function(){
-		
 		if(this.innerHTML==='='){
-			value.innerHTML = eval(value.innerHTML);
+			value.innerHTML = eval(value.innerHTML).toFixed(2);
 		}else {
 			if(this.innerHTML==='Clear'){
 				value.innerHTML = '';
@@ -16,8 +16,14 @@ for(let i=0; i<btn.length; i++) {
 			else {
 				value.innerHTML += this.innerHTML;
 			}
+			//поправки
+			if(this.innerHTML==='/ 0'){
+				value.innerHTML = "error"
+			}
+			if(this.innerHTML === value.length > 3){
+				value.innerHTML = 'number too long';
+			}
 		}
-		
 	})
 }
 
