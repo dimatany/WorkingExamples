@@ -2,13 +2,10 @@ body {
   font-family: "Open Sans", serif;
   min-height: 100vh;
   background: #edf1f4;
-}
-body main {
   display: flex;
   align-items: center;
   justify-content: center;
 }
-
 .dark {
   background: #282c2f;
 }

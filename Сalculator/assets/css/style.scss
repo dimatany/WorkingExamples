@@ -19,11 +19,10 @@ body {
   font-family: "Open Sans", serif;
   min-height: 100vh;
   background: $background-color;
-  main {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  main {}
 }
 
 .dark {
