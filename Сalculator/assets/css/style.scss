@@ -17,13 +17,15 @@ $color-but4: #333;
 
 body {
   font-family: "Open Sans", serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  //min-height: 100vh;
-  max-height: 80vh;
+  min-height: 100vh;
   background: $background-color;
+  main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }
+
 .dark {
   background: $background-color-dark;
   .toggleBtn {
@@ -187,6 +189,5 @@ body {
   width: 150px;
   border-radius: 20px;
 }
-
  */
 
