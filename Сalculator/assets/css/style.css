@@ -2,9 +2,6 @@ body {
   font-family: "Open Sans", serif;
   min-height: 100vh;
   background: #edf1f4;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 .dark {
   background: #282c2f;
@@ -78,6 +75,7 @@ body {
   padding: 20px;
   border-radius: 20px;
   box-shadow: 15px 15px 20px rgba(0, 0, 0, 0.1), -15px -15px 20px #fff;
+  margin: 100px auto;
 }
 .calculator .buttons {
   display: grid;
@@ -141,7 +139,6 @@ body {
   border: 2px solid #edf1f4;
 }
 
-/*
 .toggleBtn:hover::after {
   content: attr(data-title);
   position: absolute;
@@ -154,10 +151,9 @@ body {
   text-align: center;
   font-size: 12px;
   padding: 20px 25px;
-  border: 1px solid $color-light;
+  border: 1px solid #5166d6;
   width: 150px;
   border-radius: 20px;
 }
- */
 
 /*# sourceMappingURL=style.css.map */

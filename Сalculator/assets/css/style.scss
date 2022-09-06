@@ -19,9 +19,6 @@ body {
   font-family: "Open Sans", serif;
   min-height: 100vh;
   background: $background-color;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   main {}
 }
 
@@ -104,6 +101,7 @@ body {
   border-radius: 20px;
   box-shadow: 15px 15px 20px $box-shadow,
   -15px -15px 20px $insert-shadow;
+  margin: 100px auto;
   .buttons {
     display: grid;
     #value {
@@ -171,7 +169,6 @@ body {
     }
   }
 }
-/*
 .toggleBtn:hover::after {
   content: attr(data-title);
   position: absolute;
@@ -188,5 +185,5 @@ body {
   width: 150px;
   border-radius: 20px;
 }
- */
+
 
