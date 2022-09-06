@@ -21,6 +21,7 @@ body {
   justify-content: center;
   align-items: center;
   //min-height: 100vh;
+  max-height: 80vh;
   background: $background-color;
 }
 .dark {
@@ -169,6 +170,7 @@ body {
     }
   }
 }
+/*
 .toggleBtn:hover::after {
   content: attr(data-title);
   position: absolute;
@@ -185,4 +187,6 @@ body {
   width: 150px;
   border-radius: 20px;
 }
+
+ */
 
