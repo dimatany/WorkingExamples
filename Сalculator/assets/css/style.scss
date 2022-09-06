@@ -30,20 +30,18 @@ body {
     border: 2px solid $color-but4;
     box-shadow: 5px 5px 10px $box-shadow2,
     -5px -5px 10px $insert-shadow2;
-    .svg-light {
-      display: block;
-      position: fixed;
-      top: 20px;
-      right: 30px;
-      width: 50px;
-      height: 50px;
-    }
-    .svg-dark {
+    .lightSVG svg {
       display: none;
     }
-
+    .darkSVG svg {
+      display: block;
+      position: fixed;
+      top: 27px;
+      right: 37px;
+      width: 35px;
+      height: 35px;
+    }
   }
-
   .calculator {
     background: $background-dark-cal;
     box-shadow: 15px 15px 20px $box-shadow2,
@@ -52,7 +50,7 @@ body {
       #value {
         color: $color-dark;
         box-shadow: inset 15px 15px 20px $box-shadow2,
-       inset  -15px -15px 20px $insert-shadow2;
+        inset  -15px -15px 20px $insert-shadow2;
       }
       span {
         color: $color-dark;
@@ -84,14 +82,15 @@ body {
   box-shadow: 5px 5px 10px $box-shadow,
   -5px -5px 10px $insert-shadow;
   border: 2px solid $button-shadow;
-  .svg-dark {
+  background: $background-color-dark;
+  .lightSVG svg{
     position: fixed;
-    top: 20px;
-    right: 30px;
-    width: 50px;
-    height: 50px;
+    top: 27px;
+    right: 37px;
+    width: 35px;
+    height: 35px;
   }
-  .svg-light {
+  .darkSVG svg {
     display: none;
   }
 }
@@ -148,10 +147,8 @@ body {
     #clear:active, #plus:active, #equal:active {
       box-shadow: 5px 5px 10px $box-shadow,
       -5px -5px 20px $insert-shadow,
-    inset 5px 5px 10px $box-shadow;
-
+      inset 5px 5px 10px $box-shadow;
     }
-
     #clear {
       grid-column: span 2;
       background: $color-ins;
@@ -172,4 +169,19 @@ body {
     }
   }
 }
-
+.toggleBtn:hover::after {
+  content: attr(data-title);
+  position: absolute;
+  left: -90px;
+  top: 50px;
+  z-index: 1;
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(5px);
+  font-style: italic;
+  text-align: center;
+  font-size: 12px;
+  padding: 20px 25px;
+  border: 1px solid $color-light;
+  width: 150px;
+  border-radius: 20px;
+}
