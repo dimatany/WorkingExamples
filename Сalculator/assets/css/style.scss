@@ -150,7 +150,7 @@ body {
       inset 5px 5px 10px $box-shadow;
     }
     #clear {
-      grid-column: span 2;
+      grid-column: span 1;
       background: $color-ins;
       color: $insert-shadow;
       border: 2px solid $button-shadow;
