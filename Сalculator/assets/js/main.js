@@ -32,7 +32,7 @@ document.querySelector('.buttons').onclick = (event) => {
 	//если нажата кнопка 0-9 или '.'
 	if(digit.includes(key)){
 		if (b ==='' && sign === '') {
-			if (key === '.' && a.includes('.')) {//нажатие двух точек
+			if (key === '.' && a.includes('.')) {//нажатие двух точек исключаем
 				a += '';
 				console.log(a, b, sign);
 				out.textContent = a;
@@ -48,8 +48,15 @@ document.querySelector('.buttons').onclick = (event) => {
 			out.textContent = b;
 		}
 		else {
-			b += key;
-			out.textContent = b;
+			if (key === '.' && b.includes('.')) {//нажатие двух точек исключаем
+				b += '';
+				console.log(a, b, sign);
+				out.textContent = b;
+			} else {
+				b += key;
+				console.log(a, b, sign);
+				out.textContent = b;
+			}
 		}
 		console.log(a, b, sign);
 		return;
