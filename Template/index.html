@@ -3,13 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <!-- Установите заголовок документа -->
     <title>New Project</title>
 
-    <meta name="description" content="Increasing prosperity in our lives can be accomplished by having the right frame of mind. The truth is, our thoughts are very powerful.">
+    <!--Позволяет контролировать, откуда загружаются ресурсы. Поместите как можно раньше в <head>, так как тег применяется только к ресурсам, которые объявлены после него.-->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'">
+
+    <!-- Установите базовый URL для всех относительных URL в документе -->
+    <base href="https://example.com/page.html">
+
+    <!-- Название веб-приложения (должно использоваться только в том случае, если веб-сайт используется как приложение) -->
+    <meta name="application-name" content="Имя приложения">
+
+    <!-- Цвет вкладки для Chrome на Android, Vivaldi, Safari 15 -->
+    <meta name="theme-color" content="#4285f4">
+
+    <!-- Краткое описание документа (ограничение до 150 символов) -->
+    <!-- Это содержимое может использоваться в результатах поисковых систем. -->
+    <meta name="description" content="...">
+
+    <!-- Управление поведением поисковых машин при осмотре и индексации сайта -->
+    <meta name="robots" content="index,follow"><!-- Все поисковые системы -->
+    <meta name="googlebot" content="index,follow"><!-- Специфика Google -->
+
+    <!-- Указывает Google не показывать поисковую строку site-links -->
+    <meta name="google" content="nositelinkssearchbox">
+
+    <!-- Указывает Google не переводить документ -->
+    <meta name="google" content="no translate">
+
+    <!-- Проверить право собственности сайта -->
+    <meta name="google-site-verification" content="verification_token"><!-- Google Search Console -->
+    <meta name="yandex-verification" content="verification_token"><!-- Яндекс Вебмастерам -->
+    <meta name="msvalidate.01" content="verification_token"><!-- Bing Webmaster Center -->
+    <meta name="alexaVerifyID" content="verification_token"><!-- Alexa Console -->
+    <meta name="p:domain_verify" content="code_from_pinterest"><!-- Pinterest Console-->
+    <meta name="norton-safeweb-site-verification" content="norton_code"><!-- Norton Safe Web -->
+
+    <!-- Укажите программное обеспечение, использованное для создания документа (например, WordPress, Dreamweaver) -->
+    <meta name="generator" content="название программного обеспечения">
+
+    <!-- Краткое описание темы вашего документа -->
+    <meta name="subject" content="тема вашего документа">
+
+    <!-- Дает общую возрастную оценку, основанную на содержании документа -->
+    <meta name="rating" content="General">
+
+    <!-- Позволяет контролировать, как передается информация о реферере -->
+    <meta name="referrer" content="no-referrer">
+
+    <!-- Отключить автоматическое определение и форматирование возможных телефонных номеров -->
+    <meta name="format-detection" content="phone=no">
+
+    <!-- Полностью отказаться от предварительной выборки DNS, установив значение "off" -->
+    <meta http-equiv="x-dns-prefetch-control" content="off">
+
+    <!-- Указывает документ, который будет отображаться в определенном фрейме -->
+    <meta http-equiv="Window-Target" content="_value">
+
+    <!-- Гео-теги -->
+    <meta name="ICBM" content="широта, долгота">.
+    <meta name="geo.position" content="широта;долгота">
+    <meta name="geo.region" content="country[-state]"><!-- Код страны (ISO 3166-1): обязательный, код штата (ISO 3166-2): необязательный; например, content="US" / content="US-NY" -->
+    <meta name="geo.placename" content="city/town"><!-- например, content="New York City" -->
+
+    <!-- Монетизация веб-сайтов https://webmonetization.org/docs/getting-started -->
+    <meta name="monetization" content="$payment-pointer.example">
+
+
     <meta name="msapplication-TileColor" content="#da532c">
-    <meta name="msapplication-config" content="assets/favicon/browserconfig.xml">
+    <meta name="msapplication-config" content="assets/favicon/browser-config.xml">
     <meta name="theme-color" content="#ffffff">
-    <meta name="robots" content="all">
+
     <meta name="revisit-after" content="30 days">
     <meta property="og:locale" content="en_EN">
     <meta property="og:type" content="website">
@@ -58,6 +123,7 @@
 <main></main>
 <footer></footer>
 
+<noscript>Please enable the JavaScript function to use our site</noscript>
 <script src="assets/js/lazyload.js"></script>
 <script src="assets/js/main.js"></script>
 </body>
