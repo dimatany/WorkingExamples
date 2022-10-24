@@ -2,8 +2,27 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9e3b3e94-a61a-441a-9884-624508bb6215" name="Changes" comment="commit">
+      <change afterPath="$PROJECT_DIR$/Dashboard/assets/css/reset.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dashboard/assets/css/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dashboard/assets/css/style.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dashboard/assets/css/style.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dashboard/assets/fonts/poppins/Poppins-Bold.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dashboard/assets/fonts/poppins/Poppins-Light.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dashboard/assets/fonts/poppins/Poppins-Medium.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dashboard/assets/img/Ellipse 8.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dashboard/assets/img/Group 31.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dashboard/assets/img/discountshape.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dashboard/assets/img/keysquare.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dashboard/assets/img/messagequestion.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dashboard/assets/img/search.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dashboard/assets/img/square.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dashboard/assets/img/usersquare.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dashboard/assets/img/walletmoney.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dashboard/assets/js/lazyload.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dashboard/assets/js/main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dashboard/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Template/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Template/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,30 +56,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/dimatatana/git/WorkingExamples&quot;,
-    &quot;list.type.of.created.stylesheet&quot;: &quot;SCSS&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "/Users/dimatatana/git/WorkingExamples",
+    "list.type.of.created.stylesheet": "SCSS",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.editor",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File&quot;: [
-      &quot;GitIgnore&quot;
+  "keyToStringList": {
+    "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
+      "GitIgnore"
     ]
   }
-}</component>
-  <component name="RunManager" selected="JavaScript Debug.index.html">
-    <configuration name="index.html (1)" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/WorkingExamples/Сalculator/index.html" useBuiltInWebServerPort="true">
-      <method v="2" />
-    </configuration>
+}]]></component>
+  <component name="RunManager" selected="JavaScript Debug.index.html (5)">
     <configuration name="index.html (2)" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/WorkingExamples/CSSLending/index.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
@@ -70,16 +86,19 @@
     <configuration name="index.html (4)" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/WorkingExamples/jQeryForm/index.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
+    <configuration name="index.html (5)" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/WorkingExamples/Dashboard/index.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
     <configuration name="index.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/WorkingExamples/index.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JavaScript Debug.index.html (5)" />
         <item itemvalue="JavaScript Debug.index.html" />
         <item itemvalue="JavaScript Debug.index.html (4)" />
         <item itemvalue="JavaScript Debug.index.html (3)" />
         <item itemvalue="JavaScript Debug.index.html (2)" />
-        <item itemvalue="JavaScript Debug.index.html (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -163,14 +182,14 @@
       <workItem from="1663747416755" duration="1548000" />
       <workItem from="1663751976241" duration="405000" />
       <workItem from="1663752387524" duration="297000" />
-      <workItem from="1663764635693" duration="728000" />
-    </task>
-    <task id="LOCAL-00049" summary="commit">
-      <created>1660202952292</created>
-      <option name="number" value="00049" />
-      <option name="presentableId" value="LOCAL-00049" />
-      <option name="project" value="LOCAL" />
-      <updated>1660202952292</updated>
+      <workItem from="1663764635693" duration="3828000" />
+      <workItem from="1665582691009" duration="53000" />
+      <workItem from="1665582864124" duration="5000" />
+      <workItem from="1665586357122" duration="5000" />
+      <workItem from="1666016070246" duration="8000" />
+      <workItem from="1666167731005" duration="37000" />
+      <workItem from="1666173978080" duration="29000" />
+      <workItem from="1666606938520" duration="19006000" />
     </task>
     <task id="LOCAL-00050" summary="commit">
       <created>1660211022626</created>
@@ -508,7 +527,14 @@
       <option name="project" value="LOCAL" />
       <updated>1663752669538</updated>
     </task>
-    <option name="localTasksCounter" value="98" />
+    <task id="LOCAL-00098" summary="commit">
+      <created>1663765392548</created>
+      <option name="number" value="00098" />
+      <option name="presentableId" value="LOCAL-00098" />
+      <option name="project" value="LOCAL" />
+      <updated>1663765392548</updated>
+    </task>
+    <option name="localTasksCounter" value="99" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
