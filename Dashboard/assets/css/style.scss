@@ -76,6 +76,9 @@ body {
       justify-content: flex-start;
       transition: all 0.1s ease-in;
       margin-bottom: 18px;
+      svg {
+        margin-left: -10px;
+      }
       span {
         padding-left: 13px;
       }
@@ -85,6 +88,8 @@ body {
         display: inline-block;
         padding: 3px;
         transform: rotate(-45deg);
+        margin-left: 67px;
+        margin-top: 18px;
       }
       &:hover,
       &.active {
@@ -152,4 +157,50 @@ body {
   flex-direction: row;
   justify-content: flex-start;
   padding: 16px;
+}
+
+
+
+////////////////////
+.test{
+  margin-top:30px;
+}
+
+li{
+  list-style:none;
+  padding:10px;
+  position:relative;
+
+}
+
+a{
+  text-decoration:none;
+  color:#555;
+  font:14px Oswald;
+  text-transform:uppercase;
+  position:relative;
+  z-index:1000;
+}
+
+.hover{
+  display:block;
+  position:absolute;
+  width:0%;
+  height:40px;
+  top:0px;
+  left:0px;
+  background:#d00355;
+  z-index:0;
+  opacity:0;
+}
+
+a:hover{
+  color:#FFF;
+}
+
+
+.arrow{
+  position:absolute;
+  left:150px;
+  top:1px;
 }

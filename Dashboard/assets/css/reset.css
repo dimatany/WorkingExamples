@@ -4,6 +4,10 @@
     margin: 0;
     box-sizing: border-box;
 }
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
 
 html, body {
     scroll-behavior: smooth;
@@ -96,3 +100,4 @@ input[type=checkbox] {
 }
 .header {}
 .footer {}
+
