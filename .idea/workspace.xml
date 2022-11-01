@@ -6,7 +6,6 @@
       <change beforePath="$PROJECT_DIR$/Dashboard/assets/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/Dashboard/assets/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Dashboard/assets/css/style.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/Dashboard/assets/css/style.css.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Dashboard/assets/css/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/Dashboard/assets/css/style.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dashboard/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Dashboard/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -176,14 +175,7 @@
       <workItem from="1666606938520" duration="21843000" />
       <workItem from="1666940530244" duration="2513000" />
       <workItem from="1667199361422" duration="275000" />
-      <workItem from="1667199689121" duration="24790000" />
-    </task>
-    <task id="LOCAL-00054" summary="commit">
-      <created>1660302030269</created>
-      <option name="number" value="00054" />
-      <option name="presentableId" value="LOCAL-00054" />
-      <option name="project" value="LOCAL" />
-      <updated>1660302030269</updated>
+      <workItem from="1667199689121" duration="25852000" />
     </task>
     <task id="LOCAL-00055" summary="commit">
       <created>1660302106896</created>
@@ -521,7 +513,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667218546064</updated>
     </task>
-    <option name="localTasksCounter" value="103" />
+    <task id="LOCAL-00103" summary="commit">
+      <created>1667298106386</created>
+      <option name="number" value="00103" />
+      <option name="presentableId" value="LOCAL-00103" />
+      <option name="project" value="LOCAL" />
+      <updated>1667298106386</updated>
+    </task>
+    <option name="localTasksCounter" value="104" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

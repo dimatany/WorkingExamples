@@ -1,5 +1,17 @@
-//$background-color: #22222;
-@media screen and (max-width: 720px) {}
+$background-color: #FFFFFF;
+$background-active: rgba(89, 50, 234, 1);
+$background-active2: rgba(22, 192, 152, 0.38);
+$background-active3: rgba(255, 197, 197, 1);
+$box-shadow: rgba(226, 236, 249, 0.5);
+$color-text: rgba(145, 151, 179, 1);
+$color-text2: rgba(255, 255, 255, 1);
+$color-text3: rgba(0, 0, 0, 1);
+$color-text4: rgba(22, 192, 152, 1);
+$color-text5: rgb(181, 183, 192);
+$color-text6: rgba(41, 45, 50, 1);
+$color-text7: rgba(0, 135, 103, 1);
+$color-text8: rgba(223, 4, 4, 1);
+$border-color: #EEEEEE;
 
 @font-face {
   font-family: "Poppins";
@@ -30,18 +42,16 @@ body {
   font-weight: 500;
   color: rgba(41, 45, 50, 1);
 }
-
 .dashboard {
   display: flex;
   flex-direction: row;
 }
-
 .left-side-bar {
   min-height: 1196px;
   height: 100vh;
-  background: #FFFFFF;
-  box-shadow: 0 10px 60px rgba(226, 236, 249, 0.5);
-  color: rgba(145, 151, 179, 1);
+  background: $background-color;
+  box-shadow: 0 10px 60px $box-shadow;
+  color: $color-text;
 }
 .logo {
   padding-top: 36px;
@@ -93,7 +103,7 @@ body {
           padding-top: 4px;
         }
         i {
-          border: solid rgba(145, 151, 179, 1);
+          border: solid $color-text;
           border-width: 0 2px 2px 0;
           display: inline-block;
           padding: 3px;
@@ -107,8 +117,8 @@ body {
       }
       &:hover {
         width: 250px;
-        background: rgba(89, 50, 234, 1);
-        color: rgba(255, 255, 255, 1);
+        background: $background-active;
+        color: $color-text2;
         transition: all 0.1s ease-in;
         border-radius: 10px;
       }
@@ -131,7 +141,7 @@ body {
     padding-left: 11px;
     span:first-child {
       font-weight: 500;
-      color: rgba(0, 0, 0, 1);
+      color: $color-text3;
       line-height: 23px;
     }
     span:last-child {
@@ -144,7 +154,6 @@ body {
     }
   }
 }
-
 .container {
   max-width: 968px;
   margin-left: 73px;
@@ -155,7 +164,7 @@ body {
     margin-bottom: 53px;
   }
   .maine {
-    background-color: rgba(255, 255, 255, 1);
+    background-color: $color-text2;
     border-radius: 25px;
   }
 }
@@ -180,7 +189,7 @@ body {
         line-height: 30px;
       }
       &:last-child {
-        color: rgba(22, 192, 152, 1);
+        color: $color-text4;
       }
     }
   }
@@ -223,7 +232,7 @@ body {
     width: 100%;
     border-collapse: collapse;
     tr {
-      border-bottom: 1px solid #EEEEEE;
+      border-bottom: 1px solid $border-color;
       td:nth-child(1) {
         width: 19%;
       }
@@ -254,7 +263,7 @@ body {
     thead {
       max-width: 863px;
       margin: 0 auto;
-      color: rgb(181, 183, 192);
+      color: $color-text5;
       font-weight: 400;
       font-size: 14px;
     }
@@ -263,7 +272,7 @@ body {
         td {
           padding-top: 25px;
           padding-bottom: 25px;
-          color: rgba(41, 45, 50, 1);
+          color: $color-text6;
           font-size: 14px;
         }
       }
@@ -271,20 +280,19 @@ body {
   }
 }
 .active {
-  background-color: rgba(22, 192, 152, 0.38);
+  background-color: $background-active2;
   padding: 4px 17px;
   border-radius: 5px;
-  color: rgba(0, 135, 103, 1);
-  border: 1px solid rgba(0, 135, 103, 1);
+  color: $color-text7;
+  border: 1px solid $color-text7;
 }
 .inactive {
   padding: 4px 10px;
   border-radius: 5px;
-  background-color: rgba(255, 197, 197, 1);
-  color: rgba(223, 4, 4, 1);
-  border: 1px solid rgba(223, 4, 4, 1);
+  background-color: $background-active3;
+  color: $color-text8;
+  border: 1px solid $color-text8;
 }
-
 .maine-footer {
   max-width: 968px;
   width: 100%;
@@ -295,40 +303,37 @@ body {
   justify-content: space-between;
   align-items: center;
   p {
-    color: rgba(181, 183, 192, 1);
+    color: $color-text5;
   }
-}
-
-///////////////////////////////////////
-
-.pagination {
-  background-color: #fff;
-  li {
-    display: inline-block;
-    list-style: none;
-    a {
-      display: block;
-      padding: 3px 11px;
-      font-size: 12px;
-      background-color: rgba(238, 238, 238, 1);
-      //text-align: center;
-      text-decoration: none;
-      color: #404B52;
-      border-radius: 4px;
-      margin: 2px;
-      transition: all .3s ease;
-      &:hover,
-      &.active-but {
-        color: #fff;
-        background-color: rgba(89, 50, 234, 1);
-        &:first-child {
-          a {
-            border-radius: 40px 0 0 40px;
+  .pagination {
+    background-color: #fff;
+    li {
+      display: inline-block;
+      list-style: none;
+      a {
+        display: block;
+        padding: 3px 11px;
+        font-size: 12px;
+        background-color: rgba(238, 238, 238, 1);
+        //text-align: center;
+        text-decoration: none;
+        color: #404B52;
+        border-radius: 4px;
+        margin: 2px;
+        transition: all .3s ease;
+        &:hover,
+        &.active-but {
+          color: #fff;
+          background-color: rgba(89, 50, 234, 1);
+          &:first-child {
+            a {
+              border-radius: 40px 0 0 40px;
+            }
           }
-        }
-        &:last-child {
-          a {
-            border-radius: 0 40px 40px 0;
+          &:last-child {
+            a {
+              border-radius: 0 40px 40px 0;
+            }
           }
         }
       }
@@ -336,3 +341,5 @@ body {
   }
 }
 
+
+@media screen and (max-width: 720px) {}

@@ -288,15 +288,14 @@ body {
 .maine-footer p {
   color: rgb(181, 183, 192);
 }
-
-.pagination {
+.maine-footer .pagination {
   background-color: #fff;
 }
-.pagination li {
+.maine-footer .pagination li {
   display: inline-block;
   list-style: none;
 }
-.pagination li a {
+.maine-footer .pagination li a {
   display: block;
   padding: 3px 11px;
   font-size: 12px;
@@ -307,14 +306,14 @@ body {
   margin: 2px;
   transition: all 0.3s ease;
 }
-.pagination li a:hover, .pagination li a.active-but {
+.maine-footer .pagination li a:hover, .maine-footer .pagination li a.active-but {
   color: #fff;
   background-color: rgb(89, 50, 234);
 }
-.pagination li a:hover:first-child a, .pagination li a.active-but:first-child a {
+.maine-footer .pagination li a:hover:first-child a, .maine-footer .pagination li a.active-but:first-child a {
   border-radius: 40px 0 0 40px;
 }
-.pagination li a:hover:last-child a, .pagination li a.active-but:last-child a {
+.maine-footer .pagination li a:hover:last-child a, .maine-footer .pagination li a.active-but:last-child a {
   border-radius: 0 40px 40px 0;
 }
 
