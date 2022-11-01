@@ -139,84 +139,94 @@
                 <table>
                     <thead>
                     <tr>
-                        <th scope="col">Customer Name</th>
-                        <th scope="col">Company</th>
-                        <th scope="col">Phone Number</th>
-                        <th scope="col">Email</th>
-                        <th scope="col">Country</th>
-                        <th scope="col">Status</th>
+                        <th>Customer Name</th>
+                        <th>Company</th>
+                        <th>Phone Number</th>
+                        <th>Email</th>
+                        <th>Country</th>
+                        <th>Status</th>
                     </tr>
                     </thead>
                     <tbody>
                     <tr>
-                        <td data-label="Customer Name">Jane Cooper</td>
-                        <td data-label="Company">Microsoft</td>
-                        <td data-label="Phone Number">(225) 555-0118</td>
-                        <td data-label="Email">jane@microsoft.com</td>
-                        <td data-label="Country">United States</td>
-                        <td data-label="Status">Active</td>
+                        <td>Jane Cooper</td>
+                        <td>Microsoft</td>
+                        <td>(225) 555-0118</td>
+                        <td>jane@microsoft.com</td>
+                        <td>United States</td>
+                        <td><span class="active">Active</span></td>
                     </tr>
                     <tr>
-                        <td data-label="Customer Name">Floyd Miles</td>
-                        <td data-label="Company">Yahoo</td>
-                        <td data-label="Phone Number">(205) 555-0100</td>
-                        <td data-label="Email">floyd@yahoo.com</td>
-                        <td data-label="Country">Kiribati</td>
-                        <td data-label="Status">Inactive</td>
+                        <td>Floyd Miles</td>
+                        <td>Yahoo</td>
+                        <td>(205) 555-0100</td>
+                        <td>floyd@yahoo.com</td>
+                        <td>Kiribati</td>
+                        <td><span class="inactive">Inactive</span></td>
                     </tr>
                     <tr>
-                        <td data-label="Customer Name">Ronald Richards</td>
-                        <td data-label="Company">Adobe</td>
-                        <td data-label="Phone Number">(302) 555-0107</td>
-                        <td data-label="Email">ronald@adobe.com</td>
-                        <td data-label="Country">Israel</td>
-                        <td data-label="Status">Inactive</td>
+                        <td>Ronald Richards</td>
+                        <td>Adobe</td>
+                        <td>(302) 555-0107</td>
+                        <td>ronald@adobe.com</td>
+                        <td>Israel</td>
+                        <td><span class="inactive">Inactive</span></td>
                     </tr>
                     <tr>
-                        <td data-label="Customer Name">Marvin McKinney</td>
-                        <td data-label="Company">Tesla</td>
-                        <td data-label="Phone Number">(252) 555-0126</td>
-                        <td data-label="Email">marvin@tesla.com</td>
-                        <td data-label="Country">Iran</td>
-                        <td data-label="Status">Active</td>
+                        <td>Marvin McKinney</td>
+                        <td>Tesla</td>
+                        <td>(252) 555-0126</td>
+                        <td>marvin@tesla.com</td>
+                        <td>Iran</td>
+                        <td><span class="active">Active</span></td>
                     </tr>
                     <tr>
-                        <td data-label="Customer Name">Jerome Bell</td>
-                        <td data-label="Company">Google</td>
-                        <td data-label="Phone Number">(629) 555-0129</td>
-                        <td data-label="Email">jerome@google.com</td>
-                        <td data-label="Country">Réunion</td>
-                        <td data-label="Status">Active</td>
+                        <td>Jerome Bell</td>
+                        <td>Google</td>
+                        <td>(629) 555-0129</td>
+                        <td>jerome@google.com</td>
+                        <td>Réunion</td>
+                        <td><span class="active">Active</span></td>
                     </tr>
                     <tr>
-                        <td data-label="Customer Name">Kathryn Murphy</td>
-                        <td data-label="Company">Microsoft</td>
-                        <td data-label="Phone Number">(406) 555-0120</td>
-                        <td data-label="Email">kathryn@microsoft.com</td>
-                        <td data-label="Country">Curaçao</td>
-                        <td data-label="Status">Active</td>
+                        <td>Kathryn Murphy</td>
+                        <td>Microsoft</td>
+                        <td>(406) 555-0120</td>
+                        <td>kathryn@microsoft.com</td>
+                        <td>Curaçao</td>
+                        <td><span class="active">Active</span></td>
                     </tr>
                     <tr>
-                        <td data-label="Customer Name">Jacob Jones</td>
-                        <td data-label="Company">Yahoo</td>
-                        <td data-label="Phone Number">(208) 555-0112</td>
-                        <td data-label="Email">jacob@yahoo.com</td>
-                        <td data-label="Country">Brazil</td>
-                        <td data-label="Status">Active</td>
+                        <td>Jacob Jones</td>
+                        <td>Yahoo</td>
+                        <td>(208) 555-0112</td>
+                        <td>jacob@yahoo.com</td>
+                        <td>Brazil</td>
+                        <td><span class="active">Active</span></td>
                     </tr>
                     <tr>
-                        <td data-label="Customer Name">Kristin Watson</td>
-                        <td data-label="Company">Facebook</td>
-                        <td data-label="Phone Number">(704) 555-0127</td>
-                        <td data-label="Email">kristin@facebook.com</td>
-                        <td data-label="Country">Åland Islands</td>
-                        <td data-label="Status">Inactive</td>
+                        <td>Kristin Watson</td>
+                        <td>Facebook</td>
+                        <td>(704) 555-0127</td>
+                        <td>kristin@facebook.com</td>
+                        <td>Åland Islands</td>
+                        <td><span class="inactive">Inactive</span></td>
                     </tr>
                     </tbody>
                 </table>
             </div>
             <div class="maine-footer">
                 <p>Showing data 1 to 8 of  256K entries</p>
+                <ul class="pagination">
+                    <li><a href="#">&lt;</a></li>
+                    <li><a class="active-but" href="#0">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">...</a></li>
+                    <li><a href="#">40</a></li>
+                    <li><a href="#">&gt;</a></li>
+                </ul>
             </div>
         </div>
     </div>

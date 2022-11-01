@@ -207,15 +207,32 @@ body {
 }
 
 .main-body {
-  max-width: 909px;
+  max-width: 968px;
   width: 100%;
-  margin: 0 auto 30px;
+  margin: 0 auto 25px;
+  padding: 0 23px 0 37px;
 }
 .main-body table {
   width: 100%;
+  border-collapse: collapse;
 }
 .main-body table tr {
   border-bottom: 1px solid #EEEEEE;
+}
+.main-body table tr td:nth-child(1) {
+  width: 19%;
+}
+.main-body table tr td:nth-child(2) {
+  width: 15%;
+}
+.main-body table tr td:nth-child(3) {
+  width: 16%;
+}
+.main-body table tr td:nth-child(4) {
+  width: 22%;
+}
+.main-body table tr td:nth-child(5) {
+  width: 17%;
 }
 .main-body table tr:last-child {
   margin-bottom: 30px;
@@ -238,10 +255,67 @@ body {
 .main-body table tbody tr td {
   padding-top: 25px;
   padding-bottom: 25px;
+  color: rgb(41, 45, 50);
+  font-size: 14px;
+}
+
+.active {
+  background-color: rgba(22, 192, 152, 0.38);
+  padding: 4px 17px;
+  border-radius: 5px;
+  color: rgb(0, 135, 103);
+  border: 1px solid rgb(0, 135, 103);
+}
+
+.inactive {
+  padding: 4px 10px;
+  border-radius: 5px;
+  background-color: rgb(255, 197, 197);
+  color: rgb(223, 4, 4);
+  border: 1px solid rgb(223, 4, 4);
 }
 
 .maine-footer {
-  padding-bottom: 40px;
+  max-width: 968px;
+  width: 100%;
+  margin: 0 auto 30px;
+  padding: 0 23px 35px 37px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.maine-footer p {
+  color: rgb(181, 183, 192);
+}
+
+.pagination {
+  background-color: #fff;
+}
+.pagination li {
+  display: inline-block;
+  list-style: none;
+}
+.pagination li a {
+  display: block;
+  padding: 3px 11px;
+  font-size: 12px;
+  background-color: rgb(238, 238, 238);
+  text-decoration: none;
+  color: #404B52;
+  border-radius: 4px;
+  margin: 2px;
+  transition: all 0.3s ease;
+}
+.pagination li a:hover, .pagination li a.active-but {
+  color: #fff;
+  background-color: rgb(89, 50, 234);
+}
+.pagination li a:hover:first-child a, .pagination li a.active-but:first-child a {
+  border-radius: 40px 0 0 40px;
+}
+.pagination li a:hover:last-child a, .pagination li a.active-but:last-child a {
+  border-radius: 0 40px 40px 0;
 }
 
 /*# sourceMappingURL=style.css.map */

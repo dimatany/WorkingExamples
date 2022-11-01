@@ -159,7 +159,6 @@ body {
     border-radius: 25px;
   }
 }
-
 .main-header {
   display: flex;
   flex-direction: row;
@@ -215,15 +214,31 @@ body {
     }
   }
 }
-
 .main-body {
-  max-width: 909px;
+  max-width: 968px;
   width: 100%;
-  margin: 0 auto 30px;
+  margin: 0 auto 25px;
+  padding: 0 23px 0 37px;
   table {
     width: 100%;
+    border-collapse: collapse;
     tr {
       border-bottom: 1px solid #EEEEEE;
+      td:nth-child(1) {
+        width: 19%;
+      }
+      td:nth-child(2) {
+        width: 15%;
+      }
+      td:nth-child(3) {
+        width: 16%;
+      }
+      td:nth-child(4) {
+        width: 22%;
+      }
+      td:nth-child(5) {
+        width: 17%;
+      }
       &:last-child {
         margin-bottom: 30px;
       }
@@ -248,15 +263,76 @@ body {
         td {
           padding-top: 25px;
           padding-bottom: 25px;
-
+          color: rgba(41, 45, 50, 1);
+          font-size: 14px;
         }
       }
     }
   }
 }
-
-.maine-footer {
-  padding-bottom: 40px;
+.active {
+  background-color: rgba(22, 192, 152, 0.38);
+  padding: 4px 17px;
+  border-radius: 5px;
+  color: rgba(0, 135, 103, 1);
+  border: 1px solid rgba(0, 135, 103, 1);
+}
+.inactive {
+  padding: 4px 10px;
+  border-radius: 5px;
+  background-color: rgba(255, 197, 197, 1);
+  color: rgba(223, 4, 4, 1);
+  border: 1px solid rgba(223, 4, 4, 1);
 }
 
+.maine-footer {
+  max-width: 968px;
+  width: 100%;
+  margin: 0 auto 30px;
+  padding: 0 23px 35px 37px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  p {
+    color: rgba(181, 183, 192, 1);
+  }
+}
+
+///////////////////////////////////////
+
+.pagination {
+  background-color: #fff;
+  li {
+    display: inline-block;
+    list-style: none;
+    a {
+      display: block;
+      padding: 3px 11px;
+      font-size: 12px;
+      background-color: rgba(238, 238, 238, 1);
+      //text-align: center;
+      text-decoration: none;
+      color: #404B52;
+      border-radius: 4px;
+      margin: 2px;
+      transition: all .3s ease;
+      &:hover,
+      &.active-but {
+        color: #fff;
+        background-color: rgba(89, 50, 234, 1);
+        &:first-child {
+          a {
+            border-radius: 40px 0 0 40px;
+          }
+        }
+        &:last-child {
+          a {
+            border-radius: 0 40px 40px 0;
+          }
+        }
+      }
+    }
+  }
+}
 
