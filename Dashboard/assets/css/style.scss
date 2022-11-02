@@ -155,6 +155,9 @@ body {
     }
   }
 }
+.hamburger {
+  display: none;
+}
 .container {
   max-width: 968px;
   margin-left: 73px;
@@ -176,7 +179,8 @@ body {
   flex-wrap: wrap;
   padding-top: 30px;
   padding-left: 38px;
-  width: 909px;
+  max-width: 909px;
+  width: 100%;
   margin-bottom: 40px;
   .main-header-name {
     display: flex;
@@ -350,7 +354,6 @@ body {
     }
   }
 }
-
 .hamburger.active .bar:nth-child(2) {
   opacity: 0;
 }
@@ -426,6 +429,6 @@ body {
     left: 0;
   }
   .nav-menu ul li a i {
-    margin-left: 20px;
+    margin-left: 30px;
   }
 }
