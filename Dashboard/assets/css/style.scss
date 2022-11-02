@@ -406,6 +406,7 @@ body {
     top: 45px;
     border: 1px solid transparent;
     border-radius: 0;
+    height: 100vh;
   }
   .hamburger {
     display: block;
@@ -420,7 +421,9 @@ body {
   }
   .active {
     background: $body-color;
-    position: fixed;
+    position: absolute;
+    top: 0;
+    left: 0;
   }
   .nav-menu ul li a i {
     margin-left: 20px;
