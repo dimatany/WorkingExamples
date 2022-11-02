@@ -266,6 +266,11 @@ body {
   color: rgb(0, 135, 103);
   border: 1px solid rgb(0, 135, 103);
 }
+.active:hover {
+  border: 1px solid rgb(0, 0, 0);
+  background-color: rgb(89, 50, 234);
+  color: rgb(255, 255, 255);
+}
 
 .inactive {
   padding: 4px 10px;
@@ -273,6 +278,11 @@ body {
   background-color: rgb(255, 197, 197);
   color: rgb(223, 4, 4);
   border: 1px solid rgb(223, 4, 4);
+}
+.inactive:hover {
+  border: 1px solid rgb(0, 0, 0);
+  background-color: rgb(89, 50, 234);
+  color: rgb(255, 255, 255);
 }
 
 .maine-footer {

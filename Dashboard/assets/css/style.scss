@@ -285,6 +285,11 @@ body {
   border-radius: 5px;
   color: $color-text7;
   border: 1px solid $color-text7;
+  &:hover {
+    border: 1px solid $color-text3;
+    background-color: $background-active;
+    color: $color-text2;
+  }
 }
 .inactive {
   padding: 4px 10px;
@@ -292,6 +297,11 @@ body {
   background-color: $background-active3;
   color: $color-text8;
   border: 1px solid $color-text8;
+  &:hover {
+    border: 1px solid $color-text3;
+    background-color: $background-active;
+    color: $color-text2;
+  }
 }
 .maine-footer {
   max-width: 968px;
