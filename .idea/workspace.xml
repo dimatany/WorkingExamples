@@ -2,7 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9e3b3e94-a61a-441a-9884-624508bb6215" name="Changes" comment="commit">
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BurgerMenuJS/assets/css/reset.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BurgerMenuJS/assets/css/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BurgerMenuJS/assets/css/style.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BurgerMenuJS/assets/css/style.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BurgerMenuJS/assets/img/Main (1280).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BurgerMenuJS/assets/img/logo-light.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BurgerMenuJS/assets/img/logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BurgerMenuJS/assets/img/profile-icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BurgerMenuJS/assets/img/search-icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BurgerMenuJS/assets/img/slider1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BurgerMenuJS/assets/img/slider2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BurgerMenuJS/assets/img/slider3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BurgerMenuJS/assets/js/main.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BurgerMenuJS/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dashboard/assets/css/style.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/Dashboard/assets/css/style.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dashboard/assets/css/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/Dashboard/assets/css/style.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dashboard/assets/js/lazyload.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dashboard/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Dashboard/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -172,14 +190,7 @@
       <workItem from="1666606938520" duration="21843000" />
       <workItem from="1666940530244" duration="2513000" />
       <workItem from="1667199361422" duration="275000" />
-      <workItem from="1667199689121" duration="26042000" />
-    </task>
-    <task id="LOCAL-00056" summary="commit">
-      <created>1660302562844</created>
-      <option name="number" value="00056" />
-      <option name="presentableId" value="LOCAL-00056" />
-      <option name="project" value="LOCAL" />
-      <updated>1660302562844</updated>
+      <workItem from="1667199689121" duration="28815000" />
     </task>
     <task id="LOCAL-00057" summary="commit">
       <created>1661258601958</created>
@@ -517,7 +528,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667299166893</updated>
     </task>
-    <option name="localTasksCounter" value="105" />
+    <task id="LOCAL-00105" summary="commit">
+      <created>1667299345290</created>
+      <option name="number" value="00105" />
+      <option name="presentableId" value="LOCAL-00105" />
+      <option name="project" value="LOCAL" />
+      <updated>1667299345290</updated>
+    </task>
+    <option name="localTasksCounter" value="106" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
