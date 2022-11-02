@@ -1,3 +1,4 @@
+$body-color: #f2f1f6;
 $background-color: #FFFFFF;
 $background-active: rgba(89, 50, 234, 1);
 $background-active2: rgba(22, 192, 152, 0.38);
@@ -37,10 +38,10 @@ $border-color: #EEEEEE;
 
 body {
   font-family: "Poppins", sans-serif;
-  background: #f2f1f6;
+  background: $body-color;
   font-size: 14px;
   font-weight: 500;
-  color: rgba(41, 45, 50, 1);
+  color: $color-text6;
 }
 .dashboard {
   display: flex;
@@ -67,7 +68,7 @@ body {
     font-size: 11px;
   }
 }
-.menu {
+.nav-menu {
   min-width: 306px;
   width: 100%;
   display: flex;
@@ -279,7 +280,7 @@ body {
     }
   }
 }
-.active {
+.active-but {
   background-color: $background-active2;
   padding: 4px 17px;
   border-radius: 5px;
@@ -291,7 +292,7 @@ body {
     color: $color-text2;
   }
 }
-.inactive {
+.inactive-but {
   padding: 4px 10px;
   border-radius: 5px;
   background-color: $background-active3;
@@ -350,5 +351,78 @@ body {
   }
 }
 
+.hamburger.active .bar:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.active .bar:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+.hamburger.active .bar:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: $color-text3;
+}
 
-@media screen and (max-width: 720px) {}
+@media screen and (max-width: 720px) {
+  .container {
+    max-width: 720px;
+    margin-left: 0;
+    .header {
+      margin-top: 90px;
+      margin-left: -45px;
+    }
+    .maine {
+      margin-left: -45px;
+    }
+  }
+  .left-side-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    background: $body-color;
+    width: 100%;
+  }
+  .nav-menu {
+    position: fixed;
+    left: 100%;
+    top: 45px;
+    width: 100%;
+    border-radius: 10px;
+    transition: 0.3s;
+    ul {
+      margin-top: 40px;
+      margin-left: 10%;
+    }
+  }
+  .nav-menu.active {
+    left: 0;
+    top: 45px;
+    border: 1px solid transparent;
+    border-radius: 0;
+  }
+  .hamburger {
+    display: block;
+    cursor: pointer;
+    margin: 20px;
+  }
+  .avatar {
+    display: none;
+  }
+  .logo {
+    display: none;
+  }
+  .active {
+    background: $body-color;
+    position: fixed;
+  }
+  .nav-menu ul li a i {
+    margin-left: 20px;
+  }
+}
