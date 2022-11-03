@@ -384,8 +384,7 @@ body {
 }
 @media screen and (max-width: 980px) {
   .container {
-    max-width: 720px;
-    margin-left: -90px;
+    margin-left: -20px;
   }
   .container .header {
     margin-top: 90px;
@@ -438,15 +437,12 @@ body {
   }
 }
 @media screen and (max-width: 660px) {
-  .main-body {
+  .main-body, .maine-footer {
     min-width: 968px;
   }
   .header, .maine {
     min-width: 320px; /* ширина нашего блока */
     overflow: auto;
-  }
-  .hamburger {
-    margin: 20px 45px 0 0;
   }
 }
 
