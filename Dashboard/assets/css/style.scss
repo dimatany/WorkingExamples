@@ -373,16 +373,43 @@ body {
   background-color: $color-text3;
 }
 
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 1210px) {
+  .main-body {
+    max-width: 968px;
+    width: 100%;
+    margin: 0 auto 25px;
+    padding: 0 23px 0 37px;
+    table {
+      tr {
+        td:nth-child(1) {
+          padding-left: 10px;
+        }
+        td:nth-child(2) {
+          padding-left: 10px;
+        }
+        td:nth-child(3) {
+          padding-left: 10px;
+        }
+        td:nth-child(4) {
+          padding-left: 10px;
+          word-break: break-all;
+        }
+        td:nth-child(5) {
+          padding-left: 10px;
+        }
+        &:last-child {
+          margin-bottom: 30px;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 980px) {
   .container {
     max-width: 720px;
-    margin-left: 0;
+    margin-left: -90px;
     .header {
       margin-top: 90px;
-      margin-left: -45px;
-    }
-    .maine {
-      margin-left: -45px;
     }
   }
   .left-side-bar {
@@ -390,7 +417,7 @@ body {
     justify-content: space-between;
     align-items: flex-start;
     background: $body-color;
-    width: 100%;
+    margin: 0 auto;
   }
   .nav-menu {
     position: fixed;
@@ -430,5 +457,17 @@ body {
   }
   .nav-menu ul li a i {
     margin-left: 30px;
+  }
+}
+@media screen and (max-width: 660px) {
+  .main-body {
+    min-width: 968px;
+  }
+ .header, .maine {
+   min-width:320px; /* ширина нашего блока */
+   overflow: auto;
+ }
+  .hamburger {
+    margin: 20px 45px 0 0;
   }
 }
