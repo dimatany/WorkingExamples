@@ -430,11 +430,12 @@ body {
     }
   }
   .nav-menu.active {
-    left: 0;
+    left: -24%;
     top: 45px;
     border: 1px solid transparent;
     border-radius: 0;
     height: 100vh;
+    width: 120%;
   }
   .hamburger {
     display: block;
