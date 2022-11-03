@@ -368,8 +368,7 @@ body {
   width: 25px;
   height: 3px;
   margin: 5px auto;
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.1s ease-in-out;
   background-color: $color-text3;
 }
 
@@ -440,7 +439,8 @@ body {
   .hamburger {
     display: block;
     cursor: pointer;
-    margin: 20px;
+    margin-top: 20px;
+    width: 25px;
   }
   .avatar {
     display: none;
@@ -453,6 +453,7 @@ body {
     position: absolute;
     top: 0;
     left: 0;
+    margin-left: 3%;
   }
   .nav-menu ul li a i {
     margin-left: 30px;
