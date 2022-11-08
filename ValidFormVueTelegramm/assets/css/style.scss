@@ -1,10 +1,116 @@
 $color-content: #4b5d68;
+$ruler: 16px;
+$color-red: #AE1100;
+$color-bg: #EBECF0;
+$color-shadow: #BABECC;
+$color-white: #FFF;
 
 body {
   color: $color-content;
+  background: wheat;
+  .banner {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    color: #fff;
+  }
+  .banner:after{
+    content: '';
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    bottom: 0;
+  }
+  .banner:before{
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    backface-visibility:hidden;
+    transform: translateZ(0) scale(1.0, 1.0);
+    background-image: url("https://images.unsplash.com/photo-1498354136128-58f790194fa7?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=8d66d0f68c7412e69612414926dbbe97&auto=format&fit=crop&w=1050&q=80");
+    background-size: cover ;
+    background-attachment: fixed;
+    animation: increase 50s linear 10ms infinite;
+    transition: all 0.2s ease-in-out;
+    z-index: -2;
+  }
+  @-webkit-keyframes increase {
+    0%{transform: scale(1)}
+    50%{transform: scale(1.5)}
+    100%{transform: scale(1)}
+  }
+  @-moz-keyframes increase {
+    0%{transform: scale(1)}
+    50%{transform: scale(1.5)}
+    100%{transform: scale(1)}
+  }
+  @keyframes increase {
+    0%{transform: scale(1)}
+    50%{transform: scale(1.5)}
+    100%{transform: scale(1)}
+  }
 }
 .container {
   max-width: 1250px;
   width: 90%;
   margin: 0 auto;
+  color: $color-content;
+  .row {
+    .col-4 {
+      flex: 0 auto;
+      width: 100%;
+      border-radius: 40px;
+    }
+    .row-wrap {
+      margin: 0 auto;
+      box-shadow:
+              10px 10px 10px #d1d9e6,
+              -5px -5px 5px  #f9f9f9;
+      form {
+        .card {
+          min-width: 220px;
+          max-width: 400px;
+          margin: 40px auto 40px;
+          background-color: rgba(255, 255, 255, 0.1);
+          backdrop-filter: blur(5px);
+          border-radius: 1rem;
+          .card-header {
+            background-color: transparent;
+          }
+          .card-body {}
+          .card-footer {
+            display: flex;
+            align-items: center;
+            margin: 0 auto;
+            background-color: transparent;
+            border-top: 1px solid transparent;
+            .btn{
+              background-color: #0a58ca;
+              min-width: 120px;
+              border-radius: 20px;margin-bottom: 20px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+/////////////////////
+label {
+  display: block;
+  margin-bottom: $ruler*1.5;
+  width: 100%;
+}
+input, textarea {
+  margin-right: $ruler/2;
+  box-shadow:  inset 2px 2px 5px $color-shadow, inset -5px -5px 10px $color-white;
+  width: 100%;
+  box-sizing: border-box;
+  transition: all 0.2s ease-in-out;
+  appearance: none;
 }
