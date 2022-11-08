@@ -1,246 +1,331 @@
-$button-color: hsl(211.1,100%,50%);
-$background-container: hsl(0,0%,96.9%);
-$background-first_form: hsl(0,100%,99.8%);
-$text-color: hsl(0,0%,32.9%);
-$paragraph-color: hsl(0,0%,58.8%);
-$title-color: hsl(0,0%,0%);
-$border-color: hsl(0,0%,89.4%);
-$font-stack: 'Inter', sans-serif;
+$blue: #007BFF;
+$light: #969696;
+$medium: #545454;
+$dark: #1C1C1C;
+$border: #E4E4E4;
 
+*, *::before, *::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  outline: none;
+  position: relative;
+}
+html,
+body,
+.pageWrap {
+  width: 100%;
+  height: 100%;
+  background-image: url("../images/abs2.jpg");
+}
 body {
-  background: silver;
-}
-
-.container {
-  width: 100%;
-  margin: 0 auto;
-}
-
-.first_form, .second_form{
-  max-width: 540px;
-  width: 100%;
-  max-height: 590px;
-  background-color: $background-first_form;
-  padding: 10px;
-  border-radius: 5px;
-  margin: 30px;
-  font-size: 15px;
-  color: $text-color;
-}
-
-.first_form h1 {
-  font-size: 24px;
-  font-weight: 700;
-  word-spacing: -3px;
-  padding-top: 14px;
-  margin-bottom: 22px;
-  color: $title-color;
-}
-
-.block_fields {
-  display: flex;
-  max-width: 502px;
-  width: 100%;
-}
-
-.field_input {
-  display: flex;
-  flex-direction: column;
-  height: 67px;
-  justify-content: space-between;
-  margin-left: 5px;
-}
-
-.field_input input {
-  width: 245px;
-  height: 38px;
-  border-radius: 5px;
-  border: 1px solid $border-color;
-}
-
-.field_input input:hover {
-  border: 1px solid $button-color;
-}
-
-.field_select {
-  width: 245px;
-  height: 38px;
-  border-radius: 5px;
-  border: 1px solid $border-color;
-}
-
-.email {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 98px;
-  margin-top: 19px;
-  margin-bottom: 13px;
-}
-
-.email input {
-  width: 500px;
-  height: 38px;
-  border-radius: 5px;
-  border: 1px solid $border-color;
-}
-
-.email input:hover {
-  border: 1px solid $button-color;
-}
-
-.email p {
-  color: $paragraph-color;
-}
-
-.disabled_selected {/*как отступить текстом от начала поля?*/
-  color: $paragraph-color;
-}
-
-.radio {
-  margin-bottom: 20px;
-}
-
-.retreat {
-  margin-bottom: 20px;
-}
-
-.second_retreat {
-  padding-bottom: 20px;
-
-}
-
-.btn {
-  width: 500px;
-  height: 38px;
-  border-radius: 5px;
-  background-color: $button-color;
-  text-align: center;
-  font-size: 16px;
-  color: $background-first_form;
-  margin-bottom: 20px;
-  margin-top: 20px;
-}
-
-.btn:hover {
-  color: $text-color;
-  background-color: $background-first_form;
-  border: 1px solid $button-color;
-}
-
-.additions_block {
-  text-align: center;
-  margin: 0 60px;
-  line-height: 21px;
-}
-
-.additions_block {
-  color: $paragraph-color;
-}
-
-.additions {
+  font-family: 'Inter', sans-serif;
+  color: $light;
   font-size: 13px;
+  line-height: 18px;
 }
-
-.additions_block a {
-  color: $button-color;
-}
-
-footer {
-  border-top: 1px solid $border-color;
-  margin-top: 17px;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  text-align: center;
-}
-
-footer a {
-  color: $button-color;
-}
-
-/*second_form*/
-.wrap {
-  width: 100%;
-  max-width: 500px;
-  margin: 0 auto;
-}
-
-.second_form h1 {
+h1 {
+  font-weight: 800;
   font-size: 24px;
-  font-weight: 500;
-  color: $title-color;
-  margin-top: 16px;
-  margin-bottom: 23px;
+  line-height: 32px;
+  letter-spacing: -0.4px;
+  color: $dark;
 }
-
-.block_change_photo {
+h2 {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 32px;
+  letter-spacing: -0.4px;
+  color: $dark;
+}
+a, button {
+  transition: all .2s ease;
+}
+a {
+  text-decoration: none;
+  color: $blue;
+}
+a:hover {
+  text-decoration: underline;
+}
+ol, ul {
+  list-style: none;
+}
+.pageWrap {
+  background-color: #f7f7f7;
   display: flex;
-  flex-direction: row;
-  margin-bottom: 19px;
+  justify-content: center;
 }
-
-.reset {
-  background: url("../images/iconBasket.png")  no-repeat top right;
-  width: 40px;
-  height: 40px;
-  margin-top: -17px;
+.container {
+  width: 1100px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
-
-input[type="file"] {
-  display: none;
+.formWrap {
+  background-color: #fff;
+  width: calc(50% - 10px);
+  max-width: 540px;//nen
+  height: 590px;
+  margin-top: 50px;
+  padding: 20px 18px;
+  border-radius: 10px;
 }
-
-.custom-file-upload {
-  display: inline-block;
-  margin-top: -27px;
+.formRow {
+  display: flex;
+  justify-content: space-between;
+}
+.w50 {
+  width: calc(50% - 6px);
+}
+.formElement {
+  margin-bottom: 20px;
+}
+.formElement label {
+  display: block;
+  font-family: 'Inter', sans-serif;
+  color: $medium;
+  font-size: 15px;
+  line-height: 22px;
+  margin-bottom: 7px;
+}
+input+p {
+  margin-top: 7px;
+}
+input[type=text],
+input[type=email],
+select,
+.fakeFileWrap,
+.btn {
+  width: 100%;
+  height: 38px;
+  border: 1px solid $border;
+  border-radius: 6px;
+  padding: 8px 10px;
+  font-family: 'Inter', sans-serif;
+  color: $medium;
+}
+input[type=text]:focus,
+input[type=email]:focus,
+.fakeFile:focus,
+select:focus {
+  background: transparent;
+  border: 1px solid $blue;
+}
+input[type=radio] {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+input[type=radio]+label {
   cursor: pointer;
-  margin-left: 20px;
-
-  width: 139px;
-  height: 30px;
-  border-radius: 5px;
-  border: 1px solid $border-color;
+  position: relative;
+  padding-left: 30px;
+  display: inline-block;
+}
+input[type=radio]+label:before {
+  content: '';
+  display: block;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  border: 1px solid $border;
+  background-color: #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+input[type=radio]+label:after {
+  content: '';
+  display: block;
+  width: 25px;
+  height: 25px;
+  border: 7px solid $blue;
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0;
+  transition: all .2ms ease-in;
+  left: 0;
+  top: 0;
+  z-index: 2;
 }
 
-.custom-file-upload img {
-  padding-top: 5px;
+.jq-selectbox{
+  width: 100%;
+}
+.jq-selectbox__select {
+  width: 100%;
+  height: 38px;
+  border: 1px solid $border;
+  border-radius: 6px;
+  padding: 8px 10px;
+  color: var(--medium);
+  border-radius: 4px;
+  background: #FFF;
+  box-shadow: none;
+  font: 15px/22px 'Inter', sans-serif;
+  text-shadow: none;
+}
+.jq-selectbox__select:hover {
+  background: #FFF;
+}
+.jq-selectbox__trigger{
+  border-left: none;
+}
+.jq-selectbox__trigger-arrow {
+  width: 18px;
+  height: 18px;
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  border: none;
+}
+.jq-selectbox__trigger-arrow::before,
+.jq-selectbox__trigger-arrow::after{
+  content: '';
+  display: block;
+  width: 0;
+  height: 0;
+  border-right: 6px solid transparent;
+  border-left: 6px solid transparent;
+  position: absolute;
+  right: 6px;
+}
+.jq-selectbox__trigger-arrow::before{
+  position: absolute;
+  top: 1px;
+  border-bottom: 6px solid #999;
+}
+.jq-selectbox__trigger-arrow::after{
+  position: absolute;
+  bottom: 1px;
+  border-top: 6px solid #999;
+}
+.jq-selectbox.focused .jq-selectbox__select {
+  border: 1px solid $blue;
+}
+.jq-selectbox li:hover {
+  background-color: $blue;
 }
 
-.upload_photo {
+input[type=radio]:checked+label::after {
+  opacity: 1;
+}
+.btn {
+  text-transform: uppercase;
+  font-weight: 600;
+  cursor: pointer;
+  background-color: $blue;
+  color: #fff;
+  margin-bottom: 22px;
+}
+.btn:hover {
+  background-color: #fff;
+  border: 1px solid $blue;
+  color: var(--blue);
+
+}
+.w30 {
+  width: 30%;
+}
+.pPolici {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.forLogIn {
+  color: $medium;
+  text-align: center;
+  font-size: 15px;
+  line-height: 22px;
+}
+.forLogIn a {
+  font-weight: 600;
+}
+.forLogIn::before {
+  content: '';
+  display: block;
+  width: 100%;
+  border-top: 1px solid $border;
+  margin-bottom: 20px;
+}
+.profile {
+  width: 100%;
   display: flex;
   align-items: center;
+  justify-content: flex-start;
 }
-
-.block_fields {
-  display: flex;
-  max-width: 502px;
+#avPic {
+  width: 80px;
+  height: 80px;
+}
+.fakeFileWrap{
+  width: 138px;
+  height: 30px;
+  margin: 0 10px 0 0;
+}
+.fakeFile {
   width: 100%;
+  height: 100%;
+  padding: 8px 32px 8px 10px;
+}
+.fakeFileWrap input {
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 2;
+  padding: 8px 32px 8px 10px;
+}
+.icon {
+  width: 16px;
+  height: 16px;
+  color: $light;
+  position: absolute;
+  top: 8px;
+  right: 8px;
+}
+.feFlex{
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 20px;
+}
+.feFlex p{
+  flex-basis: 100%;
+  padding-top: 9px;
+}
+.btnDelete{
+  width: 30px;
+  height: 30px;
+  border: 1px solid $border;
+  border-radius: 6px;
+  background: #fff;
+  color: $light;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.icon2{
+  width: 16px;
+  height: 16px;
+  display: block;
+  position: absolute;
+  top: 8px;
+  right: 5px;
+}
+.icon-camera:before {
+  content: "\e90f";
 }
 
-.btn_second_form {
-  width: 150px;
-  height: 36px;
-  border-radius: 5px;
-  background-color: $button-color;
-  text-align: center;
-  font-size: 16px;
-  color: $background-first_form;
-  margin-bottom: 20px;
-  margin-top: 22px;
+
+@media screen and (max-width: 1080px) {
+  .formWrap{
+    width: 100%;
+    margin: 40px auto 40px;
+  }
+  .forLogIn::before{
+    margin-bottom: 10px;
+  }
 }
-.btn_second_form:hover {
-  color: $text-color;
-  background-color: $background-first_form;
-  border: 1px solid $button-color;
-}
-
-footer {
-  height: 200px;
-}
-
-
-
-
-
-
-

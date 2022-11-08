@@ -21,121 +21,167 @@
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-<div class="first_form">
+
+<div class="pageWrap">
     <div class="container">
-        <form method="post" name="create_account" action="#" target="_blank">
-            <h1>Create an Account</h1>
-            <div class="block_fields">
-                <div class="field_input">
-                    <label for="first_name">First Name</label>
-                    <input id="first_name" type="text" name="first_name" value="">
+        <div class="formWrap">
+            <form action="#" method="post">
+                <div class="formElement">
+                    <h1>Create an Account</h1>
                 </div>
-                <div class="field_input">
-                    <label for="last_name">Last Name</label>
-                    <input id="last_name" type="text" name="last_name" value="">
-                </div>
-            </div>
-            <div class="email">
-                <label for="email_input">E-mail</label>
-                <input id="email_input" type="text" name="email"/>
-                <p class="additions">We'll never share your email with anyone else.</p>
-            </div>
-            <div class="radio">
-                <label><input type="radio" name="gender" value="Male" checked>Male</label>
-                <label><input type="radio" name="gender" value="Female">Female</label>
-            </div>
-            <div class="block_fields retreat">
-                <div class="field_input">
-                    <label for="select">Country</label>
-                    <select class="field_select" id="select" name="country" required="required">
-                        <option class="disabled_selected" disabled selected>Select</option>
-                        <option value="usa">USA</option>
-                        <option value="canada">CANADA</option>
-                        <option value="england">England</option>
-                    </select>
-                </div>
-                <div class="field_input">
-                    <label for="city">City</label>
-                    <input id="city" type="text" name="city" value="">
-                </div>
-            </div>
-            <button class="btn" type="submit">Sign Up</button>
-            <div class="additions_block">
-                <p class="additions">By clicking the "Sing Up" button, you confirm that you accept our
-                <a href="#">Terms of Use</a> and <a href="#">Privacy Policy</a></p>
-            </div>
-            <footer>
-                <p>Have an account?<a href="#">Log In</a></p>
-            </footer>
-        </form>
-    </div>
-</div>
-<div class="second_form">
-    <div class="container">
-        <form method="post" enctype="multipart/form-data" name="profile" action="#">
-            <div class="wrap">
-                <h1>Profile</h1>
-                <div class="block_change_photo">
-                    <img src="assets/images/avatar.png" alt="avatar">
-                    <div class="upload_photo">
-                        <label for="file-upload" class="custom-file-upload">
-                            <img alt="camera" src="assets/images/iconCamera.svg">
-                        </label>
-                        <input id="file-upload" type="file" name="avatar">
-                        <button class="reset"></button>
+
+                <div class="formRow">
+                    <div class="formElement w50">
+                        <label for="firstName">First Name</label>
+                        <input type="text" name="firstName" id="firstName">
+                    </div>
+                    <div class="formElement w50">
+                        <label for="lastName">Last Name</label>
+                        <input type="text" name="lastName" id="lastName">
                     </div>
                 </div>
-                <div class="block_fields second_retreat">
-                    <div class="field_input">
-                        <label for="name">Name</label>
-                        <input id="name" type="text" name="name" value="" required autocomplete="name">
-                    </div>
-                    <div class="field_input">
-                        <label for="email">E-mail</label>
-                        <input id="email" type="text" name="email" required autocomplete="email">
-                    </div>
+
+                <div class="formElement">
+                    <label for="email">E-mail</label>
+                    <input type="email" name="email" id="email">
+                    <p>We'll never share your email with anyone else. </p>
                 </div>
-                <div class="block_fields second_retreat">
-                    <div class="field_input">
-                        <label for="select2">Country</label>
-                        <select id="select2" name="country" required="required">
-                            <option class="disabled_selected" disabled selected>Select</option>
-                            <option value="usa">USA</option>
-                            <option value="canada">CANADA</option>
-                            <option value="england">England</option>
+                <div class="formElement">
+                    <input type="radio" name="gender" value="man" id="man" checked>
+                    <label for="man"> Man</label>
+                    <input type="radio" name="gender" value="female" id="female">
+                    <label for="female">Female</label>
+                </div>
+
+                <div class="formRow">
+                    <div class="formElement w50">
+                        <label for="country">Country</label>
+                        <select name="country" id="country">
+                            <option></option>
+                            <option>Ukraine</option>
+                            <option>USA</option>
+                            <option>Canada</option>
+                            <option>Poland</option>
                         </select>
                     </div>
-                    <div class="field_input">
+                    <div class="formElement w50">
+                        <label for="city">City</label>
+                        <input type="text" name="city" id="city">
+                    </div>
+                </div>
+
+                <button class="btn" type="submit">Sign Up</button>
+            </form>
+            <p class="pPolici">By clicking the 'Sign Up' button, you confirm that you accept our <a href="#">Terms
+                of Use</a>
+                and <a href="#">Privacy Policy. </a></p>
+            <p class="forLogIn">Have an account? <a href="#">Log In</a></p>
+        </div>
+        <div class="formWrap">
+            <form action="#" method="post" enctype="multipart/form-data">
+                <div class="formElement">
+                    <h2>Profile</h2>
+                </div>
+                <div class="formRow profile">
+                    <div class="formElement">
+                        <img id="avPic" src="assets/images/avatar.png" alt="photo">
+                    </div>
+                    <div class="formElement feFlex">
+                        <div class="fakeFileWrap">
+                            <div class="fakeFile"> </div>
+                            <input type="file" name="avatar">
+                            <span class="icon">
+                                <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                     viewBox="0 0 230.629 230.629" style="enable-background:new 0 0 230.629 230.629;" xml:space="preserve">
+<path d="M230.629,59.325H0v150.989h230.629V59.325z M115.314,183.373c-26.814,0-48.553-21.738-48.553-48.554
+	c0-26.814,21.738-48.553,48.553-48.553s48.555,21.739,48.555,48.553C163.869,161.635,142.129,183.373,115.314,183.373z
+	 M88.041,20.315h54.547l17.943,28.93H70.1L88.041,20.315z M144.447,134.819c0,16.089-13.043,29.133-29.133,29.133
+	c-16.088,0-29.131-13.044-29.131-29.133c0-16.089,13.043-29.132,29.131-29.132C131.404,105.688,144.447,118.73,144.447,134.819z" fill="#969696"/>
+</svg>
+
+
+                            </span>
+                        </div>
+                        <button class="btnDelete">
+                            <span class="icon2">
+                                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                     viewBox="0 0 297 297" style="enable-background:new 0 0 297 297;" xml:space="preserve">
+			<path d="M150.333,203.762c0-32.35,26.317-58.667,58.667-58.667c6.527,0,12.8,1.087,18.669,3.063l4.882-58.587H47.163
+				l14.518,174.21C63.233,282.408,79.091,297,97.784,297h84.147c18.692,0,34.551-14.592,36.103-33.219l0.173-2.081
+				c-3.001,0.475-6.075,0.729-9.207,0.729C176.651,262.429,150.333,236.112,150.333,203.762z" fill="#969696"/>
+			<path d="M209,158.714c-24.839,0-45.048,20.209-45.048,45.048c0,24.839,20.209,45.048,45.048,45.048s45.048-20.209,45.048-45.048
+				C254.048,178.923,233.839,158.714,209,158.714z M231.101,216.232c2.659,2.66,2.659,6.971,0,9.631
+				c-1.33,1.329-3.073,1.994-4.816,1.994c-1.742,0-3.486-0.665-4.816-1.994L209,213.393l-12.47,12.47
+				c-1.33,1.329-3.073,1.994-4.816,1.994c-1.742,0-3.486-0.665-4.816-1.994c-2.659-2.66-2.659-6.971,0-9.631l12.47-12.47
+				l-12.47-12.47c-2.659-2.66-2.659-6.971,0-9.631c2.66-2.658,6.971-2.658,9.631,0l12.47,12.47l12.47-12.47
+				c2.661-2.658,6.972-2.658,9.632,0c2.659,2.66,2.659,6.971,0,9.631l-12.47,12.47L231.101,216.232z" fill="#969696"/>
+			<path d="M112.095,26.102c0-6.883,5.6-12.483,12.483-12.483h30.556c6.884,0,12.484,5.6,12.484,12.483v8.507h13.619v-8.507
+				C181.238,11.71,169.528,0,155.135,0h-30.556c-14.392,0-26.102,11.71-26.102,26.102v8.507h13.618V26.102z" fill="#969696"/>
+			<path d="M236.762,63.643c0-8.5-6.915-15.415-15.415-15.415H58.367c-8.5,0-15.415,6.915-15.415,15.415v12.31h193.81V63.643z" fill="#969696"/>
+</svg>
+
+                            </span>
+                        </button>
+                        <p>Up to 1 MB (300x300 px)</p>
+                    </div>
+                </div>
+                <div class="formRow">
+                    <div class="formElement w50">
+
+                        <label for="name">Name</label>
+                        <input type="text" name="name" id="name">
+                    </div>
+                    <div class="formElement w50">
+                        <label for="email2">E-mail</label>
+                        <input type="text" name="email" id="email2">
+                    </div>
+                </div>
+                <div class="formRow">
+                    <div class="formElement w50">
+                        <label for="country2">Country</label>
+                        <select name="country" id="country2">
+                            <option></option>
+                            <option>Ukraine</option>
+                            <option>USA</option>
+                            <option>Canada</option>
+                            <option>Poland</option>
+                        </select>
+                    </div>
+                    <div class="formElement w50">
                         <label for="city2">City</label>
-                        <input id="city2" type="text" name="city" value="">
+                        <input type="text" name="city" id="city2">
                     </div>
                 </div>
-                <div class="block_fields">
-                    <div class="field_input">
-                        <label for="ZipCode">Zip Code</label>
-                        <input type="number" name="ZipCode" id="ZipCode" autocomplete="off">
+                <div class="formRow">
+                    <div class="formElement w50">
+                        <label for="zipCode">Zip Code</label>
+                        <input type="text" name="zipCode" id="zipCode">
                     </div>
-                    <div class="field_input">
-                    <label for="PhoneNum">Phone Number</label>
-                    <input type="tel" name="phone" id="PhoneNum" required autocomplete="tel">
+                    <div class="formElement w50">
+                        <label for="tel">Phone Number</label>
+                        <input type="text" name="tel" id="tel">
                     </div>
                 </div>
-                <button class="btn_second_form" type="submit">Update</button>
-            </div>
-        </form>
+                <button class="btn w30" type="submit">Update</button>
+            </form>
+        </div>
     </div>
 </div>
-<footer></footer>
-<script src="assets/js/jquery-3.6.0.min"></script>
+
+<script src="assets/js/jquery-3.6.0.slim.min.js"></script>
 <script src="assets/plugins/jquery.formstyler.min.js"></script>
 <script>
-    (function($) {
-        $(function() {
+	(function ($) {
+		$(function () {
 
-            $('input[type="radio"], select').styler();
+			$('select').styler({
+				selectSearch: true,
 
-        });
-    })(jQuery);
+				selectPlaceholder:"Select",
+			});
+		});
+
+	})(jQuery);
 </script>
 </body>
 </html>

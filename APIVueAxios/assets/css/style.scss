@@ -1,16 +1,15 @@
 $heart-color: red;
 $color-content: rgba(0, 0, 0, .7);
 
+
 body {
   color: $color-content;
 }
-
 .wrap-container {
   max-width: 1170px;
   width: 90%;
   margin: 0 auto;
 }
-
 .modal_overlay {
   position: fixed;
   left: 0;
@@ -23,7 +22,6 @@ body {
   justify-content: center;
   z-index:100;
 }
-
 .modal_overlay .my_modal {
   border-radius: 8px;
   background-color: #616264;
@@ -36,47 +34,37 @@ body {
   align-items: center;
   justify-content: center;
 }
-
 .favourite, .my_btn {
   position: absolute;
   right:20px;
 }
-
 .my_btn {
   top:20px;
 }
-
 .none {
   display:none;
 }
-
 .block {
   display:block;
 }
-
 .my_card {
   position:relative;
 }
-
 .favourite {
   bottom: 20px;
   height: 40px;
   width:40px;
 }
-
 .favourite .active svg {
  fill:$heart-color;
 }
-
 svg {
   width: 100%;
   height: 100%;
 }
-
 p {
   color: #fff;
 }
-
 .card {
   position: relative;
   display: flex;
@@ -86,7 +74,7 @@ p {
 }
 
 //////////////////////////////////////////////////
-body{
+body {
   --background-color: #ffffff;
   --text-color: black;
   --header-color: #616264;

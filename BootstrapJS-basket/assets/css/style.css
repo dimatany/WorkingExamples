@@ -1,0 +1,22 @@
+.top-panel {
+  position: fixed;
+  left: 0;
+  width: 100%;
+  top: 0;
+  padding: 20px 0;
+  text-align: center;
+  z-index: 1000;
+  color: #fff;
+  font-weight: 600;
+}
+.top-panel.panel-error {
+  background-color: tomato;
+}
+.top-panel.panel-success {
+  background-color: green;
+}
+.top-panel.panel-info {
+  background-color: lightskyblue;
+}
+
+/*# sourceMappingURL=style.css.map */
