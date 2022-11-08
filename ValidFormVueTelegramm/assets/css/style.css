@@ -26,7 +26,7 @@ body .banner:before {
   left: 0;
   backface-visibility: hidden;
   transform: translateZ(0) scale(1, 1);
-  background-image: url("https://images.unsplash.com/photo-1498354136128-58f790194fa7?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=8d66d0f68c7412e69612414926dbbe97&auto=format&fit=crop&w=1050&q=80");
+  background-image: url(../image/zvezdi.jpg);
   background-size: cover;
   background-attachment: fixed;
   animation: increase 50s linear 10ms infinite;
@@ -71,7 +71,9 @@ body .banner:before {
   max-width: 1250px;
   width: 90%;
   margin: 0 auto;
-  color: #4b5d68;
+  color: white;
+  font-size: 14px;
+  font-style: italic;
 }
 .container .row .col-4 {
   flex: 0 auto;
@@ -101,10 +103,21 @@ body .banner:before {
   border-top: 1px solid transparent;
 }
 .container .row .row-wrap form .card .card-footer .btn {
-  background-color: #0a58ca;
+  width: 140px;
+  height: 50px;
+  border-width: 1px;
+  color: #ffffff;
+  border-color: #057fd0;
+  font-weight: bold;
+  box-shadow: 0px 1px 0px 0px #f0f7fa;
+  text-shadow: 0px -1px 0px #5b6178;
+  background: linear-gradient(#33bdef, #019ad2);
   min-width: 120px;
   border-radius: 20px;
   margin-bottom: 20px;
+}
+.container .row .row-wrap form .card .card-footer .btn:hover {
+  background: linear-gradient(#019ad2, #33bdef);
 }
 
 label {

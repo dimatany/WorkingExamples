@@ -2,11 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9e3b3e94-a61a-441a-9884-624508bb6215" name="Changes" comment="commit1">
+      <change afterPath="$PROJECT_DIR$/ValidFormVueTelegramm/assets/image/zvezdi.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ValidFormVueTelegramm/assets/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/ValidFormVueTelegramm/assets/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ValidFormVueTelegramm/assets/css/style.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/ValidFormVueTelegramm/assets/css/style.css.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ValidFormVueTelegramm/assets/css/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/ValidFormVueTelegramm/assets/css/style.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ValidFormVueTelegramm/feedback.html" beforeDir="false" afterPath="$PROJECT_DIR$/ValidFormVueTelegramm/feedback.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -181,14 +181,7 @@
       <workItem from="1667379404933" duration="18359000" />
       <workItem from="1667815537246" duration="1123000" />
       <workItem from="1667897336026" duration="6817000" />
-      <workItem from="1667904309421" duration="7088000" />
-    </task>
-    <task id="LOCAL-00072" summary="commit">
-      <created>1661772795066</created>
-      <option name="number" value="00072" />
-      <option name="presentableId" value="LOCAL-00072" />
-      <option name="project" value="LOCAL" />
-      <updated>1661772795066</updated>
+      <workItem from="1667904309421" duration="8732000" />
     </task>
     <task id="LOCAL-00073" summary="commit">
       <created>1661772877412</created>
@@ -526,7 +519,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667904629159</updated>
     </task>
-    <option name="localTasksCounter" value="121" />
+    <task id="LOCAL-00121" summary="commit1">
+      <created>1667920563353</created>
+      <option name="number" value="00121" />
+      <option name="presentableId" value="LOCAL-00121" />
+      <option name="project" value="LOCAL" />
+      <updated>1667920563353</updated>
+    </task>
+    <option name="localTasksCounter" value="122" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
