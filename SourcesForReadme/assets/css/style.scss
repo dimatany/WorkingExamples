@@ -25,7 +25,6 @@ body {
 .header,
 .hello {
   background: $lightgray;
-  max-width: 1200px;
   margin: 0 auto;
 }
 
@@ -48,7 +47,6 @@ body {
 
 .maine {
   background: $lightgray;
-  max-width: 1200px;
   margin: 0 auto;
   padding-bottom: 80px;
   overflow-anchor: none;
@@ -689,7 +687,6 @@ body {
 
 .footer {
   background: $lightgray;
-  max-width: 1200px;
   margin: 0 auto;
   h2 {
     @include fz(35);

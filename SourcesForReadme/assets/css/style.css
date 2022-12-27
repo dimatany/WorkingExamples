@@ -12,7 +12,6 @@ body {
 .header,
 .hello {
   background: #3b3b3b;
-  max-width: 1200px;
   margin: 0 auto;
 }
 
@@ -35,7 +34,6 @@ body {
 
 .maine {
   background: #3b3b3b;
-  max-width: 1200px;
   margin: 0 auto;
   padding-bottom: 80px;
   overflow-anchor: none;
@@ -625,7 +623,6 @@ body {
 
 .footer {
   background: #3b3b3b;
-  max-width: 1200px;
   margin: 0 auto;
 }
 .footer h2 {
