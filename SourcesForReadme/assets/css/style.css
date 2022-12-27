@@ -11,7 +11,7 @@ body {
 
 .header,
 .hello {
-  background: #2A2A2A;
+  background: #3b3b3b;
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -624,7 +624,7 @@ body {
 }
 
 .footer {
-  background: #2A2A2A;
+  background: #3b3b3b;
   max-width: 1200px;
   margin: 0 auto;
 }
