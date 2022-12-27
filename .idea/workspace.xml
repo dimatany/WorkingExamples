@@ -2,8 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9e3b3e94-a61a-441a-9884-624508bb6215" name="Changes" comment="commit1">
-      <change beforePath="$PROJECT_DIR$/ValidFormVueTelegramm/assets/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/ValidFormVueTelegramm/assets/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ValidFormVueTelegramm/assets/css/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/ValidFormVueTelegramm/assets/css/style.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourcesForReadme/assets/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/SourcesForReadme/assets/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourcesForReadme/assets/css/style.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/SourcesForReadme/assets/css/style.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourcesForReadme/assets/css/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/SourcesForReadme/assets/css/style.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -178,14 +181,12 @@
       <workItem from="1667379404933" duration="18359000" />
       <workItem from="1667815537246" duration="1123000" />
       <workItem from="1667897336026" duration="6817000" />
-      <workItem from="1667904309421" duration="8773000" />
-    </task>
-    <task id="LOCAL-00074" summary="commit">
-      <created>1661946627319</created>
-      <option name="number" value="00074" />
-      <option name="presentableId" value="LOCAL-00074" />
-      <option name="project" value="LOCAL" />
-      <updated>1661946627319</updated>
+      <workItem from="1667904309421" duration="8892000" />
+      <workItem from="1669036460949" duration="178000" />
+      <workItem from="1669041541349" duration="57000" />
+      <workItem from="1669198177400" duration="513000" />
+      <workItem from="1669202778390" duration="45000" />
+      <workItem from="1672127996842" duration="160000" />
     </task>
     <task id="LOCAL-00075" summary="commit">
       <created>1662381780226</created>
@@ -523,7 +524,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667922626651</updated>
     </task>
-    <option name="localTasksCounter" value="123" />
+    <task id="LOCAL-00123" summary="commit1">
+      <created>1667922655058</created>
+      <option name="number" value="00123" />
+      <option name="presentableId" value="LOCAL-00123" />
+      <option name="project" value="LOCAL" />
+      <updated>1667922655058</updated>
+    </task>
+    <option name="localTasksCounter" value="124" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
