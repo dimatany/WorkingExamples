@@ -326,246 +326,56 @@ body {
     align-items: center;
     padding-bottom: 100px;
     .list {
-      position: relative;
-      width: 550px;
-      padding: 50px;
+      margin: 10px;
       background: #2f363e;
-      box-shadow: 25px 25px 75px rgba(0, 0, 0, 0.25),
-      10px 10px 70px rgba(0, 0, 0, 0.25),
-      inset 5px 5px 10px rgba(0, 0, 0, 0.5),
-      inset 5px 5px 20px rgba(255, 255, 255, 0.2),
-      inset -5px -5px 15px rgba(0, 0, 0, 0.75);
+      box-shadow: inset 2px 2px 2px hsl(0deg 0% 100% / 25%), inset -2px -2px 2px rgb(0 0 0 / 25%);
       border-radius: 30px;
+      padding: 30px;
+      width: 500px;
       .list-item {
-        position: relative;
-        display: flex;
-        align-items: center;
-        margin: 15px 0;
-        cursor: pointer;
-      }
-      .list-item .rank {
-        position: relative;
-        min-width: 45px;
-        height: 45px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border-radius: 50%;
-        margin-right: 35px;
-      }
-      .list-item .rank::before {
-        content: '';
-        position: absolute;
-        width: 30px;
-        height: 30px;
-        background: #2f363e;
-        border-radius: 30px;
-        transform: scale(0);
-        transition: 0.5s;
-      }
-      .list-item:hover .rank::before {
-        transform: scale(1);
-      }
-      .list-item .rank span {
-        position: relative;
-        @include fz(16);
-        font-weight: 600;
-        color: #fff;
-        transition: 0.5s;
-      }
-      .list-item::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 45px;
-        height: 45px;
-        background: $blue;
-        border-radius: 22.5px;
-        box-shadow: 5px 5px 7px rgba(0, 0, 0, 0.25),
-        inset 2px 2px 5px rgba(255, 255, 255, 0.5),
-        inset -3px -3px 5px rgba(0, 0, 0, 0.5);
-        transition: 0.5s;
-      }
-      .list-item:hover::before {
-        width: 70%;
-      }
-    }
-    .list-item .name {
-      position: relative;
-      line-height: 1.15rem;
-      .name h4 {
-        font-weight: 600;
-        color: #bcbcc0;
-        transition: 0.5s;
-      }
-      .list-item:hover .name h4,{
-        color: #fff;
-      }
-    }
-    .mySkills-icon-img {
-      img {
-        width: 50px;
-        height: auto;
-      }
-    }
-    .one img {
-      position: absolute;
-      top: 60px;
-      left: 400px;
-    }
-    .two img {
-      position: absolute;
-      top: 120px;
-      left: 400px;
-    }
-    .three img {
-      position: absolute;
-      top: 180px;
-      left: 400px;
-    }
-    .four img {
-      position: absolute;
-      top: 240px;
-      left: 400px;
-    }
-    .five img {
-      position: absolute;
-      top: 305px;
-      left: 400px;
-    }
-    .six img {
-      position: absolute;
-      top: 365px;
-      left: 400px;
-    }
-    .seven img {
-      position: absolute;
-      top: 425px;
-      left: 400px;
-    }
-    .eight img {
-      position: absolute;
-      top: 485px;
-      left: 400px;
-    }
-    .nine img {
-      position: absolute;
-      top: 545px;
-      left: 400px;
-    }
-    .ten img {
-      position: absolute;
-      top: 605px;
-      left: 400px;
-    }
-    .eleven img {
-      position: absolute;
-      top: 665px;
-      left: 400px;
-    }
-    .twelve img {
-      position: absolute;
-      top: 725px;
-      left: 400px;
-    }
-    .thirteen img {
-      position: absolute;
-      top: 725px;
-      left: 400px;
-    }
-  }
-}
-@media screen and (max-width: 768px) {
-  .mySkills {
-    h2 {
-      font-weight: 400;
-    }
-    .mySkills-hard {
-      .list {
-        width: 400px;
-        padding: 20px;
-      }
-      .list-item:hover::before {
-        width: 65%;
-      }
-      .mySkills-icon-img {
-        img {
-          width: 40px;
+        color: #000;
+        width: 100%;
+        margin: 30px auto;
+        .name {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 20px;
+          height: 45px;
+          background: lightyellow;
+          border-radius: 22.5px;
+          box-shadow: 5px 5px 7px rgba(0, 0, 0, 0.25),
+          inset 2px 2px 5px rgba(255, 255, 255, 0.5),
+          inset -3px -3px 5px rgba(0, 0, 0, 0.5);
+          &:hover {
+            cursor: pointer;
+            color: $text;
+            background: $orange;
+            transition: 0.5s;
+          }
+          .rank {
+            background: #434343;
+            box-shadow: inset 2px 2px 2px hsl(0deg 0% 100% / 25%), inset -2px -2px 2px rgb(0 0 0 / 25%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            width: 35px;
+            height: 35px;
+          }
+          .skill {}
+          .icon {
+            img {
+              vertical-align: center;
+            }
+          }
         }
       }
-      .one img {
-        position: absolute;
-        top: 40px;
-        left: 75%;
-      }
-      .two img {
-        position: absolute;
-        top: 100px;
-        left: 75%;
-      }
-      .three img {
-        position: absolute;
-        top: 160px;
-        left: 75%;
-      }
-      .four img {
-        position: absolute;
-        top: 220px;
-        left: 75%;
-      }
-      .five img {
-        position: absolute;
-        top: 285px;
-        left: 75%;
-      }
-      .six img {
-        position: absolute;
-        top: 345px;
-        left: 75%;
-      }
-      .seven img {
-        position: absolute;
-        top: 405px;
-        left: 75%;
-      }
-      .eight img {
-        position: absolute;
-        top: 465px;
-        left: 75%;
-      }
-      .nine img {
-        position: absolute;
-        top: 525px;
-        left: 75%;
-      }
-      .ten img {
-        position: absolute;
-        top: 585px;
-        left: 75%;
-      }
-      .eleven img {
-        position: absolute;
-        top: 645px;
-        left: 75%;
-      }
-      .twelve img {
-        position: absolute;
-        top: 700px;
-        left: 75%;
-      }
     }
   }
 }
-@media screen and (max-width: 410px) {
-  .mySkills {
-    .mySkills-hard {
-      .list {
-        width: 300px;
-      }
-    }
-  }
-}
+
+
 
 .Portfolio {
   h2 {
