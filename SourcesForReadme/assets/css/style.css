@@ -421,6 +421,11 @@ body {
   top: 725px;
   left: 400px;
 }
+.mySkills .mySkills-hard .thirteen img {
+  position: absolute;
+  top: 725px;
+  left: 400px;
+}
 
 @media screen and (max-width: 768px) {
   .mySkills h2 {
