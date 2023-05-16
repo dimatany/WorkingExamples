@@ -16,7 +16,7 @@ body {
 }
 
 .header .header-nav {
-  background-color: #E2A200;
+  background-color: #003049;
   position: fixed;
   top: 0;
   left: 0;
@@ -58,6 +58,7 @@ body {
   text-transform: uppercase;
   line-height: 55px;
   margin-bottom: 20px;
+  text-shadow: 1px 1px 2px #FDF0D5;
 }
 .hello .hello-info h2 {
   font-size: 2.1875rem;
@@ -77,7 +78,8 @@ body {
   background: #E2A200;
   border-radius: 20px;
   text-transform: uppercase;
-  color: #0d0a0a;
+  color: #2A2A2A;
+  box-shadow: inset 2px 2px 2px hsla(0deg, 0%, 100%, 0.25), inset -2px -2px 2px rgba(0, 0, 0, 0.25);
 }
 .hello .hello-info button:hover {
   color: #FFFFFF;
@@ -308,8 +310,9 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 20px;
-  height: 45px;
-  background: lightyellow;
+  height: 60px;
+  background: #003049;
+  color: #FFFFFF;
   border-radius: 22.5px;
   box-shadow: 5px 5px 7px rgba(0, 0, 0, 0.25), inset 2px 2px 5px rgba(255, 255, 255, 0.5), inset -3px -3px 5px rgba(0, 0, 0, 0.5);
 }
@@ -368,9 +371,11 @@ body {
   font-size: 1.5625rem;
   height: 40px;
   margin-bottom: 10px;
+  color: #FDF0D5;
+  text-shadow: 1px 1px 2px #669BBC;
 }
 .Portfolio .wrapPortfolio .portfolioItem p {
-  color: wheat;
+  color: #669BBC;
   height: 70px;
   margin-bottom: 30px;
   width: 300px;
@@ -387,6 +392,7 @@ body {
   height: 28px;
 }
 .Portfolio .wrapPortfolio .portfolioItem .portfolioItemRef span {
+  color: #E2A200;
   margin-bottom: 50px;
 }
 
