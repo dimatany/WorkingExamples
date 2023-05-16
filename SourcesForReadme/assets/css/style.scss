@@ -15,7 +15,6 @@ $one: #780000;
 $two: #C1121F;
 $three: #FDF0D5;
 $four: #003049;
-$five: #669BBC;
 
 html {
   scroll-behavior: smooth;
@@ -33,7 +32,7 @@ body {
 }
 .header {
   .header-nav {
-    background-color: $four;
+    background-color: $darkgray;
     position: fixed;
     top: 0;
     left: 0;
@@ -421,10 +420,10 @@ body {
         height: 40px;
         margin-bottom: 10px;
         color: $three;
-        text-shadow: 1px 1px 2px $five;
+        text-shadow: 1px 1px 2px $blue;
       }
       p {
-        color: $five;
+        color: $blue;
         height: 70px;
         margin-bottom: 30px;
         max-width: 300px;
@@ -472,8 +471,10 @@ body {
 }
 
 .footer {
-  background: $lightgray;
+  border-top: 1px solid $orange;
+  background-color: $darkgray;
   margin: 0 auto;
+  padding: 90px 0 0 0;
   h2 {
     @include fz(35);
     font-weight: 400;
