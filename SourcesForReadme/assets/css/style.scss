@@ -390,7 +390,8 @@ body {
     @include fz(35);
     font-weight: 400;
     margin: 0 auto;
-    width: 300px;
+    max-width: 300px;
+    width: 100%;
     text-transform: uppercase;
     padding-top: 100px;
     padding-bottom: 50px;
@@ -413,7 +414,8 @@ body {
       display: flex;flex-direction: column;
       margin-bottom: 50px;
       align-items: center;
-      width: 720px;
+      max-width: 720px;
+      width: 100%;
       h5 {
         @include fz(25);
         height: 40px;
@@ -425,20 +427,25 @@ body {
         color: $five;
         height: 70px;
         margin-bottom: 30px;
-        width: 300px;
+        max-width: 300px;
+        width: 100%;
         text-align: center;
       }
       iframe {
         border-radius: 20px;
         height: 350px;
-        width: 600px;
+        max-width: 600px;
+        width: 100%;
         margin-bottom: 30px;
       }
       .portfolioItemRef {
-
+        display: flex;
+        justify-content: space-between;
+        max-width: 400px;
+        width: 100%;
         a {
           .refBlock {
-            padding: 30px;
+
           }
         }
         span {
@@ -452,6 +459,15 @@ body {
 @media screen and (max-width: 768px) {
   .Portfolio .wrapPortfolio .portfolioItem iframe {
     max-width: 90%;
+  }
+  .Portfolio .wrapPortfolio .portfolioItem .portfolioItemRef {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+    a {
+      margin: 20px;
+    }
   }
 }
 
