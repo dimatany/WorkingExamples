@@ -387,9 +387,8 @@ body {
   width: 600px;
   margin-bottom: 30px;
 }
-.Portfolio .wrapPortfolio .portfolioItem .portfolioItemRef a i {
-  width: 28px;
-  height: 28px;
+.Portfolio .wrapPortfolio .portfolioItem .portfolioItemRef a .refBlock {
+  padding: 30px;
 }
 .Portfolio .wrapPortfolio .portfolioItem .portfolioItemRef span {
   color: #E2A200;

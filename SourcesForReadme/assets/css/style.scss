@@ -437,11 +437,9 @@ body {
       .portfolioItemRef {
 
         a {
-          i {
-            width: 28px;
-            height: 28px;
+          .refBlock {
+            padding: 30px;
           }
-
         }
         span {
           color: $orange;
