@@ -15,15 +15,21 @@ body {
   margin: 0 auto;
 }
 
-.header {
-  padding-top: 25px;
-}
 .header .header-nav {
-  padding-bottom: 131px;
+  background-color: #E2A200;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10000;
+  margin: 0 auto 30px;
+  border-bottom: 1px solid #202125;
+  box-shadow: 0 10px 10px -10px #5383ed;
 }
 .header .header-nav .header-nav-ul {
   display: flex;
   justify-content: space-around;
+  padding: 30px;
 }
 .header .header-nav .header-nav-ul .header-nav-ul-item {
   scroll-behavior: smooth;
@@ -34,8 +40,7 @@ body {
 
 .maine {
   background: #3b3b3b;
-  margin: 0 auto;
-  padding-bottom: 80px;
+  margin: 250px auto 0;
   overflow-anchor: none;
 }
 
@@ -168,7 +173,7 @@ body {
   }
 }
 .aboutMe {
-  padding: 130px 0;
+  padding: 100px 0;
   position: relative;
 }
 .aboutMe .aboutMe-description {
@@ -291,7 +296,7 @@ body {
   box-shadow: inset 2px 2px 2px hsla(0deg, 0%, 100%, 0.25), inset -2px -2px 2px rgba(0, 0, 0, 0.25);
   border-radius: 30px;
   padding: 30px;
-  width: 500px;
+  width: 600px;
 }
 .mySkills .mySkills-hard .list .list-item {
   color: #000;
@@ -338,115 +343,58 @@ body {
   padding-bottom: 50px;
   text-align: center;
 }
-.Portfolio .myPortfolio {
-  position: relative;
+.Portfolio .wrapPortfolio {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column;
+}
+.Portfolio .wrapPortfolio h3 {
+  font-size: 1.875rem;
+  margin: 0 auto 130px;
+}
+.Portfolio .wrapPortfolio .portfolioBlock {
+  display: flex;
   flex-wrap: wrap;
-}
-.Portfolio .myPortfolio .box-img1 {
-  background: url("https://dimatany.github.io/WorkingExamples/SourcesForReadme/assets/images/bg.jpg") center/cover;
-}
-.Portfolio .myPortfolio .box-img2 {
-  background: url("https://dimatany.github.io/WorkingExamples/SourcesForReadme/assets/images/wp.jpg") center/cover;
-}
-.Portfolio .myPortfolio .box-img3 {
-  background: url("https://dimatany.github.io/WorkingExamples/SourcesForReadme/assets/images/bw.jpg") center/cover;
-}
-.Portfolio .myPortfolio .box-img4 {
-  background: url("https://dimatany.github.io/WorkingExamples/SourcesForReadme/assets/images/ew.jpg") center/cover;
-}
-.Portfolio .myPortfolio .box-img5 {
-  background: url("https://dimatany.github.io/WorkingExamples/SourcesForReadme/assets/images/gp.jpg") center/cover;
-}
-.Portfolio .myPortfolio .box-img6 {
-  background: url("https://dimatany.github.io/WorkingExamples/SourcesForReadme/assets/images/bg.jpg") center/cover;
-}
-.Portfolio .myPortfolio .box-img7 {
-  background: url("https://dimatany.github.io/WorkingExamples/SourcesForReadme/assets/images/qw.jpg") center/cover;
-}
-.Portfolio .myPortfolio .box-img8 {
-  background: url("https://dimatany.github.io/WorkingExamples/SourcesForReadme/assets/images/we.jpg") center/cover;
-}
-.Portfolio .myPortfolio .box-img9 {
-  background: url("https://dimatany.github.io/WorkingExamples/SourcesForReadme/assets/images/wp.jpg") center/cover;
-}
-.Portfolio .myPortfolio .box {
-  position: relative;
-  width: 280px;
-  height: 400px;
-  box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
-  border-radius: 15px;
-  margin: 30px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transform-style: preserve-3d;
-  transform: perspective(800px);
-  z-index: 1;
-  overflow: hidden;
-  animation: hue 10s infinite alternate;
-}
-.Portfolio .myPortfolio .box:after {
-  content: "";
   width: 100%;
-  height: 100%;
-  background: inherit;
-  position: absolute;
-  top: 0;
-  left: 0;
-  filter: blur(1rem);
-  z-index: -1;
-  transform: scale(1.15);
+  margin-bottom: 100px;
 }
-@keyframes hue {
-  from {
-    filter: hue-rotate(0);
-  }
-  to {
-    filter: hue-rotate(360deg);
-  }
-}
-.Portfolio .myPortfolio .box .main-header {
-  height: 12rem;
+.Portfolio .wrapPortfolio .portfolioItem {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-.Portfolio .myPortfolio .box .description h5 {
-  font-size: 1.5625rem;
-  text-align: center;
+  flex-direction: column;
   margin-bottom: 50px;
-  line-height: 50px;
+  align-items: center;
+  width: 720px;
 }
-.Portfolio .myPortfolio .box .description p {
-  margin: 50px 20px;
+.Portfolio .wrapPortfolio .portfolioItem h5 {
+  font-size: 1.5625rem;
+  height: 40px;
+  margin-bottom: 10px;
+}
+.Portfolio .wrapPortfolio .portfolioItem p {
+  color: wheat;
+  height: 70px;
+  margin-bottom: 30px;
+  width: 300px;
   text-align: center;
-  line-height: 35px;
 }
-.Portfolio .myPortfolio .box .description ul {
-  list-style: none;
-  width: 100%;
-  display: flex;
-  justify-content: space-evenly;
-  margin: 30px 0;
-  padding: 10px;
+.Portfolio .wrapPortfolio .portfolioItem iframe {
+  border-radius: 20px;
+  height: 350px;
+  width: 600px;
+  margin-bottom: 30px;
 }
-.Portfolio .myPortfolio .box .description ul li {
-  cursor: pointer;
-  width: 30px;
-  height: 30px;
+.Portfolio .wrapPortfolio .portfolioItem .portfolioItemRef a i {
+  width: 28px;
+  height: 28px;
 }
-.Portfolio .myPortfolio .box .description ul li .fa-brands {
-  font-size: 2.5rem;
-  color: #00C1EC;
-}
-.Portfolio .myPortfolio .box .description ul li .fa-brands:hover {
-  color: red;
-  transition: 0.5s;
+.Portfolio .wrapPortfolio .portfolioItem .portfolioItemRef span {
+  margin-bottom: 50px;
 }
 
+@media screen and (max-width: 768px) {
+  .Portfolio .wrapPortfolio .portfolioItem iframe {
+    max-width: 90%;
+  }
+}
 .footer {
   background: #3b3b3b;
   margin: 0 auto;
@@ -455,9 +403,7 @@ body {
   font-size: 2.1875rem;
   font-weight: 400;
   text-transform: uppercase;
-  padding: 60px;
   text-align: center;
-  line-height: 50px;
 }
 .footer .footer-media {
   display: flex;

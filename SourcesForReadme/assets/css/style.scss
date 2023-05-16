@@ -14,27 +14,32 @@ $base_fz: 16;
 html {
   scroll-behavior: smooth;
 }
-
 body {
   font-family: $content-text;
   background: $lightgray;
   color: $text;
   font-size: $base_fz;
 }
-
 .header,
 .hello {
   background: $lightgray;
   margin: 0 auto;
 }
-
 .header {
-  padding-top: 25px;
   .header-nav {
-    padding-bottom: 131px;
+    background-color: $orange;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10000;
+    margin: 0 auto 30px;
+    border-bottom: 1px solid #202125;
+    box-shadow: 0 10px 10px -10px #5383ed;
     .header-nav-ul {
       display: flex;
       justify-content: space-around;
+      padding: 30px;
       .header-nav-ul-item {
         scroll-behavior: smooth;
         &:hover {
@@ -44,14 +49,11 @@ body {
     }
   }
 }
-
 .maine {
   background: $lightgray;
-  margin: 0 auto;
-  padding-bottom: 80px;
+  margin: 250px auto 0;
   overflow-anchor: none;
 }
-
 .hello {
   display: flex;
   .hello-info {
@@ -184,9 +186,8 @@ body {
     }
   }
 }
-
 .aboutMe {
-  padding: 130px 0;
+  padding: 100px 0;
   position: relative;;
   .aboutMe-description {
     width: 400px;
@@ -309,7 +310,6 @@ body {
     }
   }
 }
-
 .mySkills {
   h2 {
     @include fz(35);
@@ -331,7 +331,7 @@ body {
       box-shadow: inset 2px 2px 2px hsl(0deg 0% 100% / 25%), inset -2px -2px 2px rgb(0 0 0 / 25%);
       border-radius: 30px;
       padding: 30px;
-      width: 500px;
+      width: 600px;
       .list-item {
         color: #000;
         width: 100%;
@@ -376,7 +376,6 @@ body {
 }
 
 
-
 .Portfolio {
   h2 {
     @include fz(35);
@@ -388,115 +387,61 @@ body {
     padding-bottom: 50px;
     text-align: center;
   }
-  .myPortfolio {
-    position: relative;
+  .wrapPortfolio {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    .box-img1 {
-      background: url("https://dimatany.github.io/WorkingExamples/SourcesForReadme/assets/images/bg.jpg") center/cover;
+    flex-direction: column;
+    h3 {
+      @include fz(30);
+      margin: 0 auto 130px;
     }
-    .box-img2 {
-      background: url("https://dimatany.github.io/WorkingExamples/SourcesForReadme/assets/images/wp.jpg") center/cover;
-    }
-    .box-img3 {
-      background: url("https://dimatany.github.io/WorkingExamples/SourcesForReadme/assets/images/bw.jpg") center/cover;
-    }
-    .box-img4 {
-      background: url("https://dimatany.github.io/WorkingExamples/SourcesForReadme/assets/images/ew.jpg") center/cover;
-    }
-    .box-img5 {
-      background: url("https://dimatany.github.io/WorkingExamples/SourcesForReadme/assets/images/gp.jpg") center/cover;
-    }
-    .box-img6 {
-      background: url("https://dimatany.github.io/WorkingExamples/SourcesForReadme/assets/images/bg.jpg") center/cover;
-    }
-    .box-img7 {
-      background: url("https://dimatany.github.io/WorkingExamples/SourcesForReadme/assets/images/qw.jpg") center/cover;
-    }
-    .box-img8 {
-      background: url("https://dimatany.github.io/WorkingExamples/SourcesForReadme/assets/images/we.jpg") center/cover;
-    }
-    .box-img9   {
-      background: url("https://dimatany.github.io/WorkingExamples/SourcesForReadme/assets/images/wp.jpg") center/cover;
-    }
-    .box {
-      position: relative;
-      width: 280px;
-      height: 400px;
-      box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
-      border-radius: 15px;
-      margin: 30px;
+    .portfolioBlock {
       display: flex;
-      justify-content: center;
+      flex-wrap: wrap;
+      width: 100%;
+      margin-bottom: 100px;
+    }
+    .portfolioItem {
+      display: flex;flex-direction: column;
+      margin-bottom: 50px;
       align-items: center;
-      transform-style: preserve-3d;
-      transform: perspective(800px);
-      z-index: 1;
-      overflow: hidden;
-      animation: hue 10s infinite alternate;
-      &:after{
-        content: '';
-        width: 100%;
-        height: 100%;
-        background: inherit;
-        position: absolute;
-        top: 0;
-        left: 0;
-        filter: blur(1rem);
-        z-index: -1;
-        transform: scale(1.15);
+      width: 720px;
+      h5 {
+        @include fz(25);
+        height: 40px;
+        margin-bottom: 10px;
       }
-      @keyframes hue {
-        from{
-          filter: hue-rotate(0);
-        }
-        to{
-          filter: hue-rotate(360deg);
-        }
+      p {
+        color: wheat;
+        height: 70px;
+        margin-bottom: 30px;
+        width: 300px;
+        text-align: center;
       }
-      .main-header{
-        height: 12rem;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
+      iframe {
+        border-radius: 20px;
+        height: 350px;
+        width: 600px;
+        margin-bottom: 30px;
       }
-      .description {
-        h5 {
-          @include fz(25);
-          text-align: center;
-          margin-bottom: 50px;
-          line-height: 50px;
-        }
-        p {
-          margin: 50px 20px;
-          text-align: center;
-          line-height: 35px;
-        }
-        ul {
-          list-style: none;
-          width: 100%;
-          display: flex;
-          justify-content: space-evenly;
-          margin: 30px 0;
-          padding: 10px;
-          li {
-            cursor: pointer;
-            width: 30px;
-            height: 30px;
-            .fa-brands {
-              @include fz(40);
-              color: $blue;
-              &:hover {
-                color: red;
-                transition: 0.5s;
-              }
-            }
+      .portfolioItemRef {
+
+        a {
+          i {
+            width: 28px;
+            height: 28px;
           }
+
+        }
+        span {
+          margin-bottom: 50px;
         }
       }
     }
+  }
+}
+@media screen and (max-width: 768px) {
+  .Portfolio .wrapPortfolio .portfolioItem iframe {
+    max-width: 90%;
   }
 }
 
@@ -507,9 +452,7 @@ body {
     @include fz(35);
     font-weight: 400;
     text-transform: uppercase;
-    padding: 60px;
     text-align: center;
-    line-height: 50px;
   }
   .footer-media {
     display: flex;
