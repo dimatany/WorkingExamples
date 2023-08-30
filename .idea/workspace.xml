@@ -5,64 +5,58 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9e3b3e94-a61a-441a-9884-624508bb6215" name="Changes" comment="commit1">
-      <change afterPath="$PROJECT_DIR$/AdAstra/api.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdAstra/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdAstra/index2.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdAstra/ostx_files/11m.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdAstra/ostx_files/16m.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdAstra/ostx_files/17m.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdAstra/ostx_files/19m.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdAstra/ostx_files/20m.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdAstra/ostx_files/22m.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdAstra/ostx_files/23.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdAstra/ostx_files/24.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdAstra/ostx_files/25.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdAstra/ostx_files/26.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdAstra/ostx_files/27.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdAstra/ostx_files/28.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdAstra/ostx_files/29.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdAstra/ostx_files/30.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdAstra/ostx_files/31.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdAstra/ostx_files/33.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdAstra/ostx_files/4m.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdAstra/ostx_files/7m.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdAstra/ostx_files/bgform.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdAstra/ostx_files/css2.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdAstra/ostx_files/form-toolong.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdAstra/ostx_files/header-footer.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdAstra/ostx_files/hero.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdAstra/ostx_files/hero1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdAstra/ostx_files/hero3.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdAstra/ostx_files/hero4.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdAstra/ostx_files/hero7-1.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdAstra/ostx_files/hero7.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdAstra/ostx_files/heros.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdAstra/ostx_files/icomoon.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdAstra/ostx_files/int1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdAstra/ostx_files/int2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdAstra/ostx_files/jquery.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdAstra/ostx_files/m=el_main_css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdAstra/ostx_files/order.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdAstra/ostx_files/otz2.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdAstra/ostx_files/otz22.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdAstra/ostx_files/otz3.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdAstra/ostx_files/otz4.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdAstra/ostx_files/otz9.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdAstra/ostx_files/product.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdAstra/ostx_files/roboto-bold-webfont.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdAstra/ostx_files/roboto-light-webfont.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdAstra/ostx_files/roboto-medium-webfont.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdAstra/ostx_files/roboto-regular-webfont.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdAstra/ostx_files/style_a3com.4147c6cb54db3b3546cb.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdAstra/ostx_files/timer2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdAstra/success.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ValidFormVueTelegramm/assets/css/style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ValidFormVueTelegramm/assets/css/style.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ValidFormVueTelegramm/assets/css/style.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ValidFormVueTelegramm/assets/image/zvezdi.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ValidFormVueTelegramm/assets/js/feedback.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ValidFormVueTelegramm/feedback.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AdAstra/api.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AdAstra/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AdAstra/index2.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AdAstra/ostx_files/11m.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AdAstra/ostx_files/16m.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AdAstra/ostx_files/17m.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AdAstra/ostx_files/19m.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AdAstra/ostx_files/20m.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AdAstra/ostx_files/22m.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AdAstra/ostx_files/23.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AdAstra/ostx_files/24.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AdAstra/ostx_files/25.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AdAstra/ostx_files/26.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AdAstra/ostx_files/27.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AdAstra/ostx_files/28.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AdAstra/ostx_files/29.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AdAstra/ostx_files/30.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AdAstra/ostx_files/31.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AdAstra/ostx_files/33.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AdAstra/ostx_files/4m.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AdAstra/ostx_files/7m.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AdAstra/ostx_files/bgform.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AdAstra/ostx_files/css2.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AdAstra/ostx_files/form-toolong.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AdAstra/ostx_files/header-footer.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AdAstra/ostx_files/hero.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AdAstra/ostx_files/hero1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AdAstra/ostx_files/hero3.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AdAstra/ostx_files/hero4.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AdAstra/ostx_files/hero7-1.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AdAstra/ostx_files/hero7.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AdAstra/ostx_files/heros.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AdAstra/ostx_files/icomoon.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AdAstra/ostx_files/int1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AdAstra/ostx_files/int2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AdAstra/ostx_files/jquery.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AdAstra/ostx_files/m=el_main_css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AdAstra/ostx_files/order.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AdAstra/ostx_files/otz2.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AdAstra/ostx_files/otz22.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AdAstra/ostx_files/otz3.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AdAstra/ostx_files/otz4.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AdAstra/ostx_files/otz9.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AdAstra/ostx_files/product.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AdAstra/ostx_files/roboto-bold-webfont.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AdAstra/ostx_files/roboto-light-webfont.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AdAstra/ostx_files/roboto-medium-webfont.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AdAstra/ostx_files/roboto-regular-webfont.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AdAstra/ostx_files/style_a3com.4147c6cb54db3b3546cb.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AdAstra/ostx_files/timer2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AdAstra/success.php" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -272,7 +266,7 @@
       <workItem from="1687269473979" duration="42000" />
       <workItem from="1687270567570" duration="3000" />
       <workItem from="1693381691528" duration="13171000" />
-      <workItem from="1693397420647" duration="10266000" />
+      <workItem from="1693397420647" duration="10897000" />
     </task>
     <task id="LOCAL-00098" summary="commit">
       <created>1663765392548</created>
@@ -617,7 +611,7 @@
       <option name="project" value="LOCAL" />
       <updated>1686051377754</updated>
     </task>
-    <option name="localTasksCounter" value="147" />
+    <option name="localTasksCounter" value="148" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
