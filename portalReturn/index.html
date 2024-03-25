@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PortalReturn</title>
+    <!--my stylesheet-->
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body>
+<div class="container">
+    <h1>PortalReturn - our revisions</h1>
+    <h2>1. First change</h2>
+    <p>We have this option on this website now - like at photo</p>
+    <div class="img">
+        <img src="assets/img/1.jpg" alt="">
+    </div>
+    <p>We want to add/change the causes of the foot to the below</p>
+    <div class="row" id="field-CL1048428_Q1.V1_RED_STND">
+        <div class="col-12 col-md-12 mb-3">
+            <label for="returnReason">Причина повернення</label>
+            <select id="field-CL1048428_Q1.V1_RED_STND-slct" class="custom-select d-block w-100" name="ReturnOrder.ReturnOrderProductVariants[0].ReturnReasonId" required="">
+                <option value="" selected="" disabled="" hidden="">Обреріть тут</option>
+                <option value="1">Брак, дефект</option>
+                <option value="2">Невідповідність опису</option>
+                <option value="3">Не підійшов розмір</option>
+                <option value="4">Не підійшов за фасоном/виглядом</option>
+                <option value="5">Інша причина (уточніть, будь ласка)</option>
+            </select>
+            <div class="invalid-feedback">Оберіть причину повернення</div>
+        </div>
+        <div class="col-12 col-md-12 mb-3">
+            <label for="returnDescription">Опис товару</label>
+            <input id="field-CL1048428_Q1.V1_RED_STND-desc" type="text" maxlength="280" class="form-control" placeholder="Будь ласка, заповніть опис" name="ReturnOrder.ReturnOrderProductVariants[0].ReturnDescription">
+            <div class="invalid-feedback">Невірний опис товару</div>
+        </div>
+    </div>
+    <p>There is mandatory logic associated with these changes:</p>
+    <ol>
+        <li><span>first change</span> - value="1">Брак, дефект. -
+            <span>The refund amount in the final window should be calculated as the product price plus the delivery price what he paid for.
+                <img class="img" src="assets/img/2.jpg" alt="">
+            </span>
+        </li>
+        <li><span>second change</span> - value="2">Невідповідність опису option - <span>When selecting this option, the customer should write the reason in the input field (id="field-CL1048428_Q1.V1_RED_STND-desc") at the bottom - but it's not mandatory. Even without filling it, the customer should still be able to confirm the return request.</span></li>
+    </ol>
+    <h2>2. Second change</h2>
+    <p>The next step is to provide information about the client to create TTN NP</p>
+    <p>We have this option on this website now - like at photo</p>
+    <div class="img">
+        <img src="assets/img/3.jpg" alt="">
+    </div>
+    <p>We want to add/change the causes of the foot to the below</p>
+    <div class="col-lg-8 col-md-8 col-sm-12 col-12">
+        <div class="main-step one-step delivery-step deactive-step completed-step" id="selectionStep">
+            <div class="edit-step d-inline-block d-none" id="editStepSection">
+                <a class="border-0 edit-step-button" id="editSelectionStep" href="javascript:;">
+                    Редагувати
+                </a>
+            </div>
+            <div class="step-content delivery-step-content d-none" id="selectionStepContent">
+                <div class="delivery-container p-0 p-lg-4 p-xl-4">
+                    <!--address list container-->
+                    <p class="mb-3"><b>50303 Номер замовлення</b> Будь ласка, оберіть товари та причини повернення</p>
+                    <hr>
+                    <input type="hidden" name="ReturnOrder.ReturnedOrderId" value="50303">
+                    <input type="hidden" name="ReturnOrder.ReturnOrderProductVariants[0].Sku" value="CL1048428_Q1.V1_RED_STND">
+                    <div id="item-CL1048428_Q1.V1_RED_STND" data-price="195,0000" class="col-md-12 mb-4">
+                        <div class="row">
+                            <div class="col-1 col-md-1 col-sm-1 col-lg-1" style="margin:auto;">
+                                <input id="chk-CL1048428_Q1.V1_RED_STND" onchange="runGetCheckboxes(); displayHideFields();" onclick="variantChanged(this,1,'CL1048428_Q1.V1_RED_STND');" type="checkbox" name="ReturnOrder.ReturnOrderProductVariants[0].IsSelect" class="custom-input" style="-ms-transform: scale(2); -moz-transform: scale(2); -webkit-transform: scale(2); -o-transform: scale(2); padding: 10px" value="true" data-gtm-form-interact-field-id="0">
+                            </div>
+                            <div class="col-3 col-md-3 col-sm-3 col-lg-3 p-0" style="margin:auto 0 auto 0;">
+                                <img src="https://img-colinsua.mncdn.com/mnresize/90/-/Assets/Ukraine/Originals/107071_0.jpeg?v=1676584658" alt="Гаманець Жіночий Червоний Cl1048428" style="width: 100%;">
+                            </div>
+                            <div class="col-md-5 mb-3 col-sm-4 col-7">
+                                Гаманець Жіночий Червоний Cl1048428 (STND)<br>
+                                195,00 ₴)<br>
+                                Order.Product(s).Variant : Червоний <br>
+                                CL1048428_Q1.V1_RED_STND<br>
+                                Розмір: STND<br>
+                                Кількість : 1
+                            </div>
+                            <div class="col-md-3 mb-3 col-sm-4 col-12" id="returncount-CL1048428_Q1.V1_RED_STND" style="visibility: hidden;">
+                                <label for="returnCount">Кількість одиниць повернення</label>
+                                <select id="qty-CL1048428_Q1.V1_RED_STND" class="custom-select d-block w-100" name="ReturnOrder.ReturnOrderProductVariants[0].ReturnQuantity" required="" onchange="checkCorresponding('qty-CL1048428_Q1.V1_RED_STND'); runGetCheckboxes(); displayHideFields();" style="visibility: hidden;">
+                                    <option value="none" selected="" disabled="" hidden="">Обреріть тут</option>
+                                    <option value="1">1</option>
+                                </select>
+                                <div class="invalid-feedback">
+                                    Будь ласка, оберіть кількість повертаємого товару
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row" id="field-CL1048428_Q1.V1_RED_STND">
+                            <div class="col-12 col-md-12 mb-3">
+                                <label for="returnReason">Причина повернення</label>
+                                <select id="field-CL1048428_Q1.V1_RED_STND-slct" class="custom-select d-block w-100" name="ReturnOrder.ReturnOrderProductVariants[0].ReturnReasonId" required="" data-gtm-form-interact-field-id="1">
+                                    <option value="" selected="" disabled="" hidden="">Обреріть тут</option>
+                                    <option value="1">Не підійшов розмір (малий)</option>
+                                    <option value="2">Не підійшов розмір (великий)</option>
+                                    <option value="3">Не підійшов за фасоном/виглядом</option>
+                                    <option value="4">Інша причина (уточніть, будь ласка)</option>
+                                </select>
+                                <div class="invalid-feedback">Оберіть причину повернення</div>
+                            </div>
+
+                            <div class="col-12 col-md-12 mb-3">
+                                <label for="returnDescription">Опис товару</label>
+                                <input id="field-CL1048428_Q1.V1_RED_STND-desc" type="text" maxlength="280" class="form-control" placeholder="Будь ласка, заповніть опис" name="ReturnOrder.ReturnOrderProductVariants[0].ReturnDescription" data-gtm-form-interact-field-id="2">
+                                <div class="invalid-feedback">Невірний опис товару</div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <hr>
+                    <input type="hidden" name="ReturnOrder.ReturnOrderProductVariants[1].Sku" value="CL1048429_Q1.V1_YLW_STND">
+                    <div id="item-CL1048429_Q1.V1_YLW_STND" data-price="195,0000" class="col-md-12 mb-4">
+                        <div class="row">
+                            <div class="col-1 col-md-1 col-sm-1 col-lg-1" style="margin:auto;">
+                                <input id="chk-CL1048429_Q1.V1_YLW_STND" onchange="runGetCheckboxes(); displayHideFields();" onclick="variantChanged(this,1,'CL1048429_Q1.V1_YLW_STND');" type="checkbox" name="ReturnOrder.ReturnOrderProductVariants[1].IsSelect" class="custom-input" style="-ms-transform: scale(2); -moz-transform: scale(2); -webkit-transform: scale(2); -o-transform: scale(2); padding: 10px" value="true">
+                            </div>
+
+                            <div class="col-3 col-md-3 col-sm-3 col-lg-3 p-0" style="margin:auto 0 auto 0;">
+                                <img src="https://img-colinsua.mncdn.com/mnresize/90/-/Assets/Ukraine/Originals/107070_0.jpeg?v=1676584658" alt="Гаманець Жіночий Жовтий Cl1048429" style="width: 100%;">
+                            </div>
+
+                            <div class="col-md-5 mb-3 col-sm-4 col-7">
+                                Гаманець Жіночий Жовтий Cl1048429 (STND)<br>
+                                195,00 ₴)<br>
+                                Order.Product(s).Variant : жовтий <br>
+                                CL1048429_Q1.V1_YLW_STND<br>
+                                Розмір: STND<br>
+                                Кількість : 1
+                            </div>
+
+                            <div class="col-md-3 mb-3 col-sm-4 col-12" id="returncount-CL1048429_Q1.V1_YLW_STND" style="visibility: hidden;">
+                                <label for="returnCount">Кількість одиниць повернення</label>
+                                <select id="qty-CL1048429_Q1.V1_YLW_STND" class="custom-select d-block w-100" name="ReturnOrder.ReturnOrderProductVariants[1].ReturnQuantity" required="" onchange="checkCorresponding('qty-CL1048429_Q1.V1_YLW_STND'); runGetCheckboxes(); displayHideFields();" style="visibility: hidden;">
+                                    <option value="none" selected="" disabled="" hidden="">Обреріть тут</option>
+                                    <option value="1">1</option>
+                                </select>
+                                <div class="invalid-feedback">
+                                    Будь ласка, оберіть кількість повертаємого товару
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row" id="field-CL1048429_Q1.V1_YLW_STND" hidden="">
+                            <div class="col-12 col-md-12 mb-3">
+                                <label for="returnReason">Причина повернення</label>
+                                <select id="field-CL1048429_Q1.V1_YLW_STND-slct" class="custom-select d-block w-100" name="ReturnOrder.ReturnOrderProductVariants[1].ReturnReasonId">
+                                    <option value="" selected="" disabled="" hidden="">Обреріть тут</option>
+                                    <option value="1">Не підійшов розмір (малий)</option>
+                                    <option value="2">Не підійшов розмір (великий)</option>
+                                    <option value="3">Не підійшов за фасоном/виглядом</option>
+                                    <option value="4">Інша причина (уточніть, будь ласка)</option>
+                                </select>
+                                <div class="invalid-feedback">Оберіть причину повернення</div>
+                            </div>
+
+                            <div class="col-12 col-md-12 mb-3">
+                                <label for="returnDescription">Опис товару</label>
+                                <input id="field-CL1048429_Q1.V1_YLW_STND-desc" type="text" maxlength="280" class="form-control" placeholder="Будь ласка, заповніть опис" name="ReturnOrder.ReturnOrderProductVariants[1].ReturnDescription">
+                                <div class="invalid-feedback">Невірний опис товару</div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <ul id="addressList" class="address-list no-list m-0 p-0 custom-scroll"></ul>
+                    <div class="my-3">
+                        <div class="row">
+                            <div class="col-12">
+                                <input type="button" class="btn btn-primary w-100 mb-3" id="completeSelectionStep" value="Перейти до доставки" onclick="displayCargoPrice()">
+                            </div>
+                        </div>
+                    </div>
+                    <!--address list container-->
+                </div>
+            </div>
+        </div>
+        <div class="main-step three-step payment-step active-step" id="paymentStep">
+            <div class="payment-container p-0 p-lg-4 p-xl-4">
+                <div class="step-content" id="paymentStepContent">
+                    <div class="col-md-12 mb-4">
+                        <div class="row">
+                            <b style="margin: auto;" id="nameName" class="d-none d-sm-block">Ім'я: </b><input required="" type="text" class="custom-input form-control col-sm-9 col-xs-12 mb-1" placeholder="Ім'я" name="ReturnPaymentModel.Name" maxlength="50">
+                        </div>
+                        <div class="row" id="surnameField">
+                            <b style="margin: auto;" class="d-none d-sm-block">Прізвище: </b><input required="" type="text" class="custom-input form-control col-sm-9 col-xs-12 mb-1" placeholder="Прізвище" name="ReturnPaymentModel.Surname" maxlength="50">
+                        </div>
+                        <div class="row">
+                            <b style="margin: auto;" class="d-none d-sm-block">По батькові: </b><input required="" type="text" class="custom-input form-control col-sm-9 col-xs-12 mb-1" placeholder="По батькові" name="ReturnPaymentModel.FatherName" maxlength="50">
+                        </div>
+                        <div class="row">
+                            <b style="margin: auto;" class="d-none d-sm-block">Банківська карта для повернення коштів</b><input required="" type="text" class="custom-input form-control col-sm-9 col-xs-12 mb-1" placeholder="" name="ReturnPaymentModel.FatherName" maxlength="50">
+                        </div>
+                        <div class="row">
+                            <b style="margin: auto;" class="d-none d-sm-block">Номер телефону: </b><input required="" type="text" class="custom-input form-control col-sm-9 col-xs-12 mb-1" placeholder="+38(00)000 00 00" name="ReturnPaymentModel.PhoneNumber" data-inputmask="'mask': '(099)-999-99-99'" pattern="\(0[0-9]{2}\)\-([0-9]{3}\-){1}([0-9]{2}\-){1}([0-9]{2}){1}" inputmode="text">
+                        </div>
+                        <div class="row">
+                            <div class="col-12 col-md-12 mb-3">
+                                <label for="returnReason">Документ повернення: (Return document:)</label>
+                                <select id="field-CL1048428_Q1.V1_RED_STND-slct" class="custom-select d-block w-100" name="ReturnOrder.ReturnOrderProductVariants[0].ReturnReasonId" required="">
+                                    <option value="" selected="" disabled="" hidden="">Обреріть тут</option>
+                                    <option value="1">Паспорт громадянина України серія</option>
+                                    <option value="2">Паспорт громадянина України (ID картка)</option>
+                                    <option value="3">Паспорт громадянина України для виїзду за кордон</option>
+                                    <option value="4">Посвідчення водія</option>
+                                    <option value="5">Посвідка на постійне проживання </option>
+                                    <option value="5">Посвідка на тимчасове проживання - посвідка №</option>
+                                </select>
+                                <div class="invalid-feedback">Оберіть причину повернення</div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-12 mb-3">
+                            <input type="text" id="datepicker" name="datepicker" maxlength="280" class="form-control" placeholder="Серія, номер або замінний документ.">
+                            <div class="invalid-feedback">"Document number"</div>
+                            <ul>When he selects the document, the following mask will be applied.
+                                <li>1. паспорт громадянина України серія - Ukrainian citizen's passport series. - <span class="span2">" _ _ № _ _ _ _ _ _ - Example: TT 504056"</span></li>
+                                <li>2. паспорт громадянина України (ID картка) - "Ukrainian citizen's passport (ID card) <span class="span2">_ _ _ _ _ _ _ _ _ - Example: 006785845"</span> </li>
+                                <li>3. паспорт громадянина України для виїзду за кордон - Ukrainian passport for travel abroad – <span class="span2">country code _ _ _, passport number _ _ _ _ _ _ _ _ - Example: UKR FN 639856</span></li>
+                                <li>4. посвідчення водія - Driver's license; - <span class="span2">document number _ _ _ _ _ _ _ _ _ - VHT 857487</span></li>
+                                <li>5. посвідка на постійне проживання - Residence permit - permit <span class="span2">№ _ _ _ _ _ _ _ _ _</span></li>
+                                <li>6. посвідка на тимчасове проживання - Temporary residence permit - permit <span class="span2">№ _ _ _ _ _ _ _ _ _</span></li>
+                            </ul>
+                        </div>
+                        <div class="col-12 col-md-12 mb-3">
+                            <label for="returnDescription">Дата видачі документа</label>
+                            <input type="date" id="datepicker" name="datepicker" maxlength="280" class="form-control">
+                            <div class="invalid-feedback">Невірний опис товару</div>
+                        </div>
+                        <span class="span">This part should be implemented in the same way as the upper part - automatically filled with the address for delivery to our warehouse.</span>
+                        <img src="assets/img/4.jpg" alt="">
+                        <span class="span">But if the customer wants to refill the data in the fields again, they should have such an opportunity - as the delivery form we already have on the website.</span>
+                        <img src="assets/img/7.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="img">
+        <img src="assets/img/5.jpg" alt="">
+    </div>
+    <h2>3. Requirements.</h2>
+    <ol>
+        <li class="span">After the customer clicks the "Save" button, a shipping label will be automatically generated in their personal account on Nova Poshta.</li>
+        <li class="span">In the final popup, there must always be information about the refund amount and the automatic creation of the waybill in their personal account with Nova Poshta.</li>
+    </ol>
+    <div class="img">
+        <img src="assets/img/2.jpg" alt="">
+    </div>
+</div>
+</body>
+</html>
