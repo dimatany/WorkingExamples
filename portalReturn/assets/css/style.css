@@ -58,6 +58,10 @@ ol li span {
   text-decoration: underline;
 }
 
+.unstyle {
+  text-decoration: none;
+}
+
 .span2 {
   color: #6f42c1;
 }
