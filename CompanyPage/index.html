@@ -19,17 +19,17 @@
             <img src="assets/img/header.jpg" alt="Дзвiнок - баннер" width="1200" height="300">
         </div>
         <div class="header">
-            <h1>Про Дзвiнок!</h1>
+            <h1>Досліджуй вкладки та відкривай максимум можливостей! 🚀</h1>
         </div>
     </header>
 
     <nav class="container">
         <div class="tabs" role="tablist" aria-label="Інформація про компанію">
             <input type="radio" id="radio-1" name="tabs" checked aria-controls="content-1" />
-            <label class="tab" for="radio-1" role="tab" aria-selected="true" tabindex="0">Кар'єра в Дзвiнок</label>
+            <label class="tab" for="radio-1" role="tab" aria-selected="true" tabindex="0">Про нас</label>
 
             <input type="radio" id="radio-2" name="tabs" aria-controls="content-2" />
-            <label class="tab" for="radio-2" role="tab" aria-selected="false" tabindex="0">Вакансії</label>
+            <label class="tab" for="radio-2" role="tab" aria-selected="false" tabindex="0">Кар'єра в Дзвiнок</label>
 
             <input type="radio" id="radio-3" name="tabs" aria-controls="content-3" />
             <label class="tab" for="radio-3" role="tab" aria-selected="false" tabindex="0">Хочу до вас</label>
@@ -50,7 +50,6 @@
                 <img src="assets/img/1.jpg" alt="Команда Дзвінок" width="1200" height="720">
             </div>
             <div class="about-dzvinok-cards">
-
                 <p class="about-dzvinok-cards__intro">
                     Магазини <strong>Дзвінок</strong> – це не просто побутова техніка та електроніка.
                     Це стиль життя, драйв і технології, які роблять твій день крутішим!
@@ -162,9 +161,181 @@
         </section>
 
         <section id="content-2" class="tab-content" role="tabpanel" aria-labelledby="radio-2">
-            <h2>Вакансії</h2>
-            <p>Тут ви можете знайти список доступних вакансій компанії Дзвiнок!</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Sed euismod, ipsum a lacinia ultricies, nisi nisi aliquam nunc, eget tincidunt nisi nisi quis nisi.</p>
+            <h2 class="about-dzvinok-cards__title">
+                <span class="highlight">Свіжі</span> вакансії Дзвінка
+            </h2>
+
+            <div class="career-img1">
+                <img src="assets/img/2.jpg" alt="Поднятые пальцы вверх" width="1200" height="720">
+            </div>
+
+            <div class="vacancies-block">
+                <!-- Раздел с вкладками для вакансий по отделам -->
+                <div class="vacancies-tabs">
+                    <div class="vacancies-tab active" data-category="office">Офіс</div>
+                    <div class="vacancies-tab" data-category="it">IT</div>
+                    <div class="vacancies-tab" data-category="retail">Мережа</div>
+                    <div class="vacancies-tab" data-category="contact">Контакт-центр</div>
+                    <div class="vacancies-tab" data-category="service">Сервісний Центр</div>
+                    <div class="vacancies-tab" data-category="warehouse">Склад</div>
+                </div>
+
+                <!-- Контейнер для отображения вакансий -->
+                <div class="positions-container">
+                    <!-- Вакансии отдела Офис -->
+                    <div class="positions-group active" data-category="office">
+                        <div class="positions-grid">
+                            <div class="position-card">
+                                <div class="position-icon">🎨</div>
+                                <div class="position-content">
+                                    <h3 class="position-title">Графічний дизайнер</h3>
+                                    <p class="position-description">Створення привабливих візуальних матеріалів для маркетингу та брендингу</p>
+                                    <a href="#" class="position-link" onclick="activateTab('radio-3'); return false;">Хочу до вас! →</a>
+                                </div>
+                            </div>
+
+                            <div class="position-card">
+                                <div class="position-icon">📊</div>
+                                <div class="position-content">
+                                    <h3 class="position-title">SMM-менеджер</h3>
+                                    <p class="position-description">Ведення соціальних мереж компанії, створення контенту та аналітика</p>
+                                    <a href="#" class="position-link" onclick="activateTab('radio-3'); return false;">Хочу до вас! →</a>
+                                </div>
+                            </div>
+
+                            <div class="position-card">
+                                <div class="position-icon">📝</div>
+                                <div class="position-content">
+                                    <h3 class="position-title">SEO-копірайтер</h3>
+                                    <p class="position-description">Написання оптимізованих текстів для сайту та блогу компанії</p>
+                                    <a href="#" class="position-link" onclick="activateTab('radio-3'); return false;">Хочу до вас! →</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Вакансии IT отдела -->
+                    <div class="positions-group" data-category="it">
+                        <div class="positions-grid">
+                            <div class="position-card">
+                                <div class="position-icon">💻</div>
+                                <div class="position-content">
+                                    <h3 class="position-title">Frontend-розробник</h3>
+                                    <p class="position-description">Розробка та підтримка користувацького інтерфейсу сайту та внутрішніх сервісів</p>
+                                    <a href="#" class="position-link" onclick="activateTab('radio-3'); return false;">Хочу до вас! →</a>
+                                </div>
+                            </div>
+
+                            <div class="position-card">
+                                <div class="position-icon">🔧</div>
+                                <div class="position-content">
+                                    <h3 class="position-title">DevOps-інженер</h3>
+                                    <p class="position-description">Налаштування та підтримка інфраструктури проєктів</p>
+                                    <a href="#" class="position-link" onclick="activateTab('radio-3'); return false;">Хочу до вас! →</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Вакансии Сети магазинов (Мережа) -->
+                    <div class="positions-group" data-category="retail">
+                        <div class="positions-grid">
+                            <div class="position-card">
+                                <div class="position-icon">🛒</div>
+                                <div class="position-content">
+                                    <h3 class="position-title">Тренер з навчання персоналу</h3>
+                                    <p class="position-description">Навчання та розвиток персоналу магазинів</p>
+                                    <a href="#" class="position-link" onclick="activateTab('radio-3'); return false;">Хочу до вас! →</a>
+                                </div>
+                            </div>
+
+                            <div class="position-card">
+                                <div class="position-icon">📱</div>
+                                <div class="position-content">
+                                    <h3 class="position-title">Категорійний менеджер</h3>
+                                    <p class="position-description">Управління асортиментом товарів певної категорії</p>
+                                    <a href="#" class="position-link" onclick="activateTab('radio-3'); return false;">Хочу до вас! →</a>
+                                </div>
+                            </div>
+
+                            <div class="position-card">
+                                <div class="position-icon">🏪</div>
+                                <div class="position-content">
+                                    <h3 class="position-title">Провідний мерчендайзер (Одеса)</h3>
+                                    <p class="position-description">Організація викладки товару в магазинах мережі</p>
+                                    <a href="#" class="position-link" onclick="activateTab('radio-3'); return false;">Хочу до вас! →</a>
+                                </div>
+                            </div>
+
+                            <div class="position-card">
+                                <div class="position-icon">👥</div>
+                                <div class="position-content">
+                                    <h3 class="position-title">Помічник категорійного менеджера</h3>
+                                    <p class="position-description">Допомога в управлінні асортиментом та аналітика продажів</p>
+                                    <a href="#" class="position-link" onclick="activateTab('radio-3'); return false;">Хочу до вас! →</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Аналогично для остальных категорий: contact, service, warehouse -->
+                    <div class="positions-group" data-category="contact">
+                        <div class="positions-grid">
+                            <div class="position-card">
+                                <div class="position-icon">📞</div>
+                                <div class="position-content">
+                                    <h3 class="position-title">Оператор контакт-центру</h3>
+                                    <p class="position-description">Консультування клієнтів та обробка запитів</p>
+                                    <a href="#" class="position-link" onclick="activateTab('radio-3'); return false;">Хочу до вас! →</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="positions-group" data-category="service">
+                        <div class="positions-grid">
+                            <div class="position-card">
+                                <div class="position-icon">🔌</div>
+                                <div class="position-content">
+                                    <h3 class="position-title">Майстер з ремонту смартфонів</h3>
+                                    <p class="position-description">Діагностика та ремонт мобільних пристроїв</p>
+                                    <a href="#" class="position-link" onclick="activateTab('radio-3'); return false;">Хочу до вас! →</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="positions-group" data-category="warehouse">
+                        <div class="positions-grid">
+                            <div class="position-card">
+                                <div class="position-icon">📦</div>
+                                <div class="position-content">
+                                    <h3 class="position-title">Комірник</h3>
+                                    <p class="position-description">Прийом, зберігання та видача товарів на складі</p>
+                                    <a href="#" class="position-link" onclick="activateTab('radio-3'); return false;">Хочу до вас! →</a>
+                                </div>
+                            </div>
+
+                            <div class="position-card">
+                                <div class="position-icon">🚚</div>
+                                <div class="position-content">
+                                    <h3 class="position-title">Логіст</h3>
+                                    <p class="position-description">Організація доставки товарів між магазинами та до клієнтів</p>
+                                    <a href="#" class="position-link" onclick="activateTab('radio-3'); return false;">Хочу до вас! →</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Информация для соискателя -->
+                <div class="vacancy-contact">
+                    Не знайшов підходящу вакансію? Надішли нам своє резюме на
+                    <a href="mailto:hr@dzvinok.ua">hr@dzvinok.ua</a>
+                    і ми обов'язково розглянемо твою кандидатуру! 🚀
+                </div>
+            </div>
+
         </section>
 
         <section id="content-3" class="tab-content" role="tabpanel" aria-labelledby="radio-3">
