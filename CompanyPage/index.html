@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Дзвiнок - техніка, що змінює правила гри! Інформація про компанію, кар'єрні можливості та магазини.">
     <title>Про Дзвiнок!</title>
-    <!-- CSS файлы -->
+    <!-- Стили -->
     <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,7 +16,7 @@
 <div class="page-container">
     <header>
         <div class="header-image">
-            <img src="assets/img/header.jpg" alt="Дзвiнок - баннер" width="1200" height="300">
+            <img src="assets/img/header.jpg" alt="Дзвiнок - баннер" width="1200" height="300" loading="lazy">
         </div>
         <div class="header">
             <h1>Досліджуй вкладки та відкривай максимум можливостей! 🚀</h1>
@@ -44,10 +44,10 @@
     <main>
         <section id="content-1" class="tab-content active" role="tabpanel" aria-labelledby="radio-1">
             <h2 class="about-dzvinok-cards__title">
-            <span class="highlight">Дзвінок</span> – техніка, що змінює правила гри! 🚀
-        </h2>
+                <span class="highlight">Дзвінок</span> – техніка, що змінює правила гри! 🚀
+            </h2>
             <div class="career-img1">
-                <img src="assets/img/1.jpg" alt="Команда Дзвінок" width="1200" height="720">
+                <img src="assets/img/1.jpg" alt="Команда Дзвінок" width="1200" height="720" loading="lazy">
             </div>
             <div class="about-dzvinok-cards">
                 <p class="about-dzvinok-cards__intro">
@@ -166,7 +166,7 @@
             </h2>
 
             <div class="career-img1">
-                <img src="assets/img/2.jpg" alt="Поднятые пальцы вверх" width="1200" height="720">
+                <img src="assets/img/2.jpg" alt="Поднятые пальцы вверх" width="1200" height="720" loading="lazy">
             </div>
 
             <div class="vacancies-block">
@@ -195,15 +195,6 @@
                             </div>
 
                             <div class="position-card">
-                                <div class="position-icon">📊</div>
-                                <div class="position-content">
-                                    <h3 class="position-title">SMM-менеджер</h3>
-                                    <p class="position-description">Ведення соціальних мереж компанії, створення контенту та аналітика</p>
-                                    <a href="#" class="position-link" onclick="activateTab('radio-3'); return false;">Хочу до вас! →</a>
-                                </div>
-                            </div>
-
-                            <div class="position-card">
                                 <div class="position-icon">📝</div>
                                 <div class="position-content">
                                     <h3 class="position-title">SEO-копірайтер</h3>
@@ -226,14 +217,6 @@
                                 </div>
                             </div>
 
-                            <div class="position-card">
-                                <div class="position-icon">🔧</div>
-                                <div class="position-content">
-                                    <h3 class="position-title">DevOps-інженер</h3>
-                                    <p class="position-description">Налаштування та підтримка інфраструктури проєктів</p>
-                                    <a href="#" class="position-link" onclick="activateTab('radio-3'); return false;">Хочу до вас! →</a>
-                                </div>
-                            </div>
                         </div>
                     </div>
 
@@ -267,14 +250,6 @@
                                 </div>
                             </div>
 
-                            <div class="position-card">
-                                <div class="position-icon">👥</div>
-                                <div class="position-content">
-                                    <h3 class="position-title">Помічник категорійного менеджера</h3>
-                                    <p class="position-description">Допомога в управлінні асортиментом та аналітика продажів</p>
-                                    <a href="#" class="position-link" onclick="activateTab('radio-3'); return false;">Хочу до вас! →</a>
-                                </div>
-                            </div>
                         </div>
                     </div>
 
@@ -339,9 +314,69 @@
         </section>
 
         <section id="content-3" class="tab-content" role="tabpanel" aria-labelledby="radio-3">
-            <h2>Хочу до вас</h2>
-            <p>Інформація про те, як приєднатися до команди Дзвiнок!</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Sed euismod, ipsum a lacinia ultricies, nisi nisi aliquam nunc, eget tincidunt nisi nisi quis nisi.</p>
+            <h2 class="about-dzvinok-cards__title">
+                Заповни форму нижче і ми зв'яжемось з тобою дуже швидко!
+            </h2>
+            <div class="form-block">
+                <div class="form-container">
+                    <form>
+                        <div class="form-group">
+                            <label class="form-label">Напрям</label>
+                            <div class="select-wrapper">
+                                <select class="form-control">
+                                    <option>Логістика</option>
+                                    <option>Офіс</option>
+                                    <option>Продажі</option>
+                                    <option>Маркетинг</option>
+                                    <option>IT</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label">ПІБ</label>
+                            <input type="text" class="form-control">
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label">Телефон</label>
+                            <input type="tel" class="form-control" placeholder="+38">
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label">Email</label>
+                            <input type="email" class="form-control">
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label">Місто / населений пункт</label>
+                            <input type="text" class="form-control">
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label">Посилання на резюме з job-сайту</label>
+                            <input type="url" class="form-control">
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label">Прикріпи резюме (до 2 МБ; doc, docx, pdf)</label>
+                            <div class="file-upload-wrapper">
+                                <input type="file" class="file-input" id="resumeFile" accept=".doc,.docx,.pdf">
+                                <label for="resumeFile" class="file-label">
+                                    <span class="file-text">Виберіть файл</span>
+                                    <span class="file-status">Файл не вибрано</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="google-form-notice">
+                            Якщо у тебе немає Резюме, заповни <a href="https://docs.google.com/forms/d/1UtmdJWptEZJcMOFcAUAXgeKyRGpHrzo30c4QEYxuIOg/viewform?edit_requested=true">цю анкету в Google</a> і ми все одно з тобою зв'яжемося
+                        </div>
+
+                        <button type="submit" class="submit-button">Надіслати</button>
+                    </form>
+                </div>
+            </div>
         </section>
 
         <section id="content-4" class="tab-content" role="tabpanel" aria-labelledby="radio-4">

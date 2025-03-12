@@ -26,12 +26,19 @@ body {
   padding: 20px;
 }
 
+/* Улучшение для изображений */
+.header-image img, .career-img1 img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
 .header {
   text-align: center;
   padding: 30px 20px;
 
   h1 {
-    font-size: 32px;
+    font-size: clamp(24px, 5vw, 32px);
     color: #333;
     margin-bottom: 30px;
   }
@@ -79,7 +86,7 @@ input[type="radio"] {
   justify-content: center;
   height: 54px;
   width: 25%;
-  font-size: 1.25rem;
+  font-size: clamp(0.9rem, 2vw, 1.25rem);
   font-weight: 500;
   border-radius: 99px;
   cursor: pointer;
@@ -153,25 +160,29 @@ input[id="radio-4"]:checked ~ .glider {
 }
 
 .tab-content {
-  padding: 30px;
   display: none;
   background-color: #fff;
   border-radius: 12px;
-  //box-shadow: 0 0 15px rgba(32, 164, 71, 0.1);
+
+  @media (min-width: 769px) {
+    .tab-content {
+      padding: 5px;
+    }
+  }
 
   h2 {
-    font-size: 24px;
+    font-size: clamp(20px, 4vw, 24px);
     color: var(--primary-color);
     margin-bottom: 20px;
     padding-bottom: 10px;
-    border-bottom: 2px solid var(--secondary-color);
+    //border-bottom: 2px solid var(--secondary-color);
   }
 
   p {
-    font-size: 18px;
+    font-size: clamp(16px, 3vw, 18px);
     line-height: 1.6;
     color: #555;
-    margin-bottom: 70px;
+    margin-bottom: 20px;
   }
 }
 
@@ -196,7 +207,7 @@ input[id="radio-4"]:checked ~ .glider {
   padding: clamp(15px, 4vw, 30px);
   background-color: #fff;
   border-radius: 12px;
-  margin: 100px auto;
+  margin: clamp(50px, 8vw, 100px) auto;
   max-width: 100%;
   box-sizing: border-box;
 }
@@ -226,7 +237,7 @@ input[id="radio-4"]:checked ~ .glider {
 }
 
 .cards-section {
-  margin: clamp(50px, 5vw, 40px) 0;
+  margin: clamp(30px, 5vw, 40px) 0;
 }
 
 .cards-section__title {
@@ -478,40 +489,46 @@ input[id="radio-4"]:checked ~ .glider {
 
   .tab {
     width: 100%;
-    height: 50px;
+    height: auto;
+    min-height: 50px;
     margin-bottom: 5px;
     justify-content: center;
-    padding-left: 0;
   }
 
   .glider {
+    position: absolute;
     height: 50px;
     width: calc(100% - 16px);
-    left: 8px !important; /* Override all left values */
+    left: 8px !important;
   }
 
-  /* Vertical glider positioning */
+  /* Vertical glider positioning - IMPROVED */
   input[id="radio-1"]:checked ~ .glider {
     transform: translateY(0);
+    top: 8px;
   }
 
   input[id="radio-2"]:checked ~ .glider {
-    transform: translateY(55px);
+    transform: translateY(0);
+    top: 63px;
   }
 
   input[id="radio-3"]:checked ~ .glider {
-    transform: translateY(110px);
+    transform: translateY(0);
+    top: 118px;
   }
 
   input[id="radio-4"]:checked ~ .glider {
-    transform: translateY(165px);
+    transform: translateY(0);
+    top: 173px;
   }
 }
 
 @media (max-width: 480px) {
   .tab {
     font-size: 0.9rem;
-    height: 45px;
+    height: auto;
+    min-height: 45px;
   }
 
   .glider {
@@ -519,16 +536,20 @@ input[id="radio-4"]:checked ~ .glider {
   }
 
   /* Adjust vertical spacing for smaller tabs */
+  input[id="radio-1"]:checked ~ .glider {
+    top: 8px;
+  }
+
   input[id="radio-2"]:checked ~ .glider {
-    transform: translateY(50px);
+    top: 58px;
   }
 
   input[id="radio-3"]:checked ~ .glider {
-    transform: translateY(100px);
+    top: 108px;
   }
 
   input[id="radio-4"]:checked ~ .glider {
-    transform: translateY(150px);
+    top: 158px;
   }
 }
 
@@ -585,23 +606,39 @@ input[id="radio-4"]:checked ~ .glider {
 .vacancies-block {
   width: 100%;
   max-width: 1600px;
-  margin: 100px auto;
+  margin: clamp(30px, 5vw, 50px) auto;
 }
+
+/* Унифицированные стили табов вакансий */
 .vacancies-tabs {
   display: flex;
   justify-content: space-between;
-  flex-wrap: wrap;
   width: 100%;
   margin-bottom: clamp(15px, 3vw, 25px);
   padding-bottom: 10px;
   border-bottom: 2px solid var(--secondary-color);
   gap: 8px;
+  flex-wrap: wrap;
+
+  /* Стилизация скролла при необходимости */
+  overflow-x: auto;
+  &::-webkit-scrollbar {
+    height: 5px;
+  }
+  &::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 5px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: var(--secondary-color);
+    border-radius: 5px;
+  }
 }
 
 .vacancies-tab {
   flex: 1;
   text-align: center;
-  padding: clamp(8px, 1.5vw, 12px) clamp(5px, 2vw, 15px);
+  padding: clamp(8px, 1.5vw, 12px) clamp(10px, 2vw, 15px);
   background-color: #f5f5f5;
   border-radius: 8px 8px 0 0;
   cursor: pointer;
@@ -610,16 +647,21 @@ input[id="radio-4"]:checked ~ .glider {
   transition: all 0.3s ease;
   min-width: min-content;
   font-size: clamp(13px, 1.2vw, 16px);
-}
+  margin-bottom: 5px;
 
-.vacancies-tab:hover {
-  background-color: #e6f6ec;
-  color: #20A447;
-}
+  &:last-child {
+    margin-right: 0;
+  }
 
-.vacancies-tab.active {
-  background-color: var(--primary-color);
-  color: white;
+  &:hover {
+    background-color: #e6f6ec;
+    color: #20A447;
+  }
+
+  &.active {
+    background-color: var(--primary-color);
+    color: white;
+  }
 }
 
 /* Контейнер для групп позиций */
@@ -634,15 +676,32 @@ input[id="radio-4"]:checked ~ .glider {
 
 .positions-group.active {
   display: block;
-  margin: 50px;
+  margin: clamp(20px, 3vw, 30px) 0;
 }
 
-/* Сетка для карточек вакансий */
+/* Сетка для карточек вакансий - унифицируем с сеткой карточек */
 .positions-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
   gap: clamp(15px, 3vw, 20px);
   width: 100%;
+  justify-content: center;
+}
+
+/* Правила для больших экранов - унифицируем с картами */
+@media (min-width: 769px) {
+  .positions-grid {
+    grid-template-columns: repeat(auto-fit, 280px);
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* Стандартизируем карточки */
+  .position-card {
+    width: 100%;
+    max-width: 280px;
+  }
 }
 
 /* Стили для карточек вакансий */
@@ -654,6 +713,7 @@ input[id="radio-4"]:checked ~ .glider {
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   height: 100%;
+  min-height: 150px;
 }
 
 .position-card:hover {
@@ -702,6 +762,48 @@ input[id="radio-4"]:checked ~ .glider {
   color: #177a33;
 }
 
+/* Вертикальный режим для маленьких экранов */
+@media (max-width: 650px) {
+  .vacancies-tabs {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .vacancies-tab {
+    margin-right: 0;
+    border-radius: 8px;
+    margin-bottom: 5px;
+  }
+
+  .positions-group.active {
+    margin: 20px 0;
+  }
+
+  .positions-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .position-card {
+    flex-direction: column;
+    min-height: auto;
+  }
+
+  .position-icon {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+}
+
+/* Планшетный размер */
+@media (min-width: 651px) and (max-width: 768px) {
+  .positions-grid {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
 /* Контактный блок внизу */
 .vacancy-contact {
   background-color: #20A447;
@@ -719,78 +821,169 @@ input[id="radio-4"]:checked ~ .glider {
   color: white;
   text-decoration: underline;
 }
+/* Блок хочу до вас */
+.form-block {
+  max-width: 800px;
+  width: clamp(300px, 90%, 800px);
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(32, 164, 71, 0.15);
+  margin: clamp(20px, 5vw, 30px) auto;
+  background-color: #fff;
+}
+
+.about-dzvinok-cards__title {
+  font-size: clamp(20px, 5vw, 24px);
+  color: var(--primary-color);
+  margin-bottom: clamp(15px, 4vw, 20px);
+  text-align: center;
+  line-height: 1.3;
+}
+
+.form-container {
+  padding: clamp(15px, 3vw, 30px);
+}
+
+.form-group {
+  margin-bottom: clamp(15px, 3vw, 20px);
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 8px;
+  color: #444;
+  font-size: clamp(14px, 3vw, 16px);
+  font-weight: 500;
+}
+
+.form-control {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid rgba(32, 164, 71, 0.3);
+  border-radius: 6px;
+  font-size: clamp(14px, 3vw, 16px);
+  background-color: rgba(255, 255, 255, 0.6);
+
+  &:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    background-color: rgba(255, 255, 255, 0.8);
+  }
+}
+
+.select-wrapper {
+  border-radius: 50px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(to right, rgba(255, 235, 213, 0.3), rgba(255, 235, 213, 0));
+}
+
+select.form-control {
+  padding: 14px 20px;
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23333' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 15px center;
+  background-size: 16px;
+  border: none;
+  border-radius: 50px;
+}
+
+/* Стилизация загрузки файла */
+.file-upload-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.file-input {
+  position: absolute;
+  left: -9999px;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.file-label {
+  display: flex;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  overflow: hidden;
+  cursor: pointer;
+  background-color: #f9f9f9;
+}
+
+.file-text {
+  padding: 10px 15px;
+  background-color: var(--primary-color);
+  color: white;
+  display: inline-block;
+  font-weight: 500;
+  font-size: clamp(14px, 3vw, 16px);
+}
+
+.file-status {
+  padding: 10px 15px;
+  flex-grow: 1;
+  display: inline-block;
+  color: #555;
+  font-size: clamp(14px, 3vw, 16px);
+}
+
+.submit-button {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  padding: clamp(12px, 3vw, 14px) clamp(20px, 5vw, 28px);
+  border-radius: 6px;
+  font-size: clamp(16px, 3vw, 18px);
+  cursor: pointer;
+  transition: background-color 0.3s;
+  display: block;
+  margin: 0 auto;
+
+  &:hover {
+    background-color: #178a3a;
+  }
+}
+
+.google-form-notice {
+  text-align: center;
+  padding: clamp(12px, 3vw, 15px);
+  background-color: rgba(230, 246, 236, 0.5);
+  border-radius: 8px;
+  color: #333;
+  font-size: clamp(14px, 3vw, 16px);
+  margin-bottom: clamp(20px, 4vw, 25px);
+
+  a {
+    color: var(--primary-color);
+    font-weight: 500;
+    text-decoration: underline;
+  }
+}
 
 /* Адаптивность */
-@media (min-width: 769px) {
-  .positions-grid {
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
+@media (max-width: 576px) {
+  .form-block {
+    width: 95%;
+    margin: 15px auto;
   }
 
-  /* Центрирование последних элементов в неполных рядах */
-  .positions-grid:has(.position-card:nth-child(3n+1):last-child) {
-    grid-template-columns: repeat(3, 1fr);
+  .form-container {
+    padding: 15px;
   }
 
-  .positions-grid:has(.position-card:nth-child(3n+1):last-child) .position-card:last-child {
-    grid-column: 2;
-  }
-
-  .positions-grid:has(.position-card:nth-child(3n+2):last-child) .position-card:last-child {
-    grid-column-start: 2;
-  }
-}
-
-@media (min-width: 481px) and (max-width: 768px) {
-  .vacancies-tabs {
-    justify-content: flex-start;
-    overflow-x: auto;
-    flex-wrap: nowrap;
-  }
-
-  .vacancies-tab {
-    flex: 0 0 auto;
-    min-width: 120px;
-  }
-
-  .positions-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  /* Центрирование для нечетного элемента */
-  .positions-grid:has(.position-card:nth-child(odd):last-child) .position-card:last-child {
-    grid-column: 1 / -1;
-    width: 80%;
-    justify-self: center;
-  }
-}
-
-@media (max-width: 480px) {
-  .vacancies-tabs {
-    justify-content: flex-start;
-    overflow-x: auto;
-    flex-wrap: nowrap;
-  }
-
-  .vacancies-tab {
-    flex: 0 0 auto;
-    min-width: 100px;
-    font-size: 14px;
-    padding: 8px 12px;
-  }
-
-  .positions-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .position-card {
+  .file-label {
     flex-direction: column;
   }
 
-  .position-icon {
-    margin-right: 0;
-    margin-bottom: 10px;
+  .file-text {
+    width: 100%;
+    text-align: center;
+  }
+
+  .file-status {
+    width: 100%;
+    text-align: center;
+    padding: 8px;
   }
 }
