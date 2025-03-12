@@ -154,7 +154,6 @@ input[id=radio-4]:checked ~ .glider {
   display: none;
   background-color: #fff;
   border-radius: 12px;
-  box-shadow: 0 0 15px rgba(32, 164, 71, 0.1);
 }
 .tab-content h2 {
   font-size: 24px;
@@ -164,7 +163,7 @@ input[id=radio-4]:checked ~ .glider {
   border-bottom: 2px solid var(--secondary-color);
 }
 .tab-content p {
-  font-size: 16px;
+  font-size: 18px;
   line-height: 1.6;
   color: #555;
   margin-bottom: 20px;
@@ -241,14 +240,29 @@ input[id=radio-4]:checked ~ .glider {
   font-size: clamp(20px, 4vw, 28px);
 }
 
+/* НОВЫЙ КОД ДЛЯ ЦЕНТРИРОВАНИЯ ЭЛЕМЕНТОВ В GRID */
 .cards-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(min(100%, 280px), 1fr));
+  /* Вместо auto-fill используем auto-fit для лучшего центрирования */
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
   gap: clamp(15px, 3vw, 20px);
   margin-bottom: clamp(20px, 4vw, 30px);
   width: 100%;
 }
 
+/* Правила для больших экранов */
+@media (min-width: 769px) {
+  .cards-grid {
+    /* Это свойство задает фиксированную ширину колонок и центрирует их */
+    grid-template-columns: repeat(auto-fit, 280px);
+    justify-content: center;
+  }
+  /* Убедимся, что карточки имеют правильные размеры */
+  .card {
+    width: 100%;
+    max-width: 280px;
+  }
+}
 .card {
   padding: clamp(15px, 3vw, 20px);
   background-color: #f9f9f9;
@@ -308,22 +322,64 @@ input[id=radio-4]:checked ~ .glider {
   .about-dzvinok-cards__title {
     padding: 0 10px;
   }
+  .card {
+    width: 100%;
+    max-width: 100%; /* На мобильных устройствах карточки занимают всю ширину */
+  }
 }
 /* Средние размеры экрана */
 @media (min-width: 481px) and (max-width: 768px) {
   .cards-grid {
-    grid-template-columns: repeat(2, 1fr);
+    /* На планшетах отображаем по 2 карточки в ряд и центрируем их */
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  /* Если остался один элемент в последнем ряду, центрируем его */
+  .cards-grid.items-5 .card:nth-child(5),
+.cards-grid.items-4 .card:nth-child(3) { /* для второй сетки с 4 элементами, если нечетный */
+    grid-column: 1/-1;
+    max-width: 280px;
+    justify-self: center;
   }
 }
 /* Большие экраны */
-@media (min-width: 1200px) {
+@media (min-width: 2000px) {
   .about-dzvinok-cards {
-    max-width: 1200px;
+    max-width: 1600px;
   }
   .cards-grid {
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, 280px);
+    justify-content: center;
   }
 }
+/* Альтернативное решение с использованием flexbox для лучшей совместимости */
+@supports not (grid-template-columns: repeat(auto-fit, 280px)) {
+  .cards-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0; /* Сбрасываем gap для flex */
+  }
+  .card {
+    flex: 0 0 280px;
+    margin: calc(clamp(15px, 3vw, 20px) / 2);
+  }
+  @media (max-width: 480px) {
+    .card {
+      flex: 0 0 100%;
+    }
+  }
+}
+/* Добавляем дополнительный псевдоэлемент для JavaScript */
+.cards-grid::before {
+  content: "";
+  width: 0;
+  padding-bottom: 0;
+  order: 999; /* Псевдоэлемент получит последний порядок */
+}
+
 .stores-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
