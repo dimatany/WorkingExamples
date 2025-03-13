@@ -856,7 +856,7 @@ select.form-control {
     top: 173px;
   }
 }
-@media (max-width: 1200px) {
+@media (min-width: 1200px) {
   .tabs {
     width: 100%;
     justify-content: space-between;
@@ -864,7 +864,6 @@ select.form-control {
   .tab {
     width: 24%;
     min-width: 100px;
-    font-size: 1rem;
   }
   .glider {
     width: 22%;
@@ -897,6 +896,7 @@ select.form-control {
   .cards-grid, .positions-grid {
     grid-template-columns: repeat(auto-fit, 280px);
     justify-content: center;
+    margin-bottom: 130px;
   }
 }
 /* Альтернативное решение с использованием flexbox для лучшей совместимости */
@@ -927,7 +927,7 @@ select.form-control {
 
 /* Стили для блока историй сотрудников */
 .employee-stories {
-  max-width: 1200px;
+  max-width: 1600px;
   margin: clamp(30px, 5vw, 50px) auto;
   padding: 0 clamp(15px, 3vw, 30px);
 }
