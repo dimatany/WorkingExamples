@@ -172,55 +172,6 @@ document.addEventListener('DOMContentLoaded', () => {
 			});
 		});
 		
-		/**
-		 * Обновляет центрирование элементов в сетке в зависимости от размера экрана
-		 * @param {HTMLElement} grid - сетка для обновления
-		 */
-		function updateGridCentering(grid) {
-			if (!grid) return;
-			
-			// Определяем количество колонок по ширине экрана
-			let columnsCount = 3; // По умолчанию для больших экранов
-			
-			if (window.innerWidth <= 480) {
-				columnsCount = 1; // Мобильные устройства
-			} else if (window.innerWidth <= 768) {
-				columnsCount = 2; // Планшеты
-			}
-			
-			const cards = grid.querySelectorAll('.position-card');
-			const totalCards = cards.length;
-			
-			// Определяем количество элементов в последнем ряду
-			const lastRowItems = totalCards % columnsCount;
-			
-			// Добавляем классы для центрирования на основе количества элементов
-			if (lastRowItems > 0) {
-				grid.classList.add('last-row-incomplete');
-				
-				// Центрируем единственный элемент в ряду из двух колонок
-				if (columnsCount === 2 && lastRowItems === 1) {
-					cards[totalCards - 1].classList.add('center-in-row');
-				}
-				
-				// Обработка для трех колонок
-				if (columnsCount === 3) {
-					if (lastRowItems === 1) {
-						cards[totalCards - 1].classList.add('center-in-row');
-					} else if (lastRowItems === 2) {
-						cards[totalCards - 2].classList.add('left-of-center');
-						cards[totalCards - 1].classList.add('right-of-center');
-					}
-				}
-			} else {
-				// Если последний ряд полный, удаляем все классы центрирования
-				grid.classList.remove('last-row-incomplete');
-				cards.forEach(card => {
-					card.classList.remove('center-in-row', 'left-of-center', 'right-of-center');
-				});
-			}
-		}
-		
 		// Обновляем активную группу при загрузке
 		const activeGroup = document.querySelector('.positions-group.active');
 		if (activeGroup) {
@@ -230,7 +181,276 @@ document.addEventListener('DOMContentLoaded', () => {
 	
 	handleVacancyTabs();
 	
-	// БЛОК 4: ОБРАБОТКА RESIZE
+	// БЛОК 4: УПРАВЛЕНИЕ МАГАЗИНАМИ
+	/**
+	 * Инициализация и обработка интерактивного списка магазинов
+	 */
+	function initStoreLocator() {
+		// Проверяем, есть ли элементы для магазинов на странице
+		const storeLocator = document.querySelector('.store-locator');
+		if (!storeLocator) return;
+		
+		// Данные о магазинах
+		const storesData = {
+			'bahm': {
+				name: 'м. Бахмач',
+				address: 'вул. Дружби, 14',
+				phone: '(068) 125 78 68',
+				hours: {
+					weekdays: 'пн-пт: 09:00-19:00',
+					weekend: 'сб-нд: 09:00-17:00'
+				},
+				coordinates: { lat: 51.1856, lng: 32.8344 }
+			},
+			'bilo': {
+				name: 'м. Білопілля',
+				address: 'вул. Сумська, 5',
+				phone: '(095) 545 57 37',
+				hours: {
+					weekdays: 'пн-нд: 09:00-15:00',
+					weekend: ''
+				},
+				coordinates: { lat: 51.1541, lng: 34.3061 }
+			},
+			'berez': {
+				name: 'м. Березне',
+				address: 'вул. Андріївська, 27',
+				phone: '(097) 886 97 37',
+				hours: {
+					weekdays: 'пн-пт: 09:00-19:00',
+					weekend: 'сб-нд: 09:00-18:00'
+				},
+				coordinates: { lat: 50.9985, lng: 26.7505 }
+			},
+			'gluh': {
+				name: 'м. Глухів',
+				address: 'вул. Терещенків, 44',
+				phone: '(095) 224 74 42',
+				hours: {
+					weekdays: 'пн-пт: 09:00-18:00',
+					weekend: 'сб-нд: 09:00-16:00'
+				},
+				coordinates: { lat: 51.6775, lng: 33.9071 }
+			},
+			'goroh': {
+				name: 'м. Горохів',
+				address: 'вул. Торгова, 2',
+				phone: '(097) 738 96 00',
+				hours: {
+					weekdays: 'пн-пт: 09:00-19:00',
+					weekend: 'сб-нд: 09:00-17:00'
+				},
+				coordinates: { lat: 50.4994, lng: 24.7605 }
+			},
+			'dubr': {
+				name: 'м. Дубровиця',
+				address: 'вул. Шевченка, 55',
+				phone: '(097) 691 00 31',
+				hours: {
+					weekdays: 'пн-пт: 09:00-18:00',
+					weekend: 'сб-нд: 09:00-17:00'
+				},
+				coordinates: { lat: 51.5745, lng: 26.5675 }
+			},
+			'konot': {
+				name: 'м. Конотоп',
+				address: 'пр. Миру, 61',
+				phone: '(096) 762 68 68',
+				hours: {
+					weekdays: 'пн-нд: 09:00-19:00',
+					weekend: ''
+				},
+				coordinates: { lat: 51.2392, lng: 33.2009 }
+			},
+			'kost': {
+				name: 'м. Костопіль',
+				address: 'вул. Грушевського, 29',
+				phone: '(097) 887 42 77',
+				hours: {
+					weekdays: 'пн-пт: 09:00-19:00',
+					weekend: 'сб-нд: 09:00-18:00'
+				},
+				coordinates: { lat: 50.8788, lng: 26.4432 }
+			},
+			'krol': {
+				name: 'м. Кролевець',
+				address: 'вул. Рушникова, 2',
+				phone: '(068) 698 17 10',
+				hours: {
+					weekdays: 'пн-пт: 09:00-19:00',
+					weekend: 'сб-нд: 09:00-17:00'
+				},
+				coordinates: { lat: 51.5518, lng: 33.3829 }
+			},
+			'lubny': {
+				name: 'м. Лубни',
+				address: 'пл. Ярмаркова, 2',
+				phone: '(099) 109 48 28',
+				hours: {
+					weekdays: 'пн-пт: 09:00-19:00',
+					weekend: 'сб-нд: 09:00-17:00'
+				},
+				coordinates: { lat: 50.0122, lng: 32.9968 }
+			},
+			'rokyt': {
+				name: 'смт. Рокитне',
+				address: 'вул. Незалежності, 7',
+				phone: '(050) 060 33 03',
+				hours: {
+					weekdays: 'пн-пт: 09:00-19:00',
+					weekend: 'сб-нд: 09:00-17:00'
+				},
+				coordinates: { lat: 51.2791, lng: 27.2143 }
+			},
+			'sarny': {
+				name: 'м. Сарни',
+				address: 'вул. Польська, 1',
+				phone: '(068) 708 48 38',
+				hours: {
+					weekdays: 'пн-пт: 09:00-18:00',
+					weekend: 'сб-нд: 09:00-17:00'
+				},
+				coordinates: { lat: 51.3384, lng: 26.6009 }
+			},
+			'shost': {
+				name: 'м. Шостка',
+				address: 'вул. Свободи, 30 (Універмаг, 2-й пов.)',
+				phone: '(068) 924 62 62',
+				hours: {
+					weekdays: 'пн-нд: 09:00-18:00',
+					weekend: ''
+				},
+				coordinates: { lat: 51.8653, lng: 33.4758 }
+			},
+			'romny': {
+				name: 'м. Ромни',
+				address: 'бульвар Шевченка, 31',
+				phone: '(068) 978 80 09',
+				hours: {
+					weekdays: 'пн-пт: 09:00-19:00',
+					weekend: 'сб-нд: 09:00-18:00'
+				},
+				coordinates: { lat: 50.7507, lng: 33.4785 }
+			}
+		};
+		
+		// Получаем элементы
+		const citySelector = document.getElementById('citySelector');
+		const storeDetailsContent = document.querySelector('.store-details__content');
+		const storeDetailsInitial = document.querySelector('.store-details__initial');
+		let map = null;
+		let marker = null;
+		
+		// Инициализация Google карты (если API доступен)
+		function initMap() {
+			// Центр Украины для начального отображения
+			const ukraineCenter = { lat: 49.4871, lng: 31.2718 };
+			
+			// Проверяем, доступен ли Google Maps API
+			if (typeof google !== 'undefined' && google.maps) {
+				map = new google.maps.Map(document.getElementById('map'), {
+					center: ukraineCenter,
+					zoom: 6,
+					mapTypeId: google.maps.MapTypeId.ROADMAP,
+					mapTypeControl: false,
+					fullscreenControl: true,
+					streetViewControl: false
+				});
+				
+				// Переключение типа карты
+				const mapBtnView = document.querySelector('.map-btn--view');
+				const mapBtnSatellite = document.querySelector('.map-btn--satellite');
+				
+				if (mapBtnView && mapBtnSatellite) {
+					mapBtnView.classList.add('active');
+					
+					mapBtnView.addEventListener('click', function() {
+						map.setMapTypeId(google.maps.MapTypeId.ROADMAP);
+						mapBtnView.classList.add('active');
+						mapBtnSatellite.classList.remove('active');
+					});
+					
+					mapBtnSatellite.addEventListener('click', function() {
+						map.setMapTypeId(google.maps.MapTypeId.SATELLITE);
+						mapBtnSatellite.classList.add('active');
+						mapBtnView.classList.remove('active');
+					});
+				}
+			}
+		}
+		
+		// Обновление информации о магазине
+		function updateStoreInfo(cityCode) {
+			if (!cityCode || !storesData[cityCode]) {
+				// Если город не выбран или данных нет, показываем начальное состояние
+				storeDetailsInitial.style.display = 'flex';
+				storeDetailsContent.style.display = 'none';
+				return;
+			}
+			
+			// Скрываем начальное состояние и показываем информацию о магазине
+			storeDetailsInitial.style.display = 'none';
+			storeDetailsContent.style.display = 'block';
+			
+			const store = storesData[cityCode];
+			
+			// Заполняем информацию о магазине
+			document.querySelector('.store-city').textContent = store.name;
+			document.querySelector('.store-street').textContent = store.address;
+			document.querySelector('.store-phone-number').textContent = store.phone;
+			document.querySelector('.store-phone-number').href = `tel:${store.phone.replace(/[^0-9+]/g, '')}`;
+			document.querySelector('.messenger-telegram').href = `https://t.me/${store.phone.replace(/[^0-9+]/g, '')}`;
+			document.querySelector('.messenger-viber').href = `viber://chat?number=${store.phone.replace(/[^0-9+]/g, '')}`;
+			document.querySelector('.store-weekdays').textContent = store.hours.weekdays;
+			document.querySelector('.store-weekend').textContent = store.hours.weekend;
+			
+			// Обновляем ссылку "прокласти маршрут"
+			document.getElementById('routeLink').href = `https://www.google.com/maps/dir/?api=1&destination=${store.coordinates.lat},${store.coordinates.lng}`;
+			
+			// Обновляем карту
+			if (map) {
+				// Центрируем карту на выбранном магазине
+				map.setCenter(store.coordinates);
+				map.setZoom(16);
+				
+				// Добавляем или обновляем маркер
+				if (marker) {
+					marker.setPosition(store.coordinates);
+				} else {
+					marker = new google.maps.Marker({
+						position: store.coordinates,
+						map: map,
+						title: store.name,
+						animation: google.maps.Animation.DROP
+					});
+				}
+			}
+		}
+		
+		// Инициализация событий
+		if (citySelector) {
+			// Обработчик выбора города в селекте
+			citySelector.addEventListener('change', function() {
+				const selectedCity = this.value;
+				updateStoreInfo(selectedCity);
+			});
+		}
+		
+		// Инициализируем карту, если Google Maps API загружен
+		if (typeof google !== 'undefined') {
+			initMap();
+		} else {
+			// Если API не загружен, добавляем заглушку изображения карты
+			const mapContainer = document.getElementById('map');
+			if (mapContainer) {
+				mapContainer.style.backgroundImage = 'url("assets/img/map-placeholder.jpg")';
+				mapContainer.style.backgroundSize = 'cover';
+				mapContainer.style.backgroundPosition = 'center';
+			}
+		}
+	}
+	
+	// БЛОК 5: ОБРАБОТКА RESIZE
 	// Используем задержку для предотвращения частых вызовов при изменении размера
 	let resizeTimer;
 	window.addEventListener('resize', function() {
@@ -253,7 +473,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		}, 100); // Задержка в 100 мс для оптимизации производительности
 	});
 	
-	// БЛОК 5: ОБРАБОТКА ОТОБРАЖЕНИЯ ИМЕНИ ВЫБРАННОГО ФАЙЛА
+	// БЛОК 6: ОБРАБОТКА ОТОБРАЖЕНИЯ ИМЕНИ ВЫБРАННОГО ФАЙЛА
 	const fileInput = document.getElementById('resumeFile');
 	if (fileInput) {
 		fileInput.addEventListener('change', function() {
@@ -266,7 +486,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		});
 	}
 	
-	// Определяем функцию updateGridCentering глобально для использования при ресайзе
+	// Глобальная функция для центрирования элементов в grid
 	function updateGridCentering(grid) {
 		if (!grid) return;
 		
@@ -305,4 +525,7 @@ document.addEventListener('DOMContentLoaded', () => {
 			});
 		}
 	}
+	
+	// Инициализируем функциональность магазинов
+	initStoreLocator();
 });

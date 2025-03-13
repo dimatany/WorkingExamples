@@ -511,111 +511,73 @@
         </section>
 
         <section id="content-4" class="tab-content" role="tabpanel" aria-labelledby="radio-4">
-            <h2>Оффлайн магазины</h2>
-            <p>Список та контактна інформація наших оффлайн магазинів:</p>
+            <h2 class="about-dzvinok-cards__title">
+                Оффлайн магазини Дзвінка
+            </h2>
 
-            <div class="stores-grid">
-                <div class="store-card">
-                    <h3>Бахмач</h3>
-                    <p><strong>Адреса:</strong> вул. Дружби, 14 📍 <a href="#" class="route-link">[прокласти маршрут]</a></p>
-                    <p><strong>Номер телефону:</strong> (068) 125 78 68 <a href="#" class="messenger-link">[Telegram]</a> <a href="#" class="messenger-link">[Viber]</a></p>
-                    <p><strong>Графік роботи:</strong> <strong>пн-пт:</strong> 09:00-19:00 <strong>сб-нд:</strong> 09:00-17:00</p>
+            <p class="about-dzvinok-cards__intro">Контактна інформація наших магазинів у різних містах України:</p>
+
+            <div class="store-locator">
+                <div class="store-locator__controls">
+                    <div class="store-selector">
+                        <select id="citySelector" class="store-selector__dropdown">
+                            <option value="">Виберіть місто</option>
+                            <option value="bahm">м. Бахмач</option>
+                            <option value="bilo">м. Білопілля</option>
+                            <option value="berez">м. Березне</option>
+                            <option value="gluh">м. Глухів</option>
+                            <option value="goroh">м. Горохів</option>
+                            <option value="dubr">м. Дубровиця</option>
+                            <option value="konot">м. Конотоп</option>
+                            <option value="kost">м. Костопіль</option>
+                            <option value="krol">м. Кролевець</option>
+                            <option value="lubny">м. Лубни</option>
+                            <option value="rokyt">смт. Рокитне</option>
+                            <option value="sarny">м. Сарни</option>
+                            <option value="shost">м. Шостка</option>
+                            <option value="romny">м. Ромни</option>
+                        </select>
+                    </div>
                 </div>
 
-                <div class="store-card">
-                    <h3>Білопілля</h3>
-                    <p><strong>Адреса:</strong> вул. Сумська, 5 📍 <a href="#" class="route-link">[прокласти маршрут]</a></p>
-                    <p><strong>Номер телефону:</strong> (095) 545 57 37 <a href="#" class="messenger-link">[Telegram]</a> <a href="#" class="messenger-link">[Viber]</a></p>
-                    <p><strong>Графік роботи:</strong> <strong>пн-нд:</strong> 09:00-15:00</p>
-                </div>
+                <div class="store-locator__info">
+                    <div class="store-details" id="storeDetails">
+                        <div class="store-details__initial">
+                            <p>Оберіть місто зі списку, щоб побачити деталі магазину</p>
+                        </div>
+                        <!-- Шаблон информации о магазине (будет заполняться через JS) -->
+                        <div class="store-details__content" style="display: none;">
+                            <h3 class="store-details__title">Адреса магазину в <span class="store-city"></span>:</h3>
+                            <p class="store-details__address"><span class="store-street"></span> <a href="#" class="route-link" id="routeLink">прокласти маршрут</a></p>
 
-                <div class="store-card">
-                    <h3>Березне</h3>
-                    <p><strong>Адреса:</strong> вул. Андріївська, 27 📍 <a href="#" class="route-link">[прокласти маршрут]</a></p>
-                    <p><strong>Номер телефону:</strong> (097) 886 97 37 <a href="#" class="messenger-link">[Telegram]</a> <a href="#" class="messenger-link">[Viber]</a></p>
-                    <p><strong>Графік роботи:</strong> <strong>пн-пт:</strong> 09:00-19:00 <strong>сб-нд:</strong> 09:00-18:00</p>
-                </div>
+                            <h4 class="store-details__subtitle">Номер телефону:</h4>
+                            <p class="store-details__phone">
+                                <a href="#" class="store-phone-number"></a>
+                                <a href="#" class="messenger-link messenger-telegram">Telegram</a>
+                                <a href="#" class="messenger-link messenger-viber">Viber</a>
+                            </p>
 
-                <div class="store-card">
-                    <h3>Глухів</h3>
-                    <p><strong>Адреса:</strong> вул. Терещенків, 44 📍 <a href="#" class="route-link">[прокласти маршрут]</a></p>
-                    <p><strong>Номер телефону:</strong> (095) 224 74 42 <a href="#" class="messenger-link">[Telegram]</a> <a href="#" class="messenger-link">[Viber]</a></p>
-                    <p><strong>Графік роботи:</strong> <strong>пн-пт:</strong> 09:00-18:00 <strong>сб-нд:</strong> 09:00-16:00</p>
-                </div>
+                            <h4 class="store-details__subtitle">Графік роботи:</h4>
+                            <p class="store-details__hours">
+                                <span class="store-weekdays"></span><br>
+                                <span class="store-weekend"></span>
+                            </p>
+                        </div>
+                    </div>
 
-                <div class="store-card">
-                    <h3>Горохів</h3>
-                    <p><strong>Адреса:</strong> вул. Торгова, 2 📍 <a href="#" class="route-link">[прокласти маршрут]</a></p>
-                    <p><strong>Номер телефону:</strong> (097) 738 96 00 <a href="#" class="messenger-link">[Telegram]</a> <a href="#" class="messenger-link">[Viber]</a></p>
-                    <p><strong>Графік роботи:</strong> <strong>пн-пт:</strong> 09:00-19:00 <strong>сб-нд:</strong> 09:00-17:00</p>
+                    <div class="store-map">
+                        <div id="map" class="store-map__container">
+                            <!-- Здесь будет карта Google Maps -->
+                        </div>
+                        <div class="store-map__controls">
+                            <button class="map-btn map-btn--view">Карта</button>
+                            <button class="map-btn map-btn--satellite">Супутник</button>
+                        </div>
+                    </div>
                 </div>
-
-                <div class="store-card">
-                    <h3>Дубровиця</h3>
-                    <p><strong>Адреса:</strong> вул. Шевченка, 55 📍 <a href="#" class="route-link">[прокласти маршрут]</a></p>
-                    <p><strong>Номер телефону:</strong> (097) 691 00 31 <a href="#" class="messenger-link">[Telegram]</a> <a href="#" class="messenger-link">[Viber]</a></p>
-                    <p><strong>Графік роботи:</strong> <strong>пн-пт:</strong> 09:00-18:00 <strong>сб-нд:</strong> 09:00-17:00</p>
-                </div>
-
-                <div class="store-card">
-                    <h3>Конотоп</h3>
-                    <p><strong>Адреса:</strong> пр. Миру, 61 📍 <a href="#" class="route-link">[прокласти маршрут]</a></p>
-                    <p><strong>Номер телефону:</strong> (096) 762 68 68 <a href="#" class="messenger-link">[Telegram]</a> <a href="#" class="messenger-link">[Viber]</a></p>
-                    <p><strong>Графік роботи:</strong> <strong>пн-нд:</strong> 09:00-19:00</p>
-                </div>
-
-                <div class="store-card">
-                    <h3>Костопіль</h3>
-                    <p><strong>Адреса:</strong> вул. Грушевського, 29 📍 <a href="#" class="route-link">[прокласти маршрут]</a></p>
-                    <p><strong>Номер телефону:</strong> (097) 887 42 77 <a href="#" class="messenger-link">[Telegram]</a> <a href="#" class="messenger-link">[Viber]</a></p>
-                    <p><strong>Графік роботи:</strong> <strong>пн-пт:</strong> 09:00-19:00 <strong>сб-нд:</strong> 09:00-18:00</p>
-                </div>
-
-                <div class="store-card">
-                    <h3>Кролевець</h3>
-                    <p><strong>Адреса:</strong> вул. Рушникова, 2 📍 <a href="#" class="route-link">[прокласти маршрут]</a></p>
-                    <p><strong>Номер телефону:</strong> (068) 698 17 10 <a href="#" class="messenger-link">[Telegram]</a> <a href="#" class="messenger-link">[Viber]</a></p>
-                    <p><strong>Графік роботи:</strong> <strong>пн-пт:</strong> 09:00-19:00 <strong>сб-нд:</strong> 09:00-17:00</p>
-                </div>
-
-                <div class="store-card">
-                    <h3>Лубни</h3>
-                    <p><strong>Адреса:</strong> пл. Ярмаркова, 2 📍 <a href="#" class="route-link">[прокласти маршрут]</a></p>
-                    <p><strong>Номер телефону:</strong> (099) 109 48 28 <a href="#" class="messenger-link">[Telegram]</a> <a href="#" class="messenger-link">[Viber]</a></p>
-                    <p><strong>Графік роботи:</strong> <strong>пн-пт:</strong> 09:00-19:00 <strong>сб-нд:</strong> 09:00-17:00</p>
-                </div>
-
-                <div class="store-card">
-                    <h3>Рокитне</h3>
-                    <p><strong>Адреса:</strong> вул. Незалежності, 7 📍 <a href="#" class="route-link">[прокласти маршрут]</a></p>
-                    <p><strong>Номер телефону:</strong> (050) 060 33 03 <a href="#" class="messenger-link">[Telegram]</a> <a href="#" class="messenger-link">[Viber]</a></p>
-                    <p><strong>Графік роботи:</strong> <strong>пн-пт:</strong> 09:00-19:00 <strong>сб-нд:</strong> 09:00-17:00</p>
-                </div>
-
-                <div class="store-card">
-                    <h3>Сарни</h3>
-                    <p><strong>Адреса:</strong> вул. Польська, 1 📍 <a href="#" class="route-link">[прокласти маршрут]</a></p>
-                    <p><strong>Номер телефону:</strong> (068) 708 48 38 <a href="#" class="messenger-link">[Telegram]</a> <a href="#" class="messenger-link">[Viber]</a></p>
-                    <p><strong>Графік роботи:</strong> <strong>пн-пт:</strong> 09:00-18:00 <strong>сб-нд:</strong> 09:00-17:00</p>
-                </div>
-
-                <div class="store-card">
-                    <h3>Шостка</h3>
-                    <p><strong>Адреса:</strong> вул. Свободи, 30 (Універмаг, 2-й пов.) 📍 <a href="#" class="route-link">[прокласти маршрут]</a></p>
-                    <p><strong>Номер телефону:</strong> (068) 924 62 62 <a href="#" class="messenger-link">[Telegram]</a> <a href="#" class="messenger-link">[Viber]</a></p>
-                    <p><strong>Графік роботи:</strong> <strong>пн-нд:</strong> 09:00-18:00</p>
-                </div>
-
-                <div class="store-card">
-                    <h3>Ромни</h3>
-                    <p><strong>Адреса:</strong> бульвар Шевченка, 31 📍 <a href="#" class="route-link">[прокласти маршрут]</a></p>
-                    <p><strong>Номер телефону:</strong> (068) 978 80 09 <a href="#" class="messenger-link">[Telegram]</a> <a href="#" class="messenger-link">[Viber]</a></p>
-                    <p><strong>Графік роботи:</strong> <strong>пн-пт:</strong> 09:00-19:00 <strong>сб-нд:</strong> 09:00-18:00</p>
-                </div>
-
-                <!-- Остальные store-card элементы -->
             </div>
         </section>
+
     </main>
 </div>
 
