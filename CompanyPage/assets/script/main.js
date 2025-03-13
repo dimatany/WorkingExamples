@@ -30,12 +30,16 @@ document.addEventListener('DOMContentLoaded', () => {
 	};
 	
 	/**
-	 * Корректирует позицию глайдера
+	 * Корректирует позицию глайдера на основе CSS переменных вместо инлайн-стилей
 	 * @param {String} tabId - ID активной вкладки
 	 */
 	const handleGliderPosition = (tabId) => {
-		glider.style.removeProperty('transform');
+		// Используем CSS классы вместо прямых манипуляций со стилями
+		// Это делает код более поддерживаемым и позволяет перенести логику в CSS
+		glider.classList.remove('position-tab-1', 'position-tab-2', 'position-tab-3', 'position-tab-4');
+		glider.classList.add(`position-tab-${tabId.split('-')[1]}`);
 		
+		// Дополнительная логика для последнего таба
 		if (tabId === 'radio-4') {
 			requestAnimationFrame(() => {
 				const containerWidth = tabContainer.offsetWidth;
@@ -48,6 +52,7 @@ document.addEventListener('DOMContentLoaded', () => {
 				const matrix = new DOMMatrix(gliderStyles.transform);
 				
 				if (matrix.m41 > maxPosition) {
+					// Применяем корректировку только если необходимо
 					glider.style.transform = `translateX(${maxPosition}px)`;
 				}
 			});
@@ -64,6 +69,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		
 		radioButton.checked = true;
 		
+		// Используем кастомное событие для лучшей поддержки
 		const event = new Event('change', {
 			'bubbles': true,
 			'cancelable': true
@@ -71,7 +77,6 @@ document.addEventListener('DOMContentLoaded', () => {
 		radioButton.dispatchEvent(event);
 		
 		// Скрываем все табы
-		const tabContents = document.querySelectorAll('.tab-content');
 		tabContents.forEach(content => content.classList.remove('active'));
 		
 		const tabNumber = tabId.split('-')[1];
@@ -82,38 +87,44 @@ document.addEventListener('DOMContentLoaded', () => {
 			targetContent.scrollIntoView({ behavior: 'smooth', block: 'start' });
 		}
 		
+		// Обновляем URL с хэшем для возможности прямых ссылок
 		history.pushState(null, null, `#${tabId}`);
 	}
 	
-	// Глобальный доступ к функции
+	// Глобальный доступ к функции активации таба
 	window.activateTab = activateTab;
 	
-	// Инициализация обработчиков событий
+	// Инициализация обработчиков событий для табов
 	radioButtons.forEach((radio, index) => {
 		radio.addEventListener('change', () => switchTab(index, radio.id));
 	});
 	
-	// Установка начального состояния
+	// Установка начального состояния активного таба
 	const checkedRadio = document.querySelector('input[type="radio"][name="tabs"]:checked');
 	if (checkedRadio) {
 		const index = Array.from(radioButtons).indexOf(checkedRadio);
 		switchTab(index, checkedRadio.id);
 	}
 	
-	// Обработка хэша URL
+	// Обработка хэша URL для прямых ссылок на табы
 	const hash = window.location.hash.substring(1);
 	if (hash && hash.startsWith('radio-')) {
 		activateTab(hash);
 	}
 	
 	// БЛОК 2: УПРАВЛЕНИЕ GRID-СЕТКАМИ
+	/**
+	 * Инициализирует сетки с классами для правильного отображения
+	 */
 	function initializeGrids() {
 		const grids = document.querySelectorAll('.cards-grid');
 		
 		grids.forEach(function(grid, index) {
 			const itemsCount = grid.querySelectorAll('.card').length;
+			// Добавляем класс с количеством элементов для CSS-центрирования
 			grid.classList.add('items-' + itemsCount);
 			
+			// Добавляем классы для идентификации сеток
 			if (index === 0) {
 				grid.classList.add('first-grid');
 			} else if (index === 1) {
@@ -125,58 +136,74 @@ document.addEventListener('DOMContentLoaded', () => {
 	initializeGrids();
 	
 	// БЛОК 3: УПРАВЛЕНИЕ ТАБАМИ ВАКАНСИЙ
-	function handleNewVacancyTabs() {
+	/**
+	 * Обработка табов в разделе вакансий
+	 */
+	function handleVacancyTabs() {
 		const vacancyTabs = document.querySelectorAll('.vacancies-tab');
 		const positionGroups = document.querySelectorAll('.positions-group');
 		
+		// Проверяем наличие элементов перед установкой обработчиков
 		if (vacancyTabs.length === 0 || positionGroups.length === 0) return;
 		
+		// Устанавливаем обработчики для каждого таба вакансий
 		vacancyTabs.forEach(tab => {
 			tab.addEventListener('click', function() {
+				// Устанавливаем активный класс для выбранного таба
 				vacancyTabs.forEach(t => t.classList.remove('active'));
 				this.classList.add('active');
 				
+				// Получаем категорию из атрибута
 				const category = this.getAttribute('data-category');
 				
+				// Скрываем все группы
 				positionGroups.forEach(group => group.classList.remove('active'));
 				
+				// Показываем нужную группу
 				const targetGroup = document.querySelector(`.positions-group[data-category="${category}"]`);
 				if (targetGroup) {
 					targetGroup.classList.add('active');
 					
+					// Обновляем центрирование на следующем кадре анимации для надежности
 					requestAnimationFrame(() => {
-						updateCentering(targetGroup.querySelector('.positions-grid'));
+						updateGridCentering(targetGroup.querySelector('.positions-grid'));
 					});
 				}
 			});
 		});
 		
 		/**
-		 * Обновляет центрирование элементов в сетке
+		 * Обновляет центрирование элементов в сетке в зависимости от размера экрана
+		 * @param {HTMLElement} grid - сетка для обновления
 		 */
-		function updateCentering(grid) {
+		function updateGridCentering(grid) {
 			if (!grid) return;
 			
-			let columnsCount = 3;
+			// Определяем количество колонок по ширине экрана
+			let columnsCount = 3; // По умолчанию для больших экранов
 			
 			if (window.innerWidth <= 480) {
-				columnsCount = 1;
+				columnsCount = 1; // Мобильные устройства
 			} else if (window.innerWidth <= 768) {
-				columnsCount = 2;
+				columnsCount = 2; // Планшеты
 			}
 			
 			const cards = grid.querySelectorAll('.position-card');
 			const totalCards = cards.length;
 			
+			// Определяем количество элементов в последнем ряду
 			const lastRowItems = totalCards % columnsCount;
 			
+			// Добавляем классы для центрирования на основе количества элементов
 			if (lastRowItems > 0) {
 				grid.classList.add('last-row-incomplete');
 				
+				// Центрируем единственный элемент в ряду из двух колонок
 				if (columnsCount === 2 && lastRowItems === 1) {
 					cards[totalCards - 1].classList.add('center-in-row');
 				}
 				
+				// Обработка для трех колонок
 				if (columnsCount === 3) {
 					if (lastRowItems === 1) {
 						cards[totalCards - 1].classList.add('center-in-row');
@@ -186,6 +213,7 @@ document.addEventListener('DOMContentLoaded', () => {
 					}
 				}
 			} else {
+				// Если последний ряд полный, удаляем все классы центрирования
 				grid.classList.remove('last-row-incomplete');
 				cards.forEach(card => {
 					card.classList.remove('center-in-row', 'left-of-center', 'right-of-center');
@@ -193,15 +221,17 @@ document.addEventListener('DOMContentLoaded', () => {
 			}
 		}
 		
+		// Обновляем активную группу при загрузке
 		const activeGroup = document.querySelector('.positions-group.active');
 		if (activeGroup) {
-			updateCentering(activeGroup.querySelector('.positions-grid'));
+			updateGridCentering(activeGroup.querySelector('.positions-grid'));
 		}
 	}
 	
-	handleNewVacancyTabs();
+	handleVacancyTabs();
 	
 	// БЛОК 4: ОБРАБОТКА RESIZE
+	// Используем задержку для предотвращения частых вызовов при изменении размера
 	let resizeTimer;
 	window.addEventListener('resize', function() {
 		clearTimeout(resizeTimer);
@@ -217,10 +247,10 @@ document.addEventListener('DOMContentLoaded', () => {
 			if (activeGroup) {
 				const grid = activeGroup.querySelector('.positions-grid');
 				if (grid) {
-					updateCentering(grid);
+					updateGridCentering(grid);
 				}
 			}
-		}, 100);
+		}, 100); // Задержка в 100 мс для оптимизации производительности
 	});
 	
 	// БЛОК 5: ОБРАБОТКА ОТОБРАЖЕНИЯ ИМЕНИ ВЫБРАННОГО ФАЙЛА
@@ -234,5 +264,45 @@ document.addEventListener('DOMContentLoaded', () => {
 				fileStatus.textContent = 'Файл не вибрано';
 			}
 		});
+	}
+	
+	// Определяем функцию updateGridCentering глобально для использования при ресайзе
+	function updateGridCentering(grid) {
+		if (!grid) return;
+		
+		let columnsCount = 3;
+		
+		if (window.innerWidth <= 480) {
+			columnsCount = 1;
+		} else if (window.innerWidth <= 768) {
+			columnsCount = 2;
+		}
+		
+		const cards = grid.querySelectorAll('.position-card');
+		const totalCards = cards.length;
+		
+		const lastRowItems = totalCards % columnsCount;
+		
+		if (lastRowItems > 0) {
+			grid.classList.add('last-row-incomplete');
+			
+			if (columnsCount === 2 && lastRowItems === 1) {
+				cards[totalCards - 1].classList.add('center-in-row');
+			}
+			
+			if (columnsCount === 3) {
+				if (lastRowItems === 1) {
+					cards[totalCards - 1].classList.add('center-in-row');
+				} else if (lastRowItems === 2) {
+					cards[totalCards - 2].classList.add('left-of-center');
+					cards[totalCards - 1].classList.add('right-of-center');
+				}
+			}
+		} else {
+			grid.classList.remove('last-row-incomplete');
+			cards.forEach(card => {
+				card.classList.remove('center-in-row', 'left-of-center', 'right-of-center');
+			});
+		}
 	}
 });
