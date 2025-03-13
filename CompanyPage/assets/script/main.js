@@ -526,6 +526,63 @@ document.addEventListener('DOMContentLoaded', () => {
 		}
 	}
 	
+	// JavaScript для управления слайдером
+	const sliderStack = document.querySelector(".slider-stack");
+	const sliderItems = Array.from(sliderStack.children)
+	.reverse()
+	.filter((child) => child.classList.contains("slider-item"));
+	sliderItems.forEach((item) => sliderStack.appendChild(item));
+	
+	function moveSliderItem() {
+		const lastItem = sliderStack.lastElementChild;
+		if (lastItem.classList.contains("slider-item")) {
+			lastItem.classList.add("slider-swap");
+			setTimeout(() => {
+				lastItem.classList.remove("slider-swap");
+				sliderStack.insertBefore(lastItem, sliderStack.firstElementChild);
+			}, 1300);
+		}
+	}
+	
+	// Автоматическое переключение карточек каждые 4 секунды
+	let autoplayInterval = setInterval(moveSliderItem, 4000);
+	
+	// Обработчик клика для ручного переключения
+	sliderStack.addEventListener("click", function (e) {
+		const item = e.target.closest(".slider-item");
+		if (item && item === sliderStack.lastElementChild) {
+			// Очистить таймер при ручном переключении
+			clearInterval(autoplayInterval);
+			
+			item.classList.add("slider-swap");
+			setTimeout(() => {
+				item.classList.remove("slider-swap");
+				sliderStack.insertBefore(item, sliderStack.firstElementChild);
+			}, 1300);
+			
+			// Перезапустить таймер
+			autoplayInterval = setInterval(moveSliderItem, 4000);
+		}
+	});
+	
+	// Пересчет анимации при изменении размера окна
+	let resizeTimeout;
+	window.addEventListener('resize', function() {
+		clearTimeout(resizeTimeout);
+		
+		// Дебаунсинг для предотвращения многократных вызовов
+		resizeTimeout = setTimeout(function() {
+			// Если есть активная анимация, сбросить ее
+			const activeSlide = document.querySelector('.slider-swap');
+			if (activeSlide) {
+				activeSlide.classList.remove('slider-swap');
+				setTimeout(() => {
+					activeSlide.classList.add('slider-swap');
+				}, 50);
+			}
+		}, 250);
+	});
+	
 	// Инициализируем функциональность магазинов
 	initStoreLocator();
 });
