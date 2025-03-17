@@ -1000,7 +1000,7 @@ select.form-control {
 
 /* Стили для блока историй сотрудников */
 .employee-stories {
-  max-width: 1600px;
+  max-width: 1300px;
   margin: clamp(30px, 5vw, 50px) auto;
   padding: 0 clamp(15px, 3vw, 30px);
 }
@@ -1119,16 +1119,17 @@ select.form-control {
     font-size: 120%;
   }
 }
-
 .employee-card__image {
   flex: 0 0 40%;
   position: relative;
   overflow: hidden;
+  height: 550px; /* Фиксированная высота для веб-версии */
 
   img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: center top; /* Фокус на верхней части изображения */
     display: block;
   }
 }
@@ -1140,7 +1141,11 @@ select.form-control {
   }
 
   .employee-card__image {
-    flex: 0 0 300px;
+    flex: none;
+    width: 100%;
+    max-width: 300px;
+    height: 400px; /* Уменьшенная высота для планшетов */
+    margin: 0 auto;
   }
 }
 
@@ -1150,9 +1155,11 @@ select.form-control {
   }
 
   .employee-card__image {
-    flex: 0 0 250px;
+    height: 350px; /* Еще меньшая высота для мобильных */
+    max-width: 260px;
   }
 }
+
 
 /* Стили для интерактивного списка магазинов */
 .store-locator {
@@ -1180,7 +1187,6 @@ select.form-control {
   font-size: 16px;
   color: #333;
   appearance: none;
-  //background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23333' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
   background-repeat: no-repeat;
   background-position: right 15px center;
   background-size: 16px;
@@ -1308,7 +1314,6 @@ select.form-control {
   flex-grow: 1;
   min-height: 350px;
   background-color: #f5f5f5;
-  background-image: url('assets/img/map-placeholder.jpg');
   background-size: cover;
   background-position: center;
 }
