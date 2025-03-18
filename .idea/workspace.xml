@@ -4,18 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9e3b3e94-a61a-441a-9884-624508bb6215" name="Changes" comment="correction of content errors">
-      <change afterPath="$PROJECT_DIR$/PersonalAccount/assets/css/reset.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PersonalAccount/assets/css/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PersonalAccount/assets/css/style.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PersonalAccount/assets/css/style.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PersonalAccount/assets/img/3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PersonalAccount/assets/img/avatarNone.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PersonalAccount/assets/img/header.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PersonalAccount/assets/script/main.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PersonalAccount/index.html" afterDir="false" />
+    <list default="true" id="9e3b3e94-a61a-441a-9884-624508bb6215" name="Changes" comment="Tab layout + My Orders tab">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CompanyPage/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/CompanyPage/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PersonalAccount/assets/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/PersonalAccount/assets/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PersonalAccount/assets/css/style.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/PersonalAccount/assets/css/style.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PersonalAccount/assets/css/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/PersonalAccount/assets/css/style.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PersonalAccount/assets/script/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/PersonalAccount/assets/script/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PersonalAccount/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/PersonalAccount/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -615,7 +610,7 @@
       <option name="project" value="LOCAL" />
       <updated>1686051377754</updated>
     </task>
-    <option name="localTasksCounter" value="175" />
+    <option name="localTasksCounter" value="176" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -643,7 +638,8 @@
     <MESSAGE value="Implementation of page + first masonry structure" />
     <MESSAGE value="rubber layout error corrections" />
     <MESSAGE value="correction of content errors" />
-    <option name="LAST_COMMIT_MESSAGE" value="correction of content errors" />
+    <MESSAGE value="Tab layout + My Orders tab" />
+    <option name="LAST_COMMIT_MESSAGE" value="Tab layout + My Orders tab" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

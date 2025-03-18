@@ -293,6 +293,104 @@ document.addEventListener('DOMContentLoaded', function() {
 		const showMoreButton = document.querySelector('.show-more-btn');
 		const repeatOrderButtons = document.querySelectorAll('.repeat-order');
 		const createReturnButtons = document.querySelectorAll('.create-return');
+		const toggleButtons = document.querySelectorAll('.toggle-details');
+		const orderStatusFilter = document.getElementById('orderStatusFilter');
+		
+		// Инициализация фильтра статусов заказов
+		if (orderStatusFilter) {
+			// Удаляем существующий обработчик, чтобы избежать дублирования
+			orderStatusFilter.removeEventListener('change', handleStatusFilterChange);
+			// Добавляем новый обработчик
+			orderStatusFilter.addEventListener('change', handleStatusFilterChange);
+			
+			// Применяем фильтр при инициализации
+			applyStatusFilter(orderStatusFilter.value);
+		}
+		
+		// Функция-обработчик изменения фильтра статусов
+		function handleStatusFilterChange() {
+			applyStatusFilter(this.value);
+		}
+		
+		// Применение фильтра статусов
+		function applyStatusFilter(status) {
+			const orderCards = document.querySelectorAll('.order-card');
+			const noOrdersMessage = document.querySelector('.no-orders-message');
+			let visibleCount = 0;
+			
+			orderCards.forEach(card => {
+				if (status === 'all' || card.dataset.status === status) {
+					card.style.display = 'block';
+					visibleCount++;
+				} else {
+					card.style.display = 'none';
+				}
+			});
+			
+			// Показываем/скрываем сообщение о отсутствии заказов
+			if (noOrdersMessage) {
+				if (visibleCount === 0) {
+					noOrdersMessage.style.display = 'block';
+					// Скрываем кнопку "Показать еще"
+					if (showMoreButton) {
+						showMoreButton.style.display = 'none';
+					}
+				} else {
+					noOrdersMessage.style.display = 'none';
+					// Показываем кнопку "Показать еще"
+					if (showMoreButton) {
+						showMoreButton.style.display = 'block';
+					}
+				}
+			}
+		}
+		
+		// Инициализация кнопок переключения деталей заказа
+		if (toggleButtons && toggleButtons.length > 0) {
+			toggleButtons.forEach(button => {
+				// Удаляем существующий обработчик, чтобы избежать дублирования
+				button.removeEventListener('click', handleToggleDetailsClick);
+				// Добавляем новый обработчик
+				button.addEventListener('click', handleToggleDetailsClick);
+			});
+		}
+		
+		// Функция-обработчик кнопки переключения деталей
+		function handleToggleDetailsClick() {
+			// Получаем ID контейнера с деталями заказа
+			const detailsContainerId = this.getAttribute('aria-controls');
+			const detailsContainer = document.getElementById(detailsContainerId);
+			
+			// Проверяем текущее состояние
+			const expanded = this.getAttribute('aria-expanded') === 'true';
+			
+			// Обновляем атрибут aria-expanded
+			this.setAttribute('aria-expanded', !expanded);
+			
+			// Показываем или скрываем детали заказа
+			if (expanded) {
+				// Скрываем детали
+				detailsContainer.style.display = 'none';
+				this.querySelector('.toggle-text').textContent = 'Показати деталі';
+			} else {
+				// Показываем детали
+				detailsContainer.style.display = 'block';
+				this.querySelector('.toggle-text').textContent = 'Приховати деталі';
+				
+				// Анимируем трекер заказа, если он есть
+				const trackerItems = detailsContainer.querySelectorAll('.tracker-item.active');
+				if (trackerItems && trackerItems.length > 0) {
+					trackerItems.forEach((item, index) => {
+						item.style.transition = 'opacity 0.3s';
+						item.style.opacity = '0';
+						
+						setTimeout(() => {
+							item.style.opacity = '1';
+						}, 100 * index);
+					});
+				}
+			}
+		}
 		
 		// Обработчик "Показать больше заказов"
 		if (showMoreButton) {
@@ -308,10 +406,16 @@ document.addEventListener('DOMContentLoaded', function() {
 			showMoreButton.textContent = 'Завантаження...';
 			showMoreButton.disabled = true;
 			
+			// Получаем текущий выбранный статус
+			const currentStatus = orderStatusFilter ? orderStatusFilter.value : 'all';
+			
 			// Имитация загрузки данных (в реальном проекте - AJAX запрос)
 			setTimeout(() => {
 				// Тут бы добавлялись новые заказы в DOM
 				// ...
+				
+				// После добавления применяем текущий фильтр
+				applyStatusFilter(currentStatus);
 				
 				// Восстанавливаем состояние кнопки
 				showMoreButton.textContent = 'Показати більше замовлень';
@@ -344,6 +448,50 @@ document.addEventListener('DOMContentLoaded', function() {
 			}
 		}
 		
+		// Проверка возможности возврата (14 дней с даты заказа)
+		checkReturnPeriod();
+		
+		// Функция проверки периода возврата (14 дней)
+		function checkReturnPeriod() {
+			const orderCards = document.querySelectorAll('.order-card');
+			
+			orderCards.forEach(card => {
+				const orderDateElem = card.querySelector('.order-date');
+				const returnButton = card.querySelector('.create-return');
+				
+				if (orderDateElem && returnButton) {
+					// Получаем дату заказа из текста "від 30.01.2022 09:37"
+					const dateText = orderDateElem.textContent;
+					const dateMatch = dateText.match(/від (\d{2})\.(\d{2})\.(\d{4})/);
+					
+					if (dateMatch) {
+						// Формат дата, месяц (0-11), год
+						const orderDate = new Date(dateMatch[3], dateMatch[2] - 1, dateMatch[1]);
+						const currentDate = new Date();
+						
+						// Добавляем 14 дней к дате заказа
+						const returnDeadline = new Date(orderDate);
+						returnDeadline.setDate(returnDeadline.getDate() + 14);
+						
+						// Проверяем, не истек ли срок возврата
+						if (currentDate > returnDeadline) {
+							// Срок возврата истек - делаем кнопку неактивной
+							returnButton.disabled = true;
+							returnButton.classList.add('disabled');
+							returnButton.title = 'Термін повернення минув (14 днів з дати покупки)';
+							
+							// Обновляем информацию о возврате
+							const returnInfo = card.querySelector('.return-info p');
+							if (returnInfo) {
+								returnInfo.textContent = '* Термін повернення минув (14 днів з дати покупки)';
+								returnInfo.style.color = '#e53935';
+							}
+						}
+					}
+				}
+			});
+		}
+		
 		// Обработчики кнопок "Создать возврат"
 		if (createReturnButtons && createReturnButtons.length > 0) {
 			createReturnButtons.forEach(button => {
@@ -357,6 +505,12 @@ document.addEventListener('DOMContentLoaded', function() {
 		// Функция показа формы возврата
 		function handleCreateReturnClick(e) {
 			e.preventDefault();
+			
+			// Если кнопка неактивна (срок возврата истек), то ничего не делаем
+			if (this.disabled) {
+				alert('Термін повернення минув (14 днів з дати покупки)');
+				return;
+			}
 			
 			// Получаем информацию о заказе
 			const orderCard = this.closest('.order-card');
@@ -493,6 +647,9 @@ document.addEventListener('DOMContentLoaded', function() {
 									<label>IBAN:</label>
 									<input type="text" class="form-control" required>
 								</div>
+								<div class="form-note">
+									<p class="required-fields-note">* Всі поля обов'язкові для заповнення!</p>
+								</div>
 								<div class="form-actions">
 									<button type="submit" class="btn btn-primary">Відправити заяву</button>
 									<button type="button" class="btn btn-secondary cancel-return">Скасувати</button>
@@ -507,6 +664,73 @@ document.addEventListener('DOMContentLoaded', function() {
 			document.body.insertAdjacentHTML('beforeend', formHtml);
 		}
 	}
+	
+	// Функция инициализации вкладки бонусов
+	function initBonusesTab() {
+		// Получаем элементы вкладки
+		const paginationButtons = document.querySelectorAll('.pagination-btn');
+		
+		// Обработчик клика по кнопкам пагинации
+		if (paginationButtons && paginationButtons.length > 0) {
+			paginationButtons.forEach(button => {
+				button.addEventListener('click', function() {
+					// Убираем активный класс у всех кнопок
+					paginationButtons.forEach(btn => {
+						btn.classList.remove('pagination-btn-active');
+					});
+					
+					// Если это не кнопка "Следующая", делаем её активной
+					if (!this.classList.contains('pagination-btn-next')) {
+						this.classList.add('pagination-btn-active');
+					} else {
+						// Находим текущую активную кнопку
+						const currentActive = document.querySelector('.pagination-btn-active');
+						const currentIndex = Array.from(paginationButtons).indexOf(currentActive);
+						
+						// Активируем следующую кнопку, если она не последняя
+						if (currentIndex < paginationButtons.length - 2) {
+							paginationButtons[currentIndex + 1].classList.add('pagination-btn-active');
+						} else {
+							// Если достигли последней страницы, возвращаемся к первой
+							paginationButtons[0].classList.add('pagination-btn-active');
+						}
+					}
+					
+					// Здесь можно добавить загрузку данных для выбранной страницы
+					// В реальном проекте - AJAX запрос с учетом выбранной страницы
+					console.log('Загрузка страницы:', this.textContent.trim());
+				});
+			});
+		}
+		
+		// Вы можете добавить дополнительные функции для анимаций,
+		// обновления данных или других интерактивных элементов на странице бонусов
+	}
+
+// Инициализация вкладки бонусов при загрузке страницы
+	const bonusesTab = document.getElementById('tab-bonuses');
+	const bonusesPanel = document.getElementById('content-bonuses');
+	if (bonusesTab && bonusesTab.checked && bonusesPanel) {
+		initBonusesTab();
+	}
+
+// Если вы используете табы, вы можете добавить вызов initBonusesTab()
+// в обработчик изменения таба, аналогично тому, как это сделано для вкладки заказов
+// Пример:
+	/*
+	 tabInputs.forEach(input => {
+	 input.addEventListener('change', function() {
+	 const targetId = this.getAttribute('aria-controls');
+	 
+	 // ...
+	 
+	 // Если выбран таб бонусов, инициализируем его функциональность
+	 if (targetId === 'content-bonuses') {
+	 initBonusesTab();
+	 }
+	 });
+	 });
+	 */
 	
 	// Вызываем инициализацию формы возврата при загрузке страницы
 	initReturnForm();

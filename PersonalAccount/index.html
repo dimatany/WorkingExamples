@@ -18,7 +18,6 @@
         <img src="assets/img/header.jpg" alt="Дзвiнок - баннер" loading="lazy">
     </div>
 </header>
-
 <main>
     <div class="container">
         <div class="sidebar">
@@ -51,13 +50,13 @@
                 <input type="radio" id="tab-services" name="tabs" aria-controls="content-services" />
                 <label class="tab" for="tab-services" role="tab" aria-selected="false" tabindex="0">
                     <span class="menu-icon">🔍</span>
-                    Мої послуги
+                    Мої пропозиції
                 </label>
 
                 <input type="radio" id="tab-coupons" name="tabs" aria-controls="content-coupons" />
                 <label class="tab" for="tab-coupons" role="tab" aria-selected="false" tabindex="0">
                     <span class="menu-icon">🏷️</span>
-                    Мої купони
+                    Мої сертифікати
                 </label>
 
                 <input type="radio" id="tab-promocodes" name="tabs" aria-controls="content-promocodes" />
@@ -70,12 +69,6 @@
                 <label class="tab" for="tab-wishes" role="tab" aria-selected="false" tabindex="0">
                     <span class="menu-icon">❤️</span>
                     Мої бажання
-                </label>
-
-                <input type="radio" id="tab-favorites" name="tabs" aria-controls="content-favorites" />
-                <label class="tab" for="tab-favorites" role="tab" aria-selected="false" tabindex="0">
-                    <span class="menu-icon">⭐</span>
-                    Обране
                 </label>
 
                 <input type="radio" id="tab-appeals" name="tabs" aria-controls="content-appeals" />
@@ -104,7 +97,7 @@
                         <span>Вийти</span>
                     </a>
                     <span class="header-out">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M377.9 105.9L500.7 228.7c7.2 7.2 11.3 17.1 11.3 27.3s-4.1 20.1-11.3 27.3L377.9 406.1c-6.4 6.4-15 9.9-24 9.9c-18.7 0-33.9-15.2-33.9-33.9l0-62.1-128 0c-17.7 0-32-14.3-32-32l0-64c0-17.7 14.3-32 32-32l128 0 0-62.1c0-18.7 15.2-33.9 33.9-33.9c9 0 17.6 3.6 24 9.9zM160 96L96 96c-17.7 0-32 14.3-32 32l0 256c0 17.7 14.3 32 32 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-64 0c-53 0-96-43-96-96L0 128C0 75 43 32 96 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32z"/></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M377.9 105.9L500.7 228.7c7.2 7.2 11.3 17.1 11.3 27.3s-4.1 20.1-11.3 27.3L377.9 406.1c-6.4 6.4-15 9.9-24 9.9c-18.7 0-33.9-15.2-33.9-33.9l0-62.1-128 0c-17.7 0-32-14.3-32-32l0-64c0-17.7 14.3-32 32-32l128 0 0-62.1c0-18.7 15.2-33.9 33.9-33.9c9 0 17.6 3.6 24 9.9zM160 96L96 96c-17.7 0-32 14.3-32 32l0 256c0 17.7 14.3 32 32 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-64 0c-53 0-96-43-96-96L0 128C0 75 43 32 96 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32z"/></svg>
                     </span>
                 </div>
             </header>
@@ -225,14 +218,35 @@
 
                 <!-- Панель "Мои заказы" -->
                 <section id="content-orders" class="tab-panel" role="tabpanel" aria-labelledby="tab-orders">
-                    <h1 class="page-title">Мої замовлення</h1>
+                    <div class="orders-header">
+                        <h1 class="page-title">Мої замовлення</h1>
 
-                    <!-- Карточка заказа -->
-                    <div class="order-card">
+                        <!-- Фильтр заказов -->
+                        <div class="orders-filter">
+                            <label for="orderStatusFilter" class="filter-label">Статус:</label>
+                            <div class="custom-select">
+                                <select id="orderStatusFilter" class="form-control">
+                                    <option value="all" selected>Всі</option>
+                                    <option value="in-progress">В роботі</option>
+                                    <option value="completed">Завершені</option>
+                                    <option value="preorder">Передзамовлення</option>
+                                    <option value="cancelled">Скасовані</option>
+                                </select>
+                                <div class="select-arrow">
+                                    <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16">
+                                        <path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z"></path>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Карточка заказа - статус "Закрите" (Завершені) -->
+                    <div class="order-card" data-status="completed">
                         <div class="order-header">
                             <div class="order-title">
                                 <h2>Замовлення № 15680395 <span class="order-id">(5387041)</span></h2>
-                                <span class="order-date">від 30.01.2022 09:37</span>
+                                <span class="order-date">від 16.03.2025 09:37</span>
                             </div>
                             <div class="order-status status-closed">Закрите</div>
                         </div>
@@ -270,134 +284,341 @@
                             </div>
                         </div>
 
-                        <div class="order-tracker">
-                            <div class="tracker-item active">
-                                <div class="tracker-icon">
-                                    <svg viewBox="0 0 24 24" fill="currentColor">
-                                        <path d="M12,20A8,8 0 0,1 4,12A8,8 0 0,1 12,4A8,8 0 0,1 20,12A8,8 0 0,1 12,20M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M16.24,7.76C15.07,6.58 13.53,6 12,6V12L7.76,16.24C10.1,18.58 13.9,18.58 16.24,16.24C18.59,13.9 18.59,10.1 16.24,7.76Z"></path>
-                                    </svg>
-                                </div>
-                                <div class="tracker-line"></div>
-                                <div class="tracker-label">В очікуванні обробки</div>
-                                <div class="tracker-date">29.01.2022 23:12</div>
-                            </div>
-
-                            <div class="tracker-item active">
-                                <div class="tracker-icon">
-                                    <svg viewBox="0 0 24 24" fill="currentColor">
-                                        <path d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path>
-                                    </svg>
-                                </div>
-                                <div class="tracker-line"></div>
-                                <div class="tracker-label">Прийнято в роботу</div>
-                                <div class="tracker-date">30.01.2022 09:37</div>
-                            </div>
-
-                            <div class="tracker-item active">
-                                <div class="tracker-icon">
-                                    <svg viewBox="0 0 24 24" fill="currentColor">
-                                        <path d="M12,2C17.52,2 22,6.48 22,12C22,17.52 17.52,22 12,22C6.48,22 2,17.52 2,12C2,6.48 6.48,2 12,2M12,4C7.58,4 4,7.58 4,12C4,16.42 7.58,20 12,20C16.42,20 20,16.42 20,12C20,7.58 16.42,4 12,4M9,16V8H11V16H9M13,16V8H15V16H13Z"></path>
-                                    </svg>
-                                </div>
-                                <div class="tracker-line"></div>
-                                <div class="tracker-label">Закрите</div>
-                                <div class="tracker-date">30.01.2022 11:30</div>
-                            </div>
-
-                            <div class="tracker-item">
-                                <div class="tracker-icon">
-                                    <svg viewBox="0 0 24 24" fill="currentColor">
-                                        <path d="M21,16.5C21,16.88 20.79,17.21 20.47,17.38L12.57,21.82C12.41,21.94 12.21,22 12,22C11.79,22 11.59,21.94 11.43,21.82L3.53,17.38C3.21,17.21 3,16.88 3,16.5V7.5C3,7.12 3.21,6.79 3.53,6.62L11.43,2.18C11.59,2.06 11.79,2 12,2C12.21,2 12.41,2.06 12.57,2.18L20.47,6.62C20.79,6.79 21,7.12 21,7.5V16.5M12,4.15L5,8.09V15.91L12,19.85L19,15.91V8.09L12,4.15Z"></path>
-                                    </svg>
-                                </div>
-                                <div class="tracker-line"></div>
-                                <div class="tracker-label">Комплектується</div>
-                                <div class="tracker-date"></div>
-                            </div>
-
-                            <div class="tracker-item">
-                                <div class="tracker-icon">
-                                    <svg viewBox="0 0 24 24" fill="currentColor">
-                                        <path d="M3,4A2,2 0 0,0 1,6V17H3A3,3 0 0,0 6,20A3,3 0 0,0 9,17H15A3,3 0 0,0 18,20A3,3 0 0,0 21,17H23V12L20,8H17V4M10,6L14,10L10,14V11H4V9H10M17,9.5H19.5L21.47,12H17M6,15.5A1.5,1.5 0 0,1 7.5,17A1.5,1.5 0 0,1 6,18.5A1.5,1.5 0 0,1 4.5,17A1.5,1.5 0 0,1 6,15.5M18,15.5A1.5,1.5 0 0,1 19.5,17A1.5,1.5 0 0,1 18,18.5A1.5,1.5 0 0,1 16.5,17A1.5,1.5 0 0,1 18,15.5Z"></path>
-                                    </svg>
-                                </div>
-                                <div class="tracker-line"></div>
-                                <div class="tracker-label">Доставляється</div>
-                                <div class="tracker-date"></div>
-                            </div>
-
-                            <div class="tracker-item">
-                                <div class="tracker-icon">
-                                    <svg viewBox="0 0 24 24" fill="currentColor">
-                                        <path d="M5,4H19A2,2 0 0,1 21,6V18A2,2 0 0,1 19,20H5A2,2 0 0,1 3,18V6A2,2 0 0,1 5,4M5,8V12H11V8H5M13,8V12H19V8H13M5,14V18H11V14H5M13,14V18H19V14H13Z"></path>
-                                    </svg>
-                                </div>
-                                <div class="tracker-line"></div>
-                                <div class="tracker-label">Доставлене до магазину</div>
-                                <div class="tracker-date"></div>
-                            </div>
-
-                            <div class="tracker-item">
-                                <div class="tracker-icon">
-                                    <svg viewBox="0 0 24 24" fill="currentColor">
-                                        <path d="M12 2C6.5 2 2 6.5 2 12S6.5 22 12 22 22 17.5 22 12 17.5 2 12 2M10 17L5 12L6.41 10.59L10 14.17L17.59 6.58L19 8L10 17Z"></path>
-                                    </svg>
-                                </div>
-                                <div class="tracker-line"></div>
-                                <div class="tracker-label">Оплачено</div>
-                                <div class="tracker-date"></div>
-                            </div>
-
-                            <div class="tracker-item">
-                                <div class="tracker-icon">
-                                    <svg viewBox="0 0 24 24" fill="currentColor">
-                                        <path d="M14 14H22V16H14V14M14 11H22V13H14V11M14 8H22V10H14V8M12 16V4H6V16H4V18L8 19.5L12 18V16M10 9H8V7H10V9Z"></path>
-                                    </svg>
-                                </div>
-                                <div class="tracker-label">Отримано</div>
-                                <div class="tracker-date"></div>
-                            </div>
+                        <!-- Кнопка для показа/скрытия деталей заказа -->
+                        <div class="toggle-details-btn">
+                            <button class="toggle-details" aria-expanded="false" aria-controls="order-details-15680395">
+                                <svg class="icon-expand" viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
+                                    <path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z"></path>
+                                </svg>
+                                <span class="toggle-text">Показати деталі</span>
+                            </button>
                         </div>
 
-                        <div class="order-products">
-                            <h3 class="products-title">Склад замовлення</h3>
-                            <div class="product-item">
-                                <div class="product-image">
-                                    <img src="./assets/img/3.jpg" alt="Рюкзак для ноутбука" />
+                        <!-- Контейнер для деталей заказа, который будет скрываться -->
+                        <div id="order-details-15680395" class="order-details-container" style="display: none;">
+                            <div class="order-tracker">
+                                <div class="tracker-item active">
+                                    <div class="tracker-icon">
+                                        <svg viewBox="0 0 24 24" fill="currentColor">
+                                            <path d="M12,20A8,8 0 0,1 4,12A8,8 0 0,1 12,4A8,8 0 0,1 20,12A8,8 0 0,1 12,20M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M16.24,7.76C15.07,6.58 13.53,6 12,6V12L7.76,16.24C10.1,18.58 13.9,18.58 16.24,16.24C18.59,13.9 18.59,10.1 16.24,7.76Z"></path>
+                                        </svg>
+                                    </div>
+                                    <div class="tracker-line"></div>
+                                    <div class="tracker-label">В очікуванні обробки</div>
+                                    <div class="tracker-date">17.03.2025 23:12</div>
                                 </div>
-                                <div class="product-details">
-                                    <a href="#" class="product-name">Рюкзак для ноутбука 15.6" Lenovo Legion Recon Gaming (Grey) GX40S69333</a>
-                                    <div class="product-price">1 999 грн x 1 шт</div>
+
+                                <div class="tracker-item active">
+                                    <div class="tracker-icon">
+                                        <svg viewBox="0 0 24 24" fill="currentColor">
+                                            <path d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path>
+                                        </svg>
+                                    </div>
+                                    <div class="tracker-line"></div>
+                                    <div class="tracker-label">Прийнято в роботу</div>
+                                    <div class="tracker-date">18.03.2025 09:37</div>
+                                </div>
+
+                                <div class="tracker-item active">
+                                    <div class="tracker-icon">
+                                        <svg viewBox="0 0 24 24" fill="currentColor">
+                                            <path d="M12,2C17.52,2 22,6.48 22,12C22,17.52 17.52,22 12,22C6.48,22 2,17.52 2,12C2,6.48 6.48,2 12,2M12,4C7.58,4 4,7.58 4,12C4,16.42 7.58,20 12,20C16.42,20 20,16.42 20,12C20,7.58 16.42,4 12,4M9,16V8H11V16H9M13,16V8H15V16H13Z"></path>
+                                        </svg>
+                                    </div>
+                                    <div class="tracker-line"></div>
+                                    <div class="tracker-label">Закрите</div>
+                                    <div class="tracker-date">18.03.2025 11:30</div>
+                                </div>
+
+                                <div class="tracker-item">
+                                    <div class="tracker-icon">
+                                        <svg viewBox="0 0 24 24" fill="currentColor">
+                                            <path d="M21,16.5C21,16.88 20.79,17.21 20.47,17.38L12.57,21.82C12.41,21.94 12.21,22 12,22C11.79,22 11.59,21.94 11.43,21.82L3.53,17.38C3.21,17.21 3,16.88 3,16.5V7.5C3,7.12 3.21,6.79 3.53,6.62L11.43,2.18C11.59,2.06 11.79,2 12,2C12.21,2 12.41,2.06 12.57,2.18L20.47,6.62C20.79,6.79 21,7.12 21,7.5V16.5M12,4.15L5,8.09V15.91L12,19.85L19,15.91V8.09L12,4.15Z"></path>
+                                        </svg>
+                                    </div>
+                                    <div class="tracker-line"></div>
+                                    <div class="tracker-label">Комплектується</div>
+                                    <div class="tracker-date"></div>
+                                </div>
+
+                                <div class="tracker-item">
+                                    <div class="tracker-icon">
+                                        <svg viewBox="0 0 24 24" fill="currentColor">
+                                            <path d="M3,4A2,2 0 0,0 1,6V17H3A3,3 0 0,0 6,20A3,3 0 0,0 9,17H15A3,3 0 0,0 18,20A3,3 0 0,0 21,17H23V12L20,8H17V4M10,6L14,10L10,14V11H4V9H10M17,9.5H19.5L21.47,12H17M6,15.5A1.5,1.5 0 0,1 7.5,17A1.5,1.5 0 0,1 6,18.5A1.5,1.5 0 0,1 4.5,17A1.5,1.5 0 0,1 6,15.5M18,15.5A1.5,1.5 0 0,1 19.5,17A1.5,1.5 0 0,1 18,18.5A1.5,1.5 0 0,1 16.5,17A1.5,1.5 0 0,1 18,15.5Z"></path>
+                                        </svg>
+                                    </div>
+                                    <div class="tracker-line"></div>
+                                    <div class="tracker-label">Доставляється</div>
+                                    <div class="tracker-date"></div>
+                                </div>
+
+                                <div class="tracker-item">
+                                    <div class="tracker-icon">
+                                        <svg viewBox="0 0 24 24" fill="currentColor">
+                                            <path d="M5,4H19A2,2 0 0,1 21,6V18A2,2 0 0,1 19,20H5A2,2 0 0,1 3,18V6A2,2 0 0,1 5,4M5,8V12H11V8H5M13,8V12H19V8H13M5,14V18H11V14H5M13,14V18H19V14H13Z"></path>
+                                        </svg>
+                                    </div>
+                                    <div class="tracker-line"></div>
+                                    <div class="tracker-label">Доставлене до магазину</div>
+                                    <div class="tracker-date"></div>
+                                </div>
+
+                                <div class="tracker-item">
+                                    <div class="tracker-icon">
+                                        <svg viewBox="0 0 24 24" fill="currentColor">
+                                            <path d="M12 2C6.5 2 2 6.5 2 12S6.5 22 12 22 22 17.5 22 12 17.5 2 12 2M10 17L5 12L6.41 10.59L10 14.17L17.59 6.58L19 8L10 17Z"></path>
+                                        </svg>
+                                    </div>
+                                    <div class="tracker-line"></div>
+                                    <div class="tracker-label">Оплачено</div>
+                                    <div class="tracker-date"></div>
+                                </div>
+
+                                <div class="tracker-item">
+                                    <div class="tracker-icon">
+                                        <svg viewBox="0 0 24 24" fill="currentColor">
+                                            <path d="M14 14H22V16H14V14M14 11H22V13H14V11M14 8H22V10H14V8M12 16V4H6V16H4V18L8 19.5L12 18V16M10 9H8V7H10V9Z"></path>
+                                        </svg>
+                                    </div>
+                                    <div class="tracker-label">Отримано</div>
+                                    <div class="tracker-date"></div>
                                 </div>
                             </div>
 
-                            <div class="order-total">
-                                <div class="total-label">Сума:</div>
-                                <div class="total-value">1999 грн</div>
-                            </div>
+                            <div class="order-products">
+                                <h3 class="products-title">Склад замовлення</h3>
+                                <div class="product-item">
+                                    <div class="product-image">
+                                        <img src="./assets/img/3.jpg" alt="Рюкзак для ноутбука" />
+                                    </div>
+                                    <div class="product-details">
+                                        <a href="#" class="product-name">Рюкзак для ноутбука 15.6" Lenovo Legion Recon Gaming (Grey) GX40S69333</a>
+                                        <div class="product-price">1 999 грн x 1 шт</div>
+                                    </div>
+                                </div>
 
-                            <div class="order-actions">
-                                <button class="btn btn-primary repeat-order">
-                                    <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18">
-                                        <path d="M19 7H16V5.5C16 4.1 14.9 3 13.5 3H4.5C3.1 3 2 4.1 2 5.5V18.5C2 19.9 3.1 21 4.5 21H5.5C5.8 20.3 6.3 19.6 7.1 19H4.5C4.2 19 4 18.8 4 18.5V5.5C4 5.2 4.2 5 4.5 5H13.5C13.8 5 14 5.2 14 5.5V7H11C8.8 7 7 8.8 7 11V18C7 19.1 7.4 19.9 8 20.6C8.3 21.1 8.9 21.5 9.5 21.8C10 22 10.5 22 11 22H19C21.2 22 23 20.2 23 18V11C23 8.8 21.2 7 19 7M21 18C21 19.1 20.1 20 19 20H11C9.9 20 9 19.1 9 18V11C9 9.9 9.9 9 11 9H19C20.1 9 21 9.9 21 11V18Z"></path>
-                                    </svg>
-                                    Повторити замовлення
-                                </button>
-                                <button class="btn btn-secondary create-return">
-                                    <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18">
-                                        <path d="M19,7V11H5.83L9.41,7.41L8,6L2,12L8,18L9.41,16.58L5.83,13H21V7H19Z"></path>
-                                    </svg>
-                                    Створити повернення
-                                </button>
+                                <div class="order-total">
+                                    <div class="total-label">Сума:</div>
+                                    <div class="total-value">1999 грн</div>
+                                </div>
+
+                                <div class="order-actions">
+                                    <button class="btn btn-primary repeat-order">
+                                        <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18">
+                                            <path d="M19 7H16V5.5C16 4.1 14.9 3 13.5 3H4.5C3.1 3 2 4.1 2 5.5V18.5C2 19.9 3.1 21 4.5 21H5.5C5.8 20.3 6.3 19.6 7.1 19H4.5C4.2 19 4 18.8 4 18.5V5.5C4 5.2 4.2 5 4.5 5H13.5C13.8 5 14 5.2 14 5.5V7H11C8.8 7 7 8.8 7 11V18C7 19.1 7.4 19.9 8 20.6C8.3 21.1 8.9 21.5 9.5 21.8C10 22 10.5 22 11 22H19C21.2 22 23 20.2 23 18V11C23 8.8 21.2 7 19 7M21 18C21 19.1 20.1 20 19 20H11C9.9 20 9 19.1 9 18V11C9 9.9 9.9 9 11 9H19C20.1 9 21 9.9 21 11V18Z"></path>
+                                        </svg>
+                                        Повторити замовлення
+                                    </button>
+                                    <button class="btn btn-secondary create-return">
+                                        <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18">
+                                            <path d="M19,7V11H5.83L9.41,7.41L8,6L2,12L8,18L9.41,16.58L5.83,13H21V7H19Z"></path>
+                                        </svg>
+                                        Створити повернення
+                                    </button>
+                                </div>
+                                <div class="return-info">
+                                    <p>* Повернення доступне протягом 14 днів з дати покупки включно</p>
+                                </div>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Можно добавить кнопку "Показать еще заказы" если есть история заказов -->
+                    <!-- Пример карточки заказа в статусе "В роботі" -->
+                    <div class="order-card" data-status="in-progress">
+                        <div class="order-header">
+                            <div class="order-title">
+                                <h2>Замовлення № 15680396 <span class="order-id">(5387042)</span></h2>
+                                <span class="order-date">від 05.02.2022 14:22</span>
+                            </div>
+                            <div class="order-status status-processing">В роботі</div>
+                        </div>
+
+                        <div class="order-info">
+                            <div class="order-info-column">
+                                <div class="order-info-item">
+                                    <span class="info-label">Сума замовлення:</span>
+                                    <span class="info-value">2 499 грн</span>
+                                </div>
+                                <div class="order-info-item">
+                                    <span class="info-label">До сплати:</span>
+                                    <span class="info-value">2 499 грн</span>
+                                </div>
+                                <div class="order-info-item">
+                                    <span class="info-label">Спосіб оплати:</span>
+                                    <span class="info-value">Карткою онлайн</span>
+                                </div>
+                            </div>
+
+                            <div class="order-info-column">
+                                <div class="order-info-item">
+                                    <span class="info-label">Доставка:</span>
+                                    <span class="info-value">Нова Пошта</span>
+                                </div>
+                                <div class="order-info-item">
+                                    <span class="info-label">Спосіб доставки:</span>
+                                    <span class="info-value">Адресна доставка</span>
+                                </div>
+                                <div class="order-info-item">
+                                    <span class="info-label">Адреса доставки:</span>
+                                    <span class="info-value">м. Київ, вул. Хрещатик, 22</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Кнопка для показа/скрытия деталей заказа -->
+                        <div class="toggle-details-btn">
+                            <button class="toggle-details" aria-expanded="false" aria-controls="order-details-15680396">
+                                <svg class="icon-expand" viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
+                                    <path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z"></path>
+                                </svg>
+                                <span class="toggle-text">Показати деталі</span>
+                            </button>
+                        </div>
+
+                        <!-- Контейнер для деталей заказа -->
+                        <div id="order-details-15680396" class="order-details-container" style="display: none;">
+                            <!-- Содержимое деталей второго заказа -->
+                        </div>
+                    </div>
+
+                    <!-- Пример карточки заказа в статусе "Передзамовлення" -->
+                    <div class="order-card" data-status="preorder">
+                        <div class="order-header">
+                            <div class="order-title">
+                                <h2>Замовлення № 15680397 <span class="order-id">(5387043)</span></h2>
+                                <span class="order-date">від 10.02.2022 09:15</span>
+                            </div>
+                            <div class="order-status status-preorder">Передзамовлення</div>
+                        </div>
+
+                        <div class="order-info">
+                            <!-- Содержимое информации о заказе -->
+                        </div>
+
+                        <!-- Кнопка для показа/скрытия деталей заказа -->
+                        <div class="toggle-details-btn">
+                            <button class="toggle-details" aria-expanded="false" aria-controls="order-details-15680397">
+                                <svg class="icon-expand" viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
+                                    <path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z"></path>
+                                </svg>
+                                <span class="toggle-text">Показати деталі</span>
+                            </button>
+                        </div>
+
+                        <!-- Контейнер для деталей заказа -->
+                        <div id="order-details-15680397" class="order-details-container" style="display: none;">
+                            <!-- Содержимое деталей третьего заказа -->
+                        </div>
+                    </div>
+
+                    <!-- Пример карточки заказа в статусе "Скасовано" -->
+                    <div class="order-card" data-status="cancelled">
+                        <div class="order-header">
+                            <div class="order-title">
+                                <h2>Замовлення № 15680398 <span class="order-id">(5387044)</span></h2>
+                                <span class="order-date">від 15.02.2022 16:45</span>
+                            </div>
+                            <div class="order-status status-cancelled">Скасовано</div>
+                        </div>
+
+                        <div class="order-info">
+                            <!-- Содержимое информации о заказе -->
+                        </div>
+
+                        <!-- Кнопка для показа/скрытия деталей заказа -->
+                        <div class="toggle-details-btn">
+                            <button class="toggle-details" aria-expanded="false" aria-controls="order-details-15680398">
+                                <svg class="icon-expand" viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
+                                    <path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z"></path>
+                                </svg>
+                                <span class="toggle-text">Показати деталі</span>
+                            </button>
+                        </div>
+
+                        <!-- Контейнер для деталей заказа -->
+                        <div id="order-details-15680398" class="order-details-container" style="display: none;">
+                            <!-- Содержимое деталей четвертого заказа -->
+                        </div>
+                    </div>
+
+                    <!-- Сообщение, если заказов по выбранному фильтру нет -->
+                    <div class="no-orders-message" style="display: none;">
+                        <p>За обраним фільтром замовлень не знайдено.</p>
+                    </div>
+
+                    <!-- Кнопка "Показать еще заказы" -->
                     <div class="show-more-container">
                         <button class="show-more-btn">Показати більше замовлень</button>
                     </div>
                 </section>
+
+                <!-- Форма возврата (скрыта по умолчанию) -->
+                <div class="return-form-container" style="display: none;">
+                    <div class="return-form-overlay"></div>
+                    <div class="return-form-modal">
+                        <div class="return-form-header">
+                            <h3>Заява на повернення</h3>
+                            <button class="close-return-form">&times;</button>
+                        </div>
+                        <div class="return-form-content">
+                            <form id="returnForm" class="return-form">
+                                <div class="form-group">
+                                    <label>Інтернет-замовлення №:</label>
+                                    <input type="text" class="form-control" value="15680395" readonly>
+                                </div>
+                                <div class="form-group">
+                                    <label>Видаткова накладна №:</label>
+                                    <input type="text" class="form-control" value="5387041" readonly>
+                                </div>
+                                <div class="form-group">
+                                    <label>Дата:</label>
+                                    <input type="text" class="form-control" value="30.01.2022" readonly>
+                                </div>
+                                <div class="form-group">
+                                    <label>Покупець:</label>
+                                    <input type="text" class="form-control" required>
+                                </div>
+                                <div class="form-group">
+                                    <label>Телефон:</label>
+                                    <input type="tel" class="form-control" required>
+                                </div>
+                                <div class="form-group">
+                                    <label>Причина повернення:</label>
+                                    <select class="form-control" required>
+                                        <option value="">Виберіть причину повернення</option>
+                                        <option value="defect">Виявлено дефект</option>
+                                        <option value="not_match">Товар не відповідає опису</option>
+                                        <option value="not_fit">Товар не підійшов</option>
+                                        <option value="change_mind">Передумав(-ла)</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label>Одержувач коштів за повернення:</label>
+                                    <input type="text" class="form-control" required>
+                                </div>
+                                <div class="form-group">
+                                    <label>ІПН:</label>
+                                    <input type="text" class="form-control" required>
+                                </div>
+                                <div class="form-group">
+                                    <label>Банк:</label>
+                                    <input type="text" class="form-control" required>
+                                </div>
+                                <div class="form-group">
+                                    <label>IBAN:</label>
+                                    <input type="text" class="form-control" required>
+                                </div>
+                                <div class="form-note">
+                                    <p class="required-fields-note">* Всі поля обов'язкові для заповнення!</p>
+                                </div>
+                                <div class="form-actions">
+                                    <button type="submit" class="btn btn-primary">Відправити заяву</button>
+                                    <button type="button" class="btn btn-secondary cancel-return">Скасувати</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
 
                 <!-- Форма возврата (скрыта по умолчанию) -->
                 <div class="return-form-container" style="display: none;">
@@ -465,27 +686,166 @@
                     </div>
                 </div>
 
-                <!-- Панель "Мои бонусы" -->
+                <!-- Блок "Мої бонуси" -->
                 <section id="content-bonuses" class="tab-panel" role="tabpanel" aria-labelledby="tab-bonuses">
                     <h1 class="page-title">Мої бонуси</h1>
-                    <div class="tab-placeholder">
-                        <p>Контент для "Мої бонуси" будет добавлен позже</p>
+
+                    <!-- Карточка бонусного баланса -->
+                    <div class="bonuses-card">
+                        <div class="bonuses-summary">
+                            <div class="bonus-info-row">
+                                <div class="bonus-info-label">Доступно для використання</div>
+                                <div class="bonus-info-value">0.01 грн</div>
+                            </div>
+                            <div class="bonus-info-row">
+                                <div class="bonus-info-label">Загальний баланс</div>
+                                <div class="bonus-info-value">0.01 грн</div>
+                            </div>
+                            <div class="bonus-info-row">
+                                <div class="bonus-info-label">Кількість покупок</div>
+                                <div class="bonus-info-value">5</div>
+                            </div>
+                            <div class="bonus-info-row">
+                                <div class="bonus-info-label">Покупок на суму</div>
+                                <div class="bonus-info-value">4 977 грн</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h2 class="section-title">Історія операцій</h2>
+
+                    <!-- Список операций с бонусами -->
+                    <div class="bonuses-history">
+                        <!-- Операция 1 -->
+                        <div class="bonus-transaction">
+                            <div class="transaction-header">
+                                <div class="transaction-date">
+                                    <div class="transaction-label">Дата операції</div>
+                                    <div class="transaction-value">07.08.2021</div>
+                                </div>
+                                <div class="transaction-amount transaction-amount-negative">
+                                    <div class="transaction-value">3.99 грн</div>
+                                </div>
+                            </div>
+                            <div class="transaction-content">
+                                <div class="transaction-type transaction-type-spending">Згоряння бонусів</div>
+                            </div>
+                        </div>
+
+                        <!-- Операция 2 -->
+                        <div class="bonus-transaction">
+                            <div class="transaction-header">
+                                <div class="transaction-date">
+                                    <div class="transaction-label">Дата операції</div>
+                                    <div class="transaction-value">14.02.2021</div>
+                                </div>
+                                <div class="transaction-amount transaction-amount-negative">
+                                    <div class="transaction-value">59.00 грн</div>
+                                </div>
+                            </div>
+                            <div class="transaction-content">
+                                <div class="transaction-type transaction-type-spending">Згоряння бонусів</div>
+                            </div>
+                        </div>
+
+                        <!-- Операция 3 -->
+                        <div class="bonus-transaction">
+                            <div class="transaction-header">
+                                <div class="transaction-date">
+                                    <div class="transaction-label">Дата операції</div>
+                                    <div class="transaction-value">14.02.2021</div>
+                                </div>
+                                <div class="transaction-amount transaction-amount-negative">
+                                    <div class="transaction-value">7.90 грн</div>
+                                </div>
+                            </div>
+                            <div class="transaction-content">
+                                <div class="transaction-type transaction-type-spending">Згоряння бонусів</div>
+                            </div>
+                        </div>
+
+                        <!-- Операция 4 -->
+                        <div class="bonus-transaction">
+                            <div class="transaction-header">
+                                <div class="transaction-date">
+                                    <div class="transaction-label">Дата операції</div>
+                                    <div class="transaction-value">29.01.2021</div>
+                                </div>
+                                <div class="transaction-amount transaction-amount-positive">
+                                    <div class="transaction-value">3.99 грн</div>
+                                </div>
+                            </div>
+                            <div class="transaction-content">
+                                <div class="transaction-details">
+                                    <div class="transaction-row">
+                                        <div class="transaction-label">Опис</div>
+                                        <div class="transaction-value">Машинка для стрижки катышков Philips GC026/80</div>
+                                    </div>
+                                    <div class="transaction-row">
+                                        <div class="transaction-label">Нарахування бонусів</div>
+                                        <div class="transaction-value transaction-amount-positive">3.99 грн</div>
+                                    </div>
+                                </div>
+                                <div class="transaction-expiry">
+                                    <div class="transaction-value">Термін дії бонусів 181 днів</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Операция 5 -->
+                        <div class="bonus-transaction">
+                            <div class="transaction-header">
+                                <div class="transaction-date">
+                                    <div class="transaction-label">Дата операції</div>
+                                    <div class="transaction-value">17.08.2020</div>
+                                </div>
+                                <div class="transaction-amount transaction-amount-positive">
+                                    <div class="transaction-value">7.90 грн</div>
+                                </div>
+                            </div>
+                            <div class="transaction-content">
+                                <div class="transaction-details">
+                                    <div class="transaction-row">
+                                        <div class="transaction-label">Опис</div>
+                                        <div class="transaction-value">Кешбек 10% за покупку ЛАПТИ</div>
+                                    </div>
+                                    <div class="transaction-row">
+                                        <div class="transaction-label">Нарахування бонусів</div>
+                                        <div class="transaction-value transaction-amount-positive">7.90 грн</div>
+                                    </div>
+                                </div>
+                                <div class="transaction-expiry">
+                                    <div class="transaction-value">Термін дії бонусів 180 днів</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Пагинация -->
+                    <div class="pagination">
+                        <button class="pagination-btn pagination-btn-active">1</button>
+                        <button class="pagination-btn">2</button>
+                        <button class="pagination-btn pagination-btn-next">
+                            <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16">
+                                <path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z"></path>
+                            </svg>
+                        </button>
                     </div>
                 </section>
 
                 <!-- Панель "Мои услуги" -->
                 <section id="content-services" class="tab-panel" role="tabpanel" aria-labelledby="tab-services">
-                    <h1 class="page-title">Мої послуги</h1>
+                    <h1 class="page-title">Мої пропозиції</h1>
                     <div class="tab-placeholder">
-                        <p>Контент для "Мої послуги" будет добавлен позже</p>
+                        <p>Контент для "Мої пропозиції" будет добавлен позже</p>
                     </div>
                 </section>
 
                 <!-- Панель "Мои купоны" -->
                 <section id="content-coupons" class="tab-panel" role="tabpanel" aria-labelledby="tab-coupons">
-                    <h1 class="page-title">Мої купони</h1>
+                    <h1 class="page-title">Мої сертифікати</h1>
                     <div class="tab-placeholder">
-                        <p>Контент для "Мої купони" будет добавлен позже</p>
+                        <p>Контент для "Мої сертифікати" будет добавлен позже</p>
                     </div>
                 </section>
 
@@ -505,13 +865,6 @@
                     </div>
                 </section>
 
-                <!-- Панель "Избранное" -->
-                <section id="content-favorites" class="tab-panel" role="tabpanel" aria-labelledby="tab-favorites">
-                    <h1 class="page-title">Обране</h1>
-                    <div class="tab-placeholder">
-                        <p>Контент для "Обране" будет добавлен позже</p>
-                    </div>
-                </section>
 
                 <!-- Панель "Мои обращения" -->
                 <section id="content-appeals" class="tab-panel" role="tabpanel" aria-labelledby="tab-appeals">
