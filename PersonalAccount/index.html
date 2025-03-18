@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Дзвiнок - техніка, що змінює правила гри! Інформація про компанію, кар'єрні можливості та магазини.">
+    <title>Личный кабинет</title>
+    <!-- Стили -->
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+<header>
+    <div class="header-image">
+        <img src="assets/img/header.jpg" alt="Дзвiнок - баннер" loading="lazy">
+    </div>
+</header>
+
+<main>
+    <div class="container">
+        <div class="sidebar">
+            <div class="user-profile">
+                <div class="profile-image">
+                    <img src="./assets/img/avatarNone.png" alt="Фото профиля">
+                </div>
+                <h2 class="user-name">Дима Татьяна</h2>
+            </div>
+
+            <div class="tabs-menu" role="tablist" aria-label="Меню личного кабинета">
+                <input type="radio" id="tab-profile" name="tabs" aria-controls="content-profile" />
+                <label class="tab" for="tab-profile" role="tab" aria-selected="false" tabindex="0">
+                    <span class="menu-icon">👤</span>
+                    Профіль
+                </label>
+
+                <input type="radio" id="tab-orders" name="tabs" aria-controls="content-orders" />
+                <label class="tab" for="tab-orders" role="tab" aria-selected="false" tabindex="0">
+                    <span class="menu-icon">🛒</span>
+                    Мої замовлення
+                </label>
+
+                <input type="radio" id="tab-bonuses" name="tabs" aria-controls="content-bonuses" />
+                <label class="tab" for="tab-bonuses" role="tab" aria-selected="false" tabindex="0">
+                    <span class="menu-icon">🎁</span>
+                    Мої бонуси
+                </label>
+
+                <input type="radio" id="tab-services" name="tabs" aria-controls="content-services" />
+                <label class="tab" for="tab-services" role="tab" aria-selected="false" tabindex="0">
+                    <span class="menu-icon">🔍</span>
+                    Мої послуги
+                </label>
+
+                <input type="radio" id="tab-coupons" name="tabs" aria-controls="content-coupons" />
+                <label class="tab" for="tab-coupons" role="tab" aria-selected="false" tabindex="0">
+                    <span class="menu-icon">🏷️</span>
+                    Мої купони
+                </label>
+
+                <input type="radio" id="tab-promocodes" name="tabs" aria-controls="content-promocodes" />
+                <label class="tab" for="tab-promocodes" role="tab" aria-selected="false" tabindex="0">
+                    <span class="menu-icon">%</span>
+                    Мої промокоди
+                </label>
+
+                <input type="radio" id="tab-wishes" name="tabs" aria-controls="content-wishes" />
+                <label class="tab" for="tab-wishes" role="tab" aria-selected="false" tabindex="0">
+                    <span class="menu-icon">❤️</span>
+                    Мої бажання
+                </label>
+
+                <input type="radio" id="tab-favorites" name="tabs" aria-controls="content-favorites" />
+                <label class="tab" for="tab-favorites" role="tab" aria-selected="false" tabindex="0">
+                    <span class="menu-icon">⭐</span>
+                    Обране
+                </label>
+
+                <input type="radio" id="tab-appeals" name="tabs" aria-controls="content-appeals" />
+                <label class="tab" for="tab-appeals" role="tab" aria-selected="false" tabindex="0">
+                    <span class="menu-icon">✉️</span>
+                    Мої звернення
+                </label>
+
+                <input type="radio" id="tab-service" name="tabs" checked aria-controls="content-service" />
+                <label class="tab" for="tab-service" role="tab" aria-selected="true" tabindex="0">
+                    <span class="menu-icon">⚙️</span>
+                    Дзвiнок Сервіс
+                </label>
+            </div>
+
+            <div class="mobile-menu-toggle" id="mobileMenuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        <div class="main-content">
+            <header class="header">
+                <div class="header-block">
+                    <a href="#" class="logout-btn">
+                        <span>Вийти</span>
+                    </a>
+                    <span class="header-out">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M377.9 105.9L500.7 228.7c7.2 7.2 11.3 17.1 11.3 27.3s-4.1 20.1-11.3 27.3L377.9 406.1c-6.4 6.4-15 9.9-24 9.9c-18.7 0-33.9-15.2-33.9-33.9l0-62.1-128 0c-17.7 0-32-14.3-32-32l0-64c0-17.7 14.3-32 32-32l128 0 0-62.1c0-18.7 15.2-33.9 33.9-33.9c9 0 17.6 3.6 24 9.9zM160 96L96 96c-17.7 0-32 14.3-32 32l0 256c0 17.7 14.3 32 32 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-64 0c-53 0-96-43-96-96L0 128C0 75 43 32 96 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32z"/></svg>
+                    </span>
+                </div>
+            </header>
+
+            <div class="tab-panels">
+                <!-- Панель "Профиль" -->
+                <section id="content-profile" class="tab-panel" role="tabpanel" aria-labelledby="tab-profile">
+                    <h1 class="page-title">Профіль</h1>
+
+                    <div class="profile-content">
+                        <!-- Секция изменения пароля -->
+                        <div class="profile-section">
+                            <h2 class="section-title">Зміна паролю</h2>
+                            <p class="section-description">Мінімум 6 символів, рекомендуємо використовувати літери та цифри</p>
+
+                            <form class="profile-form password-form">
+                                <div class="form-group">
+                                    <label class="form-label">Новий пароль <span class="required">*</span></label>
+                                    <input type="password" class="form-control" id="newPassword" required>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="form-label">Повторіть пароль <span class="required">*</span></label>
+                                    <input type="password" class="form-control" id="confirmPassword" required>
+                                </div>
+
+                                <div class="form-actions">
+                                    <button type="submit" class="btn btn-primary">Зберегти пароль</button>
+                                </div>
+                            </form>
+                        </div>
+
+                        <!-- Секция личной информации -->
+                        <div class="profile-section">
+                            <h2 class="section-title">Профіль</h2>
+
+                            <form class="profile-form user-form">
+                                <div class="form-group">
+                                    <label class="form-label">П.І.Б. <span class="required">*</span></label>
+                                    <input type="text" class="form-control" value="Дима Татьяна" required>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="form-label">Стать <span class="required">*</span></label>
+                                    <div class="radio-group">
+                                        <label class="radio-label">
+                                            <input type="radio" name="gender" value="male" checked>
+                                            <span class="radio-text">Чоловіча</span>
+                                        </label>
+                                        <label class="radio-label">
+                                            <input type="radio" name="gender" value="female">
+                                            <span class="radio-text">Жіноча</span>
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="form-label">Телефон <span class="required">*</span></label>
+                                    <input type="tel" class="form-control" value="+38(067) 674-23-76" required>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="form-label">Додаткові телефони</label>
+                                    <div class="additional-phones">
+                                        <a href="#" class="add-phone">+ Додати додатковий телефон</a>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="form-label">Email <span class="required">*</span></label>
+                                    <input type="email" class="form-control" value="Cheize20@ukr.net" required>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="form-label">Дата народження</label>
+                                    <input type="text" class="form-control" placeholder="Приклад: 31-12-1980">
+                                    <p class="field-hint">Щоб ми знали, коли вас вітати та дарувати подарунки :)</p>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="form-label">Місто <span class="required">*</span></label>
+                                    <select class="form-control">
+                                        <option value="Київ" selected>Київ</option>
+                                        <option value="Львів">Львів</option>
+                                        <option value="Харків">Харків</option>
+                                        <option value="Одеса">Одеса</option>
+                                        <option value="Дніпро">Дніпро</option>
+                                    </select>
+                                    <p class="field-hint">Тільки кирилиця</p>
+                                </div>
+
+                                <div class="form-actions">
+                                    <button type="submit" class="btn btn-primary">Зберегти анкету</button>
+                                </div>
+                            </form>
+                        </div>
+
+                        <!-- Секция способов оплаты -->
+                        <div class="profile-section">
+                            <h2 class="section-title">Способи оплати</h2>
+
+                            <form class="profile-form payment-form">
+                                <div class="form-group">
+                                    <label class="form-label">Збережені карти</label>
+                                    <div class="saved-cards">
+                                        <div class="no-cards-message">У вас немає збережених карт</div>
+                                        <!-- Здесь будут отображаться сохраненные карты пользователя -->
+                                    </div>
+                                </div>
+
+                                <div class="form-actions">
+                                    <button type="submit" class="btn btn-primary">Зберегти зміни</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Панель "Мои заказы" -->
+                <section id="content-orders" class="tab-panel" role="tabpanel" aria-labelledby="tab-orders">
+                    <h1 class="page-title">Мої замовлення</h1>
+
+                    <!-- Карточка заказа -->
+                    <div class="order-card">
+                        <div class="order-header">
+                            <div class="order-title">
+                                <h2>Замовлення № 15680395 <span class="order-id">(5387041)</span></h2>
+                                <span class="order-date">від 30.01.2022 09:37</span>
+                            </div>
+                            <div class="order-status status-closed">Закрите</div>
+                        </div>
+
+                        <div class="order-info">
+                            <div class="order-info-column">
+                                <div class="order-info-item">
+                                    <span class="info-label">Сума замовлення:</span>
+                                    <span class="info-value">1 999 грн</span>
+                                </div>
+                                <div class="order-info-item">
+                                    <span class="info-label">До сплати:</span>
+                                    <span class="info-value">1 999 грн</span>
+                                </div>
+                                <div class="order-info-item">
+                                    <span class="info-label">Спосіб оплати:</span>
+                                    <span class="info-value">Готівкою</span>
+                                </div>
+                            </div>
+
+                            <div class="order-info-column">
+                                <div class="order-info-item">
+                                    <span class="info-label">Доставка:</span>
+                                    <span class="info-value">Київ / м. Київ, вул. О. Мішуги, 4, ТЦ "Піраміда"</span>
+                                </div>
+                                <div class="order-info-item">
+                                    <span class="info-label">Спосіб доставки:</span>
+                                    <span class="info-value">Самовивіз з магазину «Цитрус» (безкоштовно)</span>
+                                </div>
+                                <div class="order-info-item">
+                                    <span class="info-label">Адреса магазину:</span>
+                                    <span class="info-value">Київ (Київ р-н, Київська обл.) <br>
+                    <a href="#" class="location-link">м. Київ, вул. О. Мішуги, 4, ТЦ "Піраміда"</a></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="order-tracker">
+                            <div class="tracker-item active">
+                                <div class="tracker-icon">
+                                    <svg viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M12,20A8,8 0 0,1 4,12A8,8 0 0,1 12,4A8,8 0 0,1 20,12A8,8 0 0,1 12,20M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M16.24,7.76C15.07,6.58 13.53,6 12,6V12L7.76,16.24C10.1,18.58 13.9,18.58 16.24,16.24C18.59,13.9 18.59,10.1 16.24,7.76Z"></path>
+                                    </svg>
+                                </div>
+                                <div class="tracker-line"></div>
+                                <div class="tracker-label">В очікуванні обробки</div>
+                                <div class="tracker-date">29.01.2022 23:12</div>
+                            </div>
+
+                            <div class="tracker-item active">
+                                <div class="tracker-icon">
+                                    <svg viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path>
+                                    </svg>
+                                </div>
+                                <div class="tracker-line"></div>
+                                <div class="tracker-label">Прийнято в роботу</div>
+                                <div class="tracker-date">30.01.2022 09:37</div>
+                            </div>
+
+                            <div class="tracker-item active">
+                                <div class="tracker-icon">
+                                    <svg viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M12,2C17.52,2 22,6.48 22,12C22,17.52 17.52,22 12,22C6.48,22 2,17.52 2,12C2,6.48 6.48,2 12,2M12,4C7.58,4 4,7.58 4,12C4,16.42 7.58,20 12,20C16.42,20 20,16.42 20,12C20,7.58 16.42,4 12,4M9,16V8H11V16H9M13,16V8H15V16H13Z"></path>
+                                    </svg>
+                                </div>
+                                <div class="tracker-line"></div>
+                                <div class="tracker-label">Закрите</div>
+                                <div class="tracker-date">30.01.2022 11:30</div>
+                            </div>
+
+                            <div class="tracker-item">
+                                <div class="tracker-icon">
+                                    <svg viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M21,16.5C21,16.88 20.79,17.21 20.47,17.38L12.57,21.82C12.41,21.94 12.21,22 12,22C11.79,22 11.59,21.94 11.43,21.82L3.53,17.38C3.21,17.21 3,16.88 3,16.5V7.5C3,7.12 3.21,6.79 3.53,6.62L11.43,2.18C11.59,2.06 11.79,2 12,2C12.21,2 12.41,2.06 12.57,2.18L20.47,6.62C20.79,6.79 21,7.12 21,7.5V16.5M12,4.15L5,8.09V15.91L12,19.85L19,15.91V8.09L12,4.15Z"></path>
+                                    </svg>
+                                </div>
+                                <div class="tracker-line"></div>
+                                <div class="tracker-label">Комплектується</div>
+                                <div class="tracker-date"></div>
+                            </div>
+
+                            <div class="tracker-item">
+                                <div class="tracker-icon">
+                                    <svg viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M3,4A2,2 0 0,0 1,6V17H3A3,3 0 0,0 6,20A3,3 0 0,0 9,17H15A3,3 0 0,0 18,20A3,3 0 0,0 21,17H23V12L20,8H17V4M10,6L14,10L10,14V11H4V9H10M17,9.5H19.5L21.47,12H17M6,15.5A1.5,1.5 0 0,1 7.5,17A1.5,1.5 0 0,1 6,18.5A1.5,1.5 0 0,1 4.5,17A1.5,1.5 0 0,1 6,15.5M18,15.5A1.5,1.5 0 0,1 19.5,17A1.5,1.5 0 0,1 18,18.5A1.5,1.5 0 0,1 16.5,17A1.5,1.5 0 0,1 18,15.5Z"></path>
+                                    </svg>
+                                </div>
+                                <div class="tracker-line"></div>
+                                <div class="tracker-label">Доставляється</div>
+                                <div class="tracker-date"></div>
+                            </div>
+
+                            <div class="tracker-item">
+                                <div class="tracker-icon">
+                                    <svg viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M5,4H19A2,2 0 0,1 21,6V18A2,2 0 0,1 19,20H5A2,2 0 0,1 3,18V6A2,2 0 0,1 5,4M5,8V12H11V8H5M13,8V12H19V8H13M5,14V18H11V14H5M13,14V18H19V14H13Z"></path>
+                                    </svg>
+                                </div>
+                                <div class="tracker-line"></div>
+                                <div class="tracker-label">Доставлене до магазину</div>
+                                <div class="tracker-date"></div>
+                            </div>
+
+                            <div class="tracker-item">
+                                <div class="tracker-icon">
+                                    <svg viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M12 2C6.5 2 2 6.5 2 12S6.5 22 12 22 22 17.5 22 12 17.5 2 12 2M10 17L5 12L6.41 10.59L10 14.17L17.59 6.58L19 8L10 17Z"></path>
+                                    </svg>
+                                </div>
+                                <div class="tracker-line"></div>
+                                <div class="tracker-label">Оплачено</div>
+                                <div class="tracker-date"></div>
+                            </div>
+
+                            <div class="tracker-item">
+                                <div class="tracker-icon">
+                                    <svg viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M14 14H22V16H14V14M14 11H22V13H14V11M14 8H22V10H14V8M12 16V4H6V16H4V18L8 19.5L12 18V16M10 9H8V7H10V9Z"></path>
+                                    </svg>
+                                </div>
+                                <div class="tracker-label">Отримано</div>
+                                <div class="tracker-date"></div>
+                            </div>
+                        </div>
+
+                        <div class="order-products">
+                            <h3 class="products-title">Склад замовлення</h3>
+                            <div class="product-item">
+                                <div class="product-image">
+                                    <img src="./assets/img/3.jpg" alt="Рюкзак для ноутбука" />
+                                </div>
+                                <div class="product-details">
+                                    <a href="#" class="product-name">Рюкзак для ноутбука 15.6" Lenovo Legion Recon Gaming (Grey) GX40S69333</a>
+                                    <div class="product-price">1 999 грн x 1 шт</div>
+                                </div>
+                            </div>
+
+                            <div class="order-total">
+                                <div class="total-label">Сума:</div>
+                                <div class="total-value">1999 грн</div>
+                            </div>
+
+                            <div class="order-actions">
+                                <button class="btn btn-primary repeat-order">
+                                    <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18">
+                                        <path d="M19 7H16V5.5C16 4.1 14.9 3 13.5 3H4.5C3.1 3 2 4.1 2 5.5V18.5C2 19.9 3.1 21 4.5 21H5.5C5.8 20.3 6.3 19.6 7.1 19H4.5C4.2 19 4 18.8 4 18.5V5.5C4 5.2 4.2 5 4.5 5H13.5C13.8 5 14 5.2 14 5.5V7H11C8.8 7 7 8.8 7 11V18C7 19.1 7.4 19.9 8 20.6C8.3 21.1 8.9 21.5 9.5 21.8C10 22 10.5 22 11 22H19C21.2 22 23 20.2 23 18V11C23 8.8 21.2 7 19 7M21 18C21 19.1 20.1 20 19 20H11C9.9 20 9 19.1 9 18V11C9 9.9 9.9 9 11 9H19C20.1 9 21 9.9 21 11V18Z"></path>
+                                    </svg>
+                                    Повторити замовлення
+                                </button>
+                                <button class="btn btn-secondary create-return">
+                                    <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18">
+                                        <path d="M19,7V11H5.83L9.41,7.41L8,6L2,12L8,18L9.41,16.58L5.83,13H21V7H19Z"></path>
+                                    </svg>
+                                    Створити повернення
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Можно добавить кнопку "Показать еще заказы" если есть история заказов -->
+                    <div class="show-more-container">
+                        <button class="show-more-btn">Показати більше замовлень</button>
+                    </div>
+                </section>
+
+                <!-- Форма возврата (скрыта по умолчанию) -->
+                <div class="return-form-container" style="display: none;">
+                    <div class="return-form-overlay"></div>
+                    <div class="return-form-modal">
+                        <div class="return-form-header">
+                            <h3>Заява на повернення</h3>
+                            <button class="close-return-form">&times;</button>
+                        </div>
+                        <div class="return-form-content">
+                            <form id="returnForm" class="return-form">
+                                <div class="form-group">
+                                    <label>Інтернет-замовлення №:</label>
+                                    <input type="text" class="form-control" value="15680395" readonly>
+                                </div>
+                                <div class="form-group">
+                                    <label>Видаткова накладна №:</label>
+                                    <input type="text" class="form-control" value="5387041" readonly>
+                                </div>
+                                <div class="form-group">
+                                    <label>Дата:</label>
+                                    <input type="text" class="form-control" value="30.01.2022" readonly>
+                                </div>
+                                <div class="form-group">
+                                    <label>Покупець:</label>
+                                    <input type="text" class="form-control" required>
+                                </div>
+                                <div class="form-group">
+                                    <label>Телефон:</label>
+                                    <input type="tel" class="form-control" required>
+                                </div>
+                                <div class="form-group">
+                                    <label>Причина повернення:</label>
+                                    <select class="form-control" required>
+                                        <option value="">Виберіть причину повернення</option>
+                                        <option value="defect">Виявлено дефект</option>
+                                        <option value="not_match">Товар не відповідає опису</option>
+                                        <option value="not_fit">Товар не підійшов</option>
+                                        <option value="change_mind">Передумав(-ла)</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label>Одержувач коштів за повернення:</label>
+                                    <input type="text" class="form-control" required>
+                                </div>
+                                <div class="form-group">
+                                    <label>ІПН:</label>
+                                    <input type="text" class="form-control" required>
+                                </div>
+                                <div class="form-group">
+                                    <label>Банк:</label>
+                                    <input type="text" class="form-control" required>
+                                </div>
+                                <div class="form-group">
+                                    <label>IBAN:</label>
+                                    <input type="text" class="form-control" required>
+                                </div>
+                                <div class="form-actions">
+                                    <button type="submit" class="btn btn-primary">Відправити заяву</button>
+                                    <button type="button" class="btn btn-secondary cancel-return">Скасувати</button>
+                                </div>
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Панель "Мои бонусы" -->
+                <section id="content-bonuses" class="tab-panel" role="tabpanel" aria-labelledby="tab-bonuses">
+                    <h1 class="page-title">Мої бонуси</h1>
+                    <div class="tab-placeholder">
+                        <p>Контент для "Мої бонуси" будет добавлен позже</p>
+                    </div>
+                </section>
+
+                <!-- Панель "Мои услуги" -->
+                <section id="content-services" class="tab-panel" role="tabpanel" aria-labelledby="tab-services">
+                    <h1 class="page-title">Мої послуги</h1>
+                    <div class="tab-placeholder">
+                        <p>Контент для "Мої послуги" будет добавлен позже</p>
+                    </div>
+                </section>
+
+                <!-- Панель "Мои купоны" -->
+                <section id="content-coupons" class="tab-panel" role="tabpanel" aria-labelledby="tab-coupons">
+                    <h1 class="page-title">Мої купони</h1>
+                    <div class="tab-placeholder">
+                        <p>Контент для "Мої купони" будет добавлен позже</p>
+                    </div>
+                </section>
+
+                <!-- Панель "Мои промокоды" -->
+                <section id="content-promocodes" class="tab-panel" role="tabpanel" aria-labelledby="tab-promocodes">
+                    <h1 class="page-title">Мої промокоди</h1>
+                    <div class="tab-placeholder">
+                        <p>Контент для "Мої промокоди" будет добавлен позже</p>
+                    </div>
+                </section>
+
+                <!-- Панель "Мои желания" -->
+                <section id="content-wishes" class="tab-panel" role="tabpanel" aria-labelledby="tab-wishes">
+                    <h1 class="page-title">Мої бажання</h1>
+                    <div class="tab-placeholder">
+                        <p>Контент для "Мої бажання" будет добавлен позже</p>
+                    </div>
+                </section>
+
+                <!-- Панель "Избранное" -->
+                <section id="content-favorites" class="tab-panel" role="tabpanel" aria-labelledby="tab-favorites">
+                    <h1 class="page-title">Обране</h1>
+                    <div class="tab-placeholder">
+                        <p>Контент для "Обране" будет добавлен позже</p>
+                    </div>
+                </section>
+
+                <!-- Панель "Мои обращения" -->
+                <section id="content-appeals" class="tab-panel" role="tabpanel" aria-labelledby="tab-appeals">
+                    <h1 class="page-title">Мої звернення</h1>
+                    <div class="tab-placeholder">
+                        <p>Контент для "Мої звернення" будет добавлен позже</p>
+                    </div>
+                </section>
+
+                <!-- Панель "Дзвiнок Сервис" (активна по умолчанию) -->
+                <section id="content-service" class="tab-panel active" role="tabpanel" aria-labelledby="tab-service">
+                    <h1 class="page-title">Дзвiнок Сервіс</h1>
+
+                    <p class="instructions">
+                        Щоб дізнатися про стан ремонту введіть: IMEI/серійний номер пристрою або номер телефону в форматі (09*******) або номер квитанції (приклад: ПР0000XXX)
+                    </p>
+
+                    <form class="search-form">
+                        <div class="form-group">
+                            <label class="form-label">Оберіть тип ідентифікатора</label>
+                            <div class="input-group">
+                                <div class="dropdown">
+                                    <div class="dropdown-select" id="identifierType">
+                                        <span>Номер телефона</span>
+                                    </div>
+                                    <div class="dropdown-menu" id="identifierMenu">
+                                        <div class="dropdown-item">Номер телефона</div>
+                                        <div class="dropdown-item">IMEI/серійний номер</div>
+                                        <div class="dropdown-item">Номер квитанції</div>
+                                    </div>
+                                </div>
+
+                                <input type="text" class="form-control" placeholder="">
+
+                                <button type="submit" class="btn btn-primary">OK</button>
+                            </div>
+                        </div>
+                    </form>
+                </section>
+            </div>
+        </div>
+    </div>
+</main>
+
+<noscript>
+    <div class="noscript-message">
+        Для полноценной работы сайта необходимо включить JavaScript в настройках вашего браузера.
+    </div>
+</noscript>
+
+<script src="assets/script/main.js"></script>
+</body>
+</html>
