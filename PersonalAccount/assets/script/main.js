@@ -1262,6 +1262,49 @@ document.addEventListener('DOMContentLoaded', function() {
 		}, 1000);
 	}
 	
+	document.addEventListener('DOMContentLoaded', function() {
+		// Обработчики для кнопок "Купить"
+		const buyButtons = document.querySelectorAll('.wish-card__buy');
+		buyButtons.forEach(button => {
+			button.addEventListener('click', function() {
+				const productTitle = this.closest('.wish-card').querySelector('.wish-card__title').textContent;
+				alert(`Добавление товара в корзину: ${productTitle}`);
+			});
+		});
+		
+		// Обработчики для кнопок удаления
+		const removeButtons = document.querySelectorAll('.wish-card__remove');
+		removeButtons.forEach(button => {
+			button.addEventListener('click', function() {
+				const wishCard = this.closest('.wish-card');
+				const productTitle = wishCard.querySelector('.wish-card__title').textContent;
+				
+				if (confirm(`Вы действительно хотите удалить "${productTitle}" из списка желаний?`)) {
+					wishCard.style.opacity = '0';
+					setTimeout(() => {
+						wishCard.remove();
+						
+						// Проверка, остались ли еще товары
+						const remainingCards = document.querySelectorAll('.wish-card');
+						if (remainingCards.length === 0) {
+							document.querySelector('.wishes-container').style.display = 'none';
+							document.querySelector('.wishes-placeholder').style.display = 'block';
+						}
+					}, 300);
+				}
+			});
+		});
+		
+		// Обработчик для кнопки "Начать покупки"
+		const exploreBtn = document.getElementById('explore-products-btn');
+		if (exploreBtn) {
+			exploreBtn.addEventListener('click', function() {
+				// Переход на страницу с товарами
+				window.location.href = '/catalog';
+			});
+		}
+	});
+	
 	// Вызываем функцию для добавления стилей анимаций
 	addAnimationStyles();
 	
