@@ -19,7 +19,7 @@
     </div>
 </header>
 <main>
-    <div class="container">
+    <div class="page-container">
         <div class="sidebar">
             <div class="user-profile">
                 <div class="profile-image">
@@ -50,19 +50,7 @@
                 <input type="radio" id="tab-services" name="tabs" aria-controls="content-services" />
                 <label class="tab" for="tab-services" role="tab" aria-selected="false" tabindex="0">
                     <span class="menu-icon">🔍</span>
-                    Мої пропозиції
-                </label>
-
-                <input type="radio" id="tab-coupons" name="tabs" aria-controls="content-coupons" />
-                <label class="tab" for="tab-coupons" role="tab" aria-selected="false" tabindex="0">
-                    <span class="menu-icon">🏷️</span>
-                    Мої сертифікати
-                </label>
-
-                <input type="radio" id="tab-promocodes" name="tabs" aria-controls="content-promocodes" />
-                <label class="tab" for="tab-promocodes" role="tab" aria-selected="false" tabindex="0">
-                    <span class="menu-icon">%</span>
-                    Мої промокоди
+                    Мої привілеї
                 </label>
 
                 <input type="radio" id="tab-wishes" name="tabs" aria-controls="content-wishes" />
@@ -82,6 +70,8 @@
                     <span class="menu-icon">⚙️</span>
                     Дзвiнок Сервіс
                 </label>
+
+                <div class="glider"></div>
             </div>
 
             <div class="mobile-menu-toggle" id="mobileMenuToggle">
@@ -620,72 +610,6 @@
                     </div>
                 </div>
 
-                <!-- Форма возврата (скрыта по умолчанию) -->
-                <div class="return-form-container" style="display: none;">
-                    <div class="return-form-overlay"></div>
-                    <div class="return-form-modal">
-                        <div class="return-form-header">
-                            <h3>Заява на повернення</h3>
-                            <button class="close-return-form">&times;</button>
-                        </div>
-                        <div class="return-form-content">
-                            <form id="returnForm" class="return-form">
-                                <div class="form-group">
-                                    <label>Інтернет-замовлення №:</label>
-                                    <input type="text" class="form-control" value="15680395" readonly>
-                                </div>
-                                <div class="form-group">
-                                    <label>Видаткова накладна №:</label>
-                                    <input type="text" class="form-control" value="5387041" readonly>
-                                </div>
-                                <div class="form-group">
-                                    <label>Дата:</label>
-                                    <input type="text" class="form-control" value="30.01.2022" readonly>
-                                </div>
-                                <div class="form-group">
-                                    <label>Покупець:</label>
-                                    <input type="text" class="form-control" required>
-                                </div>
-                                <div class="form-group">
-                                    <label>Телефон:</label>
-                                    <input type="tel" class="form-control" required>
-                                </div>
-                                <div class="form-group">
-                                    <label>Причина повернення:</label>
-                                    <select class="form-control" required>
-                                        <option value="">Виберіть причину повернення</option>
-                                        <option value="defect">Виявлено дефект</option>
-                                        <option value="not_match">Товар не відповідає опису</option>
-                                        <option value="not_fit">Товар не підійшов</option>
-                                        <option value="change_mind">Передумав(-ла)</option>
-                                    </select>
-                                </div>
-                                <div class="form-group">
-                                    <label>Одержувач коштів за повернення:</label>
-                                    <input type="text" class="form-control" required>
-                                </div>
-                                <div class="form-group">
-                                    <label>ІПН:</label>
-                                    <input type="text" class="form-control" required>
-                                </div>
-                                <div class="form-group">
-                                    <label>Банк:</label>
-                                    <input type="text" class="form-control" required>
-                                </div>
-                                <div class="form-group">
-                                    <label>IBAN:</label>
-                                    <input type="text" class="form-control" required>
-                                </div>
-                                <div class="form-actions">
-                                    <button type="submit" class="btn btn-primary">Відправити заяву</button>
-                                    <button type="button" class="btn btn-secondary cancel-return">Скасувати</button>
-                                </div>
-
-                            </form>
-                        </div>
-                    </div>
-                </div>
-
                 <!-- Блок "Мої бонуси" -->
                 <section id="content-bonuses" class="tab-panel" role="tabpanel" aria-labelledby="tab-bonuses">
                     <h1 class="page-title">Мої бонуси</h1>
@@ -833,27 +757,188 @@
                     </div>
                 </section>
 
-                <!-- Панель "Мои услуги" -->
+                <!-- Панель "Мої привілеї" -->
                 <section id="content-services" class="tab-panel" role="tabpanel" aria-labelledby="tab-services">
-                    <h1 class="page-title">Мої пропозиції</h1>
-                    <div class="tab-placeholder">
-                        <p>Контент для "Мої пропозиції" будет добавлен позже</p>
-                    </div>
-                </section>
+                    <h1 class="page-title">Мої привілеї</h1>
 
-                <!-- Панель "Мои купоны" -->
-                <section id="content-coupons" class="tab-panel" role="tabpanel" aria-labelledby="tab-coupons">
-                    <h1 class="page-title">Мої сертифікати</h1>
-                    <div class="tab-placeholder">
-                        <p>Контент для "Мої сертифікати" будет добавлен позже</p>
-                    </div>
-                </section>
+                    <!-- Навигационные карточки -->
+                    <div class="privileges-navigation">
+                        <a href="#personal-offers-block" class="privilege-nav-card" data-target="personal-offers">
+                            <div class="nav-card-icon">
+                                <img src="/img/icons/offers-icon.svg" alt="Пропозиції" onerror="this.src='data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2224%22%20height%3D%2224%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20fill%3D%22none%22%20viewBox%3D%220%200%2024%2024%22%20stroke%3D%22%2320A447%22%20stroke-width%3D%222%22%3E%3Cpath%20d%3D%22M12%208c-1.657%200-3%20.895-3%202s1.343%202%203%202%203%20.895%203%202-1.343%202-3%202m0-8c1.11%200%202.08.402%202.599%201M12%204V2m0%2020v-2M8.686%206.493L7.27%205.077M16.728%2018.321l-1.414-1.414M6.343%2016.728l-1.414%201.414M18.32%208.686l-1.413-1.415M5.25%2012H3m18%200h-2.25%22%2F%3E%3C%2Fsvg%3E'">
+                            </div>
+                            <div class="nav-card-info">
+                                <h3>Персональні пропозиції</h3>
+                                <p>Акції та знижки для вас</p>
+                            </div>
+                            <div class="nav-card-arrow">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                        </a>
 
-                <!-- Панель "Мои промокоды" -->
-                <section id="content-promocodes" class="tab-panel" role="tabpanel" aria-labelledby="tab-promocodes">
-                    <h1 class="page-title">Мої промокоди</h1>
-                    <div class="tab-placeholder">
-                        <p>Контент для "Мої промокоди" будет добавлен позже</p>
+                        <a href="#certificates-block" class="privilege-nav-card" data-target="certificates">
+                            <div class="nav-card-icon">
+                                <img src="/img/icons/certificate-icon.svg" alt="Сертифікати" onerror="this.src='data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2224%22%20height%3D%2224%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20fill%3D%22none%22%20viewBox%3D%220%200%2024%2024%22%20stroke%3D%22%2320A447%22%20stroke-width%3D%222%22%3E%3Cpath%20d%3D%22M12%2015a7%207%200%2111.001-13.999A7%207%200%200112%2015z%22%2F%3E%3Cpath%20d%3D%22M8.5%2014L8.5%2021l3.5-2%203.5%202v-7%22%2F%3E%3C%2Fsvg%3E'">
+                            </div>
+                            <div class="nav-card-info">
+                                <h3>Мої сертифікати</h3>
+                                <p>Подарункові та знижкові сертифікати</p>
+                            </div>
+                            <div class="nav-card-arrow">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                        </a>
+
+                        <a href="#promo-codes-block" class="privilege-nav-card" data-target="promo-codes">
+                            <div class="nav-card-icon">
+                                <img src="/img/icons/promo-icon.svg" alt="Промокоди" onerror="this.src='data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2224%22%20height%3D%2224%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20fill%3D%22none%22%20viewBox%3D%220%200%2024%2024%22%20stroke%3D%22%2320A447%22%20stroke-width%3D%222%22%3E%3Cpath%20d%3D%22M15%205l4%204m0%200l-4%204m4-4H8m-3%208a2%202%200%20100-4%202%202%200%20000%204z%22%2F%3E%3C%2Fsvg%3E'">
+                            </div>
+                            <div class="nav-card-info">
+                                <h3>Мої промокоди</h3>
+                                <p>Доступні та використані промокоди</p>
+                            </div>
+                            <div class="nav-card-arrow">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- Блок "Персональні пропозиції" -->
+                    <div class="privileges-block" id="personal-offers-block">
+                        <h2 class="block-title">Персональні пропозиції</h2>
+
+                        <div class="offers-grid">
+                            <!-- Карточка предложения 1 -->
+                            <div class="offer-item">
+                                <div class="offer-image">
+                                    <img src="./assets/img/1.jpg" alt="Знижка">
+                                </div>
+                                <div class="offer-content">
+                                    <h3>Знижка 20% на свіжі телефони!</h3>
+                                    <p class="offer-validity">Дійсна до: 31.03.2025</p>
+                                    <button class="action-button">Активувати</button>
+                                </div>
+                            </div>
+
+                            <!-- Карточка предложения 2 -->
+                            <div class="offer-item">
+                                <div class="offer-image">
+                                    <img src="./assets/img/2.jpg" alt="Безкоштовна доставка">
+                                </div>
+                                <div class="offer-content">
+                                    <h3>Безкоштовна доставка на замовлення від 5000₴</h3>
+                                    <p class="offer-validity">Дійсна до: 15.04.2025</p>
+                                    <button class="action-button">Активувати</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Блок "Мої сертифікати" -->
+                    <div class="privileges-block" id="certificates-block">
+                        <h2 class="block-title">Мої сертифікати</h2>
+
+                        <div class="certificates-grid">
+                            <!-- Карточка сертификата 1 -->
+                            <div class="certificate-item">
+                                <div class="certificate-header">
+                                    <h3>Подарунковий сертифікат</h3>
+                                    <span class="certificate-value">500₴</span>
+                                </div>
+                                <div class="certificate-details">
+                                    <div class="certificate-info">
+                                        <p><span class="info-label">Код:</span> <span class="info-value">GIFT-12345</span></p>
+                                        <p><span class="info-label">Дійсний до:</span> <span class="info-value">15.04.2025</span></p>
+                                    </div>
+                                    <button class="action-button">Використати</button>
+                                </div>
+                            </div>
+
+                            <!-- Карточка сертификата 2 -->
+                            <div class="certificate-item">
+                                <div class="certificate-header">
+                                    <h3>Знижковий сертифікат</h3>
+                                    <span class="certificate-discount">15%</span>
+                                </div>
+                                <div class="certificate-details">
+                                    <div class="certificate-info">
+                                        <p><span class="info-label">Код:</span> <span class="info-value">DISC-54321</span></p>
+                                        <p><span class="info-label">Дійсний до:</span> <span class="info-value">30.05.2025</span></p>
+                                    </div>
+                                    <button class="action-button">Використати</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Блок "Мої промокоди" -->
+                    <div class="privileges-block" id="promo-codes-block">
+                        <h2 class="block-title">Мої промокоди</h2>
+
+                        <div class="promo-tabs">
+                            <button class="promo-tab active" data-target="active-codes">Активні</button>
+                            <button class="promo-tab" data-target="used-codes">Використані</button>
+                        </div>
+
+                        <!-- Активные промокоды -->
+                        <div class="promo-codes-grid" id="active-codes">
+                            <!-- Активный промокод 1 -->
+                            <div class="promo-code-item">
+                                <div class="promo-code-info">
+                                    <h3>Знижка 10% на все</h3>
+                                    <p class="promo-validity">Дійсний до: 30.04.2025</p>
+                                </div>
+                                <div class="promo-code-action">
+                                    <div class="promo-code">SPRING10</div>
+                                    <button class="copy-button">Копіювати</button>
+                                </div>
+                            </div>
+
+                            <!-- Активный промокод 2 -->
+                            <div class="promo-code-item">
+                                <div class="promo-code-info">
+                                    <h3>Додатковий бонус 5% на техніку</h3>
+                                    <p class="promo-validity">Дійсний до: 15.05.2025</p>
+                                </div>
+                                <div class="promo-code-action">
+                                    <div class="promo-code">TECH5</div>
+                                    <button class="copy-button">Копіювати</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Использованные промокоды (изначально скрыты) -->
+                        <div class="promo-codes-grid" id="used-codes" style="display: none;">
+                            <!-- Использованный промокод 1 -->
+                            <div class="promo-code-item used">
+                                <div class="promo-code-info">
+                                    <h3>Безкоштовна доставка</h3>
+                                    <p class="promo-validity">Використано: 10.02.2025</p>
+                                </div>
+                                <div class="promo-code-action">
+                                    <div class="promo-code">FREEDEL</div>
+                                    <span class="used-label">Використано</span>
+                                </div>
+                            </div>
+
+                            <!-- Использованный промокод 2 -->
+                            <div class="promo-code-item used">
+                                <div class="promo-code-info">
+                                    <h3>Знижка 15% на перше замовлення</h3>
+                                    <p class="promo-validity">Використано: 05.01.2025</p>
+                                </div>
+                                <div class="promo-code-action">
+                                    <div class="promo-code">FIRST15</div>
+                                    <span class="used-label">Використано</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </section>
 
@@ -864,7 +949,6 @@
                         <p>Контент для "Мої бажання" будет добавлен позже</p>
                     </div>
                 </section>
-
 
                 <!-- Панель "Мои обращения" -->
                 <section id="content-appeals" class="tab-panel" role="tabpanel" aria-labelledby="tab-appeals">

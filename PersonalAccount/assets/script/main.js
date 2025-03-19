@@ -1,7 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-	//=================================================
 	// ФУНКЦИОНАЛЬНОСТЬ ТАБОВ НА РАДИО-КНОПКАХ
-	//=================================================
 	const tabInputs = document.querySelectorAll('.tabs-menu input[type="radio"]');
 	const tabPanels = document.querySelectorAll('.tab-panel');
 	
@@ -12,6 +10,28 @@ document.addEventListener('DOMContentLoaded', function() {
 			const targetId = checkedTab.getAttribute('aria-controls');
 			// Активируем соответствующую панель
 			document.getElementById(targetId).classList.add('active');
+			
+			// Устанавливаем правильную позицию для глайдера
+			positionGlider(checkedTab);
+		}
+	}
+	
+	// Функция для позиционирования глайдера
+	function positionGlider(activeTab) {
+		const glider = document.querySelector('.tabs-menu .glider');
+		if (glider) {
+			const tabLabel = activeTab.nextElementSibling;
+			const tabIndex = Array.from(tabInputs).indexOf(activeTab);
+			
+			if (window.innerWidth > 950) {
+				// Для десктопа
+				glider.style.opacity = "1";
+				glider.style.top = (tabIndex * 59) + "px"; // Высота таба + отступ
+			} else {
+				// Для мобильных устройств
+				glider.style.opacity = "1";
+				glider.style.top = (tabIndex * 59) + "px";
+			}
 		}
 	}
 	
@@ -28,6 +48,9 @@ document.addEventListener('DOMContentLoaded', function() {
 			// Активируем выбранную панель
 			document.getElementById(targetId).classList.add('active');
 			
+			// Позиционируем глайдер
+			positionGlider(this);
+			
 			// Если это мобильный вид, закрываем меню
 			if (window.innerWidth <= 768) {
 				closeMobileMenu();
@@ -36,6 +59,11 @@ document.addEventListener('DOMContentLoaded', function() {
 			// Если выбран таб заказов, инициализируем его функциональность
 			if (targetId === 'content-orders') {
 				initOrdersTab();
+			}
+			
+			// Если выбран таб бонусов, инициализируем его функциональность
+			if (targetId === 'content-bonuses') {
+				initBonusesTab();
 			}
 		});
 		
@@ -53,9 +81,7 @@ document.addEventListener('DOMContentLoaded', function() {
 		});
 	});
 	
-	//=================================================
 	// ФУНКЦИОНАЛЬНОСТЬ МОБИЛЬНОГО МЕНЮ
-	//=================================================
 	const mobileMenuToggle = document.getElementById('mobileMenuToggle');
 	const sidebar = document.querySelector('.sidebar');
 	
@@ -98,31 +124,45 @@ document.addEventListener('DOMContentLoaded', function() {
 		if (window.innerWidth > 768) {
 			closeMobileMenu();
 		}
+		
+		// Обновляем позицию глайдера при изменении размера окна
+		const checkedTab = document.querySelector('.tabs-menu input[type="radio"]:checked');
+		if (checkedTab) {
+			positionGlider(checkedTab);
+		}
 	});
 	
-	// Вызываем функцию установки активного таба при загрузке
-	setInitialActiveTab();
-	
-	//=================================================
 	// ФУНКЦИОНАЛЬНОСТЬ ВЫПАДАЮЩЕГО СПИСКА
-	//=================================================
 	const dropdownSelect = document.getElementById('identifierType');
 	const dropdownMenu = document.getElementById('identifierMenu');
 	
 	if (dropdownSelect && dropdownMenu) {
 		const dropdownItems = dropdownMenu.querySelectorAll('.dropdown-item');
 		
-		// Открытие/закрытие выпадающего списка
+		// Открытие/закрытие выпадающего списка с анимацией
 		dropdownSelect.addEventListener('click', function() {
 			this.classList.toggle('open');
-			dropdownMenu.classList.toggle('show');
+			if (dropdownMenu.classList.contains('show')) {
+				dropdownMenu.style.opacity = '0';
+				setTimeout(() => {
+					dropdownMenu.classList.remove('show');
+				}, 300);
+			} else {
+				dropdownMenu.classList.add('show');
+				setTimeout(() => {
+					dropdownMenu.style.opacity = '1';
+				}, 10);
+			}
 		});
 		
 		// Выбор элемента из выпадающего списка
 		dropdownItems.forEach(item => {
 			item.addEventListener('click', function() {
 				dropdownSelect.querySelector('span').textContent = this.textContent;
-				dropdownMenu.classList.remove('show');
+				dropdownMenu.style.opacity = '0';
+				setTimeout(() => {
+					dropdownMenu.classList.remove('show');
+				}, 300);
 				dropdownSelect.classList.remove('open');
 			});
 		});
@@ -130,15 +170,16 @@ document.addEventListener('DOMContentLoaded', function() {
 		// Закрытие выпадающего списка при клике вне него
 		document.addEventListener('click', function(event) {
 			if (!dropdownSelect.contains(event.target) && !dropdownMenu.contains(event.target)) {
-				dropdownMenu.classList.remove('show');
+				dropdownMenu.style.opacity = '0';
+				setTimeout(() => {
+					dropdownMenu.classList.remove('show');
+				}, 300);
 				dropdownSelect.classList.remove('open');
 			}
 		});
 	}
 	
-	//=================================================
 	// ФУНКЦИОНАЛЬНОСТЬ ФОРМ ПРОФИЛЯ
-	//=================================================
 	// Форма смены пароля
 	const passwordForm = document.querySelector('.password-form');
 	if (passwordForm) {
@@ -190,7 +231,7 @@ document.addEventListener('DOMContentLoaded', function() {
 		});
 	}
 	
-	// Добавление дополнительного телефона
+	// Добавление дополнительного телефона с анимацией
 	const addPhoneLink = document.querySelector('.add-phone');
 	if (addPhoneLink) {
 		addPhoneLink.addEventListener('click', function(e) {
@@ -199,6 +240,8 @@ document.addEventListener('DOMContentLoaded', function() {
 			const phoneContainer = document.querySelector('.additional-phones');
 			const phoneInputWrapper = document.createElement('div');
 			phoneInputWrapper.className = 'additional-phone-item';
+			phoneInputWrapper.style.opacity = '0';
+			phoneInputWrapper.style.transform = 'translateY(20px)';
 			phoneInputWrapper.innerHTML = `
                 <div class="input-with-remove">
                     <input type="tel" class="form-control" placeholder="+38(0__) ___-__-__">
@@ -208,32 +251,45 @@ document.addEventListener('DOMContentLoaded', function() {
 			
 			phoneContainer.insertBefore(phoneInputWrapper, addPhoneLink);
 			
+			// Анимация появления
+			setTimeout(() => {
+				phoneInputWrapper.style.opacity = '1';
+				phoneInputWrapper.style.transform = 'translateY(0)';
+				phoneInputWrapper.style.transition = 'all 0.3s ease-out';
+			}, 10);
+			
 			// Обработчик удаления телефона
 			const removeBtn = phoneInputWrapper.querySelector('.remove-phone');
 			removeBtn.addEventListener('click', function() {
-				phoneInputWrapper.remove();
+				phoneInputWrapper.style.opacity = '0';
+				phoneInputWrapper.style.transform = 'translateY(20px)';
+				setTimeout(() => {
+					phoneInputWrapper.remove();
+				}, 300);
 			});
 		});
 	}
 	
-	//=================================================
 	// ФУНКЦИОНАЛЬНОСТЬ ПОИСКА СЕРВИСА
-	//=================================================
 	const searchForm = document.querySelector('.search-form');
 	if (searchForm) {
 		searchForm.addEventListener('submit', function(e) {
 			e.preventDefault();
 			
-			const selectedType = dropdownSelect.querySelector('span').textContent;
+			const selectedType = dropdownSelect ? dropdownSelect.querySelector('span').textContent : '';
 			const inputValue = this.querySelector('.form-control').value.trim();
 			
 			if (!inputValue) {
-				// Показываем ошибку для пустого ввода
-				this.querySelector('.form-control').style.borderColor = 'red';
+				// Анимация ошибки для пустого ввода
+				const input = this.querySelector('.form-control');
+				input.style.transition = 'border-color 0.3s ease';
+				input.style.borderColor = 'red';
+				input.style.animation = 'shake 0.5s';
 				
 				// Сбрасываем стиль ошибки через 3 секунды
 				setTimeout(() => {
-					this.querySelector('.form-control').style.borderColor = '';
+					input.style.borderColor = '';
+					input.style.animation = '';
 				}, 3000);
 				
 				return;
@@ -254,25 +310,35 @@ document.addEventListener('DOMContentLoaded', function() {
 			}
 			
 			if (!isValid) {
-				// Показываем ошибку для неверного формата
-				this.querySelector('.form-control').style.borderColor = 'red';
+				// Анимация ошибки для неверного формата
+				const input = this.querySelector('.form-control');
+				input.style.transition = 'border-color 0.3s ease';
+				input.style.borderColor = 'red';
+				input.style.animation = 'shake 0.5s';
 				
 				// Сбрасываем стиль ошибки через 3 секунды
 				setTimeout(() => {
-					this.querySelector('.form-control').style.borderColor = '';
+					input.style.borderColor = '';
+					input.style.animation = '';
 				}, 3000);
 				
 				return;
 			}
 			
-			// Если всё валидно, отправляем форму (в реальном проекте - AJAX)
-			console.log('Форма отправлена:', {
-				тип: selectedType,
-				значение: inputValue
-			});
+			// Имитация загрузки с анимацией
+			const button = this.querySelector('.btn-primary');
+			const originalText = button.textContent;
+			button.textContent = 'Пошук...';
+			button.disabled = true;
 			
-			// Имитация ответа - в реальном проекте заменить на API-запрос
-			alert(`Запит на перевірку статусу відправлено. Тип: ${selectedType}, Значення: ${inputValue}`);
+			setTimeout(() => {
+				// Имитация ответа - в реальном проекте заменить на API-запрос
+				alert(`Запит на перевірку статусу відправлено. Тип: ${selectedType}, Значення: ${inputValue}`);
+				
+				// Восстанавливаем состояние кнопки
+				button.textContent = originalText;
+				button.disabled = false;
+			}, 1500);
 		});
 		
 		// Очистка стиля ошибки при вводе
@@ -280,13 +346,12 @@ document.addEventListener('DOMContentLoaded', function() {
 		if (searchInput) {
 			searchInput.addEventListener('input', function() {
 				this.style.borderColor = '';
+				this.style.animation = '';
 			});
 		}
 	}
 	
-	//=================================================
 	// ФУНКЦИОНАЛЬНОСТЬ ВКЛАДКИ "МОЇ ЗАМОВЛЕННЯ"
-	//=================================================
 	// Функция инициализации вкладки заказов
 	function initOrdersTab() {
 		// Получаем элементы на вкладке заказов
@@ -312,7 +377,7 @@ document.addEventListener('DOMContentLoaded', function() {
 			applyStatusFilter(this.value);
 		}
 		
-		// Применение фильтра статусов
+		// Применение фильтра статусов с анимацией
 		function applyStatusFilter(status) {
 			const orderCards = document.querySelectorAll('.order-card');
 			const noOrdersMessage = document.querySelector('.no-orders-message');
@@ -321,22 +386,50 @@ document.addEventListener('DOMContentLoaded', function() {
 			orderCards.forEach(card => {
 				if (status === 'all' || card.dataset.status === status) {
 					card.style.display = 'block';
+					card.style.opacity = '0';
+					card.style.transform = 'translateY(20px)';
+					
+					setTimeout(() => {
+						card.style.opacity = '1';
+						card.style.transform = 'translateY(0)';
+						card.style.transition = 'all 0.5s ease-out';
+					}, 100 * visibleCount);
+					
 					visibleCount++;
 				} else {
-					card.style.display = 'none';
+					card.style.opacity = '0';
+					card.style.transform = 'translateY(20px)';
+					
+					setTimeout(() => {
+						card.style.display = 'none';
+					}, 300);
 				}
 			});
 			
 			// Показываем/скрываем сообщение о отсутствии заказов
 			if (noOrdersMessage) {
 				if (visibleCount === 0) {
-					noOrdersMessage.style.display = 'block';
+					setTimeout(() => {
+						noOrdersMessage.style.display = 'block';
+						noOrdersMessage.style.opacity = '0';
+						
+						setTimeout(() => {
+							noOrdersMessage.style.opacity = '1';
+							noOrdersMessage.style.transition = 'opacity 0.5s ease';
+						}, 10);
+					}, 300);
+					
 					// Скрываем кнопку "Показать еще"
 					if (showMoreButton) {
 						showMoreButton.style.display = 'none';
 					}
 				} else {
-					noOrdersMessage.style.display = 'none';
+					noOrdersMessage.style.opacity = '0';
+					
+					setTimeout(() => {
+						noOrdersMessage.style.display = 'none';
+					}, 300);
+					
 					// Показываем кнопку "Показать еще"
 					if (showMoreButton) {
 						showMoreButton.style.display = 'block';
@@ -367,26 +460,43 @@ document.addEventListener('DOMContentLoaded', function() {
 			// Обновляем атрибут aria-expanded
 			this.setAttribute('aria-expanded', !expanded);
 			
-			// Показываем или скрываем детали заказа
+			// Показываем или скрываем детали заказа с анимацией
 			if (expanded) {
 				// Скрываем детали
-				detailsContainer.style.display = 'none';
+				detailsContainer.style.opacity = '0';
+				detailsContainer.style.maxHeight = '0';
+				
+				setTimeout(() => {
+					detailsContainer.style.display = 'none';
+				}, 300);
+				
 				this.querySelector('.toggle-text').textContent = 'Показати деталі';
+				this.querySelector('.icon-expand').style.transform = 'rotate(0deg)';
 			} else {
 				// Показываем детали
 				detailsContainer.style.display = 'block';
+				detailsContainer.style.opacity = '0';
+				detailsContainer.style.maxHeight = '0';
+				
+				setTimeout(() => {
+					detailsContainer.style.opacity = '1';
+					detailsContainer.style.maxHeight = '2000px'; // Большое значение для анимации
+					detailsContainer.style.transition = 'opacity 0.3s ease, max-height 0.5s ease';
+				}, 10);
+				
 				this.querySelector('.toggle-text').textContent = 'Приховати деталі';
+				this.querySelector('.icon-expand').style.transform = 'rotate(180deg)';
 				
 				// Анимируем трекер заказа, если он есть
 				const trackerItems = detailsContainer.querySelectorAll('.tracker-item.active');
 				if (trackerItems && trackerItems.length > 0) {
 					trackerItems.forEach((item, index) => {
-						item.style.transition = 'opacity 0.3s';
 						item.style.opacity = '0';
 						
 						setTimeout(() => {
 							item.style.opacity = '1';
-						}, 100 * index);
+							item.style.transition = 'opacity 0.5s ease';
+						}, 300 + (100 * index));
 					});
 				}
 			}
@@ -402,9 +512,10 @@ document.addEventListener('DOMContentLoaded', function() {
 		
 		// Функция-обработчик кнопки "Показать больше"
 		function handleShowMoreClick() {
-			// Показываем состояние загрузки
+			// Показываем состояние загрузки с анимацией
 			showMoreButton.textContent = 'Завантаження...';
 			showMoreButton.disabled = true;
+			showMoreButton.style.opacity = '0.7';
 			
 			// Получаем текущий выбранный статус
 			const currentStatus = orderStatusFilter ? orderStatusFilter.value : 'all';
@@ -417,10 +528,12 @@ document.addEventListener('DOMContentLoaded', function() {
 				// После добавления применяем текущий фильтр
 				applyStatusFilter(currentStatus);
 				
-				// Восстанавливаем состояние кнопки
+				// Восстанавливаем состояние кнопки с анимацией
 				showMoreButton.textContent = 'Показати більше замовлень';
 				showMoreButton.disabled = false;
-			}, 1000);
+				showMoreButton.style.opacity = '1';
+				showMoreButton.style.transition = 'opacity 0.3s ease';
+			}, 1500);
 		}
 		
 		// Обработчики кнопок "Повторить заказ"
@@ -436,6 +549,12 @@ document.addEventListener('DOMContentLoaded', function() {
 		// Функция-обработчик кнопки "Повторить заказ"
 		function handleRepeatOrderClick(e) {
 			e.preventDefault();
+			
+			// Анимация нажатия
+			this.classList.add('clicked');
+			setTimeout(() => {
+				this.classList.remove('clicked');
+			}, 300);
 			
 			// Получаем информацию о товаре
 			const orderCard = this.closest('.order-card');
@@ -478,6 +597,8 @@ document.addEventListener('DOMContentLoaded', function() {
 							// Срок возврата истек - делаем кнопку неактивной
 							returnButton.disabled = true;
 							returnButton.classList.add('disabled');
+							returnButton.style.opacity = '0.5';
+							returnButton.style.cursor = 'not-allowed';
 							returnButton.title = 'Термін повернення минув (14 днів з дати покупки)';
 							
 							// Обновляем информацию о возврате
@@ -512,15 +633,40 @@ document.addEventListener('DOMContentLoaded', function() {
 				return;
 			}
 			
+			// Анимация нажатия
+			this.classList.add('clicked');
+			setTimeout(() => {
+				this.classList.remove('clicked');
+			}, 300);
+			
 			// Получаем информацию о заказе
 			const orderCard = this.closest('.order-card');
 			if (orderCard) {
 				// Находим форму возврата
 				const returnFormContainer = document.querySelector('.return-form-container');
 				if (returnFormContainer) {
-					// Показываем форму
+					// Показываем форму с анимацией
 					returnFormContainer.style.display = 'flex';
+					returnFormContainer.style.opacity = '0';
 					document.body.style.overflow = 'hidden'; // Блокируем прокрутку страницы
+					
+					setTimeout(() => {
+						returnFormContainer.style.opacity = '1';
+						returnFormContainer.style.transition = 'opacity 0.3s ease';
+					}, 10);
+					
+					// Анимируем появление модального окна
+					const returnFormModal = returnFormContainer.querySelector('.return-form-modal');
+					if (returnFormModal) {
+						returnFormModal.style.transform = 'translateY(50px)';
+						returnFormModal.style.opacity = '0';
+						
+						setTimeout(() => {
+							returnFormModal.style.transform = 'translateY(0)';
+							returnFormModal.style.opacity = '1';
+							returnFormModal.style.transition = 'all 0.4s ease-out';
+						}, 50);
+					}
 					
 					// Добавляем обработчики для закрытия формы
 					const closeButton = returnFormContainer.querySelector('.close-return-form');
@@ -561,107 +707,35 @@ document.addEventListener('DOMContentLoaded', function() {
 		function closeReturnForm() {
 			const returnFormContainer = document.querySelector('.return-form-container');
 			if (returnFormContainer) {
-				returnFormContainer.style.display = 'none';
-				document.body.style.overflow = ''; // Разблокируем прокрутку страницы
+				// Анимируем исчезновение
+				returnFormContainer.style.opacity = '0';
+				
+				const returnFormModal = returnFormContainer.querySelector('.return-form-modal');
+				if (returnFormModal) {
+					returnFormModal.style.transform = 'translateY(50px)';
+					returnFormModal.style.opacity = '0';
+				}
+				
+				setTimeout(() => {
+					returnFormContainer.style.display = 'none';
+					document.body.style.overflow = ''; // Разблокируем прокрутку страницы
+				}, 300);
 			}
 		}
 		
 		// Анимация трекера заказа
-		const trackerItems = document.querySelectorAll('.tracker-item.active');
-		trackerItems.forEach((item, index) => {
-			item.style.transition = 'opacity 0.3s';
-			item.style.opacity = '0';
-			
-			setTimeout(() => {
-				item.style.opacity = '1';
-			}, 100 * index);
-		});
-	}
-	
-	// Проверяем, активна ли вкладка заказов при загрузке
-	const ordersTab = document.getElementById('tab-orders');
-	const ordersPanel = document.getElementById('content-orders');
-	if (ordersTab && ordersTab.checked && ordersPanel) {
-		initOrdersTab();
-	}
-	
-	// Инициализация формы возврата при загрузке страницы
-	function initReturnForm() {
-		// Проверяем наличие формы на странице
-		const returnFormContainer = document.querySelector('.return-form-container');
-		if (!returnFormContainer) {
-			// Если формы нет, создаем ее и добавляем в DOM
-			const formHtml = `
-				<div class="return-form-container" style="display: none;">
-					<div class="return-form-overlay"></div>
-					<div class="return-form-modal">
-						<div class="return-form-header">
-							<h3>Заява на повернення</h3>
-							<button class="close-return-form">&times;</button>
-						</div>
-						<div class="return-form-content">
-							<form id="returnForm" class="return-form">
-								<div class="form-group">
-									<label>Інтернет-замовлення №:</label>
-									<input type="text" class="form-control" value="15680395" readonly>
-								</div>
-								<div class="form-group">
-									<label>Видаткова накладна №:</label>
-									<input type="text" class="form-control" value="5387041" readonly>
-								</div>
-								<div class="form-group">
-									<label>Дата:</label>
-									<input type="text" class="form-control" value="30.01.2022" readonly>
-								</div>
-								<div class="form-group">
-									<label>Покупець:</label>
-									<input type="text" class="form-control" required>
-								</div>
-								<div class="form-group">
-									<label>Телефон:</label>
-									<input type="tel" class="form-control" required>
-								</div>
-								<div class="form-group">
-									<label>Причина повернення:</label>
-									<select class="form-control" required>
-										<option value="">Виберіть причину повернення</option>
-										<option value="defect">Виявлено дефект</option>
-										<option value="not_match">Товар не відповідає опису</option>
-										<option value="not_fit">Товар не підійшов</option>
-										<option value="change_mind">Передумав(-ла)</option>
-									</select>
-								</div>
-								<div class="form-group">
-									<label>Одержувач коштів за повернення:</label>
-									<input type="text" class="form-control" required>
-								</div>
-								<div class="form-group">
-									<label>ІПН:</label>
-									<input type="text" class="form-control" required>
-								</div>
-								<div class="form-group">
-									<label>Банк:</label>
-									<input type="text" class="form-control" required>
-								</div>
-								<div class="form-group">
-									<label>IBAN:</label>
-									<input type="text" class="form-control" required>
-								</div>
-								<div class="form-note">
-									<p class="required-fields-note">* Всі поля обов'язкові для заповнення!</p>
-								</div>
-								<div class="form-actions">
-									<button type="submit" class="btn btn-primary">Відправити заяву</button>
-									<button type="button" class="btn btn-secondary cancel-return">Скасувати</button>
-								</div>
-							</form>
-						</div>
-					</div>
-				</div>
-			`;
-			
-			// Добавляем форму в конец body
-			document.body.insertAdjacentHTML('beforeend', formHtml);
+		animateOrderTracker();
+		
+		function animateOrderTracker() {
+			const trackerItems = document.querySelectorAll('.tracker-item.active');
+			trackerItems.forEach((item, index) => {
+				item.style.opacity = '0';
+				
+				setTimeout(() => {
+					item.style.opacity = '1';
+					item.style.transition = 'opacity 0.5s ease';
+				}, 200 * index);
+			});
 		}
 	}
 	
@@ -669,6 +743,23 @@ document.addEventListener('DOMContentLoaded', function() {
 	function initBonusesTab() {
 		// Получаем элементы вкладки
 		const paginationButtons = document.querySelectorAll('.pagination-btn');
+		const bonusTransactions = document.querySelectorAll('.bonus-transaction');
+		
+		// Анимация карточек бонусных операций
+		animateBonusTransactions();
+		
+		function animateBonusTransactions() {
+			bonusTransactions.forEach((transaction, index) => {
+				transaction.style.opacity = '0';
+				transaction.style.transform = 'translateY(20px)';
+				
+				setTimeout(() => {
+					transaction.style.opacity = '1';
+					transaction.style.transform = 'translateY(0)';
+					transaction.style.transition = 'all 0.4s ease-out';
+				}, 100 * index);
+			});
+		}
 		
 		// Обработчик клика по кнопкам пагинации
 		if (paginationButtons && paginationButtons.length > 0) {
@@ -696,41 +787,275 @@ document.addEventListener('DOMContentLoaded', function() {
 						}
 					}
 					
-					// Здесь можно добавить загрузку данных для выбранной страницы
-					// В реальном проекте - AJAX запрос с учетом выбранной страницы
-					console.log('Загрузка страницы:', this.textContent.trim());
+					// Имитация загрузки данных с анимацией
+					const bonusesHistory = document.querySelector('.bonuses-history');
+					if (bonusesHistory) {
+						bonusesHistory.style.opacity = '0.5';
+						
+						setTimeout(() => {
+							// Здесь бы происходила фактическая загрузка данных для новой страницы
+							bonusesHistory.style.opacity = '1';
+							bonusesHistory.style.transition = 'opacity 0.5s ease';
+							
+							// После загрузки применяем анимацию
+							animateBonusTransactions();
+						}, 500);
+					}
 				});
 			});
 		}
-		
-		// Вы можете добавить дополнительные функции для анимаций,
-		// обновления данных или других интерактивных элементов на странице бонусов
 	}
-
-// Инициализация вкладки бонусов при загрузке страницы
+	
+	// Проверяем, активна ли вкладка заказов при загрузке
+	const ordersTab = document.getElementById('tab-orders');
+	const ordersPanel = document.getElementById('content-orders');
+	if (ordersTab && ordersTab.checked && ordersPanel) {
+		initOrdersTab();
+	}
+	
+	// Проверяем, активна ли вкладка бонусов при загрузке
 	const bonusesTab = document.getElementById('tab-bonuses');
 	const bonusesPanel = document.getElementById('content-bonuses');
 	if (bonusesTab && bonusesTab.checked && bonusesPanel) {
 		initBonusesTab();
 	}
-
-// Если вы используете табы, вы можете добавить вызов initBonusesTab()
-// в обработчик изменения таба, аналогично тому, как это сделано для вкладки заказов
-// Пример:
-	/*
-	 tabInputs.forEach(input => {
-	 input.addEventListener('change', function() {
-	 const targetId = this.getAttribute('aria-controls');
-	 
-	 // ...
-	 
-	 // Если выбран таб бонусов, инициализируем его функциональность
-	 if (targetId === 'content-bonuses') {
-	 initBonusesTab();
-	 }
-	 });
-	 });
-	 */
+	
+	// Инициализация формы возврата при загрузке страницы
+	function initReturnForm() {
+		// Проверяем наличие формы на странице
+		const returnFormContainer = document.querySelector('.return-form-container');
+		if (!returnFormContainer) {
+			// Если формы нет, создаем ее и добавляем в DOM
+			const formHtml = `
+                <div class="return-form-container" style="display: none;">
+                    <div class="return-form-overlay"></div>
+                    <div class="return-form-modal">
+                        <div class="return-form-header">
+                            <h3>Заява на повернення</h3>
+                            <button class="close-return-form">&times;</button>
+                        </div>
+                        <div class="return-form-content">
+                            <form id="returnForm" class="return-form">
+                                <div class="form-group">
+                                    <label>Інтернет-замовлення №:</label>
+                                    <input type="text" class="form-control" value="15680395" readonly>
+                                </div>
+                                <div class="form-group">
+                                    <label>Видаткова накладна №:</label>
+                                    <input type="text" class="form-control" value="5387041" readonly>
+                                </div>
+                                <div class="form-group">
+                                    <label>Дата:</label>
+                                    <input type="text" class="form-control" value="30.01.2022" readonly>
+                                </div>
+                                <div class="form-group">
+                                    <label>Покупець:</label>
+                                    <input type="text" class="form-control" required>
+                                </div>
+                                <div class="form-group">
+                                    <label>Телефон:</label>
+                                    <input type="tel" class="form-control" required>
+                                </div>
+                                <div class="form-group">
+                                    <label>Причина повернення:</label>
+                                    <select class="form-control" required>
+                                        <option value="">Виберіть причину повернення</option>
+                                        <option value="defect">Виявлено дефект</option>
+                                        <option value="not_match">Товар не відповідає опису</option>
+                                        <option value="not_fit">Товар не підійшов</option>
+                                        <option value="change_mind">Передумав(-ла)</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label>Одержувач коштів за повернення:</label>
+                                    <input type="text" class="form-control" required>
+                                </div>
+                                <div class="form-group">
+                                    <label>ІПН:</label>
+                                    <input type="text" class="form-control" required>
+                                </div>
+                                <div class="form-group">
+                                    <label>Банк:</label>
+                                    <input type="text" class="form-control" required>
+                                </div>
+                                <div class="form-group">
+                                    <label>IBAN:</label>
+                                    <input type="text" class="form-control" required>
+                                </div>
+                                <div class="form-note">
+                                    <p class="required-fields-note">* Всі поля обов'язкові для заповнення!</p>
+                                </div>
+                                <div class="form-actions">
+                                    <button type="submit" class="btn btn-primary">Відправити заяву</button>
+                                    <button type="button" class="btn btn-secondary cancel-return">Скасувати</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            `;
+			
+			// Добавляем форму в конец body
+			document.body.insertAdjacentHTML('beforeend', formHtml);
+		}
+	}
+	
+	// Добавляем стили анимаций, если их нет
+	function addAnimationStyles() {
+		if (!document.getElementById('animation-styles')) {
+			const styleElement = document.createElement('style');
+			styleElement.id = 'animation-styles';
+			styleElement.textContent = `
+                @keyframes shake {
+                    0%, 100% { transform: translateX(0); }
+                    10%, 30%, 50%, 70%, 90% { transform: translateX(-5px); }
+                    20%, 40%, 60%, 80% { transform: translateX(5px); }
+                }
+                
+                @keyframes fadeIn {
+                    from { opacity: 0; transform: translateY(20px); }
+                    to { opacity: 1; transform: translateY(0); }
+                }
+                
+                .clicked {
+                    transform: scale(0.95);
+                    transition: transform 0.2s ease;
+                }
+            `;
+			document.head.appendChild(styleElement);
+		}
+	}
+	
+	// JavaScript для блока "Мої привілеї"
+	document.addEventListener('DOMContentLoaded', function() {
+		// Делаем активным текущий блок на основе якоря в URL
+		highlightActiveNavCard();
+		
+		// Добавляем активный класс при клике
+		initNavCardActiveClass();
+		
+		// Вкладки для промокодов
+		initPromoTabs();
+		
+		// Функция копирования промокодов
+		initCopyButtons();
+		
+		// Функция для подсветки активной навигационной карточки на основе якоря в URL
+		function highlightActiveNavCard() {
+			// Получаем текущий якорь (хэш) из URL
+			const currentHash = window.location.hash;
+			
+			if (currentHash) {
+				// Находим соответствующую навигационную карточку
+				const navCards = document.querySelectorAll('.privilege-nav-card');
+				
+				navCards.forEach(card => {
+					// Проверяем, совпадает ли href карточки с текущим якорем
+					if (card.getAttribute('href') === currentHash) {
+						// Удаляем активный класс у всех карточек
+						navCards.forEach(c => c.classList.remove('active'));
+						
+						// Добавляем активный класс текущей карточке
+						card.classList.add('active');
+					}
+				});
+			} else {
+				// Если якоря нет, делаем активной первую карточку
+				const firstCard = document.querySelector('.privilege-nav-card');
+				if (firstCard) {
+					firstCard.classList.add('active');
+				}
+			}
+		}
+		
+		// Добавление активного класса при клике на навигационную карточку
+		function initNavCardActiveClass() {
+			const navCards = document.querySelectorAll('.privilege-nav-card');
+			
+			navCards.forEach(card => {
+				card.addEventListener('click', function() {
+					// Удаляем активный класс у всех карточек
+					navCards.forEach(c => c.classList.remove('active'));
+					
+					// Добавляем активный класс текущей карточке
+					this.classList.add('active');
+				});
+			});
+		}
+		
+		// Функция для вкладок промокодов
+		function initPromoTabs() {
+			const tabButtons = document.querySelectorAll('.promo-tab');
+			const tabContents = document.querySelectorAll('.promo-codes-grid');
+			
+			tabButtons.forEach(button => {
+				button.addEventListener('click', function() {
+					const targetId = this.getAttribute('data-target');
+					
+					// Удаляем активный класс у всех кнопок
+					tabButtons.forEach(btn => btn.classList.remove('active'));
+					
+					// Добавляем активный класс текущей кнопке
+					this.classList.add('active');
+					
+					// Скрываем все контейнеры с промокодами
+					tabContents.forEach(content => {
+						content.style.display = 'none';
+					});
+					
+					// Показываем выбранный контейнер
+					const targetContent = document.getElementById(targetId);
+					if (targetContent) {
+						targetContent.style.display = 'grid';
+					}
+				});
+			});
+		}
+		
+		// Функция для копирования промокодов
+		function initCopyButtons() {
+			const copyButtons = document.querySelectorAll('.copy-button');
+			
+			copyButtons.forEach(button => {
+				button.addEventListener('click', function() {
+					// Получаем текст промокода
+					const promoCode = this.parentNode.querySelector('.promo-code').textContent;
+					
+					try {
+						// Создаем временный элемент для копирования
+						const el = document.createElement('textarea');
+						el.value = promoCode;
+						document.body.appendChild(el);
+						el.select();
+						document.execCommand('copy');
+						document.body.removeChild(el);
+						
+						// Изменяем текст кнопки временно
+						const originalText = this.textContent;
+						this.textContent = 'Скопійовано!';
+						this.style.backgroundColor = 'var(--primary-color)';
+						this.style.color = 'white';
+						
+						// Возвращаем исходный текст через 2 секунды
+						setTimeout(() => {
+							this.textContent = originalText;
+							this.style.backgroundColor = '';
+							this.style.color = '';
+						}, 2000);
+					} catch (err) {
+						console.error('Помилка при копіюванні: ', err);
+						alert('Не вдалося скопіювати промокод. Спробуйте вручну.');
+					}
+				});
+			});
+		}
+	});
+	
+	// Вызываем функцию для добавления стилей анимаций
+	addAnimationStyles();
+	
+	// Вызываем функцию установки активного таба при загрузке
+	setInitialActiveTab();
 	
 	// Вызываем инициализацию формы возврата при загрузке страницы
 	initReturnForm();
