@@ -1161,6 +1161,107 @@ document.addEventListener('DOMContentLoaded', function() {
 			}
 		}
 	});
+	
+	
+	document.addEventListener('DOMContentLoaded', function() {
+		// Обновление плейсхолдера при изменении типа
+		const identifierType = document.getElementById('identifierType');
+		const identifierInput = document.getElementById('identifierInput');
+		
+		if (identifierType && identifierInput) {
+			// Установка начального плейсхолдера
+			updatePlaceholder();
+			
+			// Обработчик изменения типа
+			identifierType.addEventListener('change', updatePlaceholder);
+			
+			// Функция обновления плейсхолдера
+			function updatePlaceholder() {
+				switch(identifierType.value) {
+					case 'phone':
+						identifierInput.placeholder = '097XXXXXXX';
+						break;
+					case 'receipt':
+						identifierInput.placeholder = 'ПР0000XXX';
+						break;
+					case 'imei':
+						identifierInput.placeholder = 'XXXXXXXXXXXX';
+						break;
+				}
+			}
+		}
+	});
+	
+	// Функция для обновления имени файла
+	function updateFileName(input) {
+		var fileName = document.getElementById('fileName');
+		if (input.files && input.files.length > 0) {
+			fileName.textContent = input.files[0].name;
+		} else {
+			fileName.textContent = 'Файл не выбран';
+		}
+	}
+	
+	// Функция для отправки формы
+	function submitAppealForm(event) {
+		event.preventDefault();
+		
+		// Проверка обязательных полей
+		var form = document.getElementById('appealForm');
+		var requiredFields = form.querySelectorAll('[required]');
+		var isValid = true;
+		
+		requiredFields.forEach(function(field) {
+			if (!field.value.trim()) {
+				field.classList.add('invalid');
+				isValid = false;
+			} else {
+				field.classList.remove('invalid');
+			}
+		});
+		
+		if (!isValid) {
+			alert('Пожалуйста, заполните все обязательные поля');
+			return;
+		}
+		
+		// Эмуляция отправки формы
+		alert('Ваше обращение отправляется...');
+		
+		// Эмуляция успешной отправки (через 1 секунду)
+		setTimeout(function() {
+			// Скрываем модальное окно
+			document.getElementById('appealFormModal').style.display = 'none';
+			
+			// Сбрасываем форму
+			form.reset();
+			document.getElementById('fileName').textContent = 'Файл не выбран';
+			
+			// Показываем уведомление
+			alert('Ваше обращение успешно отправлено! Мы ответим вам в течение 24 часов.');
+			
+			// Создаем элемент обращения
+			var appealsListBlock = document.getElementById('appealsListBlock');
+			var emptyAppealsBlock = document.getElementById('emptyAppealsBlock');
+			
+			// Добавляем запись в список обращений
+			var appealItem = document.createElement('div');
+			appealItem.className = 'appeal-item';
+			appealItem.innerHTML = '<div class="appeal-header">' +
+				'<div class="appeal-info">' +
+				'<h3>' + document.getElementById('subject').value + '</h3>' +
+				'<span class="appeal-date">' + new Date().toLocaleDateString() + '</span>' +
+				'</div>' +
+				'<div class="appeal-status">Обрабатывается</div>' +
+				'</div>';
+			
+			// Показываем список обращений вместо пустого блока
+			appealsListBlock.appendChild(appealItem);
+			appealsListBlock.style.display = 'block';
+			emptyAppealsBlock.style.display = 'none';
+		}, 1000);
+	}
+	
 	// Вызываем функцию для добавления стилей анимаций
 	addAnimationStyles();
 	

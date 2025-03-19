@@ -2012,5 +2012,313 @@ html {
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
   }
 }
+/* Стили для контейнера строки формы */
+.service-form-row {
+  display: flex;
+  align-items: stretch;
+  gap: 15px;
+}
+
+/* Исправление высоты элементов */
+.service-form-row .custom-select,
+.service-form-row .form-control,
+.service-form-row .btn {
+  height: 46px; /* Установка одинаковой высоты */
+}
+
+/* Стили для селекта */
+.service-form-row .custom-select {
+  width: 250px;
+  flex-shrink: 0;
+  position: relative;
+}
+
+.service-form-row .custom-select select {
+  height: 100%;
+  padding-right: 30px;
+}
+
+.service-form-row .select-arrow {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+/* Стили для поля ввода */
+.service-form-row .identifier-input {
+  flex-grow: 1;
+  min-width: 200px;
+}
+
+/* Стили для кнопки */
+.service-form-row .service-btn {
+  min-width: 80px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: 768px) {
+  .service-form-row {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .service-form-row .custom-select {
+    width: 100%;
+  }
+}
+/* Стили для блока обращений */
+/* Стили для блока обращений */
+.empty-state-message {
+  text-align: center;
+  padding: 60px 20px;
+  color: #666;
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.create-appeal-btn {
+  margin-top: 30px;
+  padding: 12px 25px;
+  font-size: 16px;
+  border: none;
+  color: white;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+/* Модальное окно */
+.appeal-form-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.appeal-modal-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.appeal-modal-content {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  max-height: 90vh;
+  overflow-y: auto;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  z-index: 1001;
+}
+
+.appeal-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  border-bottom: 1px solid #eee;
+}
+
+.appeal-modal-header h2 {
+  margin: 0;
+  font-size: 24px;
+  color: #333;
+  font-weight: 500;
+}
+
+.appeal-modal-close {
+  background: none;
+  border: none;
+  font-size: 28px;
+  line-height: 1;
+  color: #999;
+  cursor: pointer;
+}
+
+.appeal-modal-close:hover {
+  color: #333;
+}
+
+.appeal-modal-body {
+  padding: 20px;
+}
+
+.appeal-intro-text {
+  margin-bottom: 25px;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* Стили формы */
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: 500;
+  color: #333;
+}
+
+.required {
+  color: #e53935;
+  margin-left: 2px;
+}
+
+.form-control {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+  color: #333;
+}
+
+.form-control:focus {
+  border-color: #20A447;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(138, 190, 48, 0.1);
+}
+
+/* Стили для выпадающего списка */
+.custom-select {
+  position: relative;
+}
+
+.custom-select select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 100%;
+  padding-right: 30px;
+}
+
+.custom-select .select-arrow {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  color: #666;
+  font-size: 10px;
+}
+
+/* Чекбокс */
+.checkbox-container {
+  display: flex;
+  align-items: center;
+}
+
+.checkbox-container input[type=checkbox] {
+  margin-right: 10px;
+}
+
+/* Загрузка файла */
+.file-upload-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 5px;
+}
+
+.file-upload-name {
+  flex-grow: 1;
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  border-right: none;
+  border-radius: 4px 0 0 4px;
+  background-color: #f9f9f9;
+  color: #777;
+}
+
+.file-upload-btn {
+  display: inline-block;
+  padding: 12px 20px;
+  background-color: #f0f0f0;
+  border: 1px solid #ddd;
+  border-radius: 0 4px 4px 0;
+  color: #333;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.file-upload-btn:hover {
+  background-color: #e0e0e0;
+}
+
+.file-upload-input {
+  display: none;
+}
+
+.additional-files-link {
+  margin-top: 8px;
+}
+
+.additional-files-link a {
+  color: #20A447;
+  text-decoration: none;
+}
+
+.additional-files-link a:hover {
+  text-decoration: underline;
+}
+
+/* Кнопка отправки */
+.form-actions {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.form-actions .btn {
+  padding: 12px 40px;
+  font-size: 16px;
+  background-color: #20A447;
+  border: none;
+  color: white;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.form-actions .btn:hover {
+  background-color: #20A447;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .appeal-modal-content {
+    width: 95%;
+    margin: 0 10px;
+  }
+  .appeal-intro-text {
+    font-size: 14px;
+  }
+  .file-upload-container {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .file-upload-name {
+    border-right: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 10px;
+  }
+  .file-upload-btn {
+    border-radius: 4px;
+    text-align: center;
+  }
+}
 
 /*# sourceMappingURL=style.css.map */
