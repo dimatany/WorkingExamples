@@ -940,6 +940,9 @@ document.addEventListener('DOMContentLoaded', function() {
 		// Функция копирования промокодов
 		initCopyButtons();
 		
+		// Проверяем наличие предложений, сертификатов и промокодов
+		checkEmptyBlocks();
+		
 		// Функция для подсветки активной навигационной карточки на основе якоря в URL
 		function highlightActiveNavCard() {
 			// Получаем текущий якорь (хэш) из URL
@@ -1007,9 +1010,23 @@ document.addEventListener('DOMContentLoaded', function() {
 					const targetContent = document.getElementById(targetId);
 					if (targetContent) {
 						targetContent.style.display = 'grid';
+						
+						// Проверяем, есть ли промокоды в этой вкладке
+						checkEmptyPromoTab(targetContent);
 					}
 				});
 			});
+			
+			// Проверяем активную вкладку при загрузке
+			const activeTab = document.querySelector('.promo-tab.active');
+			if (activeTab) {
+				const targetId = activeTab.getAttribute('data-target');
+				const targetContent = document.getElementById(targetId);
+				if (targetContent) {
+					targetContent.style.display = 'grid';
+					checkEmptyPromoTab(targetContent);
+				}
+			}
 		}
 		
 		// Функция для копирования промокодов
@@ -1049,8 +1066,101 @@ document.addEventListener('DOMContentLoaded', function() {
 				});
 			});
 		}
+		
+		// Функция для проверки пустых блоков
+		function checkEmptyBlocks() {
+			// Проверяем блок предложений
+			const offersGrid = document.querySelector('#personal-offers-block .offers-grid');
+			if (offersGrid && offersGrid.children.length === 0) {
+				addEmptyMessage(offersGrid);
+			}
+			
+			// Проверяем блок сертификатов
+			const certificatesGrid = document.querySelector('#certificates-block .certificates-grid');
+			if (certificatesGrid && certificatesGrid.children.length === 0) {
+				addEmptyMessage(certificatesGrid);
+			}
+			
+			// Проверяем блок активных промокодов
+			const activePromos = document.querySelector('#active-codes');
+			if (activePromos) {
+				checkEmptyPromoTab(activePromos);
+			}
+			
+			// Проверяем блок использованных промокодов
+			const usedPromos = document.querySelector('#used-codes');
+			if (usedPromos) {
+				checkEmptyPromoTab(usedPromos);
+			}
+		}
+		
+		// Функция для проверки пустой вкладки промокодов
+		function checkEmptyPromoTab(tab) {
+			// Если у вкладки есть дочерние элементы, но они все только заглушки - вкладка пуста
+			const promoItems = tab.querySelectorAll('.promo-code-item:not(.empty-message)');
+			if (promoItems.length === 0) {
+				// Проверяем, не добавлена ли уже заглушка
+				const existingMessage = tab.querySelector('.empty-message');
+				if (!existingMessage) {
+					addEmptyMessage(tab);
+				}
+			}
+		}
+		
+		// Функция для добавления заглушки
+		function addEmptyMessage(container) {
+			// Создаем элемент заглушки
+			const emptyMessage = document.createElement('div');
+			emptyMessage.className = 'empty-message';
+			emptyMessage.innerHTML = `
+            <div class="empty-icon">
+                <svg width="64" height="64" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="var(--primary-color)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M8 14C8 14 9.5 16 12 16C14.5 16 16 14 16 14" stroke="var(--primary-color)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M9 9H9.01" stroke="var(--primary-color)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M15 9H15.01" stroke="var(--primary-color)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </div>
+            <p>Поки тут немає пропозицій, але скоро тебе накриє хвиля гарячих пропозицій!</p>
+        `;
+			
+			// Добавляем заглушку в контейнер
+			container.appendChild(emptyMessage);
+			
+			// Добавляем стили для заглушки, если их еще нет
+			if (!document.getElementById('empty-message-styles')) {
+				const styleElement = document.createElement('style');
+				styleElement.id = 'empty-message-styles';
+				styleElement.textContent = `
+                .empty-message {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    padding: 40px 20px;
+                    text-align: center;
+                    background-color: var(--bg-light);
+                    border-radius: 12px;
+                    min-height: 200px;
+                    grid-column: 1 / -1;
+                }
+                
+                .empty-icon {
+                    margin-bottom: 20px;
+                    opacity: 0.7;
+                }
+                
+                .empty-message p {
+                    font-size: 18px;
+                    color: #666;
+                    max-width: 400px;
+                    line-height: 1.5;
+                }
+            `;
+				document.head.appendChild(styleElement);
+			}
+		}
 	});
-	
 	// Вызываем функцию для добавления стилей анимаций
 	addAnimationStyles();
 	
