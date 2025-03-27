@@ -451,6 +451,21 @@ ul {
 .content-wrapper {
   display: flex;
   min-height: calc(100vh - 180px);
+  position: relative;
+  padding-left: 64px;
+  transition: padding-left 0.3s ease;
+}
+
+
+@media (max-width: 768px) {
+  .content-wrapper {
+    padding-left: 64px !important;
+  }
+
+  .sidebar.expanded ~ .content-section,
+  .sidebar.expanded + .content-section {
+    padding-left: 64px !important;
+  }
 }
 
 /* Sidebar Styles */
@@ -458,13 +473,21 @@ ul {
   width: 64px;
   background-color: var(--sidebar-bg);
   min-height: 100%;
-  position: relative;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   transition: width 0.3s ease;
   overflow: hidden;
   z-index: 90;
+  height: 100%;
+}
+
+.sidebar.expanded {
+  width: 280px;
 }
 
 .sidebar:hover {
@@ -513,17 +536,31 @@ ul {
   padding-right: 20px;
 }
 
-.sidebar:hover .menu-text {
+.sidebar:hover .menu-text,
+.sidebar.expanded .menu-text {
   opacity: 1;
   transform: translateX(0);
+}
+
+/* Стили для скрытия сайдбара */
+.sidebar.hidden {
+  width: 0;
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+/* Анимация появления/исчезновения */
+.sidebar {
+  transition: width 0.3s ease, opacity 0.3s ease;
 }
 
 /* Content Section */
 .content-section {
   flex: 1;
   padding: 30px;
-  max-width: 1300px;
-  margin: 0 auto;
+  margin-left: 64px; /* Отступ для бокового меню */
+  width: calc(100% - 64px);
+  position: relative;
 }
 
 .section-title {
@@ -538,6 +575,12 @@ ul {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 24px;
+}
+
+/* Блок будет смещаться влево, когда меню скрыто */
+.sidebar-collapsed .content-section {
+  margin-left: 0;
+  width: 100%;
 }
 
 .product-card {
@@ -825,6 +868,16 @@ body.mobile-menu-active .mobile-menu-overlay {
   .products-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  /* Сохраняем вертикальное меню */
+  .sidebar {
+    width: 64px;
+    position: absolute;
+  }
+
+  .sidebar.hidden {
+    width: 0;
+  }
 }
 
 @media (max-width: 768px) {
@@ -839,41 +892,22 @@ body.mobile-menu-active .mobile-menu-overlay {
     gap: 10px;
   }
 
-  .content-wrapper {
-    flex-direction: column;
-  }
-
+  /* Сохраняем вертикальное меню даже на мобильных */
   .sidebar {
+    width: 64px;
+    position: absolute;
+    overflow-y: auto;
+  }
+
+  .content-section {
+    margin-left: 64px;
+    width: calc(100% - 64px);
+    padding: 15px;
+  }
+
+  .sidebar-collapsed .content-section {
+    margin-left: 0;
     width: 100%;
-    height: auto;
-    flex-direction: row;
-    overflow-x: auto;
-    position: sticky;
-    top: 59px;
-    z-index: 89;
-  }
-
-  .sidebar:hover {
-    width: 100%;
-  }
-
-  .menu-item {
-    flex-direction: column;
-    padding: 10px 5px;
-    min-width: 80px;
-  }
-
-  .menu-icon {
-    min-width: auto;
-    margin-bottom: 5px;
-  }
-
-  .menu-text {
-    opacity: 1;
-    transform: translateX(0);
-    text-align: center;
-    font-size: 12px;
-    padding: 0 5px;
   }
 
   .products-grid {
@@ -893,6 +927,7 @@ body.mobile-menu-active .mobile-menu-overlay {
     display: none;
   }
 
+  /* Обеспечиваем правильное отображение на очень маленьких экранах */
   .pagination-container {
     padding: 3px;
   }
