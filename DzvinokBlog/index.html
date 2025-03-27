@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Дзвінок - Блог про техніку та електроніку</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+<!-- Шапка сайта -->
+<header class="header">
+    <div class="container header__container">
+        <div class="header__logo">
+            <a href="/">
+                <img src="./assets/img/LOGODzvinОК.svg" alt="Дзвінок" class="logo-img">
+            </a>
+        </div>
+        <div class="header__search">
+            <form action="/search" method="GET">
+                <input type="text" name="search" placeholder="Пошук товарів..." class="search-input">
+                <button type="submit" class="search-button">
+                    <i class="fa-solid fa-search"></i>
+                </button>
+            </form>
+        </div>
+        <div class="header__actions">
+            <div class="language-selector">
+                <a href="#" class="active">UA</a>
+                <a href="#">RU</a>
+            </div>
+            <div class="header__contacts">
+                <a href="/stores" class="location-link">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <span>Київ</span>
+                </a>
+                <a href="/profile" class="profile-link">
+                    <i class="fa-solid fa-user"></i>
+                    <span>Увійти</span>
+                </a>
+                <a href="/contacts" class="contacts-link">
+                    <i class="fa-solid fa-phone"></i>
+                    <span>Контакти</span>
+                </a>
+            </div>
+            <div class="header__cart">
+                <a href="/cart" class="cart-link">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span class="cart-count">1</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Главное меню -->
+<nav class="main-nav">
+    <div class="container">
+        <div class="nav-wrapper">
+            <button class="catalog-btn">
+                <i class="fa-solid fa-bars"></i>
+                Каталог товарів
+            </button>
+            <div class="nav-links">
+                <a href="/promos" class="nav-link">Акції</a>
+                <a href="/stores" class="nav-link">Магазини</a>
+                <div class="dropdown-nav">
+                    <button class="dropdown-btn">Ще <i class="fa-solid fa-chevron-down"></i></button>
+                    <div class="dropdown-content">
+                        <a href="/delivery">Доставка</a>
+                        <a href="/payment">Оплата</a>
+                        <a href="/warranty">Гарантія</a>
+                        <a href="/blog">Блог</a>
+                        <a href="/about">Про нас</a>
+                    </div>
+                </div>
+            </div>
+            <div class="credit-info">
+                <span class="credit-label">Кредит 0.01%</span>
+                <a href="/credit" class="credit-link">Оплата частинами</a>
+            </div>
+            <div class="nav-favorites">
+                <a href="/favorites" class="favorites-link">
+                    <i class="fa-regular fa-heart"></i>
+                </a>
+                <a href="/compare" class="compare-link">
+                    <i class="fa-solid fa-scale-balanced"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<!-- Хлебные крошки -->
+<div class="breadcrumb">
+    <div class="container">
+        <ul class="breadcrumb-list">
+            <li><a href="/">Головна</a></li>
+            <li>Блог</li>
+        </ul>
+    </div>
+</div>
+
+<!-- Hero Section -->
+<section class="hero-section">
+    <div class="container">
+        <div class="hero-content">
+            <div class="hero-profile">
+                <div class="profile-image">
+                    <img src="./assets/img/LOGODzvinОК.svg" alt="Профіль">
+                </div>
+                <div class="profile-info">
+                    <h1 class="profile-name">Дзвінок<span class="verified-badge"><i class="fa-solid fa-check"></i></span></h1>
+                    <p class="profile-tagline">Технології та Електроніка для Твого Комфорту</p>
+                </div>
+                <div class="profile-actions">
+                    <a href="#" class="social-link"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#" class="social-link"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" class="social-link"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#" class="btn-profile">Підписатися</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Tabs Section -->
+<section class="tabs-section">
+    <div class="container">
+        <div class="tabs-container">
+            <div class="tabs-nav">
+                <a href="#" class="tab-item active">Огляди та порівняння</a>
+                <a href="#" class="tab-item">Техніка для дому</a>
+                <a href="#" class="tab-item">Техніка для себе</a>
+                <a href="#" class="tab-item">Техніка для роботи та навчання</a>
+                <a href="#" class="tab-item">Смарт-техніка та електротранспорт</a>
+                <a href="#" class="tab-item">Експерт радить</a>
+                <a href="#" class="tab-item">Техно-новини та події</a>
+                <a href="#" class="tab-item">Добірки та рекомендації від DZVINOK</a>
+            </div>
+            <div class="tabs-filter">
+                <select class="filter-select">
+                    <option value="recent">Нові спочатку</option>
+                    <option value="popular">Популярні</option>
+                    <option value="trending">Тренди</option>
+                </select>
+                <button class="filter-toggle"><i class="fa-solid fa-sliders"></i></button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Products Grid -->
+<main class="content-section">
+    <div class="container">
+        <div class="products-grid">
+            <!-- Статья 1 -->
+            <div class="product-card" data-category="Огляди та порівняння" data-rating="5.0" data-date="11">
+                <div class="product-image">
+                    <a href="/blog/post/iphone-16">
+                        <img src="./assets/img/2.jpg" alt="iPhone 16" loading="lazy">
+                    </a>
+                </div>
+                <div class="product-info">
+                    <h3 class="product-title">
+                        <a href="/blog/post/iphone-16">Що очікувати від iPhone 16?</a>
+                    </h3>
+                    <div class="product-meta">
+                        <span class="product-rating">
+                            <i class="fa-solid fa-star"></i> 5.0
+                        </span>
+                        <span class="product-category">
+                            Огляди та порівняння
+                        </span>
+                    </div>
+                    <div class="product-excerpt">
+                        <p>iPhone 16 вже зараз обіцяє бути одним з найбільш вражаючих смартфонів на ринку.</p>
+                    </div>
+                    <div class="product-footer">
+                        <div class="post-date">11 місяців тому</div>
+                        <div class="product-price">Детальніше</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Статья 2 -->
+            <div class="product-card" data-category="Техніка для дому" data-rating="4.8" data-date="24">
+                <div class="product-image">
+                    <a href="/blog/post/dryers">
+                        <img src="./assets/img/3.jpg" alt="Сушарки" loading="lazy">
+                    </a>
+                </div>
+                <div class="product-info">
+                    <h3 class="product-title">
+                        <a href="/blog/post/dryers">Сушарки для овочів та фруктів</a>
+                    </h3>
+                    <div class="product-meta">
+                        <span class="product-rating">
+                            <i class="fa-solid fa-star"></i> 4.8
+                        </span>
+                        <span class="product-category">
+                            Техніка для дому
+                        </span>
+                    </div>
+                    <div class="product-excerpt">
+                        <p>Ви вже придбали дегідратор? Не лякайтеся цього слова, дегідратор це сушарка...</p>
+                    </div>
+                    <div class="product-footer">
+                        <div class="post-date">2 роки тому</div>
+                        <div class="product-price">Детальніше</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Статья 3 -->
+            <div class="product-card" data-category="Техніка для дому" data-rating="4.7" data-date="24">
+                <div class="product-image">
+                    <a href="/blog/post/bosch-refrigerators">
+                        <img src="images/blog/bosch.jpg" alt="Холодильник BOSCH" loading="lazy">
+                    </a>
+                </div>
+                <div class="product-info">
+                    <h3 class="product-title">
+                        <a href="/blog/post/bosch-refrigerators">Сучасні технології у холодильників від BOSCH</a>
+                    </h3>
+                    <div class="product-meta">
+                        <span class="product-rating">
+                            <i class="fa-solid fa-star"></i> 4.7
+                        </span>
+                        <span class="product-category">
+                            Техніка для дому
+                        </span>
+                    </div>
+                    <div class="product-excerpt">
+                        <p>Сучасна кухня не може існувати без високотехнологічного агрегату-холодильника.</p>
+                    </div>
+                    <div class="product-footer">
+                        <div class="post-date">2 роки тому</div>
+                        <div class="product-price">Детальніше</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Статья 4 -->
+            <div class="product-card" data-category="Техніка для дому" data-rating="4.6" data-date="24">
+                <div class="product-image">
+                    <a href="/blog/post/air-conditioning">
+                        <img src="images/blog/air-conditioning.jpg" alt="Кондиціонер" loading="lazy">
+                    </a>
+                </div>
+                <div class="product-info">
+                    <h3 class="product-title">
+                        <a href="/blog/post/air-conditioning">Кондиціонер для вашого комфорту</a>
+                    </h3>
+                    <div class="product-meta">
+                        <span class="product-rating">
+                            <i class="fa-solid fa-star"></i> 4.6
+                        </span>
+                        <span class="product-category">
+                            Техніка для дому
+                        </span>
+                    </div>
+                    <div class="product-excerpt">
+                        <p>Різноманітність кондиціонерів, які пропонує сучасний ринок кліматичної техніки дуже великий.</p>
+                    </div>
+                    <div class="product-footer">
+                        <div class="post-date">2 роки тому</div>
+                        <div class="product-price">Детальніше</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Статья 5 -->
+            <div class="product-card" data-category="Техніка для дому" data-rating="4.9" data-date="12">
+                <div class="product-image">
+                    <a href="/blog/post/coffee-machines">
+                        <img src="images/blog/coffee.jpg" alt="Кавоварка" loading="lazy">
+                    </a>
+                </div>
+                <div class="product-info">
+                    <h3 class="product-title">
+                        <a href="/blog/post/coffee-machines">Вибір кавоварки для дому</a>
+                    </h3>
+                    <div class="product-meta">
+                        <span class="product-rating">
+                            <i class="fa-solid fa-star"></i> 4.9
+                        </span>
+                        <span class="product-category">
+                            Техніка для дому
+                        </span>
+                    </div>
+                    <div class="product-excerpt">
+                        <p>Як обрати правильну кавоварку, яка задовольнить всі ваші потреби і смакові побажання.</p>
+                    </div>
+                    <div class="product-footer">
+                        <div class="post-date">1 рік тому</div>
+                        <div class="product-price">Детальніше</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Статья 6 -->
+            <div class="product-card" data-category="Техніка для роботи та навчання" data-rating="4.8" data-date="6">
+                <div class="product-image">
+                    <a href="/blog/post/gaming-laptops">
+                        <img src="images/blog/gaming.jpg" alt="Ігровий ноутбук" loading="lazy">
+                    </a>
+                </div>
+                <div class="product-info">
+                    <h3 class="product-title">
+                        <a href="/blog/post/gaming-laptops">Топ-5 ігрових ноутбуків 2025 року</a>
+                    </h3>
+                    <div class="product-meta">
+                        <span class="product-rating">
+                            <i class="fa-solid fa-star"></i> 4.8
+                        </span>
+                        <span class="product-category">
+                            Техніка для роботи та навчання
+                        </span>
+                    </div>
+                    <div class="product-excerpt">
+                        <p>Огляд найпотужніших ігрових ноутбуків з найкращим співвідношенням ціна-якість.</p>
+                    </div>
+                    <div class="product-footer">
+                        <div class="post-date">6 місяців тому</div>
+                        <div class="product-price">Детальніше</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Статья 7 -->
+            <div class="product-card" data-category="Смарт-техніка та електротранспорт" data-rating="4.9" data-date="8">
+                <div class="product-image">
+                    <a href="/blog/post/smart-home">
+                        <img src="images/blog/smart-home.jpg" alt="Розумний дім" loading="lazy">
+                    </a>
+                </div>
+                <div class="product-info">
+                    <h3 class="product-title">
+                        <a href="/blog/post/smart-home">Розумний дім: з чого почати</a>
+                    </h3>
+                    <div class="product-meta">
+                        <span class="product-rating">
+                            <i class="fa-solid fa-star"></i> 4.9
+                        </span>
+                        <span class="product-category">
+                            Смарт-техніка та електротранспорт
+                        </span>
+                    </div>
+                    <div class="product-excerpt">
+                        <p>Покрокова інструкція зі створення розумного будинку для початківців.</p>
+                    </div>
+                    <div class="product-footer">
+                        <div class="post-date">8 місяців тому</div>
+                        <div class="product-price">Детальніше</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Статья 8 -->
+            <div class="product-card" data-category="Техніка для себе" data-rating="4.7" data-date="9">
+                <div class="product-image">
+                    <a href="/blog/post/smartwatches">
+                        <img src="images/blog/smartwatch.jpg" alt="Смарт-годинник" loading="lazy">
+                    </a>
+                </div>
+                <div class="product-info">
+                    <h3 class="product-title">
+                        <a href="/blog/post/smartwatches">Як обрати смарт-годинник для спорту</a>
+                    </h3>
+                    <div class="product-meta">
+                        <span class="product-rating">
+                            <i class="fa-solid fa-star"></i> 4.7
+                        </span>
+                        <span class="product-category">
+                            Техніка для себе
+                        </span>
+                    </div>
+                    <div class="product-excerpt">
+                        <p>Огляд функцій та характеристик смарт-годинників для активного життя та тренувань.</p>
+                    </div>
+                    <div class="product-footer">
+                        <div class="post-date">9 місяців тому</div>
+                        <div class="product-price">Детальніше</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Статья 9 -->
+            <div class="product-card" data-category="Огляди та порівняння" data-rating="4.8" data-date="5">
+                <div class="product-image">
+                    <a href="/blog/post/cameras">
+                        <img src="images/blog/camera.jpg" alt="Фотоапарат" loading="lazy">
+                    </a>
+                </div>
+                <div class="product-info">
+                    <h3 class="product-title">
+                        <a href="/blog/post/cameras">Огляд нових фотоапаратів для професіоналів</a>
+                    </h3>
+                    <div class="product-meta">
+                        <span class="product-rating">
+                            <i class="fa-solid fa-star"></i> 4.8
+                        </span>
+                        <span class="product-category">
+                            Огляди та порівняння
+                        </span>
+                    </div>
+                    <div class="product-excerpt">
+                        <p>Порівняння камер професійного рівня від провідних виробників.</p>
+                    </div>
+                    <div class="product-footer">
+                        <div class="post-date">5 місяців тому</div>
+                        <div class="product-price">Детальніше</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<!-- Элемент для сообщения о загрузке -->
+<div class="load-more-message" style="display: none; text-align: center; padding: 20px; color: #888;"></div>
+
+<!-- Индикатор загрузки -->
+<div class="load-more-spinner" style="display: none; text-align: center; padding: 20px;">
+    <i class="fa-solid fa-spinner fa-spin"></i> Завантаження...
+</div>
+
+<!-- Пагинация -->
+<div class="pagination">
+    <div class="pagination-container">
+        <a href="#" class="pagination-prev disabled">
+            <i class="fa-solid fa-arrow-left"></i>
+        </a>
+        <div class="pagination-numbers">
+            <a href="#" class="pagination-number active">1</a>
+            <a href="/blog?page=2" class="pagination-number">2</a>
+            <a href="/blog?page=3" class="pagination-number">3</a>
+        </div>
+        <a href="/blog?page=2" class="pagination-next">
+            <i class="fa-solid fa-arrow-right"></i>
+        </a>
+    </div>
+</div>
+
+<!-- Кнопка "Наверх" -->
+<a href="#" class="scroll-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+</a>
+
+<!-- Мобильное меню оверлей -->
+<div class="mobile-menu-overlay"></div>
+
+<noscript>
+    <div class="noscript-message">
+        Для полноценной работы сайта необходимо включить JavaScript в настройках вашего браузера.
+    </div>
+</noscript>
+<script src="assets/script/main.optimized.js" defer></script>
+
+</body>
+</html>
