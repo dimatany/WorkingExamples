@@ -78,6 +78,6 @@ document.addEventListener("DOMContentLoaded", function () {
 		});
 	});
 	
-	// Инициализация с пустым состоянием
-	setActiveCategory(null);
+	// Инициализация с категорией "Всі статті" вместо null
+	setActiveCategory("Всі статті");
 });
