@@ -126,376 +126,203 @@
 </section>
 
 <!-- Main Content Area -->
-<div class="content-wrapper">
-    <!-- Боковая панель с выдвигающимся меню -->
-    <div class="sidebar" id="sidebar">
-        <a href="#" class="menu-item" data-category="all">
-            <div class="menu-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
-                    <polyline points="9 22 9 12 15 12 15 22"></polyline>
-                </svg>
-            </div>
-            <span class="menu-text">Всі статті</span>
-        </a>
+<div class="app-container">
+    <!-- Левая панель с иконками -->
+    <div class="sidebar-icons">
+        <!-- 1. Всі статті -->
+        <button class="icon-button" id="all-articles-button" aria-label="Всі статті" title="Всі статті">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7v8a2 2 0 002 2h6M8 7V5a2 2 0 012-2h4a2 2 0 012 2v2M8 7H6a2 2 0 00-2 2v9a2 2 0 002 2h8a2 2 0 002-2v-2"></path>
+            </svg>
+        </button>
 
-        <a href="#" class="menu-item" data-category="Для дому">
-            <div class="menu-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                </svg>
-            </div>
-            <span class="menu-text">Для дому</span>
-        </a>
+        <!-- 2. Техніка для дому -->
+        <button class="icon-button" id="home-tech-button" aria-label="Техніка для дому" title="Техніка для дому">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path>
+            </svg>
+        </button>
 
-        <a href="#" class="menu-item" data-category="Для себе">
-            <div class="menu-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
-                    <circle cx="12" cy="7" r="4"></circle>
-                </svg>
-            </div>
-            <span class="menu-text">Для себе</span>
-        </a>
+        <!-- 3. Доглядова електроніка -->
+        <button class="icon-button" id="electronics-button" aria-label="Доглядова електроніка" title="Доглядова електроніка">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"></path>
+            </svg>
+        </button>
 
-        <a href="#" class="menu-item" data-category="Робота й навчання">
-            <div class="menu-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
-                    <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
-                </svg>
-            </div>
-            <span class="menu-text">Робота й навчання</span>
-        </a>
+        <!-- 4. Робота й навчання -->
+        <button class="icon-button" id="education-button" aria-label="Робота й навчання" title="Робота й навчання">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+            </svg>
+        </button>
 
-        <a href="#" class="menu-item" data-category="Розумна техніка та транспорт">
-            <div class="menu-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M18 8h1a4 4 0 0 1 0 8h-1"></path>
-                    <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path>
-                    <line x1="6" y1="1" x2="6" y2="4"></line>
-                    <line x1="10" y1="1" x2="10" y2="4"></line>
-                    <line x1="14" y1="1" x2="14" y2="4"></line>
-                </svg>
-            </div>
-            <span class="menu-text">Розумна техніка та транспорт</span>
-        </a>
+        <!-- 5. Розумна техніка та транспорт -->
+        <button class="icon-button" id="smart-tech-button" aria-label="Розумна техніка" title="Розумна техніка та транспорт">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01"></path>
+            </svg>
+        </button>
 
-        <a href="#" class="menu-item" data-category="Поради експерта">
-            <div class="menu-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <circle cx="12" cy="12" r="10"></circle>
-                    <line x1="12" y1="16" x2="12" y2="12"></line>
-                    <line x1="12" y1="8" x2="12.01" y2="8"></line>
-                </svg>
-            </div>
-            <span class="menu-text">Поради експерта</span>
-        </a>
+        <!-- 6. Поради експерта -->
+        <button class="icon-button" id="expert-advice-button" aria-label="Поради експерта" title="Поради експерта">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+            </svg>
+        </button>
 
-        <a href="#" class="menu-item active" data-category="Техно-новини">
-            <div class="menu-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <circle cx="12" cy="12" r="10"></circle>
-                    <line x1="14.31" y1="8" x2="20.05" y2="17.94"></line>
-                    <line x1="9.69" y1="8" x2="21.17" y2="8"></line>
-                    <line x1="7.38" y1="12" x2="13.12" y2="2.06"></line>
-                    <line x1="9.69" y1="16" x2="3.95" y2="6.06"></line>
-                    <line x1="14.31" y1="16" x2="2.83" y2="16"></line>
-                    <line x1="16.62" y1="12" x2="10.88" y2="21.94"></line>
-                </svg>
-            </div>
-            <span class="menu-text">Техно-новини</span>
-        </a>
+        <!-- 7. Техно-новини -->
+        <button class="icon-button" id="tech-news-button" aria-label="Техно-новини" title="Техно-новини">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7v8a2 2 0 002 2h6M8 7V5a2 2 0 012-2h4a2 2 0 012 2v2M8 7H6a2 2 0 00-2 2v9a2 2 0 002 2h8a2 2 0 002-2v-2"></path>
+            </svg>
+        </button>
 
-        <a href="#" class="menu-item" data-category="Рекомендації DZVINOK">
-            <div class="menu-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <line x1="8" y1="6" x2="21" y2="6"></line>
-                    <line x1="8" y1="12" x2="21" y2="12"></line>
-                    <line x1="8" y1="18" x2="21" y2="18"></line>
-                    <line x1="3" y1="6" x2="3.01" y2="6"></line>
-                    <line x1="3" y1="12" x2="3.01" y2="12"></line>
-                    <line x1="3" y1="18" x2="3.01" y2="18"></line>
-                </svg>
-            </div>
-            <span class="menu-text">Рекомендації DZVINOK</span>
-        </a>
+        <!-- 8. Огляди та порівняння -->
+        <button class="icon-button" id="reviews-button" aria-label="Огляди та порівняння" title="Огляди та порівняння">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+            </svg>
+        </button>
+
+        <!-- 9. Питання та відповіді -->
+        <button class="icon-button" id="questions-button" aria-label="Питання та відповіді" title="Питання та відповіді">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+        </button>
+
+        <!-- 10. Рекомендації DZVINOK -->
+        <button class="icon-button" id="recommendations-button" aria-label="Рекомендації DZVINOK" title="Рекомендації DZVINOK">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"></path>
+            </svg>
+        </button>
     </div>
 
-
-    <!-- Products Grid -->
-    <main class="content-section">
-        <h1 class="section-title">Техно-новини</h1>
-
-        <div class="products-grid">
-            <!-- Статья 1 -->
-            <div class="product-card" data-category="Огляди та порівняння" data-rating="5.0" data-date="11">
-                <div class="product-image">
-                    <a href="/blog/post/iphone-16">
-                        <img src="./assets/img/2.jpg" alt="iPhone 16" loading="lazy">
-                    </a>
-                </div>
-                <div class="product-info">
-                    <h3 class="product-title">
-                        <a href="/blog/post/iphone-16">Що очікувати від iPhone 16?</a>
-                    </h3>
-                    <div class="product-meta">
-              <span class="product-rating">
-                <i class="fa-solid fa-star"></i> 5.0
-              </span>
-                        <span class="product-category">
-                Огляди та порівняння
-              </span>
-                    </div>
-                    <div class="product-excerpt">
-                        <p>iPhone 16 вже зараз обіцяє бути одним з найбільш вражаючих смартфонів на ринку.</p>
-                    </div>
-                    <div class="product-footer">
-                        <div class="post-date">11 місяців тому</div>
-                        <div class="product-price">Детальніше</div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Статья 2 -->
-            <div class="product-card" data-category="Для дому" data-rating="4.8" data-date="24">
-                <div class="product-image">
-                    <a href="/blog/post/dryers">
-                        <img src="./assets/img/3.jpg" alt="Сушарки" loading="lazy">
-                    </a>
-                </div>
-                <div class="product-info">
-                    <h3 class="product-title">
-                        <a href="/blog/post/dryers">Сушарки для овочів та фруктів</a>
-                    </h3>
-                    <div class="product-meta">
-              <span class="product-rating">
-                <i class="fa-solid fa-star"></i> 4.8
-              </span>
-                        <span class="product-category">
-                Техніка для дому
-              </span>
-                    </div>
-                    <div class="product-excerpt">
-                        <p>Ви вже придбали дегідратор? Не лякайтеся цього слова, дегідратор це сушарка...</p>
-                    </div>
-                    <div class="product-footer">
-                        <div class="post-date">2 роки тому</div>
-                        <div class="product-price">Детальніше</div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Статья 3 -->
-            <div class="product-card" data-category="Для себе" data-rating="4.7" data-date="24">
-                <div class="product-image">
-                    <a href="/blog/post/bosch-refrigerators">
-                        <img src="./assets/img/4.jpg" alt="Холодильник BOSCH" loading="lazy">
-                    </a>
-                </div>
-                <div class="product-info">
-                    <h3 class="product-title">
-                        <a href="/blog/post/bosch-refrigerators">Сучасні технології у холодильників від BOSCH</a>
-                    </h3>
-                    <div class="product-meta">
-              <span class="product-rating">
-                <i class="fa-solid fa-star"></i> 4.7
-              </span>
-                        <span class="product-category">
-                Техніка для дому
-              </span>
-                    </div>
-                    <div class="product-excerpt">
-                        <p>Сучасна кухня не може існувати без високотехнологічного агрегату-холодильника.</p>
-                    </div>
-                    <div class="product-footer">
-                        <div class="post-date">2 роки тому</div>
-                        <div class="product-price">Детальніше</div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Статья 4 -->
-            <div class="product-card" data-category="Робота й навчання" data-rating="4.6" data-date="24">
-                <div class="product-image">
-                    <a href="/blog/post/air-conditioning">
-                        <img src="./assets/img/5.jpg" alt="Кондиціонер" loading="lazy">
-                    </a>
-                </div>
-                <div class="product-info">
-                    <h3 class="product-title">
-                        <a href="/blog/post/air-conditioning">Кондиціонер для вашого комфорту</a>
-                    </h3>
-                    <div class="product-meta">
-              <span class="product-rating">
-                <i class="fa-solid fa-star"></i> 4.6
-              </span>
-                        <span class="product-category">
-                Техніка для дому
-              </span>
-                    </div>
-                    <div class="product-excerpt">
-                        <p>Різноманітність кондиціонерів, які пропонує сучасний ринок кліматичної техніки дуже великий.</p>
-                    </div>
-                    <div class="product-footer">
-                        <div class="post-date">2 роки тому</div>
-                        <div class="product-price">Детальніше</div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Статья 5 -->
-            <div class="product-card" data-category="Розумна техніка та транспорт" data-rating="4.9" data-date="12">
-                <div class="product-image">
-                    <a href="/blog/post/coffee-machines">
-                        <img src="./assets/img/6.jpg" alt="Кавоварка" loading="lazy">
-                    </a>
-                </div>
-                <div class="product-info">
-                    <h3 class="product-title">
-                        <a href="/blog/post/coffee-machines">Вибір кавоварки для дому</a>
-                    </h3>
-                    <div class="product-meta">
-              <span class="product-rating">
-                <i class="fa-solid fa-star"></i> 4.9
-              </span>
-                        <span class="product-category">
-                Техніка для дому
-              </span>
-                    </div>
-                    <div class="product-excerpt">
-                        <p>Як обрати правильну кавоварку, яка задовольнить всі ваші потреби і смакові побажання.</p>
-                    </div>
-                    <div class="product-footer">
-                        <div class="post-date">1 рік тому</div>
-                        <div class="product-price">Детальніше</div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Статья 6 -->
-            <div class="product-card" data-category="Поради експерта" data-rating="4.8" data-date="6">
-                <div class="product-image">
-                    <a href="/blog/post/gaming-laptops">
-                        <img src="./assets/img/7.jpg" alt="Ігровий ноутбук" loading="lazy">
-                    </a>
-                </div>
-                <div class="product-info">
-                    <h3 class="product-title">
-                        <a href="/blog/post/gaming-laptops">Топ-5 ігрових ноутбуків 2025 року</a>
-                    </h3>
-                    <div class="product-meta">
-              <span class="product-rating">
-                <i class="fa-solid fa-star"></i> 4.8
-              </span>
-                        <span class="product-category">
-                Техніка для роботи та навчання
-              </span>
-                    </div>
-                    <div class="product-excerpt">
-                        <p>Огляд найпотужніших ігрових ноутбуків з найкращим співвідношенням ціна-якість.</p>
-                    </div>
-                    <div class="product-footer">
-                        <div class="post-date">6 місяців тому</div>
-                        <div class="product-price">Детальніше</div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Статья 7 -->
-            <div class="product-card" data-category="Техно-новини" data-rating="4.8" data-date="6">
-                <div class="product-image">
-                    <a href="/blog/post/gaming-laptops">
-                        <img src="./assets/img/10.jpg" alt="Ігровий ноутбук" loading="lazy">
-                    </a>
-                </div>
-                <div class="product-info">
-                    <h3 class="product-title">
-                        <a href="/blog/post/gaming-laptops">Топ-5 ігрових ноутбуків 2025 року</a>
-                    </h3>
-                    <div class="product-meta">
-              <span class="product-rating">
-                <i class="fa-solid fa-star"></i> 4.8
-              </span>
-                        <span class="product-category">
-                Техніка для роботи та навчання
-              </span>
-                    </div>
-                    <div class="product-excerpt">
-                        <p>Огляд найпотужніших ігрових ноутбуків з найкращим співвідношенням ціна-якість.</p>
-                    </div>
-                    <div class="product-footer">
-                        <div class="post-date">6 місяців тому</div>
-                        <div class="product-price">Детальніше</div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Статья 7 -->
-            <div class="product-card" data-category="Рекомендації DZVINOK" data-rating="4.8" data-date="6">
-                <div class="product-image">
-                    <a href="/blog/post/gaming-laptops">
-                        <img src="./assets/img/1.jpg" alt="Ігровий ноутбук" loading="lazy">
-                    </a>
-                </div>
-                <div class="product-info">
-                    <h3 class="product-title">
-                        <a href="/blog/post/gaming-laptops">Топ-5 ігрових ноутбуків 2025 року</a>
-                    </h3>
-                    <div class="product-meta">
-              <span class="product-rating">
-                <i class="fa-solid fa-star"></i> 4.8
-              </span>
-                        <span class="product-category">
-                Техніка для роботи та навчання
-              </span>
-                    </div>
-                    <div class="product-excerpt">
-                        <p>Огляд найпотужніших ігрових ноутбуків з найкращим співвідношенням ціна-якість.</p>
-                    </div>
-                    <div class="product-footer">
-                        <div class="post-date">6 місяців тому</div>
-                        <div class="product-price">Детальніше</div>
-                    </div>
-                </div>
-            </div>
-
+    <!-- Расширенное меню -->
+    <div class="sidebar-expanded collapsed" id="expanded-menu">
+        <div class="menu-header">
+            <h2>Dashboards</h2>
+            <button class="close-button" id="close-menu" aria-label="Close menu">
+                <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
         </div>
 
-
-
-        <!-- Элемент для сообщения о загрузке -->
-        <div class="load-more-message" style="display: none; text-align: center; padding: 20px; color: #888;"></div>
-
-        <!-- Индикатор загрузки -->
-        <div class="load-more-spinner" style="display: none; text-align: center; padding: 20px;">
-            <i class="fa-solid fa-spinner fa-spin"></i> Завантаження...
+        <!-- Категории -->
+        <div class="menu-item">
+            <button class="category-button" data-category="Всі статті">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" width="20" height="20" style="margin-right: 12px;">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7v8a2 2 0 002 2h6M8 7V5a2 2 0 012-2h4a2 2 0 012 2v2M8 7H6a2 2 0 00-2 2v9a2 2 0 002 2h8a2 2 0 002-2v-2"></path>
+                </svg>
+                <span>Всі статті</span>
+            </button>
         </div>
 
-        <!-- Пагинация -->
-        <div class="pagination">
-            <div class="pagination-container">
-                <a href="#" class="pagination-prev disabled">
-                    <i class="fa-solid fa-arrow-left"></i>
-                </a>
-                <div class="pagination-numbers">
-                    <a href="#" class="pagination-number active">1</a>
-                    <a href="/blog?page=2" class="pagination-number">2</a>
-                    <a href="/blog?page=3" class="pagination-number">3</a>
-                </div>
-                <a href="/blog?page=2" class="pagination-next">
-                    <i class="fa-solid fa-arrow-right"></i>
-                </a>
+        <div class="menu-item">
+            <button class="category-button" data-category="Техніка для дому">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" width="20" height="20" style="margin-right: 12px;">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path>
+                </svg>
+                <span>Техніка для дому</span>
+            </button>
+        </div>
+
+        <div class="menu-item">
+            <button class="category-button" data-category="Доглядова електроніка">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" width="20" height="20" style="margin-right: 12px;">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"></path>
+                </svg>
+                <span>Доглядова електроніка</span>
+            </button>
+        </div>
+
+        <div class="menu-item">
+            <button class="category-button" data-category="Робота й навчання">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" width="20" height="20" style="margin-right: 12px;">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+                </svg>
+                <span>Робота й навчання</span>
+            </button>
+        </div>
+
+        <div class="menu-item">
+            <button class="category-button" data-category="Розумна техніка та транспорт">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" width="20" height="20" style="margin-right: 12px;">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01"></path>
+                </svg>
+                <span>Розумна техніка та транспорт</span>
+            </button>
+        </div>
+
+        <div class="menu-item">
+            <button class="category-button" data-category="Поради експерта">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" width="20" height="20" style="margin-right: 12px;">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+                </svg>
+                <span>Поради експерта</span>
+            </button>
+        </div>
+
+        <div class="menu-item">
+            <button class="category-button" data-category="Техно-новини">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" width="20" height="20" style="margin-right: 12px;">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7v8a2 2 0 002 2h6M8 7V5a2 2 0 012-2h4a2 2 0 012 2v2M8 7H6a2 2 0 00-2 2v9a2 2 0 002 2h8a2 2 0 002-2v-2"></path>
+                </svg>
+                <span>Техно-новини</span>
+            </button>
+        </div>
+
+        <div class="menu-item">
+            <button class="category-button" data-category="Огляди та порівняння">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" width="20" height="20" style="margin-right: 12px;">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+                </svg>
+                <span>Огляди та порівняння</span>
+            </button>
+        </div>
+
+        <div class="menu-item">
+            <button class="category-button" data-category="Питання та відповіді">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" width="20" height="20" style="margin-right: 12px;">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg>
+                <span>Питання та відповіді</span>
+            </button>
+        </div>
+
+        <div class="menu-item">
+            <button class="category-button" data-category="Рекомендації DZVINOK">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" width="20" height="20" style="margin-right: 12px;">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"></path>
+                </svg>
+                <span>Рекомендації DZVINOK</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- Основное содержимое -->
+    <div class="main-content" id="main-content">
+        <!-- Содержимое категории (по умолчанию скрыто) -->
+        <div class="content-card" id="category-content" style="display: none;">
+            <div class="content-header">
+                <span class="content-label">Claude content</span>
+                <h1 class="content-title" id="category-title"></h1>
+            </div>
+            <div class="content-body">
+                <p id="category-description"></p>
             </div>
         </div>
-    </main>
+
+        <!-- Пустое состояние (когда категория не выбрана) -->
+        <div class="empty-state" id="empty-state">
+            <h2>Выберите категорию</h2>
+            <p>Нажмите на любую категорию в меню слева, чтобы просмотреть соответствующий контент.</p>
+        </div>
+    </div>
 </div>
-
-<!-- Кнопка "Наверх" -->
-<a href="#" class="scroll-to-top">
-    <i class="fa-solid fa-arrow-up"></i>
-</a>
 
 <!-- Мобильное меню оверлей -->
 <div class="mobile-menu-overlay"></div>
