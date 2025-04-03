@@ -774,24 +774,53 @@ h2 {
 .form-textarea:focus {
   border-color: var(--primary-color);
   background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 25px;
 }
 
 .submit-comment {
-  background-color: var(--primary-color);
+  background-color: var(--accent-hover);
   color: white;
   border: none;
-  border-radius: 6px;
+  border-radius: 25px;
   padding: clamp(12px, 3vw, 14px) clamp(20px, 5vw, 28px);
   font-size: clamp(14px, 3vw, 16px);
   font-weight: 600;
   cursor: pointer;
-  transition: background-color 0.3s, transform 0.3s;
+  transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  outline: none;
+  box-shadow: none;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
 }
 
 .submit-comment:hover {
-  background-color: var(--accent-hover);
+  background-color: var(--primary-color);
   transform: translateY(-2px);
+  border-radius: 25px;
 }
+
+.submit-comment:focus,
+.submit-comment:active {
+  outline: none;
+  box-shadow: none;
+}
+
+.submit-comment:focus-visible {
+  outline: none;
+  box-shadow: none;
+}
+
+
+
+.submit-comment:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.4);
+}
+
 
 /* Анимации */
 @keyframes pulsing {
