@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ДЗВІНОК - Техніка та електроніка</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+
+<header>
+    <div class="logo">
+        <a href="/" class="logo-text">ДЗВІНОК
+            <span class="logo-subtext">техніка та електроніка</span>
+        </a>
+    </div>
+
+    <div class="search-header" role="search" aria-label="Пошук по сайту">
+        <input type="text" placeholder="Пошук товарів..." aria-label="Пошуковий запит">
+        <button aria-label="Пошук"><i class="fas fa-search"></i></button>
+    </div>
+
+    <div class="header-actions">
+        <a href="/language" aria-label="Змінити мову"><i class="fas fa-globe"></i> UA | RU</a>
+        <a href="/locations" aria-label="Обрати місто"><i class="fas fa-map-marker-alt"></i> Запоріжжя</a>
+        <a href="/account" aria-label="Увійти в особистий кабінет"><i class="fas fa-user"></i> Увійти</a>
+        <a href="/contacts" aria-label="Контактна інформація"><i class="fas fa-phone"></i> Контакти</a>
+        <a href="/cart" class="cart-icon" aria-label="Кошик покупок">
+            <i class="fas fa-shopping-cart"></i>
+            <span class="cart-count" aria-label="3 товари в кошику">3</span>
+        </a>
+    </div>
+</header>
+
+<nav class="main-nav">
+    <button class="catalog-btn" aria-label="Відкрити каталог товарів">
+        <i class="fas fa-bars"></i> Каталог товарів
+    </button>
+
+    <div class="nav-links">
+        <a href="/promotions">Акції</a>
+        <a href="/stores">Магазини</a>
+        <a href="/more">Ще</a>
+    </div>
+
+    <div class="credit-info">
+        Кредит 0.01% та Оплата частинами
+    </div>
+
+    <div class="wishlist-compare">
+        <a href="/wishlist" aria-label="Список бажань"><i class="far fa-heart"></i></a>
+        <a href="/compare" aria-label="Порівняння товарів"><i class="fas fa-balance-scale"></i></a>
+    </div>
+</nav>
+
+<div class="container">
+    <div class="emoji">😟</div>
+    <h1>На жаль, цю сторінку не знайдено</h1>
+    <p class="subtext">Можливо, товар більше не продається або ви ввели неправильну адресу</p>
+
+    <div class="search-box" role="search" aria-label="Пошук товару">
+        <input type="text" placeholder="Спробуйте знайти товар..." aria-label="Пошуковий запит для товару">
+        <button aria-label="Знайти"><i class="fas fa-search"></i></button>
+    </div>
+
+    <div class="buttons">
+        <a href="/catalog" class="cta-button" role="button">До каталогу</a>
+        <a href="/" class="cta-button" role="button">На головну</a>
+    </div>
+
+    <div class="promo-section">
+        <h2 class="section-title">Акційні пропозиції</h2>
+        <div class="promo-slides responsive-grid">
+            <div class="promo-slide">
+                <img src="./assets/img/3.jpg" alt="Apple Watch">
+            </div>
+            <div class="promo-slide">
+                <img src="./assets/img/4.jpg" alt="Samsung Galaxy">
+            </div>
+            <div class="promo-slide">
+                <img src="./assets/img/1.jpg" alt="Samsung TV">
+            </div>
+            <div class="promo-slide">
+                <img src="./assets/img/2.jpg" alt="Apple iPad">
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2 class="section-title">Популярні товари</h2>
+        <div class="product-grid responsive-grid">
+            <div class="product-card product-card--popular">
+                <div class="product-card__image">
+                    <img src="./assets/img/5.jpg" alt="Apple iPhone 13">
+                </div>
+            </div>
+            <div class="product-card product-card--popular">
+                <div class="product-card__image">
+                    <img src="./assets/img/6.jpg" alt="Ноутбук Dell">
+                </div>
+            </div>
+            <div class="product-card product-card--popular">
+                <div class="product-card__image">
+                    <img src="./assets/img/7.jpg" alt="Електрочайник">
+                </div>
+            </div>
+            <div class="product-card product-card--popular">
+                <div class="product-card__image">
+                    <img src="./assets/img/8.jpg" alt="Шуруповерт Bosch">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2 class="section-title">Зараз переглядають</h2>
+        <div class="product-grid responsive-grid">
+            <div class="product-card product-card--viewing">
+                <div class="product-card__image">
+                    <img src="/api/placeholder/150/150" alt="Кавомашина">
+                </div>
+                <div class="product-card__info">
+                    <div class="product-card__name">Кавомашина</div>
+                    <div class="product-card__price">1 899 грн</div>
+                    <button class="product-card__action" aria-label="Додати в кошик">
+                        <i class="fas fa-cart-plus"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="product-card product-card--viewing">
+                <div class="product-card__image">
+                    <img src="/api/placeholder/150/150" alt="Пилосос">
+                </div>
+                <div class="product-card__info">
+                    <div class="product-card__name">Ручний автомобільний пилосос</div>
+                    <div class="product-card__price">19 99 грн</div>
+                    <button class="product-card__action" aria-label="Додати в кошик">
+                        <i class="fas fa-cart-plus"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="product-card product-card--viewing">
+                <div class="product-card__image">
+                    <img src="/api/placeholder/150/150" alt="Пилка">
+                </div>
+                <div class="product-card__info">
+                    <div class="product-card__name">Пилка садова</div>
+                    <div class="product-card__price">7 499 грн</div>
+                    <button class="product-card__action" aria-label="Додати в кошик">
+                        <i class="fas fa-cart-plus"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="product-card product-card--viewing">
+                <div class="product-card__image">
+                    <img src="/api/placeholder/150/150" alt="Графічна карта">
+                </div>
+                <div class="product-card__info">
+                    <div class="product-card__name">Графічна карта NVFI</div>
+                    <div class="product-card__price">4 899 грн</div>
+                    <button class="product-card__action" aria-label="Додати в кошик">
+                        <i class="fas fa-cart-plus"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Блок категорий с SVG иконками -->
+    <div class="section category-section">
+        <h2 class="section-title">Категорії, які можуть вас зацікавити</h2>
+
+        <div class="category-slider">
+            <button class="category-slider__arrow category-slider__arrow--prev" aria-label="Попередні категорії">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M15 18L9 12L15 6" stroke="#317039" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+
+            <div class="category-slider__wrapper">
+                <div class="category-items">
+                    <!-- Вбудована техніка -->
+                    <a href="/category/built-in" class="category-item">
+                        <div class="category-item__icon">
+                            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="10" y="10" width="8" height="8" rx="1" stroke="#317039" stroke-width="2"/>
+                                <rect x="22" y="10" width="8" height="8" rx="1" stroke="#317039" stroke-width="2"/>
+                                <rect x="10" y="22" width="8" height="8" rx="1" stroke="#317039" stroke-width="2"/>
+                                <rect x="22" y="22" width="8" height="8" rx="1" stroke="#317039" stroke-width="2"/>
+                            </svg>
+                        </div>
+                        <div class="category-item__title">Вбудована техніка</div>
+                    </a>
+
+                    <!-- Плити -->
+                    <a href="/category/stoves" class="category-item">
+                        <div class="category-item__icon">
+                            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="8" y="8" width="24" height="24" rx="1" stroke="#317039" stroke-width="2"/>
+                                <line x1="8" y1="14" x2="32" y2="14" stroke="#317039" stroke-width="2"/>
+                                <circle cx="14" cy="20" r="2" stroke="#317039" stroke-width="2"/>
+                                <circle cx="26" cy="20" r="2" stroke="#317039" stroke-width="2"/>
+                                <circle cx="14" cy="28" r="2" stroke="#317039" stroke-width="2"/>
+                                <circle cx="26" cy="28" r="2" stroke="#317039" stroke-width="2"/>
+                            </svg>
+                        </div>
+                        <div class="category-item__title">Плити</div>
+                    </a>
+
+                    <!-- Швейні машини -->
+                    <a href="/category/sewing-machines" class="category-item">
+                        <div class="category-item__icon">
+                            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="8" y="12" width="24" height="16" rx="1" stroke="#317039" stroke-width="2"/>
+                                <circle cx="28" cy="20" r="3" stroke="#317039" stroke-width="2"/>
+                                <path d="M20 22C20 22 24 22 24 20C24 18 20 18 20 18" stroke="#317039" stroke-width="2" stroke-linecap="round"/>
+                                <line x1="13" y1="28" x2="13" y2="32" stroke="#317039" stroke-width="2" stroke-linecap="round"/>
+                                <line x1="27" y1="28" x2="27" y2="32" stroke="#317039" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                        </div>
+                        <div class="category-item__title">Швейні машини</div>
+                    </a>
+
+                    <!-- Кавомашини -->
+                    <a href="/category/coffee-machines" class="category-item">
+                        <div class="category-item__icon">
+                            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="10" y="10" width="14" height="20" rx="1" stroke="#317039" stroke-width="2"/>
+                                <path d="M24 14H28C29.1046 14 30 14.8954 30 16V18C30 19.1046 29.1046 20 28 20H24V14Z" stroke="#317039" stroke-width="2"/>
+                                <line x1="14" y1="16" x2="20" y2="16" stroke="#317039" stroke-width="2" stroke-linecap="round"/>
+                                <line x1="10" y1="30" x2="24" y2="30" stroke="#317039" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                        </div>
+                        <div class="category-item__title">Кавомашини</div>
+                    </a>
+
+                    <!-- Apple iPhone -->
+                    <a href="/category/iphone" class="category-item">
+                        <div class="category-item__icon">
+                            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M25.4999 10C26.2999 10.8 26.6999 11.9 26.6999 13.3C26.6999 14.6 26.1999 15.8 25.1999 16.7C24.0999 17.7 22.7999 18.1 21.5999 18C21.4999 16.7 21.9999 15.4 22.9999 14.5C23.9999 13.5 24.9999 13.2 25.4999 10Z" stroke="#317039" stroke-width="2"/>
+                                <path d="M30 20.5C29.9 22.7 30.8 24.2 32.7 26C32 28.5 30.9 30.7 29.5 32.6C28.4 34.2 27.1 34 25.8 34C24.6 34 23.9 33.2 22.3 33.2C20.6 33.2 19.8 34 18.7 34C17.5 34 16.4 33.3 15.2 31.5C13.3 28.7 11.8 24.5 11.7 20.5C11.7 18 12.3 15.7 13.7 14C14.8 12.6 16.5 11.7 18.2 11.7C19.5 11.7 20.6 12.5 21.5 12.5C22.4 12.5 23.7 11.7 25.3 11.7C26.7 11.7 28.1 12.4 29.1 13.5C26.8 14.9 27.2 18.4 30 20.5Z" stroke="#317039" stroke-width="2"/>
+                            </svg>
+                        </div>
+                        <div class="category-item__title">Apple iPhone</div>
+                    </a>
+
+                    <!-- Смартфони -->
+                    <a href="/category/smartphones" class="category-item">
+                        <div class="category-item__icon">
+                            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="13" y="8" width="14" height="24" rx="2" stroke="#317039" stroke-width="2"/>
+                                <line x1="13" y1="12" x2="27" y2="12" stroke="#317039" stroke-width="2"/>
+                                <line x1="13" y1="28" x2="27" y2="28" stroke="#317039" stroke-width="2"/>
+                                <circle cx="20" cy="30" r="1" stroke="#317039" stroke-width="2"/>
+                            </svg>
+                        </div>
+                        <div class="category-item__title">Смартфони</div>
+                    </a>
+
+                    <!-- Холодильники -->
+                    <a href="/category/refrigerators" class="category-item">
+                        <div class="category-item__icon">
+                            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="10" y="6" width="20" height="28" rx="1" stroke="#317039" stroke-width="2"/>
+                                <line x1="10" y1="16" x2="30" y2="16" stroke="#317039" stroke-width="2"/>
+                                <line x1="24" y1="10" x2="24" y2="14" stroke="#317039" stroke-width="2" stroke-linecap="round"/>
+                                <line x1="24" y1="20" x2="24" y2="28" stroke="#317039" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                        </div>
+                        <div class="category-item__title">Холодильники</div>
+                    </a>
+
+                    <!-- Ноутбуки -->
+                    <a href="/category/laptops" class="category-item">
+                        <div class="category-item__icon">
+                            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M8 26V14C8 12.8954 8.89543 12 10 12H30C31.1046 12 32 12.8954 32 14V26H8Z" stroke="#317039" stroke-width="2"/>
+                                <path d="M8 26H32V27C32 28.1046 31.1046 29 30 29H10C8.89543 29 8 28.1046 8 27V26Z" stroke="#317039" stroke-width="2"/>
+                                <line x1="19" y1="27.5" x2="21" y2="27.5" stroke="#317039" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                        </div>
+                        <div class="category-item__title">Ноутбуки</div>
+                    </a>
+
+                    <!-- Пральні машини -->
+                    <a href="/category/washing-machines" class="category-item">
+                        <div class="category-item__icon">
+                            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="10" y="8" width="20" height="24" rx="1" stroke="#317039" stroke-width="2"/>
+                                <circle cx="20" cy="22" r="6" stroke="#317039" stroke-width="2"/>
+                                <circle cx="20" cy="22" r="2" stroke="#317039" stroke-width="2"/>
+                                <circle cx="15" cy="13" r="1.5" stroke="#317039"/>
+                                <circle cx="19" cy="13" r="1.5" stroke="#317039"/>
+                                <line x1="23" y1="12.5" x2="26" y2="12.5" stroke="#317039" stroke-width="1.5" stroke-linecap="round"/>
+                            </svg>
+                        </div>
+                        <div class="category-item__title">Пральні машини</div>
+                    </a>
+                </div>
+            </div>
+
+            <button class="category-slider__arrow category-slider__arrow--next" aria-label="Наступні категорії">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M9 18L15 12L9 6" stroke="#317039" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <div class="footer-content">
+        <p>© 2025 ДЗВІНОК.ua | Всі права захищені</p>
+    </div>
+</footer>
+
+</body>
+</html>

@@ -10,6 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
 	const mobileMenuOverlay = document.querySelector('.mobile-menu-overlay');
 	const sidebarIcons = document.querySelector('.sidebar-icons');
 	
+	
 	// Состояние
 	let activeCategory = "Всі статті";
 	let menuState = 'collapsed';
@@ -212,3 +213,4 @@ document.addEventListener("DOMContentLoaded", function () {
 	// Синхронизация начальной прокрутки
 	handleScroll();
 });
+

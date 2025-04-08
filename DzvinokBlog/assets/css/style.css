@@ -948,5 +948,144 @@ ul {
     max-width: none;
   }
 }
+/* ===== Основные стили для сайдбаров ===== */
+.app-container {
+  display: flex;
+  min-height: 100vh;
+  position: relative;
+}
+
+/* ===== Левая панель с иконками (sidebar-icons) ===== */
+.sidebar-icons {
+  width: 60px;
+  background-color: #000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 60px 0 0 0;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow-y: auto;
+  border-right: 1px solid #2a2a2a;
+  flex-shrink: 0;
+  z-index: 20;
+}
+
+.sidebar-icons .icon-button {
+  width: 100%;
+  height: 48px; /* Фиксированная высота кнопки */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar-icons .icon-button svg {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  stroke: currentColor;
+  stroke-width: 2;
+}
+
+/* ===== Расширенное меню (sidebar-expanded) ===== */
+.sidebar-expanded {
+  width: 240px;
+  background-color: #000;
+  color: white;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow-y: auto;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  z-index: 10;
+  flex-shrink: 0;
+}
+
+.sidebar-expanded .menu-item {
+  display: flex;
+  align-items: center;
+  height: 48px; /* Фиксированная высота строки */
+  padding: 0 16px;
+  margin: 0;
+}
+
+.sidebar-expanded .category-button {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  gap: 12px;
+  color: inherit;
+  background: none;
+  border: none;
+  text-align: left;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar-expanded .category-button svg {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  stroke: currentColor;
+  stroke-width: 2;
+}
+
+.sidebar-expanded .category-button span {
+  line-height: 1;
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+/* ===== Состояния меню ===== */
+.sidebar-expanded.collapsed {
+  transform: translateX(-100%);
+  opacity: 0;
+  position: absolute;
+  left: 60px;
+}
+
+.sidebar-expanded.expanded {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+/* ===== Основной контент ===== */
+.main-content {
+  flex: 1;
+  background-color: #f0f0f0;
+  padding: 20px;
+  overflow-y: auto;
+  height: 100vh;
+}
+
+/* ===== Мобильная адаптация ===== */
+@media (max-width: 768px) {
+  .sidebar-icons,
+.sidebar-expanded {
+    overflow-y: hidden;
+    touch-action: none;
+  }
+  .main-content {
+    -webkit-overflow-scrolling: touch;
+  }
+}
+/* ===== Утилиты ===== */
+/* Скрытие полосы прокрутки */
+.sidebar-icons::-webkit-scrollbar,
+.sidebar-expanded::-webkit-scrollbar {
+  display: none;
+}
+
+.sidebar-icons,
+.sidebar-expanded {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* ===== Исправь поведение статьи при ресайзе экрана - она ужимается а должны уходить под меню ===== */
 
 /*# sourceMappingURL=style.css.map */
