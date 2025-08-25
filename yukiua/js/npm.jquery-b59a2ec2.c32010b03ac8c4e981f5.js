@@ -1,0 +1,1 @@
+(self.webpackChunkHoroshop=self.webpackChunkHoroshop||[]).push([[950],{3053:function(o,e,p){var r=p(1271),s=p(8706);void 0===s.$&&(s.$=r),void 0===s.jQuery&&(s.jQuery=r),o.exports=r}}]);

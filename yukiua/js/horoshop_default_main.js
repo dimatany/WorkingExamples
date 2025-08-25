@@ -1,0 +1,2 @@
+/* /vendor/application/deferred-init.js */
+(function(w){w.INIT={stack:[],add:function(func,executeImmediately){executeImmediately=executeImmediately||!1;if(executeImmediately){func()}else{this.stack.push(func)}},execute:function(){this.stack.forEach(function(func){if(typeof func==='function'){func()}})}}})(window);

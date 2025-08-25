@@ -1,0 +1,120 @@
+.products-menu__title a[href="/tovary-zi-znyzhkamy/"] {
+    color: #df3faf;
+}
+
+.products-menu__title a[href="/ru/tovary-zi-znyzhkamy/"] {
+    color: #df3faf;
+}
+
+#delivery-progress-block-wrapper {
+    width: 100%;
+    display: block;
+    box-sizing: border-box;
+    margin-top: 20px;
+    border: 1px solid color(srgb 0.9402 0.9453 0.9453);
+    border-radius: 4px;
+}
+
+.ribbon-banner__container {
+    display: -moz-flex;
+    display: block !important;
+    -moz-justify-content: center;
+    justify-content: center;
+    -moz-align-items: center;
+    align-items: center;
+    position: initial;
+    height: 25px;
+    overflow: hidden;
+}
+
+span.line_blue {
+    color: #75bee9;
+    font-weight: 500;
+}
+
+.social-icons__img {
+    width: 18px;
+    height: 18px;
+    fill: #75bee9;
+    pointer-events: none;
+}
+
+.ribbon-banner__text {
+    position: relative;
+    padding-left: 0px;
+    padding-top: 2px;
+}
+
+.header__bottom.fixed {
+    position: fixed;
+    top: 1;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,.2);
+    width: 100%;
+}
+
+.blockStripTopLeft {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+#delivery-progress-block {
+    width: 100%;
+    display: block;
+    box-sizing: border-box;
+    padding: 16px;
+    background-color: #f9f9f9;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0,0,0,.08);
+    font-family: "Segoe UI", Tahoma, sans-serif;
+}
+
+.blockStripTop {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.lockStripTopLeftLogo {
+    width: 36px;
+    height: 36px;
+    margin-right: 12px;
+}
+
+.blockStripTopLeftText {
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+    margin: 0;
+}
+
+.blockStripBottomStrip {
+    width: 100%;
+    height: 12px;
+    background-color: #e0e0e0;
+    border-radius: 6px;
+    overflow: hidden;
+    margin-bottom: 12px;
+}
+
+.blockStripBottomStripSpan {
+    display: block;
+    height: 100%;
+    background-color: #75bee9;
+    transition: width .8s ease;
+    border-radius: 6px;
+}
+
+.blockStripBottomPrice {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    color: #555;
+}
+
+.blockStripBottomPrice span {
+    text-align: center;
+    flex: 1;
+}
